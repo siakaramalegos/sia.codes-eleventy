@@ -1,8 +1,7 @@
-# eleventy-base-blog
+# sia.codes blog
 
-A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
+This blog started with the [Eleventy](https://github.com/11ty/eleventy) 11ty blog starter.
 
-[![Build Status](https://travis-ci.org/11ty/eleventy-base-blog.svg?branch=master)](https://travis-ci.org/11ty/eleventy-base-blog)
 
 ## Demos
 
@@ -41,7 +40,7 @@ npm install
 npx eleventy
 ```
 
-Or build and host locally for local development
+Or build and host locally for local development on localhost:8080:
 ```
 npx eleventy --serve
 ```

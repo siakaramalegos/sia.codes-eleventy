@@ -1,16 +1,16 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "sia.codes",
+  "url": "https://sia.codes/",
+  "description": "Sia is a freelance developer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Sia is a freelance developer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://myurl.com/feed/feed.xml",
     "id": "https://myurl.com/"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com"
+    "name": "Sia Karamalegos",
+    "email": "siakaramalegos@gmail.com"
   }
 }
