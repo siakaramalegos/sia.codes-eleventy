@@ -70,30 +70,25 @@ html, body {
   font-family: 'Recursive', Arial, Helvetica, sans-serif;
   color: var(--grey-80);
   background-color: var(--white);
-  /* background: -webkit-linear-gradient(left, var(--white) , var(--blue-10));
-  background: -o-linear-gradient(right, var(--white), var(--blue-10));
-  background: -moz-linear-gradient(right, var(--white), var(--blue-10));
-  background: linear-gradient(to right, var(--white) , var(--blue-10)); */
   min-height: 100%;
   display: grid;
   grid-template-rows: 1fr auto; }
-.social {
-  grid-column: 2;
-  text-align: right;}
+header {
+  display: grid;
+  grid-gap: 24px;
+  margin: 0 auto;
+  max-width: 500px;
+  position: relative;}
+.social { text-align: right;}
 .social a {
   color: var(--pink-50);
   display: inline-block;
-  margin: 16px; }
+  margin: 6px; }
 .social a:hover { color: var(--pink-40);}
 h1, h2, h3, h4, h5, h6 {
   color: var(--purple-70);
   font-variation-settings: "CASL" 1;
   margin-top: 1.5em;}
-header {
-  display: grid;
-  grid-gap: 24px;
-  grid-template-columns: 150px 1fr;
-  position: relative;}
 .gradient-text {
   background-color: var(--blue-40);
   background: -webkit-linear-gradient(left, var(--blue-40) , var(--purple-40));
@@ -102,14 +97,14 @@ header {
   background: linear-gradient(to right, var(--blue-40) , var(--purple-40));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding: 24px 3px 24px 0;}
+  padding: 24px 3px 0 0;}
 section {padding: 32px 0;}
 .title {
-  grid-column: span 2;
-  font-size: 200px;
+  font-size: 80px;
   font-weight: 1000;
-  line-height: 160px;
-  margin: 40px 0 0 0;
+  line-height: 80px;
+  margin: 20px 0 0 0;
+  padding-bottom: ;
   text-align: right;
   width: 100%;}
 .sia {
@@ -117,18 +112,18 @@ section {padding: 32px 0;}
   display: block;}
 .codes {
   color: var(--blue-50);
-  font-size: 160px;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: -0.088em;}
 header p { margin-top: 0; }
 p,
 .tmpl-post li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;}
 li { margin-top: 0.5em; margin-bottom: 0.5em;}
 p.lead {
   color: var(--grey-50);
-  font-size: 24px;
+  font-size: 18px;
   font-style: italic;
   font-variation-settings: 'ital' 1, 'slnt' -8;}
 .text-right { text-align: right;}
@@ -175,13 +170,13 @@ a.button-circle {
   border-radius: 100%;
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   display: flex;
-  font-size: 20px;
-  height: 150px;
+  font-size: 16px;
+  height: 100px;
   justify-content: center;
   letter-spacing: 0.5px;
   position: relative;
-  left: -20px;
-  width: 150px;}
+  left: 0;
+  width: 100px;}
 img { max-width: 100%; }
 .tmpl-post img { box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); }
 .twitter-tweet {
@@ -230,7 +225,7 @@ code {
   font-variation-settings: "mono" 1, "MONO" 1;}
 code {
   background-color: rgba(222,221,227,0.7);
-  font-size: 16px;  }
+  font-size: 14px;  }
 pre {
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   font-size: 14px;
@@ -293,20 +288,16 @@ pre {
 /* Posts list */
 .postlist {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 24px;
-}
+  grid-gap: 24px;}
 .postlist-item {
   background-color: var(--white);
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
-  padding: 16px;
-}
+  padding: 16px;}
 .postlist-item p { font-size: 16px;}
 .postlist-date,
 .postlist-item:before {
   font-size: 16px;
   color: var(--grey-70);}
-
 
 /* Tags */
 .post-tag {
@@ -353,4 +344,30 @@ footer p { font-size: 1em;}
 .headshot{
   border-radius: 100%;
   width: 300px;
+}
+
+@media screen and (min-width: 1020px) {
+  header {
+    grid-template-columns: 150px 1fr;
+    max-width: 100%;}
+  .gradient-text {padding: 24px 3px 24px 0;}
+  .title {
+    grid-column: span 2;
+    font-size: 200px;
+    line-height: 160px;
+    margin: 40px 0 0 0;}
+  .codes {
+    font-size: 160px;}
+  .social { grid-column: 2;}
+  .social a {margin: 8px; }
+  a.button-circle {
+    font-size: 20px;
+    height: 150px;
+    left: -20px;
+    width: 150px;}
+  p.lead {font-size: 24px;}
+  .postlist {
+    grid-template-columns: repeat(3, 1fr);}
+  p, .tmpl-post li {font-size: 18px;}
+  code {font-size: 16px;}
 }
