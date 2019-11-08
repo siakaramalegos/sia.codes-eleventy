@@ -1,9 +1,9 @@
 {
-  "title": "sia.codes",
+  "title": "Sia Karamalegos, Freelance Web Performance Engineer",
   "url": "https://sia.codes/",
-  "description": "Sia is a freelance developer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies.",
+  "description": "Sia is a freelance developer and web performance engineer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies.",
   "feed": {
-    "subtitle": "Sia is a freelance developer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies.",
+    "subtitle": "Sia is a freelance developer and web performance engineer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://myurl.com/feed/feed.xml",

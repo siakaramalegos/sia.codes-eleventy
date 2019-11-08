@@ -5,12 +5,20 @@ tags:
 navtitle: Home
 ---
 
-<h1 class="sia">sia.codes</h1>
-<p class="lead">Freelance developer, international conference speaker, workshop instructor, and community organizer</p>
+<header>
+  <div class="gradient-text">
+    <h1 class="title"><span class="sia">sia</span> <span class="codes">karamalegos</span></h1>
+    <p class="lead">freelance developer, international conference speaker, workshop instructor, and community organizer</p>
+    <p class="lead">i like to make the web fast</p>
+  </div>
+  <p class="hire-button"><a href="" class="button button-large">Hire me</a></p>
+</header>
 
-<h2>Latest 3 Posts</h2>
+<section>
+  <h2>Recent Writing</h2>
 
-{% set postslist = collections.posts | head(-3) %}
-{% include "postslist.njk" %}
+  {% set postslist = collections.posts | head(-3) %}
+  {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+</section>
