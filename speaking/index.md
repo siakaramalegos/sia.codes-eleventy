@@ -14,6 +14,10 @@ Hello, I love making developer's lives easier through teaching, speaking, and me
 
 Want me to speak at one of your events? <a href="mailto:sia@clioandcalliope.com?subject=Speaking inquiry from sia.codes">Email me</a>, or [DM me on Twitter](https://twitter.com/thegreengreek)!
 
+<p class="text-center">
+  <a class="button button-default" href="mailto:sia@clioandcalliope.com?subject=Speaking inquiry from sia.codes">Book me to speak at your event</a>
+</p>
+
 <div class="videoWrapper">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/SA_Hp8l7lr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
