@@ -129,6 +129,7 @@ p.lead {
   font-variation-settings: 'ital' 1, 'slnt' -8;}
 .text-right { text-align: right;}
 em { font-variation-settings: 'ital' 1, 'slnt' -8; }
+.text-center {text-align: center;}
 blockquote {
   color: var(--grey-50);
   font-style: italic;
@@ -161,16 +162,25 @@ a:hover {
   box-shadow: none;}
 .a-reset a:hover { background: none; }
 a.button {
-  background-color: var(--pink-50);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cd0084+30,b000f5+100 */
+  background: rgb(205,0,132); /* Old browsers  var(--pink-50); and purple-50*/
+  background: -moz-linear-gradient(-45deg,  rgba(205,0,132,1) 30%, rgba(176,0,245,1) 100%);
+  background: -webkit-linear-gradient(-45deg,  rgba(205,0,132,1) 30%,rgba(176,0,245,1) 100%);
+  background: linear-gradient(135deg,  rgba(205,0,132,1) 30%,rgba(176,0,245,1) 100%);
+  border: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   color: var(--white);
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;}
-a.button:hover { background-color: var(--pink-40);}
+a.button-default {
+  display: inline-block;
+  font-size: 20px;
+  padding: 16px 32px;}
+a.button:hover { background: var(--pink-40);}
 a.button-circle {
   align-items: center;
   border-radius: 100%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   display: flex;
   font-size: 16px;
   height: 100px;

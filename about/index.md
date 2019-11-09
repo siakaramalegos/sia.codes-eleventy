@@ -20,7 +20,11 @@ As a person, I also love making developer's lives easier through teaching, speak
 <section>
 
 ## ⚡️ Need help making your website fast?
-I can implement end-to-end performance managment, from audits and improvements to long-term management with CI. Whether onsite or remote, I can also provide training tailored for your team and project technology. <a href="mailto:sia@clioandcalliope.com?subject=Contract inquiry from sia.codes">Hire me</a> today!
+I implement end-to-end performance managment, from audits and improvements to long-term management with CI. Whether onsite or remote, I can provide training tailored for your team and project technology.
+
+<p class="text-center">
+  <a class="button button-default" href="mailto:sia@clioandcalliope.com?subject=Contract inquiry from sia.codes">Hire me</a>
+</p>
 
 </section>
 
