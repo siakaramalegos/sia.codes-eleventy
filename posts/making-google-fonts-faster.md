@@ -48,7 +48,7 @@ You may be asking yourself, “Why can’t I just use the direct link to the fon
 The second problem we encounter with Google Fonts is that we have no control over flash-of-invisible-text (FOIT) and flash-of-unstyled-text (FOUT) while fonts are loading. Setting the [`font-display`](https://font-display.glitch.me/) property in the @font-face would give us that control, but it’s defined in the Google Fonts stylesheet.
 
 <figure>
-    <img src="/img/foit-emr.png"
+    <img src="/img/fonts/foit-emr.jpg"
          alt="FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)">
     <figcaption>FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)</figcaption>
 </figure>
@@ -67,7 +67,7 @@ The only basic performance improvement we can do with Google Fonts hosting is wa
 Why? If you don’t warm up the connection, the browser will wait until it sees the CSS call font files before it begins DNS/TCP/TLS:
 
 <figure>
-    <img src="/img/fonts-no-preconnect.png"
+    <img src="/img/fonts/fonts-no-preconnect.jpg"
          alt="Loading Google Fonts without preconnect">
     <figcaption>Loading Google Fonts without preconnect</figcaption>
 </figure>
@@ -75,7 +75,7 @@ Why? If you don’t warm up the connection, the browser will wait until it sees 
 This is wasted time because we KNOW that we will definitely need to request resources from `fonts.gstatic.com`. By adding the preconnect, we can perform DNS/TCP/TLS before the socket is needed, thereby moving forward that branch of the waterfall:
 
 <figure>
-    <img src="/img/fonts-preconnect.png"
+    <img src="/img/fonts/fonts-preconnect.jpg"
          alt="Loading Google Fonts with preconnect to fonts.gstatic.com">
     <figcaption>Loading Google Fonts with preconnect to fonts.gstatic.com</figcaption>
 </figure>
@@ -87,7 +87,7 @@ It would be even better if we had full control over our font files, loading, and
 First, select the Google font you need from the left sidebar. Type in the search box for a filtered list (red arrow), then click on your font (blue arrow):
 
 <figure>
-    <img src="/img/fonts-step-1.png"
+    <img src="/img/fonts/fonts-step-1.jpg"
          alt="Step 1: Select a font.">
     <figcaption>Step 1: Select a font.</figcaption>
 </figure>
@@ -95,7 +95,7 @@ First, select the Google font you need from the left sidebar. Type in the search
 Next, select your character sets and styles. Remember that more styles mean more for the client to download:
 
 <figure>
-    <img src="/img/fonts-select-sets.png"
+    <img src="/img/fonts/fonts-select-sets.jpg"
          alt="Select your character sets and styles (weight and style).">
     <figcaption>Select your character sets and styles (weight and style).</figcaption>
 </figure>
@@ -103,7 +103,7 @@ Next, select your character sets and styles. Remember that more styles mean more
 Different fonts have different levels of character support and style options. For example, Open Sans supports many more charsets than Muli:
 
 <figure>
-    <img src="/img/fonts-open-sans.png"
+    <img src="/img/fonts/fonts-open-sans.jpg"
          alt="Open Sans supports many more character sets including Cyrillic, Greek, Vietnamese, and extended sets.">
     <figcaption>Open Sans supports many more character sets including Cyrillic, Greek, Vietnamese, and extended sets.</figcaption>
 </figure>
@@ -111,7 +111,7 @@ Different fonts have different levels of character support and style options. Fo
 Your final choice is which browsers you want to support. “Modern Browsers” will give you WOFF and WOFF2 formats while “Best Support” will also give you TTF, EOT, and SVG. For our use case, we chose to only host WOFF and WOFF2 while selecting system fonts as fallbacks for older browsers. Work with your design team to decide the best option for you.
 
 <figure>
-    <img src="/img/fonts-support.png"
+    <img src="/img/fonts/fonts-support.jpg"
          alt="Select “Best Support” for all file formats or “Modern Browsers” for only WOFF and WOFF2.">
     <figcaption>Select “Best Support” for all file formats or “Modern Browsers” for only WOFF and WOFF2.</figcaption>
 </figure>
@@ -154,13 +154,13 @@ t file type.
 So how did we do? Let’s take a look at the performance before and after. Using webpagetest.org in easy mode (Moto G4, Chrome, slow 3G), our speed index was 4.147s using only preconnect, and 3.388s using self-hosting plus preload. The waterfalls for each show how we are saving time by playing with latency:
 
 <figure>
-  <img src="/img/fonts-self.png"
+  <img src="/img/fonts/fonts-self.jpg"
         alt="Loading from Google with preconnect to fonts.gstatic.com">
   <figcaption>Loading from Google with preconnect to fonts.gstatic.com</figcaption>
 </figure>
 
 <figure>
-  <img src="/img/fonts-preload.png"
+  <img src="/img/fonts/fonts-preload.jpg"
         alt="Self-hosting fonts and using preload">
   <figcaption>Self-hosting fonts and using preload</figcaption>
 </figure>
