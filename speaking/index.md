@@ -5,6 +5,7 @@ tags:
   - nav
 navtitle: Speaking
 templateClass: tmpl-post
+date: 2019-01-04
 ---
 
 Hello, I love making developer's lives easier through teaching, speaking, and mentoring. I talk about front-end topics such as web performance, JavaScript, and React.

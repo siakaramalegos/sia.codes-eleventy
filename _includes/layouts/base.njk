@@ -51,7 +51,7 @@
       <div class="content">
         <h1 class="home"><a href="{{ '/' | url }}">sia.codes</a></h1>
         <ul class="nav">
-          {%- for nav in collections.nav | reverse -%}
+          {%- for nav in collections.nav -%}
           <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
           {%- endfor -%}
         </ul>

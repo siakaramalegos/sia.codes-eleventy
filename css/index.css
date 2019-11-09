@@ -281,7 +281,7 @@ pre {
   font-weight: 700;
   text-decoration: underline;}
 .home {
-  display: inline-block;
+  display: none;
   padding: 0 1rem;
   font-size: 1em; /* 16px /16 */}
 .home :link:not(:hover) {
@@ -362,6 +362,9 @@ footer p { font-size: 1em;}
   width: 300px;
 }
 
+@media screen and (min-width: 395px) {
+  .home {display: inline-block;}
+}
 @media screen and (min-width: 1020px) {
   header {
     grid-template-columns: 150px 1fr;

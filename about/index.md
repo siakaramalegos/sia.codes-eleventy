@@ -5,6 +5,7 @@ tags:
   - nav
 navtitle: About
 templateClass: tmpl-post
+date: 2019-01-02
 ---
 
 <section>
