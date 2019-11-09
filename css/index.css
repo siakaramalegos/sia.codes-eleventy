@@ -127,6 +127,7 @@ p.lead {
   font-style: italic;
   font-variation-settings: 'ital' 1, 'slnt' -8;}
 .text-right { text-align: right;}
+em { font-variation-settings: 'ital' 1, 'slnt' -8; }
 blockquote {
   color: var(--grey-50);
   font-style: italic;
