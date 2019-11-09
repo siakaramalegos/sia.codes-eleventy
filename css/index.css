@@ -398,7 +398,7 @@ footer a svg {width: 24px;}
   .social a svg {width: 32px;}
   footer a svg {width: 32px;}
 }
-@media screen and (min-width: 395px) {.home {display: inline-block;}}
+@media screen and (min-width: 440px) {.home {display: inline-block;}}
 @media screen and (min-width: 500px) {
   .event-item {
     display: grid;

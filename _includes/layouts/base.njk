@@ -54,6 +54,7 @@
           {%- for nav in collections.nav -%}
           <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
           {%- endfor -%}
+          <li class="nav-item"><a href="/feed/feed.xml">RSS</a></li>
         </ul>
       </div>
     </nav>
