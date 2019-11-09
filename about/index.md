@@ -15,11 +15,23 @@ I'm a freelance web developer, a [Women Techmakers](https://www.womentechmakers.
 
 As a person, I also love making developer's lives easier through teaching, speaking, and mentoring. You can find more information about me and the topics I speak about on my speaking page. I talk about front-end topics such as web performance, JavaScript, and React.
 
+</section>
+
+<section>
+
 ## ⚡️ Need help making your website fast?
 I can implement end-to-end performance managment, from audits and improvements to long-term management with CI. Whether onsite or remote, I can also provide training tailored for your team and project technology. <a href="mailto:sia@clioandcalliope.com?subject=Contract inquiry from sia.codes">Hire me</a> today!
 
+</section>
+
+<section>
+
 ## 🎤 Want me to speak at one of your events?
 <a href="mailto:sia@clioandcalliope.com?subject=Speaking inquiry from sia.codes">Email me</a>, or [DM me on Twitter](https://twitter.com/thegreengreek)!
+
+</section>
+
+<section>
 
 ## 💕 Want to show your appreciation for speakers and organizers?
 Sponsor me on [Github Sponsors](https://github.com/sponsors/siakaramalegos) or buy me a coffee on [Ko-fi](https://ko-fi.com/siacodes).

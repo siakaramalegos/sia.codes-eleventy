@@ -1,5 +1,13 @@
 export const upcomingEvents = [
   {
+    conference: 'GDG New Orleans',
+    conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjryzpbzb/',
+    location: 'New Orleans, LA, USA',
+    talks: [
+      { talk: 'differential', date: '03 Dec 2019' },
+    ]
+  },
+  {
     conference: 'The Progressive Web Experience',
     conferenceUrl: 'https://progressivewebexperience.io/conference/clearwater/2019/12/home',
     location: 'Clearwater, FL, USA',
