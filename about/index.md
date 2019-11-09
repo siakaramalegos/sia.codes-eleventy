@@ -7,6 +7,7 @@ navtitle: About
 templateClass: tmpl-post
 ---
 
+<section>
 <img src="/img/sia_karamalegos_small.jpg" alt="Sia Karamalegos" class="headshot">
 
 I'm a freelance web developer, a [Women Techmakers](https://www.womentechmakers.com/) ambassador, and a co-organizer for [GDG New Orleans](https://www.gdgneworleans.com/). I'm also a Google Developer Expert in Web Technologies. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
@@ -21,3 +22,7 @@ I can implement end-to-end performance managment, from audits and improvements t
 
 ## 💕 Want to show your appreciation for speakers and organizers?
 Sponsor me on [Github Sponsors](https://github.com/sponsors/siakaramalegos) or buy me a coffee on [Ko-fi](https://ko-fi.com/siacodes).
+
+</section>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">heylow web dev friends: if you aren&#39;t keeping up with <a href="https://twitter.com/TheGreenGreek?ref_src=twsrc%5Etfw">@TheGreenGreek</a>&#39;s <a href="https://twitter.com/hashtag/30DaysOfWebPerf?src=hash&amp;ref_src=twsrc%5Etfw">#30DaysOfWebPerf</a>, you should be.<br><br>just did Day 4&#39;s tip to our site, and got a 27% bump in page load and a 13% bump in TTFB.<br><br>(note: we were using only `dns-prefetch` before today. `preconnect` is amazing.) <a href="https://t.co/eHHMFWxdBB">https://t.co/eHHMFWxdBB</a></p>&mdash; thanksgiving, but spooky (@vincefalconi) <a href="https://twitter.com/vincefalconi/status/1192133784117948419?ref_src=twsrc%5Etfw">November 6, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

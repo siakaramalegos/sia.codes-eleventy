@@ -180,6 +180,7 @@ a.button-circle {
   width: 100px;}
 img { max-width: 100%; }
 .tmpl-post img { box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); }
+iframe {box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); margin: 32px auto;}
 .twitter-tweet {
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   margin: 40px auto;}
@@ -299,6 +300,20 @@ pre {
 .postlist-item:before {
   font-size: 16px;
   color: var(--grey-70);}
+
+/* Events list */
+.event-item {margin-bottom: 1.5rem;}
+.tmpl-post .event-item li {
+  font-size: 16px;
+  list-style-type: none;}
+.event-item li span {
+  color: var(--grey-60);
+  font-size: 12px;
+  margin-right: 4px;}
+.event-item h3 { margin: 1rem 0 0 0;}
+.event-item ul {
+  margin-top: 0.5rem;
+  padding: 0;}
 
 /* Tags */
 .post-tag {
