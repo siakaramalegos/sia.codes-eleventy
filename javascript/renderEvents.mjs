@@ -28,6 +28,7 @@ function getEventNode({ conference, conferenceUrl, location, talks }) {
 
   const mapIcon = document.createElement('img')
   mapIcon.src = '/img/map-marker-alt.svg'
+  mapIcon.alt = 'map marker'
   locationDiv.prepend(mapIcon)
 
   const list = document.createElement('ul')

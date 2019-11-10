@@ -77,7 +77,6 @@ header {
   display: grid;
   grid-gap: 24px;
   margin: 0 auto;
-  max-width: 500px;
   padding-bottom: 32px;
   position: relative;}
 .social { text-align: right;}
@@ -89,7 +88,7 @@ header {
 h1, h2, h3, h4, h5, h6 {
   color: var(--purple-70);
   font-variation-settings: "CASL" 1;
-  margin-top: 1.5em;}
+  margin: 1.5rem 0;}
 .gradient-text {
   background-color: var(--blue-40);
   background: -webkit-linear-gradient(left, var(--blue-40) , var(--purple-40));
@@ -101,11 +100,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 24px 3px 0 0;}
 section {padding: 8px 0;}
 .title {
-  font-size: 80px;
+  font-size: 18vw;
   font-weight: 1000;
-  line-height: 80px;
-  margin: 20px 0 0 0;
-  padding-bottom: ;
+  line-height: 0.75em;
+  margin-bottom: 0;
+  padding: 40px 4px 40px 0;
   text-align: right;
   width: 100%;}
 .sia {
@@ -113,10 +112,11 @@ section {padding: 8px 0;}
   display: block;}
 .codes {
   color: var(--blue-50);
-  font-size: 48px;
+  font-size: 15vw;
   font-weight: 300;
   letter-spacing: -0.088em;}
 header p { margin-top: 0; }
+.subtitle p {max-width: 37.5em;}
 p,
 .tmpl-post li {
   font-size: 16px;
@@ -131,7 +131,7 @@ p.lead {
 em { font-variation-settings: 'ital' 1, 'slnt' -8; }
 .text-center {text-align: center;}
 blockquote {
-  color: var(--grey-50);
+  color: var(--grey-60);
   font-style: italic;
   font-variation-settings: 'ital' 1, 'slnt' -8;
   margin: 32px;
@@ -183,12 +183,14 @@ a.button-circle {
   border-radius: 100%;
   display: flex;
   font-size: 16px;
-  height: 100px;
+  height: 15vw;
+  min-height: 100px;
   justify-content: center;
   letter-spacing: 0.5px;
   position: relative;
   left: 0;
-  width: 100px;}
+  width: 15vw;
+  min-width: 100px;}
 img { max-width: 100%; }
 .tmpl-post img { box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); }
 iframe {box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); margin: 32px auto;}
@@ -300,20 +302,21 @@ pre {
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   padding: 16px;}
 .postlist-item p { font-size: 16px;}
-.postlist-date,
-.postlist-item:before {
-  font-size: 16px;
-  color: var(--grey-70);}
+.postlist-date{
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--grey-60);}
 
 /* Events list */
 .event-item {
-  margin-bottom: 1.5rem;}
+  margin-top: 1.5rem;}
 .card-list .event-item li {
   font-size: 16px;
   list-style-type: none;}
 .event-item li span {
-  color: var(--grey-40);
+  color: var(--grey-60);
   font-size: 12px;
+  font-weight: 200;
   margin-right: 4px;}
 .event-item h3 { margin: 0;}
 .event-item ul {
@@ -321,8 +324,9 @@ pre {
   margin-top: 0;
   padding: 0;}
 .event-location {
-  color: var(--grey-40);
+  color: var(--grey-60);
   font-size: 12px;
+  font-weight: 200;
   margin: 8px 0 12px 0;}
 .event-location img {
   box-shadow: none;
@@ -331,7 +335,7 @@ pre {
 
 /* Tags */
 .post-tag {
-  background-color: var(--grey-40);
+  background-color: var(--grey-60);
   border-radius: 8px; /* 3px /12 */
   color: var(--white);
   display: inline-block;
@@ -406,19 +410,23 @@ footer a svg {width: 24px;}
   .event-location {margin: 0;}
   .event-location img {margin: 0 8px;}
 }
+@media screen and (min-width: 665px) {
+  header {
+    grid-template-columns: minmax(100px, 15vw) 1fr;
+    max-width: 100%;}
+  .title {
+    grid-column: span 2;}
+  .social { grid-column: 2;}
+}
 @media screen and (min-width: 1020px) {
   header {
-    grid-template-columns: 150px 1fr;
-    max-width: 100%;}
+    grid-template-columns: 150px 1fr;}
   .gradient-text {padding: 24px 3px 24px 0;}
-  .title {
-    grid-column: span 2;
+  .title {;
     font-size: 200px;
-    line-height: 160px;
     margin: 40px 0 0 0;}
   .codes {
     font-size: 160px;}
-  .social { grid-column: 2;}
   .social a {margin: 8px; }
   a.button-circle {
     font-size: 20px;

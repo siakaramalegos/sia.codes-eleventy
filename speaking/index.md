@@ -19,7 +19,7 @@ Want me to speak at one of your events? <a href="mailto:sia@clioandcalliope.com?
 </p>
 
 <div class="videoWrapper">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/SA_Hp8l7lr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe title="The Future of Front-End Performance - Sia Karamalegos" width="560" height="315" src="https://www.youtube.com/embed/SA_Hp8l7lr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </section>
 
