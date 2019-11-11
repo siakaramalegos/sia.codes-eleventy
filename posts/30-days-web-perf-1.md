@@ -2,7 +2,7 @@
 title: "Day 1 of⚡️ #30DaysOfWebPerf ⚡️: Lighthouse"
 description: Lighthouse is an amazing tool that helps you identify specific speed problems on your website.
 date: 2019-11-01
-tags: ['WebPerf', 'Measurement Tools']
+tags: ['WebPerf', 'Dev Tools']
 layout: layouts/post.njk
 ---
 
