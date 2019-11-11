@@ -136,14 +136,17 @@ blockquote {
   font-variation-settings: 'ital' 1, 'slnt' -8;
   margin: 32px;
   /* max-width: calc(37.5em - 32px); */
-  position: relative;}
+  position: relative;
+  z-index: 1;}
 blockquote::before {
   content: "\201C";
-  opacity: 10%;
+  color: var(--grey-10);
   font-size: 150px;
   position: absolute;
   left: -46px;
-  top: -38px;}
+  top: -38px;
+  z-index: -1;}
+blockquote p {z-index: 1;}
 blockquote br {
   display: block;
   content: "";
