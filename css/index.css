@@ -91,10 +91,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1.5rem 0;}
 .gradient-text {
   background-color: var(--blue-40);
-  background: -webkit-linear-gradient(left, var(--blue-40) , var(--purple-40));
-  background: -o-linear-gradient(right, var(--blue-40), var(--purple-40));
-  background: -moz-linear-gradient(right, var(--blue-40), var(--purple-40));
-  background: linear-gradient(to right, var(--blue-40) , var(--purple-40));
+  /* gradient based off of var(--blue-40) , var(--purple-40)); */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7775ff+1,be4fff+78 */
+  background: rgb(119,117,255); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(119,117,255,1) 1%, rgba(190,79,255,1) 78%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(119,117,255,1) 1%,rgba(190,79,255,1) 78%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(119,117,255,1) 1%,rgba(190,79,255,1) 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7775ff', endColorstr='#be4fff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 24px 3px 0 0;}
