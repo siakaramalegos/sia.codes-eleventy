@@ -1,0 +1,17 @@
+---
+title: "Day 5 of⚡️ #30DaysOfWebPerf ⚡️: Your laptop is a filthy liar"
+description: Dev Tools throttling emulators are great, but they don't mimic real devices.
+date: 2019-11-07
+tags: ['WebPerf', 'Dev Tools']
+layout: layouts/post.njk
+---
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day 5 of⚡️ <a href="https://twitter.com/hashtag/30DaysOfWebPerf?src=hash&amp;ref_src=twsrc%5Etfw">#30DaysOfWebPerf</a> ⚡️<br><br>&quot;Your laptop is a filthy liar.&quot;<br><br>--<a href="https://twitter.com/slightlylate?ref_src=twsrc%5Etfw">@slightlylate</a> <br><br>💻🤥<a href="https://t.co/651MU0zMxC">https://t.co/651MU0zMxC</a> <a href="https://t.co/YCLfycozgN">pic.twitter.com/YCLfycozgN</a></p>&mdash; Sia Karamalegos (@TheGreenGreek) <a href="https://twitter.com/TheGreenGreek/status/1192448463717437440?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Oh no! 😳 What does he mean??<br><br>Those network and CPU throttle emulators are a quick help, but they are no where near the real user experience of people, ESPECIALLY on MOBILE. <a href="https://t.co/JASHdp560y">pic.twitter.com/JASHdp560y</a></p>&mdash; Sia Karamalegos (@TheGreenGreek) <a href="https://twitter.com/TheGreenGreek/status/1192448470419943429?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">What&#39;s the best solution?<br><br>Buying an actual crappy phone and hooking it up to your computer for remote debugging with <a href="https://twitter.com/ChromeDevTools?ref_src=twsrc%5Etfw">@ChromeDevTools</a> <br><br>📱 + 💻 = 🥇<a href="https://t.co/YZqxo1L7OT">https://t.co/YZqxo1L7OT</a></p>&mdash; Sia Karamalegos (@TheGreenGreek) <a href="https://twitter.com/TheGreenGreek/status/1192448472202518531?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">What&#39;s a pretty great solution?<br><br>WebPagetest! WPT is basically a bunch of basements full of various models of mobile phones in different locations just waiting for you to profile your website on them.<a href="https://t.co/OSUVewgfwU">https://t.co/OSUVewgfwU</a></p>&mdash; Sia Karamalegos (@TheGreenGreek) <a href="https://twitter.com/TheGreenGreek/status/1192448473196613633?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/WebPagetest?src=hash&amp;ref_src=twsrc%5Etfw">#WebPagetest</a> is a powerful tool with a feature set that can&#39;t fit in a Twitter thread. <br><br>To get started, try out &quot;easy&quot; mode with a few default settings. Later, try to match the settings with your user analytics. <a href="https://t.co/F47QrSq1H2">https://t.co/F47QrSq1H2</a></p>&mdash; Sia Karamalegos (@TheGreenGreek) <a href="https://twitter.com/TheGreenGreek/status/1192448474379423744?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
