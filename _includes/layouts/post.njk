@@ -8,12 +8,5 @@ templateClass: tmpl-post
 
   {{ content | safe }}
 
-  <section>
-    <h2>Webmentions</h3>
-    {% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
-    {% include 'webmentions.njk' %}
-  </section>
-
-  <p><a href="{{ '/' | url }}">← Home</a></p>
-
+  <p style="margin-top:2rem"><a href="{{ '/' | url }}">← Home</a></p>
 </div>
