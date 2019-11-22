@@ -3,7 +3,7 @@
   "version": "5.0.0",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "npx eleventy",
+    "build": "NODE_ENV=production npx eleventy",
     "start": "npx eleventy --serve",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
@@ -28,7 +28,11 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
     "luxon": "^1.12.0",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.0.2"
+    "markdown-it-anchor": "^5.0.2",
+    "node-fetch": "^2.6.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15"
+  }
 }
