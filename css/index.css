@@ -168,7 +168,7 @@ a:hover {
   border: none;
   box-shadow: none;}
 .a-reset a:hover { background: none; }
-a.button {
+a.button, input.button {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cd0084+30,b000f5+100 */
   background: rgb(205,0,132); /* Old browsers  var(--pink-50); and purple-50*/
   background: -moz-linear-gradient(-45deg,  rgba(205,0,132,1) 30%, rgba(176,0,245,1) 100%);
@@ -177,6 +177,7 @@ a.button {
   border: none;
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   color: var(--white);
+  cursor: pointer;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;}
@@ -184,7 +185,8 @@ a.button-default {
   display: inline-block;
   font-size: 20px;
   padding: 16px 32px;}
-a.button:hover { background: var(--pink-40);}
+input.button-small {padding: 4px 8px;}
+a.button:hover, input.button:hover { background: var(--pink-40);}
 a.button-circle {
   align-items: center;
   border-radius: 100%;
@@ -405,9 +407,35 @@ footer p { font-size: 1em;}
 .social a svg {width: 24px;}
 footer a svg {width: 24px;}
 
+/* Webmentions */
+.webmentions img {border-radius: 50%;}
+.webmentions h3 {margin-top: 40px;}
+.webmentions__facepile a {
+  border: none;
+  box-shadow: none;}
+.webmentions__facepile a:hover {background: none;}
+.webmentions a:hover img { filter: drop-shadow(3px 5px 10px var(--pink-20));}
+.form-webmention {margin: 16px 0; width: 100%;}
+.webmention-replies img {
+  height: 24px;
+  width: 24px;}
+.webmention-replies article {margin-bottom: 32px;}
+.webmention-replies .webmention__meta {margin-bottom: 8px;}
+.webmention-replies .webmention__meta time {display: block; margin-top: 8px;}
+form input[type="url"] {
+  display: block;
+  height: 2rem;
+  margin: 4px 0;
+  width: 100%;}
+form .button {height: 2rem; width: 150px;}
+form label {font-weight: 700;}
+
 @media screen and (min-width: 380px) {
   .social a svg {width: 32px;}
   footer a svg {width: 32px;}
+  form input[type="url"] {
+    display: inline-block;
+    width: calc(100% - 160px);}
 }
 @media screen and (min-width: 440px) {.home {display: inline-block;}}
 @media screen and (min-width: 500px) {
@@ -416,6 +444,15 @@ footer a svg {width: 24px;}
     grid-template-columns: 2fr 1fr;}
   .event-location {margin: 0;}
   .event-location img {margin: 0 8px;}
+  .webmention-replies .webmention__meta {
+    display: grid;
+    grid-template-columns: 30px 1fr 200px;
+  }
+  .webmention-replies .webmention__meta time {
+    display: inline;
+    margin-top: 0;
+    text-align: right;
+  }
 }
 @media screen and (min-width: 665px) {
   header {
