@@ -448,6 +448,7 @@ form label {font-weight: 700;}
   display: grid;
   grid-template-columns: 24px 1fr;
   grid-gap: 8px;
+  margin-top: 40px;
   padding: 16px;}
 .share-well p {font-size: 14px;}
 .share-well svg {margin: auto;}
