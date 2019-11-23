@@ -56,7 +56,7 @@ node_modules/
 .env
 ```
 
-
+You probably want some content in your webmentions. If you use Twitter, [Bridgy](https://brid.gy/) is a great way to bring in mentions from Twitter. First make sure your website is listed in your profile, then link it.
 
 ## How it's all going to work
 
