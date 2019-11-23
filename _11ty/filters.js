@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const rootUrl = require('../_data/metadata.json').url
 
 module.exports = {
   getWebmentionsForUrl: (webmentions, url) => {
@@ -21,5 +22,10 @@ module.exports = {
   },
   readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
     return DateTime.fromISO(dateStr).toFormat(formatStr);
+  },
+  generateShareLink: (url, text) => {
+    const shareText = `${text} by @TheGreenGreek`
+    const shareUrl = `${rootUrl}${url}`
+    return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&amp;url=${encodeURI(shareUrl)}`
   }
 }

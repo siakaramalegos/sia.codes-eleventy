@@ -443,6 +443,16 @@ form input[type="url"] {
 form .button {height: 2rem; width: 150px;}
 form label {font-weight: 700;}
 
+.share-well {
+  background-color: rgba(222,221,227,0.4);
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  grid-gap: 8px;
+  padding: 16px;}
+.share-well p {font-size: 14px;}
+.share-well svg {margin: auto;}
+
+
 @media screen and (min-width: 380px) {
   .social a svg {width: 32px;}
   footer a svg {width: 32px;}

@@ -1,4 +1,4 @@
-<div class="webmentions content-grid-sibling" id="webmentions">
+<div class="webmentions" id="webmentions">
 
   {% set mentions = webmentions | getWebmentionsForUrl(metadata.url + webmentionUrl) %}
   {% set reposts = mentions | webmentionsByType('repost-of') %}
@@ -7,7 +7,6 @@
   {% set likesSize = likes | size %}
   {% set replies = mentions | webmentionsByType('in-reply-to')  %}
   {% set repliesSize = replies | size  %}
-
 
 {% if likesSize > 0 %}
 <div class="webmentions__facepile">
