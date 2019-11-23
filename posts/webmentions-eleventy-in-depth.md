@@ -284,7 +284,7 @@ Now we can write the webmentions template. In this example, I will show links, r
 ```
 {% endraw %}
 
-With our variables set, we can now use that data for rendering. Here I'll walk through only "replies", but feel free to see how I handled the remaining sets in [this gist](https://gist.github.com/siakaramalegos/b1f7ded21f9ecddaee91e3f6d88e2e48).
+With our variables set, we can now use that data for rendering. Here I'll walk through only "replies", but feel free to see a snapshot of how I handled the remaining sets in [this gist](https://gist.github.com/siakaramalegos/b1f7ded21f9ecddaee91e3f6d88e2e48).
 
 Since replies are more complex than just rendering a photo and link, I call another template to render the individual webmention. Here we render the count of replies and conditionally plural-ify the word "Reply". Then we loop through the reply webmentions to render them with a new nunjucks partial:
 
@@ -347,3 +347,9 @@ You can see the result of my own implementation below. Good luck! Let me know ho
 ## Continue your journey by using Microformats
 
 Keith Grant has a great write-up in his article [Adding Webmention Support to a Static Site](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/). Check out the "Enhancing with Microformats" section for an explanation and examples.
+
+## Additional resources
+
+- You can find the full code for my site on [Github](https://github.com/siakaramalegos/sia.codes-eleventy). It will evolve in the future, I'm sure, so you can focus on [this commit](https://github.com/siakaramalegos/sia.codes-eleventy/commit/d7318565917b1342b38d6b3bff4e3e548276afca) which has the bulk of my changes for adding webmentions.
+- How I added dotenv support to Netlify is covered in this [Stack Overflow answer](https://stackoverflow.com/questions/48453493/set-environment-variable-for-build-in-netlify).
+- How I set up a "cron" job through Github actions to periodically rebuild my site on Netlify (to grab and post new webmentions) is covered in [Scheduling Netlify deploys with GitHub Actions](https://www.voorhoede.nl/en/blog/scheduling-netlify-deploys-with-github-actions/).
