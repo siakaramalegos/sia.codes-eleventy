@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: layouts/page.njk
 title: Hi, I'm Sia Karamalegos.
 tags:
   - nav
