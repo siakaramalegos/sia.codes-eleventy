@@ -14,6 +14,7 @@
 
 :root{
   --grey-0: rgb(252,252,253);
+  --grey-05: #edecf0;
   --white: rgb(252,252,253);
   --grey-10: rgb(222,221,227);
   --grey-20: rgb(192,190,202);
@@ -332,16 +333,15 @@ pre {
 /* Events list */
 .event-item {
   margin-top: 1.5rem;}
-.card-list .event-item li {
-  font-size: 16px;
-  list-style-type: none;}
-.event-item li span {
+.card-list .event-item summary, .card-list .event-item details p {font-size: 16px;}
+.card-list .event-item details {margin: 8px;}
+.event-item .event-date {
   color: var(--grey-60);
   font-size: 12px;
   font-weight: 200;
   margin-right: 4px;}
 .event-item h3 { margin: 0;}
-.event-item ul {
+.event-item details {
   grid-column: span 2;
   margin-top: 0;
   padding: 0;}
@@ -354,6 +354,12 @@ pre {
   box-shadow: none;
   margin:0 8px 0 0;
   width: 12px;}
+summary::marker {color: var(--pink-20);}
+summary::-webkit-details-marker {color: var(--pink-20);}
+details p {
+  background-color: var(--grey-05);
+  padding: 16px;
+}
 
 /* Tags */
 .post-tag {

@@ -32,7 +32,16 @@ date: 2019-01-01
 <section style="max-width:680px">
   <h2>Upcoming Talks and Workshops</h2>
   <div id="upcomingEvents" class="card-list">
-    <p>Stay tuned for future talks!</p>
+    {% set upcomingEvents = 'upcomingEvents' | getEvents %}
+    {% set upcomingEventsSize = upcomingEvents | size %}
+
+    {% if upcomingEventsSize > 0 %}
+      {% for event in upcomingEvents %}
+        {% include 'event.njk' %}
+      {% endfor %}
+    {% else %}
+      <p>Stay tuned for future talks!</p>
+    {% endif %}
   </div>
   <p>Learn more <a href="{{ '/speaking/' | url }}">about my speaking</a>.</p>
   <br>
@@ -50,5 +59,3 @@ date: 2019-01-01
   <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
 </section>
 </div>
-
-<script src="/javascript/home.mjs" type="module"></script>

@@ -1,5 +1,7 @@
 const { DateTime } = require("luxon");
 const rootUrl = require('../_data/metadata.json').url
+const events = require('../_data/events.js')
+const talks = require('../_data/talks.js')
 
 module.exports = {
   getWebmentionsForUrl: (webmentions, url) => {
@@ -27,5 +29,7 @@ module.exports = {
     const shareText = `${text} by @TheGreenGreek`
     const shareUrl = `${rootUrl}${url}`
     return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&amp;url=${encodeURI(shareUrl)}`
-  }
+  },
+  getEvents: timing =>  events[timing],
+  getTalkForEvent: id => talks[id],
 }
