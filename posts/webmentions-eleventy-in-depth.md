@@ -4,6 +4,7 @@ description: Add Webmentions to your Eleventy static site with this step-by-step
 date: 2019-11-22
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
+tweetId: '1198282993678376961'
 ---
 
 I am a huge fan of the static site generator [Eleventy](https://www.11ty.io/) so far, and I was super excited to try out [Webmentions](https://indieweb.org/Webmention) with them.

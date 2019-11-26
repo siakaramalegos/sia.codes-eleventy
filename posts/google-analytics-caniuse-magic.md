@@ -4,6 +4,7 @@ description: Import your Google Analytics data into caniuse for detailed feature
 date: 2017-10-27
 tags: ['Analytics']
 layout: layouts/post.njk
+tweetId: '1197888967561162761'
 ---
 
 <figure>
