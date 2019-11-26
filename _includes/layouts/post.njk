@@ -19,8 +19,8 @@ templateClass: tmpl-post
 
     <p>If you liked this article and think others should read it, please
       <!-- Sharingbutton Twitter -->
-      <a href={{ page.url | generateShareLink(description) }}
-        target="_blank" rel="noopener">share it on Twitter</a></p>
+      <a href="{{ page.url | generateShareLink(description) }}"
+        target="_blank" rel="noopener">share it on Twitter</a> or <a href="{{ page.url | generateDiscussionLink }}">join the discussion</a>.</p>
   </div>
   </section>
 

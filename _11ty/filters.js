@@ -30,6 +30,10 @@ module.exports = {
     const shareUrl = `${rootUrl}${url}`
     return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&amp;url=${encodeURI(shareUrl)}`
   },
+  generateDiscussionLink: (url) => {
+    const postUrl = `${rootUrl}${url}`
+    return `https://twitter.com/search?f=tweets&src=typd&q=${encodeURI(postUrl)}`
+  },
   getEvents: timing =>  events[timing],
   getTalkForEvent: id => talks[id],
 }
