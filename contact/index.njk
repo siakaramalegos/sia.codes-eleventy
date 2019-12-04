@@ -1,0 +1,42 @@
+---
+layout: layouts/page.njk
+title: Contact
+tags:
+- nav
+navtitle: Contact
+templateClass: tmpl-post
+date: 2019-01-02
+---
+
+<section>
+  <p class="lead">Ready to start your next project with me? Fill out the form below, and I'll be in touch!</p>
+
+  <form class="form" name="contact" method="POST" data-netlify="true">
+    <label for="name">Name *
+      <input type="text" id="name" name="name" required>
+    </label>
+
+    <label for="email">Email *
+      <input type="email" id="email" name="email" required>
+    </label>
+
+    <label for="subject">Subject
+      <input type="text" id="subject" name="subject">
+    </label>
+
+    <label for="message">Message *
+      <textarea rows="4" id="message" name="message" required></textarea>
+    </label>
+
+    <button class="button button-default" type="submit">Send message</button>
+  </form>
+
+  <p>💕 Want to show your appreciation for speakers, organizers, and content writers?
+  Sponsor me on <a href="https://github.com/sponsors/siakaramalegos">Github Sponsors</a> or buy me a coffee on <a href="https://ko-fi.com/siacodes">Ko-fi</a>.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search.substring(1))
+    const subject = params.get('subject')
+    document.querySelector('#subject').value = subject
+  </script>
+</section>

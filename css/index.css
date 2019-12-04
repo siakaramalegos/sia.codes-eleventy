@@ -169,7 +169,7 @@ a:hover {
   border: none;
   box-shadow: none;}
 .a-reset a:hover { background: none; }
-a.button, input.button {
+a.button, input.button, button.button {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cd0084+30,b000f5+100 */
   background: rgb(205,0,132); /* Old browsers  var(--pink-50); and purple-50*/
   background: -moz-linear-gradient(-45deg,  rgba(205,0,132,1) 30%, rgba(176,0,245,1) 100%);
@@ -179,15 +179,16 @@ a.button, input.button {
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   color: var(--white);
   cursor: pointer;
+  font-family: 'Recursive', Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;}
-a.button-default {
+a.button-default, button.button-default {
   display: inline-block;
   font-size: 20px;
   padding: 16px 32px;}
 input.button-small {padding: 4px 8px;}
-a.button:hover, input.button:hover { background: var(--pink-40);}
+a.button:hover, input.button:hover, button.button:hover { background: var(--pink-40);}
 a.button-circle {
   align-items: center;
   border-radius: 100%;
@@ -446,8 +447,30 @@ form input[type="url"] {
   height: 2rem;
   margin: 4px 0;
   width: 100%;}
-form .button {height: 2rem; width: 150px;}
-form label {font-weight: 700;}
+.form-webmention .button {height: 2rem; width: 150px;}
+form label {
+  font-weight: 700;
+  margin: 4px 0 0 0;}
+.form {
+  background-color: var(--grey-05);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+  margin: 40px auto;
+  padding: 16px;}
+.form button, .form label {
+  display: block;
+  margin: 24px auto;
+  width: 90%;}
+.form input {
+  height: 2rem;}
+.form input, .form textarea {
+  border: 1px solid var(--grey-20);
+  color: var(--grey-80);
+  display: block;
+  font-family: 'Recursive', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 4px 0;
+  padding: 4px;
+  width: 100%;}
 
 .share-well {
   background-color: rgba(222,221,227,0.4);
@@ -483,6 +506,7 @@ form label {font-weight: 700;}
     margin-top: 0;
     text-align: right;
   }
+  .form {padding: 32px;}
 }
 @media screen and (min-width: 665px) {
   header {
@@ -491,6 +515,8 @@ form label {font-weight: 700;}
   .title {
     grid-column: span 2;}
   .social { grid-column: 2;}
+  .form {padding: 72px;}
+  .form button, .form label {width: 80%;}
 }
 @media screen and (min-width: 1020px) {
   header {

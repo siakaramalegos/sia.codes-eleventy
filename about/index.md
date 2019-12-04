@@ -23,7 +23,7 @@ As a person, I also love making developer's lives easier through teaching, speak
 I implement end-to-end performance managment, from audits and improvements to long-term management with CI. Whether onsite or remote, I can provide training tailored for your team and project technology.
 
 <p class="text-center">
-  <a class="button button-default" href="mailto:sia@clioandcalliope.com?subject=Performance inquiry from sia.codes">Hire me</a>
+  <a class="button button-default" href="/contact/?subject=Performance inquiry from sia.codes">Hire me</a>
 </p>
 
 </section>
@@ -31,7 +31,7 @@ I implement end-to-end performance managment, from audits and improvements to lo
 <section>
 
 ## 🎤 Want me to speak at one of your events?
-<a href="mailto:sia@clioandcalliope.com?subject=Speaking inquiry from sia.codes">Email me</a>, or [DM me on Twitter](https://twitter.com/thegreengreek)!
+<a href="/contact/?subject=Speaking inquiry from sia.codes">Send me a message</a>, or [DM me on Twitter](https://twitter.com/thegreengreek)!
 
 </section>
 
