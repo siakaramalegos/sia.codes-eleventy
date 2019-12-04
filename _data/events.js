@@ -1,6 +1,24 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: 'FrontEnd Fest',
+      conferenceUrl: 'https://frontendfest.io/',
+      location: 'Chicago, IL, USA',
+      talks: [
+        { key: 'tbd', date: '06 May 2020' },
+      ]
+    },
+    {
+      conference: 'UberConf',
+      conferenceUrl: 'https://uberconf.com/',
+      location: 'Denver, CO, USA',
+      talks: [
+        { key: 'tbd', date: '14 Jul 2020' },
+      ]
+    },
+  ],
+  pastEvents: [
+    {
       conference: 'The Progressive Web Experience',
       conferenceUrl: 'https://progressivewebexperience.io/conference/clearwater/2019/12/home',
       location: 'Clearwater, FL, USA',
@@ -11,8 +29,6 @@ module.exports = {
         { key: 'performance', date: '03 Dec 2019' },
       ]
     },
-  ],
-  pastEvents: [
     {
       conference: 'GDG New Orleans',
       conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjryzpbzb/',

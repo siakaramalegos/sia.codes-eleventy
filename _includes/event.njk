@@ -1,7 +1,7 @@
 <article class="event-item">
   <h3><a href="{{ event.conferenceUrl }}">{{ event.conference }}</a></h3>
   <div class="event-location">
-    <img src="/img/map-marker-alt.svg" alt="map marker">{{ event.location }}
+    <img src="/img/map-marker-alt.svg" alt="">{{ event.location }}
   </div>
   {% for talkInfo in event.talks %}
     {% set talk = talkInfo.key | getTalkForEvent %}
