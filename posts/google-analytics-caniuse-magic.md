@@ -5,6 +5,8 @@ date: 2017-10-27
 tags: ['Analytics']
 layout: layouts/post.njk
 tweetId: '1197888967561162761'
+isSelect: true
+featuredImagePrefix: /img/caniuse-magic/levitation
 ---
 
 <figure>

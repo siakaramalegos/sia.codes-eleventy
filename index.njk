@@ -51,9 +51,9 @@ date: 2019-01-01
 </section>
 
 <section>
-  <h2>Recent Writing</h2>
+  <h2>Select Writing</h2>
 
-  {% set postslist = collections.posts | head(-3) %}
+  {% set postslist = collections.posts | getSelect %}
   {% include "postslist.njk" %}
 
   <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>

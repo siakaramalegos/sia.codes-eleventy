@@ -4,12 +4,17 @@ description: If you use Google Fonts, a few additional steps can lead to much fa
 date: 2019-02-06
 tags: ['WebPerf', 'Fonts']
 layout: layouts/post.njk
+isSelect: true
+featuredImagePrefix: /img/fonts/typewriter_keys
 ---
 
-<!-- <a href="{{ '/posts/firstpost/' | url }}">First post</a>
-<a href="{{ '/posts/thirdpost/' | url }}">Third post</a> -->
+<figure>
+  <img src="/img/fonts/typewriter_keys.jpg"
+        alt="Close-up of typewriter keys">
+  <figcaption>Photo by <a href="https://unsplash.com/photos/tFdt_ztePy4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bob Newman</a> on <a href="https://unsplash.com/collections/3603769/font?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
 
-If you use Google Fonts on your website or web application, a few additional steps can lead to much faster load times. In this article, I will show you how to:
+In this article, I will show you how to:
 
 1. Skip over some of the latency time for downloading fonts from Google Fonts
 2. Self-host your fonts for faster speed and greater control over FOIT and FOUT

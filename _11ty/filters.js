@@ -36,4 +36,5 @@ module.exports = {
   },
   getEvents: timing =>  events[timing],
   getTalkForEvent: id => talks[id],
+  getSelect: posts => posts.filter(post => post.data.isSelect),
 }

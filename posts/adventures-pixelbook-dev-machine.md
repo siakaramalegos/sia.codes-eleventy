@@ -5,6 +5,8 @@ date: 2018-12-07
 tags: ['Tools']
 layout: layouts/post.njk
 tweetId: '1197670409543540738'
+isSelect: true
+featuredImagePrefix: /img/pixelbook/pixelbook
 ---
 
 <figure>
