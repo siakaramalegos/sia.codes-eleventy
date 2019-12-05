@@ -522,7 +522,13 @@ form label {
   background-color: var(--grey-05);
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   margin: 40px auto;
-  padding: 16px;}
+  padding: 16px;
+  position: relative;}
+.form > * {position: relative;}
+.form svg {
+  position: absolute;
+  top: 5px;
+  right: 10px;}
 .form button, .form label {
   display: block;
   margin: 24px auto;
