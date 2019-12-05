@@ -1,7 +1,6 @@
 ---
 title: My adventures in turning a Pixelbook into a developer machine
-description: If you use Google Fonts, a few additional steps can lead to much faster load times.
-date: 2018-12-07
+description: With the Chromebook Linux beta, web development got a whole lot easier.
 tags: ['Tools']
 layout: layouts/post.njk
 tweetId: '1197670409543540738'
