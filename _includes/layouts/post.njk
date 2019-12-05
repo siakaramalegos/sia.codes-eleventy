@@ -11,25 +11,41 @@ templateClass: tmpl-post
   <section class="e-content">
   {{ content | safe }}
 
-  <div class="share-well">
-    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
-      <path fill="#55acee"
-        d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+  <div class="well">
+    <svg aria-hidden="true" focusable="false" role="img" width="200px" xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512">
+      <path fill="rgba(255,209,228,0.6)"
+        d="M408.781 128.007C386.356 127.578 368 146.36 368 168.79V256h-8V79.79c0-22.43-18.356-41.212-40.781-40.783C297.488 39.423 280 57.169 280 79v177h-8V40.79C272 18.36 253.644-.422 231.219.007 209.488.423 192 18.169 192 40v216h-8V80.79c0-22.43-18.356-41.212-40.781-40.783C121.488 40.423 104 58.169 104 80v235.992l-31.648-43.519c-12.993-17.866-38.009-21.817-55.877-8.823-17.865 12.994-21.815 38.01-8.822 55.877l125.601 172.705A48 48 0 0 0 172.073 512h197.59c22.274 0 41.622-15.324 46.724-37.006l26.508-112.66a192.011 192.011 0 0 0 5.104-43.975V168c.001-21.831-17.487-39.577-39.218-39.993z"></path>
     </svg>
+    <h2>Hi, I'm Sia.</h2>
+    <p>I'm a freelance performance engineer and web developer, and I'm available for your projects.</p>
+    <a class="button button-default" href="/contact/?subject=Performance inquiry from sia.codes">Hire me</a>
 
-    <p>
-      {% if tweetId %}
-        <a href="https://twitter.com/intent/tweet?in_reply_to={{ tweetId }}">Join the conversation</a> on Twitter. Or, if you liked this article and think others should read it, please <a
-          href="https://twitter.com/intent/retweet?tweet_id={{ tweetId }}" target="_blank" rel="noopener">retweet it</a>.
-      {% else %}
-         If you liked this article and think others should read it, please <a href="{{ page.url | generateShareLink(description) }}" target="_blank" rel="noopener">share it</a>. Or, <a href="{{ page.url | generateDiscussionLink }}">find the conversation</a> on Twitter.
-      {% endif %}
-    </p>
   </div>
   </section>
 
   <section>
     <h2>Webmentions</h3>
+
+    <div class="share">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+        <path fill="#55acee"
+          d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+      </svg>
+
+      <p>
+        {% if tweetId %}
+        <a href="https://twitter.com/intent/tweet?in_reply_to={{ tweetId }}">Join the conversation</a> on Twitter. Or, if
+        you liked this article and think others should read it, please <a
+          href="https://twitter.com/intent/retweet?tweet_id={{ tweetId }}" target="_blank" rel="noopener">retweet it</a>.
+        {% else %}
+        If you liked this article and think others should read it, please <a
+          href="{{ page.url | generateShareLink(description) }}" target="_blank" rel="noopener">share it</a>. Or, <a
+          href="{{ page.url | generateDiscussionLink }}">find the conversation</a> on Twitter.
+        {% endif %}
+      </p>
+    </div>
+
     {% set webmentionUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
     {% include 'webmentions.njk' %}
   </section>

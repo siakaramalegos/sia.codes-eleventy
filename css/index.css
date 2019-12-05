@@ -539,15 +539,24 @@ form label {
   padding: 4px;
   width: 100%;}
 
-.share-well {
+.well {
   background-color: rgba(222,221,227,0.4);
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 32px;
+  position: relative;}
+.well > * {position: relative;}
+.well svg {
+  bottom: 0;
+  right: 100px;
+  position: absolute;
+  transform: rotate(45deg);}
+.share {
   display: grid;
   grid-template-columns: 24px 1fr;
-  grid-gap: 16px;
-  margin-top: 40px;
-  padding: 16px;}
-.share-well p {font-size: 14px;}
-.share-well svg {margin: auto;}
+  grid-gap: 16px;}
+.share p {font-size: 14px;margin: 0;}
+.share svg {margin: auto;}
 
 
 @media screen and (min-width: 380px) {
