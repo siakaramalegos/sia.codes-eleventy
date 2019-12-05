@@ -37,4 +37,5 @@ module.exports = {
   getEvents: timing =>  events[timing],
   getTalkForEvent: id => talks[id],
   getSelect: posts => posts.filter(post => post.data.isSelect),
+  truncate: text => text.length > 300 ? `${text.substring(0, 300)}...` : text,
 }

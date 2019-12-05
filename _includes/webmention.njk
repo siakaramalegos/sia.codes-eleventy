@@ -7,7 +7,7 @@
       <img src="{{ '/img/avatar.svg' | url }}" alt="" width="48" height="48">
       {% endif %}
       <span>
-        <a class="h-card u-url" {% if webmention.url %}href="{{ webmention.url }}" {% endif %} target="_blank" rel="noopener noreferrer"><strong class="p-name">{{ webmention.author.name }}</strong></a>
+        <strong class="p-name">{{ webmention.author.name }}</strong>
       </span>
     {% else %}
       <span>
@@ -21,7 +21,12 @@
         </time>
     {% endif %}
   </div>
-  <div>
-      {{ webmention.content.text }}
-  </div>
+  <p class="webmention-text">
+    {{ webmention.content.text | truncate }}
+    {% if webmention.url %}
+    <a href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
+      source <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="10px"><path fill="currentColor" d="M432 320h-32a16 16 0 00-16 16v112H64V128h144a16 16 0 0016-16V80a16 16 0 00-16-16H48a48 48 0 00-48 48v352a48 48 0 0048 48h352a48 48 0 0048-48V336a16 16 0 00-16-16zM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 000 34L157.67 377a24 24 0 0034 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 00-24-24z" /></svg>
+    </a>
+    {% endif %}
+  </p>
 </article>

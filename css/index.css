@@ -496,6 +496,8 @@ footer a svg {width: 24px;}
 .webmention-replies article {margin-bottom: 32px;}
 .webmention-replies .webmention__meta {margin-bottom: 8px;}
 .webmention-replies .webmention__meta time {display: block; margin-top: 8px;}
+.webmention-text {font-size: 16px; margin-top: 0;}
+.webmention-text a {font-size: 14px; margin-left: 4px;}
 form input[type="url"] {
   display: block;
   height: 2rem;
