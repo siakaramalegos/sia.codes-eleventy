@@ -1,14 +1,12 @@
 ---
-title: 'Show me the money: Justifying performance improvements using Google Analytics'
+title: 'Justifying performance improvements using Google Analytics'
 description: Trying to convince your company to make site load speed improvements? Maybe Google Analytics can help.
 date: 2019-06-13
 tags: ['WebPerf', 'Analytics']
 layout: layouts/post.njk
+isSelect: true
+featuredImagePrefix: /img/show-money/show-money
 ---
-
-<p class="lead">
-Trying to convince your company to make site load speed improvements? Maybe Google Analytics can help.
-</p>
 
 <figure>
     <img src="/img/show-money/show-money.jpg"

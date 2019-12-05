@@ -5,7 +5,15 @@ date: 2019-11-22
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
 tweetId: '1198282993678376961'
+isSelect: true
+featuredImagePrefix: /img/posts/hands-laptop
 ---
+
+<figure>
+  <img src="/img/posts/hands-laptop.jpg"
+    alt="hands on a laptop keyboard">
+  <figcaption>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
 
 I am a huge fan of the static site generator [Eleventy](https://www.11ty.io/) so far, and I was super excited to try out [Webmentions](https://indieweb.org/Webmention) with them.
 

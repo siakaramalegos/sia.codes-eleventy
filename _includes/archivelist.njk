@@ -1,0 +1,20 @@
+<div reversed class="archivelist">
+  {% for post in archivelist | reverse %}
+  <article class="archivelist-item{% if post.url == url %} archivelist-item-active{% endif %}">
+    <time class="archivelist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    <h3 class="archivelist-title">
+      <a
+        href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      <span class="archivelist-tags">
+        {% for tag in post.data.tags %}
+        {%- if tag != "posts" -%}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {%- endif -%}
+        {% endfor %}
+      </span>
+    </h3>
+    <p class="archivelist-description">{{post.data.description}}</p>
+  </article>
+  {% endfor %}
+</div>

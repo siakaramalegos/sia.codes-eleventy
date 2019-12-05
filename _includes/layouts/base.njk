@@ -52,7 +52,7 @@
   <body>
     <nav>
       <div class="content">
-        <h1 class="home"><a href="{{ '/' | url }}">sia.codes</a></h1>
+        <h1 class="home"><a class="logo-link" href="{{ '/' | url }}">sia</a></h1>
         <ul class="nav">
           {%- for nav in collections.nav -%}
           <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>

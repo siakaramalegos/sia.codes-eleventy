@@ -5,9 +5,11 @@ date: 2019-11-26
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
 tweetId: '1199441838140272647'
+isSelect: true
+featuredImagePrefix: /img/posts/twitter-phone
 ---
 
-![Mobile phone laying on table with blue screen and Twitter logo showing](/img/twitter-phone.jpg)
+![Mobile phone laying on table with blue screen and Twitter logo showing](/img/posts/twitter-phone.jpg)
 
 In today's episode of Making Sia's Blog Better™️, I wanted to better encourage readers to engage in the conversation about my blog posts. I used [Eleventy](https://www.11ty.io/) to build my blog and recently added [Webmentions](https://indieweb.org/Webmention), which are a really cool way of making self-hosted blogs a bit more engaging without implementing comments. You can check them out at the bottom of this page.
 

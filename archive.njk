@@ -7,8 +7,19 @@ permalink: /posts/
 ---
 
 <div class="content">
-  <h1>Blog</h1>
+  <section>
+    <h1>Blog</h1>
+  </section>
 
-  {% set postslist = collections.posts %}
-  {% include "postslist.njk" %}
+  <section>
+    <h2>Select posts</h2>
+    {% set postslist = collections.posts | getSelect %}
+    {% include "postslist.njk" %}
+  </section>
+
+  <section>
+    <h2>All posts</h2>
+    {% set archivelist = collections.posts %}
+    {% include "archivelist.njk" %}
+  </section>
 </div>

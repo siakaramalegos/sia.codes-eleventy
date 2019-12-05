@@ -17,10 +17,12 @@ permalink: /tags/{{ tag }}/
 ---
 
 <div class="content">
-  <h1>Tagged “{{ tag }}”</h1>
+  <section>
+    <h1>Tagged “{{ tag }}”</h1>
 
-  {% set postslist = collections[ tag ] %}
-  {% include "postslist.njk" %}
+    {% set archivelist = collections[ tag ] %}
+    {% include "archivelist.njk" %}
+  </section>
 
   <p>See <a href="{{ '/tags/' | url }}">all tags</a>.</p>
 </div>
