@@ -107,7 +107,7 @@ section {padding: 8px 0;}
 .title {
   font-size: 18vw;
   font-weight: 1000;
-  line-height: 0.75em;
+  line-height: 12vw;
   margin-bottom: 0;
   padding: 40px 4px 40px 0;
   text-align: right;
@@ -162,7 +162,6 @@ a {
   text-decoration: none;}
 a:hover {
   background-color: var(--pink-10);
-  /* color: var(--pink-50); */
   text-decoration: none; }
 .a-reset a {
   border: none;
@@ -350,7 +349,7 @@ nav img {display: block;}
   position: relative;
   transition-duration: .15s;
   transition-property: background,box-shadow,margin,padding;}
-.postlist-item:hover {
+.postlist-item:hover, .postlist-item:focus-within {
   background-color: var(--white);
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
   margin: -6px;
@@ -359,10 +358,9 @@ nav img {display: block;}
   content: "";
   top: 0;
   right: 0;
-  bottom: 42px;
+  bottom: 0;
   left: 0;
-  position: absolute;
-  z-index: 2;}
+  position: absolute;}
 .postlist-item p {font-size: 16px;margin: 10px;}
 .postlist-item h3 {margin: 10px 8px;}
 .postlist-date, .archivelist-date{
@@ -379,6 +377,7 @@ nav img {display: block;}
   object-fit: cover;
   width: 100%;}
 .postlist-item:hover .postlist-image img {filter: none; mix-blend-mode: normal;}
+.post-tag {position: relative;}
 .archivelist-item {margin-top: 40px;}
 .archivelist-title {margin: 12px 0 0 0;}
 .archivelist-tags {margin-left: 16px;}
@@ -579,8 +578,9 @@ form label {
   header {
     grid-template-columns: 150px 1fr;}
   .gradient-text {padding: 24px 3px 24px 0;}
-  .title {;
+  .title {
     font-size: 200px;
+    line-height: 110px;
     margin: 40px 0 0 0;}
   .codes {
     font-size: 160px;}

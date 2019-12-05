@@ -5,7 +5,7 @@
         <img src="{{post.data.featuredImagePrefix}}_300.jpg" alt="">
       </div>
       <p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
-      <h3 class="postlist-title">
+      <h3 class="postlist-title a-reset">
         <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
       </h3>
       <p>{{ post.data.description }}</p>
