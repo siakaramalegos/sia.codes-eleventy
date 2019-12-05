@@ -384,6 +384,18 @@ nav img {display: block;}
 .archivelist-tags a {position: relative; bottom: 4px;}
 .archivelist-description {font-size: 16px; margin: 0;}
 
+#upcoming-talks {
+  margin: 40px 0;
+  position: relative;}
+#upcoming-talks .talks {
+  margin: 0 auto;
+  max-width: 680px;}
+#upcoming-talks svg {
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  position: absolute;}
+
 /* Events list */
 .event-item {
   margin-top: 1.5rem;}
@@ -572,6 +584,10 @@ form label {
   .social { grid-column: 2;}
   .form {padding: 72px;}
   .form button, .form label {width: 80%;}
+  .postlist {grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width: 850px) {
+  #upcoming-talks svg {display: block;}
 }
 @media screen and (min-width: 1020px) {
   .home {margin-left: -10px;}

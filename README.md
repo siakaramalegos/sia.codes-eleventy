@@ -2,6 +2,18 @@
 
 This blog started with the [Eleventy](https://github.com/11ty/eleventy) 11ty blog starter.
 
+## Design inspiration
+
+General
+- https://hankchizljaw.com/
+- https://mxb.dev/
+- https://www.zachleat.com/
+
+Cards
+- https://paulrobertlloyd.com/articles/
+- https://inclusive-components.design/cards/
+
+
 
 ## Demos
 
