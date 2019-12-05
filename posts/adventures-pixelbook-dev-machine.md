@@ -1,6 +1,7 @@
 ---
 title: My adventures in turning a Pixelbook into a developer machine
 description: With the Chromebook Linux beta, web development got a whole lot easier.
+date: 2018-12-07
 tags: ['Tools']
 layout: layouts/post.njk
 tweetId: '1197670409543540738'
