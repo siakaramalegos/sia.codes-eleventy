@@ -1,6 +1,14 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: 'FOSDEM 2020 Web Performance devroom',
+      conferenceUrl: 'https://fosdem.org/2020/',
+      location: 'Brussels, Belgium',
+      talks: [
+        { key: 'fonts', date: '01 Feb 2020' },
+      ]
+    },
+    {
       conference: 'FrontEnd Fest',
       conferenceUrl: 'https://frontendfest.io/',
       location: 'Chicago, IL, USA',
@@ -44,6 +52,14 @@ module.exports = {
       talks: [
         { key: 'performance', date: '18 Oct 2019' },
         { key: 'performanceWorkshop', date: '16 Oct 2019' },
+      ]
+    },
+    {
+      conference: '#FrontEndParty',
+      conferenceUrl: 'https://www.meetup.com/FrontEndParty/events/fctkfryzmbgc/',
+      location: 'New Orleans, LA, USA',
+      talks: [
+        { key: 'preact', date: '24 Sep 2019' },
       ]
     },
     {
