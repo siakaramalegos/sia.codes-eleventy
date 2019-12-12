@@ -7,6 +7,10 @@ module.exports = {
     title: "Hint, Hint, Font Loading Matters!",
     description: "Fonts are lovely but can slow down our loads. How can we make them faster? We all love fonts. From Google Fonts to Typekit, Hoefler&Co and more, they give character and tone to our websites. The down side of fonts is that they can really slow down our loads. In this talk we'll learn about common pitfalls like critical requests depth and how to use resource hints to play tricks with latency to load web applications faster. We'll walk through a network profile to understand what's going on in the browser and how to make it faster."
   },
+  devtools: {
+    title: "Diving into Dev Tools for performance",
+    description: "Performance is important. Tooling can be hard. Do flame charts and waterfalls intimidate you? Come learn how to use common performance tools such as Chrome DevTools, Lighthouse, and webpagetest.org. We'll profile several websites with different performance issues to illustrate how to use each tool. In this talk, I'll live-profile several sites to help you see how to approach performance analysis. It's best if you already know how to use the Chrome Dev Tools inspector, but we will approach the performance tools from a beginner's starting point. Attendees should be comfortable with HTML at a minimum."
+  },
   preact: {
     title: "Preact, a tiny alternative to React",
     description: "Preact is a fast, 3kB alternative to React with the same modern API! Let's go crazy and live code a new #FrontEndParty website that uses the Meetup API to populate the upcoming event."

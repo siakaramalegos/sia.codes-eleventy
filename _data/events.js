@@ -17,6 +17,15 @@ module.exports = {
       ]
     },
     {
+      conference: 'Visual Studio Live! Nashville',
+      conferenceUrl: 'https://vslive.com/nashville',
+      location: 'Nashville, TN, USA',
+      talks: [
+        { key: 'differential', date: '19 May 2020' },
+        { key: 'performance', date: '19 May 2020' },
+      ]
+    },
+    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
