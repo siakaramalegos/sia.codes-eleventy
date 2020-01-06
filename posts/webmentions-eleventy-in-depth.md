@@ -8,7 +8,7 @@ tweetId: '1198282993678376961'
 isSelect: true
 featuredImagePrefix: /img/posts/hands-laptop
 translations:
-  - language: française
+  - language: français
     link: https://jamstatic.fr/2019/12/27/webmentions-eleventy/
 ---
 
