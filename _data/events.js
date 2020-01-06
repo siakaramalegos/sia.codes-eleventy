@@ -1,6 +1,14 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: 'Lightning Night presented by Activate',
+      conferenceUrl: 'https://www.activatelightningnight.com/',
+      location: 'Baton Rouge, LA, USA',
+      talks: [
+        { key: 'differential', date: '14 Jan 2020' },
+      ]
+    },
+    {
       conference: 'FOSDEM 2020 Web Performance devroom',
       conferenceUrl: 'https://fosdem.org/2020/',
       location: 'Brussels, Belgium',
@@ -9,11 +17,24 @@ module.exports = {
       ]
     },
     {
+      conference: '#PerfMatters Conference',
+      conferenceUrl: 'https://perfmattersconf.com/',
+      location: 'Redwood City, CA, USA',
+      talks: [
+        { key: 'imagesNew', date: '31 Mar 2020' },
+      ]
+    },
+    {
       conference: 'FrontEnd Fest',
       conferenceUrl: 'https://frontendfest.io/',
       location: 'Chicago, IL, USA',
       talks: [
-        { key: 'tbd', date: '06 May 2020' },
+        { key: 'performanceWorkshop', date: '06 May 2020' },
+        { key: 'a11yWorkshop1', date: '07 May 2020' },
+        { key: 'a11yWorkshop2', date: '07 May 2020' },
+        { key: 'devtools', date: '08 May 2020' },
+        { key: 'performance', date: '08 May 2020' },
+        { key: 'differential', date: '08 May 2020' },
       ]
     },
     {

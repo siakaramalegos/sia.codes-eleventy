@@ -3,6 +3,18 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!"
   },
+  a11yWorkshop1: {
+    title: 'Web Accessibility Workshop 101',
+    description: "In this first part of a 2-part series on web accessibility, we'll answer the questions: What does “accessibility” mean when it comes to the web? Why does it matter? What tools and resources should I use to make an accessible website or application? We'll also dive into hands-on exercises for fixing common accessibility issues such as semantic HTML, color contrast, keyboard access, and optimizing for screen readers. The exercises will continue in part 2 of this series. The workshop parts 1 and 2 are meant to be taken together.Part 1 introduces us to accessibility and begins the hands- on exercises.Part 2 continues the exercises to cover the most common topics and issues in making websites accessible.Please come with a charged laptop.You must understand HTML, CSS, and JavaScript to get the most out of this workshop."
+  },
+  a11yWorkshop2: {
+    title: 'Web Accessibility Workshop 102',
+    description: "This is the continuation of the Web Accessibility Workshop 101, in which we learned the answers to the questions: What does “accessibility” mean when it comes to the web? Why does it matter? What tools and resources should I use to make an accessible website or application? In this part, we'll continue with hands-on exercises for fixing common accessibility issues such as semantic HTML, color contrast, keyboard access, and optimizing for screen readers. The workshop parts 1 and 2 are meant to be taken together.Part 1 introduces us to accessibility and begins the hands- on exercises.Part 2 continues the exercises to cover the most common topics and issues in making websites accessible.Please come with a charged laptop.You must understand HTML, CSS, and JavaScript to get the most out of this workshop."
+  },
+  imagesNew: {
+    title: 'Responsive Images for the Web',
+    description: "Images account for 50% of the bytes downloaded to load a website. How can you make sure that your users only download the smallest image necessary while preserving image quality? In this talk, we'll focus on the underlying concepts in HTML and CSS for serving responsive images, which you can take with you no matter which tool you use.Which file formats suit which image types best? How can you use art direction in images to show the best image for a viewport layout? Come learn about this and more!"
+  },
   fonts: {
     title: "Hint, Hint, Font Loading Matters!",
     description: "Fonts are lovely but can slow down our loads. How can we make them faster? We all love fonts. From Google Fonts to Typekit, Hoefler&Co and more, they give character and tone to our websites. The down side of fonts is that they can really slow down our loads. In this talk we'll learn about common pitfalls like critical requests depth and how to use resource hints to play tricks with latency to load web applications faster. We'll walk through a network profile to understand what's going on in the browser and how to make it faster."
