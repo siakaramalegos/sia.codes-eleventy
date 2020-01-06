@@ -7,6 +7,9 @@ layout: layouts/post.njk
 tweetId: '1198282993678376961'
 isSelect: true
 featuredImagePrefix: /img/posts/hands-laptop
+translations:
+  - language: française
+    link: https://jamstatic.fr/2019/12/27/webmentions-eleventy/
 ---
 
 <figure>
