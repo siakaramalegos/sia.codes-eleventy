@@ -60,10 +60,54 @@
 
 * { box-sizing: border-box; }
 
+
+ /* The bare minimum for the English Language */
 @font-face {
- font-family: 'Recursive';
- src: url('/css/fonts/recursive-MONO_CASL_wght_slnt_ital--2019_11_05-00_13--subset-0020_007F.woff2') format('woff2-variations');
- font-weight: 300 900;}
+  font-family: 'Recursive';
+  font-style: oblique -15deg 0deg;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_english_basic.woff2') format('woff2');
+  unicode-range: U+0020-007F,U+00A9,U+2190-2193;
+}
+
+/* unicode latin-1 letters, basic european diacritics */
+@font-face {
+  font-family: 'Recursive';
+  font-style: oblique -15deg 0deg;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_latin_1.woff2') format('woff2');
+  unicode-range: U+00C0-00FF;
+}
+
+/* unicode latin-1, punc/symbols & arrows (↔ ↕ ↖ ↗ ↘ ↙) */
+@font-face {
+  font-family: 'Recursive';
+  font-style: oblique -15deg 0deg;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_latin_1_punc.woff2') format('woff2');
+  unicode-range: U+00A0-00BF,U+2194-2199;
+}
+
+/* unicode latin A extended */
+@font-face {
+  font-family: 'Recursive';
+  font-style: oblique -15deg 0deg;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_latin_ext.woff2') format('woff2');
+  unicode-range: U+0100-017F;
+}
+/* SPECIFICALLY for the 'sia' karamalegos logo @ sia.code – remove if you don't need :) */
+@font-face {
+  font-family: 'Recursive Sia';
+  font-weight: 1000;
+  font-display: block;
+  src: url('fonts/Recursive_VF_1.034--subset_sia_logo.woff2') format('woff2');
+  unicode-range: U+0073,U+0069,U+0061;
+}
 
 html, body {
   padding: 0;
@@ -106,13 +150,14 @@ h1, h2, h3, h4, h5, h6 {
 section {padding: 8px 0;}
 .title {
   font-size: 18vw;
-  font-weight: 1000;
+  font-weight: 300;
   line-height: 12vw;
   margin-bottom: 0;
   padding: 40px 4px 40px 0;
   text-align: right;
   width: 100%;}
 .sia {
+  font-family: 'Recursive Sia', Arial, Helvetica, sans-serif;
   color: var(--blue-40);
   display: block;}
 .codes {
@@ -130,14 +175,12 @@ li { margin-top: 0.5em; margin-bottom: 0.5em;}
 p.lead {
   color: var(--grey-50);
   font-size: 18px;
-  font-style: italic;
-  font-variation-settings: 'ital' 1, 'slnt' -8;}
+  font-variation-settings: 'ital' 0, 'slnt' -8}
 .text-right { text-align: right;}
 em { font-variation-settings: 'ital' 1, 'slnt' -8; }
 .text-center {text-align: center;}
 blockquote {
   color: var(--grey-60);
-  font-style: italic;
   font-variation-settings: 'ital' 1, 'slnt' -8;
   margin: 32px;
   position: relative;
@@ -267,7 +310,7 @@ pre,
 code {
   font-family: 'Recursive', Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
   line-height: 1.5;
-  font-variation-settings: "mono" 1, "MONO" 1;}
+  font-variation-settings: "MONO" 1;}
 code {
   background-color: rgba(222,221,227,0.7);
   font-size: 14px;  }
