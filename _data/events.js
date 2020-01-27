@@ -1,14 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'Lightning Night presented by Activate',
-      conferenceUrl: 'https://www.activatelightningnight.com/',
-      location: 'Baton Rouge, LA, USA',
-      talks: [
-        { key: 'differential', date: '14 Jan 2020' },
-      ]
-    },
-    {
       conference: 'FOSDEM 2020 Web Performance devroom',
       conferenceUrl: 'https://fosdem.org/2020/',
       location: 'Brussels, Belgium',
