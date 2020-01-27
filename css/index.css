@@ -104,7 +104,7 @@
 @font-face {
   font-family: 'Recursive Sia';
   font-weight: 1000;
-  font-display: swap;
+  font-display: block;
   src: url('fonts/Recursive_VF_1.034--subset_sia_logo.woff2') format('woff2');
   unicode-range: U+0073,U+0069,U+0061;
 }
