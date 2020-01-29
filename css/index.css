@@ -164,7 +164,8 @@ section {padding: 8px 0;}
   color: var(--blue-50);
   font-size: 15vw;
   font-weight: 300;
-  letter-spacing: -0.088em;}
+  letter-spacing: -0.088em;
+  font-feature-settings: 'ss20';}
 header p { margin-top: 0; }
 .subtitle p {max-width: 37.5em;}
 p,
