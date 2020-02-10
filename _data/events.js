@@ -1,11 +1,19 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'FOSDEM 2020 Web Performance devroom',
-      conferenceUrl: 'https://fosdem.org/2020/',
-      location: 'Brussels, Belgium',
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcdbxb/',
+      location: 'New Orleans, LA, USA',
       talks: [
-        { key: 'fonts', date: '01 Feb 2020' },
+        { key: 'imagesNew', date: '18 Feb 2020' },
+      ]
+    },
+    {
+      conference: 'Delgado Community College Career Speaker Series',
+      conferenceUrl: 'http://www.dcc.edu/',
+      location: 'New Orleans, LA, USA',
+      talks: [
+        { key: 'career', date: '19 Feb 2020' },
       ]
     },
     {
@@ -43,11 +51,22 @@ module.exports = {
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
       talks: [
-        { key: 'tbd', date: '14 Jul 2020' },
+        { key: 'performanceWorkshop', date: '14 Jul 2020' },
+        { key: 'devtools', date: '15 Jul 2020' },
+        { key: 'performance', date: '15 Jul 2020' },
+        { key: 'differential', date: '15 Jul 2020' },
       ]
     },
   ],
   pastEvents: [
+    {
+      conference: 'FOSDEM 2020 Web Performance devroom',
+      conferenceUrl: 'https://fosdem.org/2020/',
+      location: 'Brussels, Belgium',
+      talks: [
+        { key: 'fonts', date: '01 Feb 2020' },
+      ]
+    },
     {
       conference: 'The Progressive Web Experience',
       conferenceUrl: 'https://progressivewebexperience.io/conference/clearwater/2019/12/home',

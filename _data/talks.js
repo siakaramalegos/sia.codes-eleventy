@@ -3,6 +3,10 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!"
   },
+  career: {
+    title: "My path to freelance web development",
+    description: "In this talk to students interested in technology fields at Delgado Community College, I describe my career journey and what it took to get to where I needed to be at each stage, including the pitfalls, privileges, and where I still want to go."
+  },
   a11yWorkshop1: {
     title: 'Web Accessibility Workshop 101',
     description: "In this first part of a 2-part series on web accessibility, we'll answer the questions: What does “accessibility” mean when it comes to the web? Why does it matter? What tools and resources should I use to make an accessible website or application? We'll also dive into hands-on exercises for fixing common accessibility issues such as semantic HTML, color contrast, keyboard access, and optimizing for screen readers. The exercises will continue in part 2 of this series. The workshop parts 1 and 2 are meant to be taken together.Part 1 introduces us to accessibility and begins the hands- on exercises.Part 2 continues the exercises to cover the most common topics and issues in making websites accessible.Please come with a charged laptop.You must understand HTML, CSS, and JavaScript to get the most out of this workshop."

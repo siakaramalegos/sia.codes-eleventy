@@ -112,7 +112,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Recursive', Arial, Helvetica, sans-serif;
+  font-family: 'Recursive', Verdana, Arial, Helvetica, sans-serif;
   color: var(--grey-80);
   background-color: var(--white);
   min-height: 100%;
@@ -188,6 +188,7 @@ blockquote {
 blockquote::before {
   content: "\201C";
   color: var(--grey-10);
+  font-family:   'Recursive', Arial, Helvetica, sans-serif;
   font-size: 150px;
   position: absolute;
   left: -46px;
