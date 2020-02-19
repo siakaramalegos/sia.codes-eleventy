@@ -1,22 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'GDG New Orleans',
-      conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcdbxb/',
-      location: 'New Orleans, LA, USA',
-      talks: [
-        { key: 'imagesNew', date: '18 Feb 2020' },
-      ]
-    },
-    {
-      conference: 'Delgado Community College Career Speaker Series',
-      conferenceUrl: 'http://www.dcc.edu/',
-      location: 'New Orleans, LA, USA',
-      talks: [
-        { key: 'career', date: '19 Feb 2020' },
-      ]
-    },
-    {
       conference: '#PerfMatters Conference',
       conferenceUrl: 'https://perfmattersconf.com/',
       location: 'Redwood City, CA, USA',
@@ -59,6 +43,22 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcdbxb/',
+      location: 'New Orleans, LA, USA',
+      talks: [
+        { key: 'imagesNew', date: '18 Feb 2020' },
+      ]
+    },
+    {
+      conference: 'Delgado Community College Career Speaker Series',
+      conferenceUrl: 'http://www.dcc.edu/',
+      location: 'New Orleans, LA, USA',
+      talks: [
+        { key: 'career', date: '19 Feb 2020' },
+      ]
+    },
     {
       conference: 'FOSDEM 2020 Web Performance devroom',
       conferenceUrl: 'https://fosdem.org/2020/',

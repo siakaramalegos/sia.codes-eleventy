@@ -264,7 +264,10 @@ a.logo-link {
   height: 50px;
   width: 50px;
 }
-img { max-width: 100%; }
+img {
+  height: auto;
+  max-width: 100%;
+}
 .tmpl-post img { box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); }
 iframe {box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12); margin: 32px auto;}
 .twitter-tweet {

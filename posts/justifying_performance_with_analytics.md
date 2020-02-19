@@ -10,7 +10,9 @@ featuredImagePrefix: /img/show-money/show-money
 
 <figure>
     <img src="/img/show-money/show-money.jpg"
-         alt="Man's hand holding out a fist full of dollars toward the viewer">
+         alt="Man's hand holding out a fist full of dollars toward the viewer"
+         height="383px"
+         width="680px">
     <figcaption>Photo by <a href="https://unsplash.com/photos/MNXaW_ABlZY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">lucas Favre</a> on <a href="https://unsplash.com/collections/1815009/checkout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 
