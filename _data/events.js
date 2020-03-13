@@ -9,19 +9,6 @@ module.exports = {
       ]
     },
     {
-      conference: 'FrontEnd Fest',
-      conferenceUrl: 'https://frontendfest.io/',
-      location: 'Chicago, IL, USA',
-      talks: [
-        { key: 'performanceWorkshop', date: '06 May 2020' },
-        { key: 'a11yWorkshop1', date: '07 May 2020' },
-        { key: 'a11yWorkshop2', date: '07 May 2020' },
-        { key: 'devtools', date: '08 May 2020' },
-        { key: 'performance', date: '08 May 2020' },
-        { key: 'differential', date: '08 May 2020' },
-      ]
-    },
-    {
       conference: 'Visual Studio Live! Nashville',
       conferenceUrl: 'https://vslive.com/nashville',
       location: 'Nashville, TN, USA',
@@ -39,6 +26,19 @@ module.exports = {
         { key: 'devtools', date: '15 Jul 2020' },
         { key: 'performance', date: '15 Jul 2020' },
         { key: 'differential', date: '15 Jul 2020' },
+      ]
+    },
+    {
+      conference: 'FrontEnd Fest',
+      conferenceUrl: 'https://frontendfest.io/',
+      location: 'Chicago, IL, USA',
+      talks: [
+        { key: 'performanceWorkshop', date: '29 Sep 2020' },
+        { key: 'a11yWorkshop1', date: '30 Sep 2020' },
+        { key: 'a11yWorkshop2', date: '30 Sep 2020' },
+        { key: 'devtools', date: '01 Oct 2020' },
+        { key: 'performance', date: '01 Oct 2020' },
+        { key: 'differential', date: '01 Oct 2020' },
       ]
     },
   ],
