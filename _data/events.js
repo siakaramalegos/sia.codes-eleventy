@@ -1,23 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: '#PerfMatters Conference',
-      conferenceUrl: 'https://perfmattersconf.com/',
-      location: 'Redwood City, CA, USA',
-      talks: [
-        { key: 'imagesNew', date: '31 Mar 2020' },
-      ]
-    },
-    {
-      conference: 'Visual Studio Live! Nashville',
-      conferenceUrl: 'https://vslive.com/nashville',
-      location: 'Nashville, TN, USA',
-      talks: [
-        { key: 'differential', date: '19 May 2020' },
-        { key: 'performance', date: '19 May 2020' },
-      ]
-    },
-    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
@@ -41,8 +24,33 @@ module.exports = {
         { key: 'differential', date: '01 Oct 2020' },
       ]
     },
+    {
+      conference: 'Visual Studio Live! Philadelphia',
+      conferenceUrl: 'https://vslive.com/nashville',
+      location: 'Philadelphia, PN, USA',
+      talks: [
+        { key: 'differential', date: '20 Oct 2020' },
+        { key: 'performance', date: '20 Oct 2020' },
+      ]
+    },
   ],
   pastEvents: [
+    {
+      conference: 'Magnolia JS',
+      conferenceUrl: 'https://magnoliajs.com/',
+      location: 'Jackson, MS, USA',
+      talks: [
+        { key: 'differential', date: '16 Apr 2020' },
+      ]
+    },
+    {
+      conference: '#PerfMatters Conference',
+      conferenceUrl: 'https://perfmattersconf.com/',
+      location: 'Redwood City, CA, USA',
+      talks: [
+        { key: 'imagesNew', date: '31 Mar 2020' },
+      ]
+    },
     {
       conference: 'GDG New Orleans',
       conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcdbxb/',
