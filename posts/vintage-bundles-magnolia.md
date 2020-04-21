@@ -1,6 +1,6 @@
 ---
 title: Vintage Bundles talk at Magnolia JS
-description: Learn to optimize your images for the web in this video from PerfMatters Conf.
+description: What are some strategies for serving modern JavaScript to modern browsers?
 date: 2020-04-21
 tags: ['JavaScript', 'WebPerf']
 layout: layouts/post.njk
