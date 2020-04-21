@@ -5,8 +5,8 @@ date: 2020-02-11
 tags: ['Web', 'Tools']
 layout: layouts/post.njk
 tweetId: '1227248318159491077'
-# isSelect: true
-# featuredImagePrefix: /img/pixelbook/pixelbook
+isSelect: true
+featuredImagePrefix: /img/posts/disappointed-child
 ---
 
 **Step 1**: Buy a domain. You might have a problem if you already have 20 domains waiting to be used, but that's okay. Feel free to buy more domains. You never know when you might need that perfect domain name. P.S. [zeit.co](https**://zeit.co/) has a great [domain search tool](https://zeit.co/domains) with hacks. Now I've just enabled your habit. You're welcome.
@@ -38,3 +38,5 @@ tweetId: '1227248318159491077'
 **Step 13**: 5 months later, write a blog post.
 
 *Note to self: next time, just hire a designer.*
+
+<small>Blog gallery photo by [Henrikke Due](https://unsplash.com/@henrikkedue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash</small>
