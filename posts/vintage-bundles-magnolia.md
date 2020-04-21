@@ -4,7 +4,7 @@ description: What are some strategies for serving modern JavaScript to modern br
 date: 2020-04-21
 tags: ['JavaScript', 'WebPerf']
 layout: layouts/post.njk
-# tweetId: '1251260214051045376'
+tweetId: '1252703197904408577'
 isSelect: true
 featuredImagePrefix: /img/posts/vintage-bundles
 ---
