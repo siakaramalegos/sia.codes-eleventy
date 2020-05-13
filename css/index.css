@@ -592,7 +592,7 @@ form label {
   margin: 4px 0;
   padding: 4px;
   width: 100%;}
-
+#honey {display: none;}
 .well {
   background-color: rgba(222,221,227,0.4);
   margin-top: 40px;
