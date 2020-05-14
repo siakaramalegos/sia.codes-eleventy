@@ -26,7 +26,7 @@ pre[class*="language-"] {
 	border-radius: .3em;
 }
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
-	color: #75715e;
+	color: #97927d;
 }
 .token.punctuation {
 	color: #f8f8f2;
