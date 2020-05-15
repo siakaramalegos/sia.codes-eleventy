@@ -11,7 +11,7 @@ layout: layouts/post.njk
 
 [Eleventy](https://www.11ty.dev/) is a static site generator that makes building static, performant websites a breeze. It uses JavaScript to build pages at build time, but does not require any JavaScript in the client to render them.
 
-Eleventy's magic comes with powerful tools for data, but the data model can be a lot to conceptualize when you're new to Eleventy. In this post, I'll explain the hierarchy of the data that we can work with and how to access it. I'll use real-world examples for learners like me who understand concepts better when they see them applied in practice.
+Eleventy's magic comes with powerful tools for data, but the data model can be a lot to conceptualize when you're new to Eleventy. In this post, I'll explain the hierarchy of the data that we can work with and how to access it. I'll use real-world examples for learners like me who understand concepts better when they see them applied in practice. Disclaimer: opinions ahead! I'm going to focus more on the concepts that will help you in decision making. Links are provided if you want to dive into the details of any one concept. I hope to make a second post in this series that talks about manipulating data, so stay tuned!
 
 The examples here will use HTML, Markdown, JavaScript, JSON, and [Nunjucks](https://mozilla.github.io/nunjucks/templating.html). For reference, I'm using [Eleventy version 0.11.0](https://github.com/11ty/eleventy/releases/tag/v0.11.0) as it has a few cool new tools.
 
@@ -84,7 +84,7 @@ By default, Eleventy builds pages based on your file and directory structure. In
 Before we move on to custom data, note that Eleventy also provides `pagination` data to a page. Pagination is a very specific use case, so I won't cover it here. Read more about [pagination in the docs](https://www.11ty.dev/docs/pagination/).
 
 ## Collection data
-With [collections](https://www.11ty.dev/docs/collections/), we are upping the magicalness of Eleventy. Collections are groups of pages that are grouped by [tags](https://www.11ty.dev/docs/collections/#tag-syntax). To conceptualize this, think of a traditional blog with posts on multiple topics. One post might be tagged `JavaScript` while another might be tagged both `JavaScript` and `HTML`. If you like relational databases, think of tags and pages as having a many-to-many relationship.
+With [collections](https://www.11ty.dev/docs/collections/), we are upping the magicalness of Eleventy. Collections are groups of pages that are grouped by [tags](https://www.11ty.dev/docs/collections/#tag-syntax)*. To conceptualize this, think of a traditional blog with posts on multiple topics. One post might be tagged `JavaScript` while another might be tagged both `JavaScript` and `HTML`. If you like relational databases, think of tags and pages as having a many-to-many relationship.
 
 Collections are useful for rendering lists of pages that include the ability to navigate to those pages. For example, an index page for your blog posts or a list of pages with the same content tag.
 
@@ -172,6 +172,29 @@ A new feature in version 0.11.0 is a universal filter for giving you [previous a
 
 In the [`2-collections` branch](https://github.com/siakaramalegos/eleventy-data-tutorial/tree/2-collections) of the repo, I created index pages for both the podcasts and posts, and added those index pages to the site's navbar, all using collections.
 
+### * Custom collections
+Tags are the most common way of creating collections, but you can actually create [custom collections](https://www.11ty.dev/docs/collections/#advanced-custom-filtering-and-sorting) using JavaScript in your Eleventy config. [Phil Hawksworth](https://twitter.com/philhawksworth) uses this feature in [his blog](https://www.hawksworx.com/) to create a collection of the tags themselves as well as create a collection of all items in the blog folder, among other things:
+
+```javascript
+// .eleventy.js
+module.exports = function(eleventyConfig) {
+
+    // Assemble some collections
+  eleventyConfig.addCollection("tagList", require("./src/site/_filters/getTagList.js"));
+  eleventyConfig.addCollection("posts", function(collection) {
+    return collection.getFilteredByGlob("src/site/blog/*.md").reverse();
+  });
+  eleventyConfig.addCollection("cards", function(collection) {
+    return collection.getAll().filter(function(item) {
+      return "card" in item.data;
+    });
+  });
+
+};
+```
+
+See Phil's [source code](https://github.com/philhawksworth/hawksworx.com/blob/fe1cfc2dfecea0b141b035f019cb315aaaeb02ef/.eleventy.js#L22-L31).
+
 ## Template data
 So far, we've only been using the data supplied by Eleventy with only a few custom data elements that I snuck in while you weren't looking. 👀 Let's take a look at those now.
 
@@ -193,7 +216,7 @@ stack Dijkstra looks good to me Firefox bike-shedding scrum master.
 We learned about `tags` already; `layout` is a similar special template data key in Eleventy which tells it which [layout file](https://www.11ty.dev/docs/layouts/) to use for your page (found in a `/_includes/` folder). Other [special template data keys for templates](https://www.11ty.dev/docs/data-configuration/) include `permalink`, `date`, and more.
 
 ## Custom data and the data hierarchy
-Finally, we come to custom data. In the example above, I set a `title` attribute in my front matter. This is not data automatically supplied or used by Eleventy. It is completely custom. In this case, I use it to populate both my webpage's `<title>` element and the primary heading, or `<h1>`. Custom data you set in this manner is available directly in a template using the name you gave it:
+Finally, we come to custom data. In the example above, I set a `title` attribute in my front matter. This is not data automatically supplied nor used by Eleventy. It is completely custom. In this case, I use it to populate both my webpage's `<title>` element and the primary heading, or `<h1>`. Custom data you set in this manner is available directly in a template using the name you gave it:
 
 {% raw %}
 ```html
@@ -271,9 +294,9 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
-Now our posts index page, `/src/posts/index.njk`, is showing up in our posts collection list because it's inheriting the tag from the directory. We can fix this by renaming it `posts.njk` and moving it up to the `/src/` directory.
+Now our posts index page, `/src/posts/index.njk`, is showing up in our posts collection list because it's inheriting the tag from the directory. We can fix this by renaming it `posts.njk` and moving it up to the `/src/` directory. This move preserves the original routing due to the magic of Eleventy's directory- and file-based build method.
 
-You can find the code for this section in the [`3-data-hierarchy` branch](https://github.com/siakaramalegos/eleventy-data-tutorial/tree/3-data-hierarchy). This was just one example of using the data hierarchy - you should definitely check out the [data hierarchy docs](https://www.11ty.dev/docs/data/#sources-of-data) to learn about the other options too.
+You can find the code for this section in the [`3-data-hierarchy` branch](https://github.com/siakaramalegos/eleventy-data-tutorial/tree/3-data-hierarchy). This was just one example of using the data hierarchy - you should definitely check out the [data hierarchy docs](https://www.11ty.dev/docs/data/#sources-of-data) to learn about the other options too. I could spend loads of time explaining the hierarchy, but that would make it seem like the most important concept in all of Eleventy. Just know that it gives you the ability to inherit or scope data as you please. So if you need more precision on managing inheritance or scope, dive down on that concept more.
 
 ### What custom data is even available in a view?
 You're trying to build a page, but you can't figure out "where" your new variable that you thought you set. I haven't found a way to log everything available in a page - something akin to `self` or `this`. I have found a way to hack this with collections. For each item in a collection, you can `log` the `item.data` which will show the special Eleventy data attributes as well as your own custom ones:
@@ -308,7 +331,7 @@ You're trying to build a page, but you can't figure out "where" your new variabl
 If you know of a way to do this more easily, please share, and I'll update this post!
 
 ## Custom Data with a capital D
-The data hierarchy and examples I gave above are great for providing smart defaults, inheritance, and merging basic page data. But what about what I like to call "Data with a capital D"? Do you need to render something that is dependent on a large data object or array? Do you need to fetch data from another URL before statically rendering it?
+The data hierarchy and examples I gave above are great for providing smart defaults, inheritance, and merging basic page data. But what about what I like to call "Data with a capital D"? Do you need to render something that is dependent on a large data object or array? Do you need to fetch data from another URL before statically rendering it? Do you need to manipulate some data to make it easier to use?
 
 The data hierarchy technically handles that too, but we usually use either global data files, or maybe directory- or file-specific data files. Three examples I have implemented in Eleventy include:
 
@@ -316,7 +339,7 @@ The data hierarchy technically handles that too, but we usually use either globa
 - Fetching webmentions for all my blog posts on sia.codes to show them at the bottom of an article with re-builds triggered every 4 hours to pull in new ones ([example article with webmentions](https://sia.codes/posts/webmentions-eleventy-in-depth/) at the bottom).
 - Organizing courses, modules, and lessons in a new Jamstack course management system. (I hope to release an open source version soon!)
 
-I'll focus on the [global data file](https://www.11ty.dev/docs/data-global/) method here. Data in files located in a `/_data/` directory is globally accessible in all pages using the filename. Your files can either be JSON, or you can use `module.exports` from a JavaScript file. In our repo, [branch `4-big-d-data`](https://github.com/siakaramalegos/eleventy-data-tutorial/tree/4-big-d-data), I created a dogs data file:
+I'll focus on the [global data file](https://www.11ty.dev/docs/data-global/) method here. Data in files located in a `/_data/` directory is globally accessible in all pages using the filename. Your files can either be JSON, or you can use `module.exports` from a JavaScript file (actually, it can handle [more data types](https://www.11ty.dev/docs/data-custom/) if you don't like JavaScript 😅). In our repo, [branch `4-big-d-data`](https://github.com/siakaramalegos/eleventy-data-tutorial/tree/4-big-d-data), I created a dogs data file:
 
 ```javascript
 // /src/_data/dogs.js
@@ -366,6 +389,8 @@ tags: ['nav']
 
 If you needed to fetch data, you could use a JavaScript file and [return an async function](https://www.11ty.dev/docs/data-js/) for your `module.exports`. It's a bit complex, but my [webmentions code](https://github.com/siakaramalegos/sia.codes-eleventy/blob/master/_data/webmentions.js) is an example of this. If you're interested in the details, I wrote up a [full tutorial](https://sia.codes/posts/webmentions-eleventy-in-depth/) on adding webmentions to an Eleventy site.
 
+If you want to manipulate data before using it, you could "just use JavaScript". For example, in my online course project, I import my course>module>lesson hierarchy data from `/_data/courses.js` into another `/_data/lessonPrevNext.js` file to manually set a previous and next lesson since the sort order is a bit more nuanced. I wanted one source of truth, but needed something easier to work with in my views.
+
 ## Summary
 Eleventy is a powerful static site generator with a lot of flexibilty in how to handle data. It's so flexible that sometimes your options for architecting data can be overwhelming. The primary ways I use data in developing Eleventy apps are:
 
@@ -377,3 +402,6 @@ Eleventy is a powerful static site generator with a lot of flexibilty in how to 
 To see your data, use the [`log`](https://www.11ty.dev/docs/filters/log/) universal filter.
 
 Have you used data in a unique way in your Eleventy sites? If so, I'd love to see your examples!
+
+## Thanks
+Special thanks to [Chris Guzman](https://twitter.com/SpeakToChris), [Aaron Peters](https://twitter.com/aaronpeters), [David Rhoden](https://twitter.com/davidrhoden), and [Phil Hawksworth](https://twitter.com/philhawksworth) for giving me their time and feedback!
