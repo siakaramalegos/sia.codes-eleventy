@@ -4,8 +4,8 @@ description: Setting and using data in the static site generator Eleventy
 date: 2020-05-15
 tags: ['IndieWeb', 'Eleventy', 'JavaScript']
 layout: layouts/post.njk
-# tweetId: '1197670409543540738'
-# isSelect: true
+tweetId: '1261340524201390081'
+isSelect: true
 featuredImagePrefix: /img/posts/possum
 ---
 
