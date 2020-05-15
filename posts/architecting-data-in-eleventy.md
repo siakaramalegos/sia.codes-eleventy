@@ -1,17 +1,25 @@
 ---
 title: Architecting data in Eleventy
 description: Setting and using data in the static site generator Eleventy
-date: 2020-05-13
+date: 2020-05-15
 tags: ['IndieWeb', 'Eleventy', 'JavaScript']
 layout: layouts/post.njk
 # tweetId: '1197670409543540738'
 # isSelect: true
-# featuredImagePrefix: /img/pixelbook/pixelbook
+featuredImagePrefix: /img/posts/possum
 ---
+
+<figure>
+    <img src="/img/posts/possum_600.jpg"
+         alt="Possum overlayed on a keyboard">
+    <figcaption>This is what happens when a fan of Eleventy is not a graphic designer.</figcaption>
+</figure>
 
 [Eleventy](https://www.11ty.dev/) is a static site generator that makes building static, performant websites a breeze. It uses JavaScript to build pages at build time, but does not require any JavaScript in the client to render them.
 
-Eleventy's magic comes with powerful tools for data, but the data model can be a lot to conceptualize when you're new to Eleventy. In this post, I'll explain the hierarchy of the data that we can work with and how to access it. I'll use real-world examples for learners like me who understand concepts better when they see them applied in practice. Disclaimer: opinions ahead! I'm going to focus more on the concepts that will help you in decision making. Links are provided if you want to dive into the details of any one concept. I hope to make a second post in this series that talks about manipulating data, so stay tuned!
+Eleventy's magic comes with powerful tools for data, but the data model can be a lot to conceptualize when you're new to Eleventy. In this post, I'll explain the hierarchy of the data that we can work with and how to access it. I'll use real-world examples for learners like me who understand concepts better when they see them applied in practice.
+
+Disclaimer: opinions ahead! I'm going to focus more on the concepts that will help you in decision making. Links are provided if you want to dive into the details of any one concept. I hope to make a second post in this series that talks about manipulating data, so stay tuned!
 
 The examples here will use HTML, Markdown, JavaScript, JSON, and [Nunjucks](https://mozilla.github.io/nunjucks/templating.html). For reference, I'm using [Eleventy version 0.11.0](https://github.com/11ty/eleventy/releases/tag/v0.11.0) as it has a few cool new tools.
 
@@ -389,7 +397,7 @@ tags: ['nav']
 
 If you needed to fetch data, you could use a JavaScript file and [return an async function](https://www.11ty.dev/docs/data-js/) for your `module.exports`. It's a bit complex, but my [webmentions code](https://github.com/siakaramalegos/sia.codes-eleventy/blob/master/_data/webmentions.js) is an example of this. If you're interested in the details, I wrote up a [full tutorial](https://sia.codes/posts/webmentions-eleventy-in-depth/) on adding webmentions to an Eleventy site.
 
-If you want to manipulate data before using it, you could "just use JavaScript". For example, in my online course project, I import my course>module>lesson hierarchy data from `/_data/courses.js` into another `/_data/lessonPrevNext.js` file to manually set a previous and next lesson since the sort order is a bit more nuanced. I wanted one source of truth, but needed something easier to work with in my views.
+If you want to manipulate data before using it, you could "just use JavaScript". For example, in my online course project, I import my course>module>lesson hierarchy data from `/_data/courses.js` into another `/_data/lessonPrevNext.js` file to manually set a previous and next lesson since the sort order is a bit more nuanced. I wanted one source of truth, but needed something easier to work with in my views. [Computed data](https://www.11ty.dev/docs/data-computed/) is another new feature in 0.11.0 that you can use as well.
 
 ## Summary
 Eleventy is a powerful static site generator with a lot of flexibilty in how to handle data. It's so flexible that sometimes your options for architecting data can be overwhelming. The primary ways I use data in developing Eleventy apps are:
@@ -405,3 +413,5 @@ Have you used data in a unique way in your Eleventy sites? If so, I'd love to se
 
 ## Thanks
 Special thanks to [Chris Guzman](https://twitter.com/SpeakToChris), [Aaron Peters](https://twitter.com/aaronpeters), [David Rhoden](https://twitter.com/davidrhoden), and [Phil Hawksworth](https://twitter.com/philhawksworth) for giving me their time and feedback!
+
+I apologize for the cover image abomination. It is a mash up of two great images on Unsplash by [Mikell Darling](https://unsplash.com/photos/Mmz_ncRz4ZQ) and [Yingchih](https://unsplash.com/photos/TZj-urJKRao).
