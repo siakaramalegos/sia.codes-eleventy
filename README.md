@@ -23,6 +23,8 @@ Cards
 
 ## Getting Started
 
+Note that the [default branch is `main`](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx).
+
 ### 1. Clone this repository:
 
 ```
@@ -85,3 +87,5 @@ DEBUG=* npx eleventy
 For all sia.codes enhancements: [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 For the eleventy-base-blog: MIT
+
+Content is all &copy; Sia Karamalegos
