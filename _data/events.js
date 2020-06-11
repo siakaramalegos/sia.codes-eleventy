@@ -1,14 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'NFJS Virtual Workshop',
-      conferenceUrl: 'https://nofluffjuststuff.com/virtual-workshops/170/web_performance_deep_dive',
-      location: 'Online',
-      talks: [
-        { key: 'performanceWorkshop', date: '28 May 2020' },
-      ]
-    },
-    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
@@ -43,6 +35,14 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'NFJS Virtual Workshop',
+      conferenceUrl: 'https://nofluffjuststuff.com/virtual-workshops/170/web_performance_deep_dive',
+      location: 'Online',
+      talks: [
+        { key: 'performanceWorkshop', date: '28 May 2020' },
+      ]
+    },
     {
       conference: 'Magnolia JS',
       conferenceUrl: 'https://magnoliajs.com/',
