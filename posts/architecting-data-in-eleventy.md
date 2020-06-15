@@ -26,7 +26,7 @@ The examples here will use HTML, Markdown, JavaScript, JSON, and [Nunjucks](http
 ## Getting started
 The [Eleventy docs](https://www.11ty.dev/docs/) are a key place to start understanding the different features. We're going to take these a few steps further to give you an over-arching understanding of how it all works together.
 
-To follow along, you can find the code in my [eleventy-data-tutorial](https://github.com/siakaramalegos/eleventy-data-tutorial) repo. The master branch contains a bare-bones starting Eleventy app with an index.html and a single layout.
+To follow along, you can find the code in my [eleventy-data-tutorial](https://github.com/siakaramalegos/eleventy-data-tutorial) repo. The `main` branch contains a bare-bones starting Eleventy app with an index.html and a single layout.
 
 ## How do I see my data??
 As someone used to building apps with front-end frameworks or client-side JavaScript, I felt like a deer in the headlights when I first wanted to "see" my data. Eleventy is using JavaScript to build full HTML pages in Node, not render them in a browser. This means we don't have access to browser dev tools like the debugger or the browser console.
