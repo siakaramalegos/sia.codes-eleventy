@@ -28,7 +28,7 @@ module.exports = {
   generateShareLink: (url, text) => {
     const shareText = `${text} by @TheGreenGreek`
     const shareUrl = `${rootUrl}${url}`
-    return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&amp;url=${encodeURI(shareUrl)}`
+    return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&url=${encodeURI(shareUrl)}`
   },
   generateDiscussionLink: (url) => {
     const postUrl = `${rootUrl}${url}`
