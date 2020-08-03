@@ -1,17 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'UberConf',
-      conferenceUrl: 'https://uberconf.com/',
-      location: 'Denver, CO, USA',
-      talks: [
-        { key: 'performanceWorkshop', date: '14 Jul 2020' },
-        { key: 'devtools', date: '15 Jul 2020' },
-        { key: 'performance', date: '15 Jul 2020' },
-        { key: 'differential', date: '15 Jul 2020' },
-      ]
-    },
-    {
       conference: 'FrontEnd Fest',
       conferenceUrl: 'https://frontendfest.io/',
       location: 'Chicago, IL, USA',
@@ -24,17 +13,16 @@ module.exports = {
         { key: 'differential', date: '01 Oct 2020' },
       ]
     },
-    {
-      conference: 'Visual Studio Live! Philadelphia',
-      conferenceUrl: 'https://vslive.com/nashville',
-      location: 'Philadelphia, PN, USA',
-      talks: [
-        { key: 'differential', date: '20 Oct 2020' },
-        { key: 'performance', date: '20 Oct 2020' },
-      ]
-    },
   ],
   pastEvents: [
+    {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcjbvb/',
+      location: 'New Orleans, LA, USA',
+      talks: [
+        { key: 'eleventy', date: '16 June 2020' },
+      ]
+    },
     {
       conference: 'NFJS Virtual Workshop',
       conferenceUrl: 'https://nofluffjuststuff.com/virtual-workshops/170/web_performance_deep_dive',

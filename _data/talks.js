@@ -3,6 +3,10 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!"
   },
+  eleventy: {
+    title: "An intro to the static site generator Eleventy",
+    description: "What is this cult of Eleventy and why do they think it's so great? Come learn about the JavaScript-based static site generator that requires no client-side JavaScript."
+  },
   career: {
     title: "My path to freelance web development",
     description: "In this talk to students interested in technology fields at Delgado Community College, I describe my career journey and what it took to get to where I needed to be at each stage, including the pitfalls, privileges, and where I still want to go."
