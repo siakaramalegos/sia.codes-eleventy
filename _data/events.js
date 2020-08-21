@@ -1,5 +1,13 @@
 module.exports = {
   upcomingEvents: [
+    {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcjbvb/',
+      location: 'New Orleans, LA, USA',
+      talks: [
+        { key: 'eleventy', date: '16 June 2020' },
+      ]
+    },
   ],
   pastEvents: [
     {
