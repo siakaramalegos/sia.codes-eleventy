@@ -6,7 +6,7 @@
           srcset="{{post.data.featuredImagePrefix}}_300.jpg 300w,
                   {{post.data.featuredImagePrefix}}_600.jpg 600w"
           sizes="(min-width: 1020px) 311px, (min-width: 680px) 48.75vw, calc(100vw - 20px)"
-          alt="">
+          alt="" loading="lazy">
       </div>
       <p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
       <h3 class="postlist-title a-reset">
