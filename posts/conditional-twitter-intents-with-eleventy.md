@@ -5,7 +5,7 @@ date: 2019-11-26
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
 tweetId: '1199441838140272647'
-isSelect: true
+isSelect: false
 featuredImagePrefix: /img/posts/twitter-phone
 ---
 

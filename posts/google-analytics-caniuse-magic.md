@@ -5,14 +5,14 @@ date: 2017-10-27
 tags: ['Analytics']
 layout: layouts/post.njk
 tweetId: '1197888967561162761'
-isSelect: true
+isSelect: false
 featuredImagePrefix: /img/caniuse-magic/levitation
 ---
 
 <figure>
-    <img src="/img/caniuse-magic/levitation.jpg"
-         alt="Woman in woods levitating">
-    <figcaption>How I feel right now. Photo by <a href="https://unsplash.com/photos/GR2uZmp7mUo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rob Potter</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+  <img src="/img/caniuse-magic/levitation.jpg"
+          alt="Woman in woods levitating">
+  <figcaption>How I feel right now. Photo by <a href="https://unsplash.com/photos/GR2uZmp7mUo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rob Potter</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 
 
@@ -32,17 +32,17 @@ You can see in the top right-hand corner, that only 55.95% of our client’s use
 Go to [caniuse](https://caniuse.com/), and in the red *Can I use _______ ?* area, click on the Settings link to the right:
 
 <figure>
-    <img src="/img/caniuse-magic/caniuse-zoom.png"
-         alt="Close-up screenshot of main input with settings link to the right">
-    <figcaption>Click on the gear/settings link to the right</figcaption>
+  <img src="/img/caniuse-magic/caniuse-zoom.png"
+    alt="Close-up screenshot of main input with settings link to the right">
+  <figcaption>Click on the gear/settings link to the right</figcaption>
 </figure>
 
 Then, the left menu sidebar will include a button to *Import...* from Google Analytics:
 
 <figure>
-    <img src="/img/caniuse-magic/caniuse-sidebar.png"
-         alt="Close-up screenshot of sidebar with Import button for Google Analytics">
-    <figcaption>Click on Import...</figcaption>
+  <img src="/img/caniuse-magic/caniuse-sidebar.png"
+    alt="Close-up screenshot of sidebar with Import button for Google Analytics">
+  <figcaption>Click on Import...</figcaption>
 </figure>
 
 Click on that, and follow the steps to give caniuse access permission to the Google account with your analytics information. Then, select a profile (website) that you want to import from and a date range.
