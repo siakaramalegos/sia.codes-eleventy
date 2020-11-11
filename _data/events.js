@@ -1,5 +1,17 @@
 module.exports = {
   upcomingEvents: [
+    {
+      conference: 'The Progressive Web Experience',
+      conferenceUrl: 'https://progressivewebexperience.io/',
+      location: 'Online',
+      talks: [
+        { key: 'performanceWorkshop', date: '30 Nov 2020' },
+        { key: 'devtools', date: '01 Dec 2020' },
+        { key: 'performance', date: '01 Dec 2020' },
+        { key: 'serverlessNetlify', date: '02 Dec 2020' },
+        { key: 'hasuraCloud', date: '02 Dec 2020' },
+      ]
+    },
   ],
   pastEvents: [
     {

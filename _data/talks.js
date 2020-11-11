@@ -3,6 +3,14 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!"
   },
+  serverlessNetlify: {
+    title: "Introduction to Serverless Functions Using Netlify",
+    description: "Serverless functions are a key skill to know when moving to Jamstack applications or serverless architecture. Going serverless means having no server to manage while also having the ability to scale infinitely. In this talk, we'll start with a basic, static Eleventy website then build in dynamic features like form handling and secure API access using serverless functions. We'll use the Netlify CLI to set up our dev environment and deploy to production on Netlify."
+  },
+  hasuraCloud: {
+    title: "Serverless GraphQL Using Hasura Cloud",
+    description: "Hasura Cloud makes setting up GraphQL APIs over PostgreSQL databases a breeze. In this talk, we'll build a new database and GraphQL API from scratch using Hasura Cloud and Heroku, then use that API to query and mutate our data using a serverless frontend. You must understand vanilla JavaScript and HTML and be familiar with the basics of GraphQL queries and running npm scripts to attend this workshop."
+  },
   eleventyWebmentions: {
     title: "Webmentions + Eleventy",
     description: "Webmentions are an exciting standard which help enable the IndieWeb. We can own our own content, hosted on our own domains, without sacrificing social connection and replies with other people! In this talk, I discuss what webmentions are and how to implement them. The code is based on an Eleventy site, but the concepts should be applicable to any site."
