@@ -4,7 +4,7 @@ description: Slides and resources from my talk at JamStack Toronto.
 date: 2020-11-10
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
-# tweetId: '1198282993678376961'
+tweetId: '1326601057179406338'
 isSelect: true
 featuredImagePrefix: /img/posts/webmentions-eleventy
 ---
