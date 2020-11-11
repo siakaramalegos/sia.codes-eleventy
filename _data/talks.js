@@ -3,6 +3,10 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!"
   },
+  eleventyWebmentions: {
+    title: "Webmentions + Eleventy",
+    description: "Webmentions are an exciting standard which help enable the IndieWeb. We can own our own content, hosted on our own domains, without sacrificing social connection and replies with other people! In this talk, I discuss what webmentions are and how to implement them. The code is based on an Eleventy site, but the concepts should be applicable to any site."
+  },
   eleventy: {
     title: "An intro to the static site generator Eleventy",
     description: "What is this cult of Eleventy and why do they think it's so great? Come learn about the JavaScript-based static site generator that requires no client-side JavaScript."

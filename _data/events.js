@@ -3,6 +3,22 @@ module.exports = {
   ],
   pastEvents: [
     {
+      conference: 'JAMstack Toronto',
+      conferenceUrl: 'https://www.meetup.com/JAMstack-Toronto/events/274128808/',
+      location: 'Online',
+      talks: [
+        { key: 'eleventyWebmentions', date: '11 Nov 2020' },
+      ]
+    },
+    {
+      conference: 'Connect.Tech',
+      conferenceUrl: 'http://connect.tech/',
+      location: 'Online',
+      talks: [
+        { key: 'fonts', date: '14 Oct 2020' },
+      ]
+    },
+    {
       conference: 'GDG New Orleans',
       conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcjbvb/',
       location: 'New Orleans, LA, USA',
