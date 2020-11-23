@@ -9,7 +9,6 @@ module.exports = {
         { key: 'devtools', date: '01 Dec 2020' },
         { key: 'performance', date: '01 Dec 2020' },
         { key: 'serverlessNetlify', date: '02 Dec 2020' },
-        { key: 'hasuraCloud', date: '02 Dec 2020' },
       ]
     },
   ],
