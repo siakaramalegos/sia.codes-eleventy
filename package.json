@@ -4,8 +4,7 @@
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
     "build": "NODE_ENV=production npx eleventy",
-    "netlify-build": "node create-env.js && NODE_ENV=production npx eleventy",
-    "start": "npx eleventy --serve --port=8081",
+    "start": "netlify dev --port=8081",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
@@ -33,7 +32,6 @@
     "node-fetch": "^2.6.1"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "lodash": "^4.17.20"
   }
 }

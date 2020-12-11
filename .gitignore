@@ -5,3 +5,6 @@ package-lock.json
 */.DS_Store
 .DS_Store
 .env
+
+# Local Netlify folder
+.netlify
