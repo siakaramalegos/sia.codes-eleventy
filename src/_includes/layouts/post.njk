@@ -52,4 +52,26 @@ templateClass: tmpl-post
 
   <p><a href="{{ '/' | url }}">← Home</a></p>
 
+  <!-- Structured data for articles - Images should be at least 1200 pixels wide  -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{ title }}",
+      {% if featuredImagePrefix %}
+      "image": [
+        "{{ featuredImagePrefix }}_1x1.jpg",
+        "{{ featuredImagePrefix }}_4x3.jpg",
+        "{{ featuredImagePrefix }}_16x9.jpg"
+       ],
+      {% endif %}
+      "image": [
+        "https://example.com/photos/1x1/photo.jpg",
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg"
+       ],
+      "datePublished": "{{ date }}",
+      "dateModified": "{{ date }}"
+    }
+  </script>
 </div>

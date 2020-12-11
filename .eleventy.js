@@ -2,7 +2,7 @@ const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const filters = require('./_11ty/filters')
+const filters = require('./src/_11ty/filters')
 
 module.exports = function(eleventyConfig) {
   // Filters
@@ -34,7 +34,7 @@ module.exports = function(eleventyConfig) {
     return array.slice(0, n);
   });
 
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+  eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
@@ -73,6 +73,8 @@ module.exports = function(eleventyConfig) {
     }
   });
 
+  // Input directory: src
+  // Output directory: _site
   return {
     templateFormats: [
       "md",
@@ -92,7 +94,7 @@ module.exports = function(eleventyConfig) {
     dataTemplateEngine: "njk",
     passthroughFileCopy: true,
     dir: {
-      input: ".",
+      input: "src",
       includes: "_includes",
       data: "_data",
       output: "_site"
