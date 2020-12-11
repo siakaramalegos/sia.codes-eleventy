@@ -36,10 +36,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("css/fonts");
-  eleventyConfig.addPassthroughCopy("javascript");
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/css/fonts");
+  eleventyConfig.addPassthroughCopy("src/javascript");
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
