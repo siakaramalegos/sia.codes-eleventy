@@ -18,7 +18,7 @@ featuredImage: "A_possum_and_a_movie_camera_1943_f4yflt.jpg"
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:A_possum_and_a_movie_camera_1943.jpg">Wikimedia Commons</a> </figcaption>
 </figure>
 
-I'm a huge fan of [Cloudinary](https://cloudinary.com/) for media, and this was the first time I set it up on a site using [Eleventy](https://www.11ty.dev/). In typical fashion, I wasn't satisfied with the existing solutions I found, so I decided to write my own.
+I'm a huge fan of [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) for media, and this was the first time I set it up on a site using [Eleventy](https://www.11ty.dev/). In typical fashion, I wasn't satisfied with the existing solutions I found, so I decided to write my own.
 
 Originally, I did not set up Cloudinary on my blog because I used to have just a handful of images, and I would create srcsets and formats manually [using ImageMagick and cwebp](https://github.com/siakaramalegos/images-on-the-command-line). But then I got excited about using [structured data](https://developers.google.com/search/docs/guides/search-gallery) for SEO, and the image generation job got a lot more complicated with more sizes and cropping.
 
