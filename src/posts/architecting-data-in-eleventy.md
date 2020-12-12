@@ -6,13 +6,16 @@ tags: ['IndieWeb', 'Eleventy', 'JavaScript']
 layout: layouts/post.njk
 tweetId: '1261340524201390081'
 isSelect: true
-featuredImagePrefix: /img/posts/possum
+featuredImage: possum_efpwzp.jpg
 ---
 
 <figure>
-    <img src="/img/posts/possum_600.jpg"
-         alt="Possum overlayed on a keyboard">
-    <figcaption>This is what happens when a fan of Eleventy is not a graphic designer.</figcaption>
+  <img src="{% src "possum_efpwzp.jpg" %}"
+    srcset="{% srcset "possum_efpwzp.jpg" %}"
+    sizes="(min-width: 760px) 680px, 93.64vw"
+    alt="Possum overlayed on a keyboard"
+    width="612" height="408">
+  <figcaption>This is what happens when a fan of Eleventy is not a graphic designer.</figcaption>
 </figure>
 
 [Eleventy](https://www.11ty.dev/) is a static site generator that makes building static, performant websites a breeze. It uses JavaScript to build pages at build time, but does not require any JavaScript in the client to render them.

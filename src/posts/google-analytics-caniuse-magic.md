@@ -6,15 +6,17 @@ tags: ['Analytics']
 layout: layouts/post.njk
 tweetId: '1197888967561162761'
 isSelect: false
-featuredImagePrefix: /img/caniuse-magic/levitation
+featuredImage: levitation_ec7gyj.jpg
 ---
 
 <figure>
-  <img src="/img/caniuse-magic/levitation.jpg"
-          alt="Woman in woods levitating">
+  <img src="{% src "levitation_ec7gyj.jpg" %}"
+    srcset="{% srcset "levitation_ec7gyj.jpg" %}"
+    sizes="(min-width: 760px) 680px, 93.64vw"
+    alt="Woman in woods levitating"
+    width="1360" height="765">
   <figcaption>How I feel right now. Photo by <a href="https://unsplash.com/photos/GR2uZmp7mUo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rob Potter</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
-
 
 Today I learned that you can import your Google Analytics data into [caniuse](https://caniuse.com/) to determine how many of your users would be able to use a particular front-end technology in their browser of choice. Maybe the rest of you have been holding out on this and just didn’t tell me. Maybe I had my head in the sand. Well, today I learned about it, and it’s amazing.
 

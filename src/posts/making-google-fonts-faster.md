@@ -5,12 +5,15 @@ date: 2019-02-06
 tags: ['WebPerf', 'Fonts']
 layout: layouts/post.njk
 isSelect: true
-featuredImagePrefix: /img/fonts/typewriter_keys
+featuredImage: typewriter_keys_qgtruq.jpg
 ---
 
 <figure>
-  <img src="/img/fonts/typewriter_keys.jpg"
-        alt="Close-up of typewriter keys">
+  <img src="{% src "typewriter_keys_qgtruq.jpg" %}"
+    srcset="{% srcset "typewriter_keys_qgtruq.jpg" %}"
+    sizes="(min-width: 760px) 680px, 93.64vw"
+    alt="Close-up of typewriter keys"
+    width="4000" height="1835">
   <figcaption>Photo by <a href="https://unsplash.com/photos/tFdt_ztePy4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bob Newman</a> on <a href="https://unsplash.com/collections/3603769/font?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 

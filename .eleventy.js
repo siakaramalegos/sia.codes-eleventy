@@ -2,7 +2,8 @@ const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const filters = require('./src/_11ty/filters')
+const filters = require('./src/_11ty/filters');
+const { respimg, srcset, src } = require("./src/_11ty/shortcodes");
 
 module.exports = function(eleventyConfig) {
   // Filters
@@ -40,6 +41,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/css/fonts");
   eleventyConfig.addPassthroughCopy("src/javascript");
+
+  // Responsive image shortcodes
+  eleventyConfig.addShortcode('respimg', respimg);
+  eleventyConfig.addShortcode('src', src);
+  eleventyConfig.addShortcode('srcset', srcset);
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
@@ -80,7 +86,7 @@ module.exports = function(eleventyConfig) {
       "md",
       "njk",
       "html",
-      "liquid"
+      // "liquid"
     ],
 
     // If your site lives in a different subdirectory, change this.
@@ -89,7 +95,7 @@ module.exports = function(eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     passthroughFileCopy: true,

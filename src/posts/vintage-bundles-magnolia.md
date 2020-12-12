@@ -6,7 +6,7 @@ tags: ['JavaScript', 'WebPerf']
 layout: layouts/post.njk
 tweetId: '1252703197904408577'
 isSelect: true
-featuredImagePrefix: /img/posts/vintage-bundles
+featuredImage: vintage-bundles_anqbiu.jpg
 ---
 
 More developers are starting to understand that web performance matters. From higher mobile search rankings to bottom-line revenue impacts, performance can make or break your web app. However, fixing performance can feel like a quagmire of expert-level nuanced understanding on so many topics. What would you think if I told you you could cut your JavaScript bundle size up to 50% by doing one thing only? Nearly 90% of worldwide web traffic runs on modern browsers, but we're transpiling all of our JavaScript down to ES5. That transpilation has a cost.

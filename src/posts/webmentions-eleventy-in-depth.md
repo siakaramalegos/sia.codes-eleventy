@@ -6,15 +6,18 @@ tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
 tweetId: '1198282993678376961'
 isSelect: true
-featuredImagePrefix: /img/posts/hands-laptop
 translations:
   - language: français
     link: https://jamstatic.fr/2019/12/27/webmentions-eleventy/
+featuredImage: hands-laptop_rdfolj.jpg
 ---
 
 <figure>
-  <img src="/img/posts/hands-laptop.jpg"
-    alt="hands on a laptop keyboard">
+  <img src="{% src "hands-laptop_rdfolj.jpg" %}"
+    srcset="{% srcset "hands-laptop_rdfolj.jpg" %}"
+    sizes="(min-width: 760px) 680px, 93.64vw"
+    alt="hands on a laptop keyboard"
+    width="1360" height="808">
   <figcaption>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 

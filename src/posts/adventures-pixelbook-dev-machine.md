@@ -6,13 +6,16 @@ tags: ['Tools']
 layout: layouts/post.njk
 tweetId: '1197670409543540738'
 isSelect: true
-featuredImagePrefix: /img/pixelbook/pixelbook
+featuredImage: pixelbook_vkhrbc.jpg
 ---
 
 <figure>
-    <img src="/img/pixelbook/pixelbook.jpg"
-         alt="My favorite view of the ultra-thin Pixelbook by Google">
-    <figcaption>My favorite view of the ultra-thin Pixelbook by Google</figcaption>
+  <img src="{% src "pixelbook_vkhrbc.jpg" %}"
+    srcset="{% srcset "pixelbook_vkhrbc.jpg" %}"
+    sizes="(min-width: 760px) 680px, 93.64vw"
+    alt="Side-view of Pixelbook showing how thin it is"
+    width="1360" height="776">
+  <figcaption>My favorite view of the ultra-thin Pixelbook by Google</figcaption>
 </figure>
 
 Today the FedEx man delivered my brand new Pixelbook. So much fun! I got this little tool to attempt to get off of the Mac platform without going full Linux distro. For the most part, I do web development and only need (1) a terminal, (2) an editor, preferably VS Code, and (3) a browser. Since Chrome OS deployed the new Linux beta, all these things are now possible with fewer install headaches than before. These are my adventures in trying to turn it into a dev machine.

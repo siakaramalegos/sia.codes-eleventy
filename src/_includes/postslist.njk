@@ -2,9 +2,8 @@
   {% for post in postslist | reverse %}
     <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <div class="postlist-image">
-        <img src="{{post.data.featuredImagePrefix}}_300.jpg"
-          srcset="{{post.data.featuredImagePrefix}}_300.jpg 300w,
-                  {{post.data.featuredImagePrefix}}_600.jpg 600w"
+        <img src="{% src post.data.featuredImage, 300 %}"
+          srcset="{% srcset post.data.featuredImage, [300, 600] %}"
           sizes="(min-width: 1020px) 311px, (min-width: 680px) 48.75vw, calc(100vw - 20px)"
           alt="">
       </div>

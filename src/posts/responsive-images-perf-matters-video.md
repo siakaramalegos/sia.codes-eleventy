@@ -6,7 +6,7 @@ tags: ['Images', 'WebPerf']
 layout: layouts/post.njk
 tweetId: '1251260214051045376'
 isSelect: true
-featuredImagePrefix: /img/posts/images-slide
+featuredImage: images-slide_c4ox2n.jpg
 ---
 
 Want to learn how to make your images more responsive and more performant? Haven't gotten a chance to read that book/article/doc on web performance for images yet?

@@ -5,15 +5,16 @@ date: 2019-06-13
 tags: ['WebPerf', 'Analytics']
 layout: layouts/post.njk
 isSelect: true
-featuredImagePrefix: /img/show-money/show-money
+featuredImage: show-money_uolhum.jpg
 ---
 
 <figure>
-    <img src="/img/show-money/show-money.jpg"
-         alt="Man's hand holding out a fist full of dollars toward the viewer"
-         height="383px"
-         width="680px">
-    <figcaption>Photo by <a href="https://unsplash.com/photos/MNXaW_ABlZY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">lucas Favre</a> on <a href="https://unsplash.com/collections/1815009/checkout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+  <img src="{% src "show-money_uolhum.jpg" %}"
+    srcset="{% srcset "show-money_uolhum.jpg" %}"
+    sizes="(min-width: 760px) 680px, 93.64vw"
+    alt="Man's hand holding out a fist full of dollars toward the viewer"
+    width="1360" height="765">
+  <figcaption>Photo by <a href="https://unsplash.com/photos/MNXaW_ABlZY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">lucas Favre</a> on <a href="https://unsplash.com/collections/1815009/checkout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 
 Many of us who love the web and want to make it fast feel like we’re shouting out into the ether that [performance matters](https://developers.google.com/web/fundamentals/performance/why-performance-matters/), but I’m not sure anyone is listening. We write articles, give talks, organize whole conferences, and we even have a hashtag (#PerfMatters)! But, many companies still don’t listen. It’s not their fault necessarily.
