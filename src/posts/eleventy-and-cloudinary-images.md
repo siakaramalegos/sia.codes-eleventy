@@ -52,7 +52,7 @@ Why did I include all those attributes? Let's take a look at each...
 
 For modern browsers, we can give a set of images and instructions for how wide they will be displayed using `srcset` and `sizes`. This allows the browser to make the best decision on which image to load based on the user's screen width and [device pixel ratio (DPR)](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio). For example, those nice Retina screens (DPR of 2) need images twice as wide as the slot we're putting them in if we still want them to look good.
 
-The `sizes` attribte can be tricky to write correctly by hand. My favorite way of getting it (a.k.a, the lazy way), is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that will let you know how far off your images are in their size, and will also give us suggestions for the `sizes` attribute.
+The `sizes` attribute can be tricky to write correctly by hand. My favorite way of getting it (a.k.a, the lazy way), is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that will let you know how far off your images are in their size, and will also give us suggestions for the `sizes` attribute.
 
 <figure>
   <img src="{% src "respimagelint_bnumrs.jpg" %}"
@@ -65,7 +65,7 @@ The `sizes` attribte can be tricky to write correctly by hand. My favorite way o
 
 ## Layout Shift
 
-To prevent layout shift once the image loads, we need to provide the browser with an aspect ratio. Currently, the way to do that is to set a height and width on the image. Use the original image's dimensions since the actual size doesn't matter, just the aspect ratio. Your CSS will control the actual height and width.
+To prevent layout shift once the image loads, we need to provide the browser with an aspect ratio. Currently, the way to do that is to set a height and width on the image in HTML. Use the original image's dimensions since the actual size doesn't matter, just the aspect ratio. Your CSS will control the actual height and width.
 
 To prevent weird stretching, set an auto height in your CSS:
 
@@ -111,7 +111,7 @@ I don't need a `<picture>` tag because Cloudinary can automatically serve the be
 
 ### Shortcodes
 
-For the shortcodes, I gave them smart default widths based on the styles for my site, but I also pass an optional parameter to set these when I use them.
+For the shortcodes, I gave them smart default widths based on the styles for my site, but I allow an optional parameter to set them when I invoke the shortcode.
 
 ```javascript
 // _11ty/shortcodes.js
@@ -149,5 +149,3 @@ eleventyConfig.addShortcode('srcset', srcset);
 Voilà!
 
 How do you use Eleventy with Cloudinary? I haven't turned this into a plugin yet. Should I?
-
-Happy coding!
