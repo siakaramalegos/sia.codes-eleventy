@@ -54,14 +54,24 @@ templateClass: tmpl-post
 
   <!-- Structured data for articles - Images should be at least 1200 pixels wide  -->
   {% if featuredImage %}
+    {% set mentions = webmentions | getWebmentionsForUrl(metadata.url + webmentionUrl) %}
+    {% set replies = mentions | webmentionsByType('in-reply-to')  %}
+    {% set repliesSize = replies | size  %}
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "NewsArticle",
+        "@type": "BlogPosting",
         "headline": "{{ title }}",
         "image": {% seoImages featuredImage %},
         "datePublished": "{{ date.toUTCString() }}",
-        "dateModified": "{{ updated.toUTCString() if updated else date.toUTCString() }}"
+        "dateModified": "{{ updated.toUTCString() if updated else date.toUTCString() }}",
+        "commentCount": {{ repliesSize }},
+        "author": {
+          "@type": "Person",
+          "givenName": "Sia",
+          "familyName": "Karamalegos",
+          "name": "Sia Karamalegos"
+        }
       }
     </script>
   {% endif %}
