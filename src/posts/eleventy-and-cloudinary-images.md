@@ -125,7 +125,7 @@ const FALLBACK_WIDTH = 680;
 function getSrcset(file, widths) {
   const widthSet = widths ? widths : FALLBACK_WIDTHS
   return widthSet.map(width => {
-    return `${BASE_URL}q_auto,f_auto,w_${width}/${FOLDER}${file} ${width}w`;
+    return `${getSrc(file, width)} ${width}w`;
   }).join(", ")
 }
 
