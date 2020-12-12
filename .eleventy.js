@@ -3,7 +3,7 @@ const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const filters = require('./src/_11ty/filters');
-const { respimg, srcset, src } = require("./src/_11ty/shortcodes");
+const { srcset, src } = require("./src/_11ty/shortcodes");
 
 module.exports = function(eleventyConfig) {
   // Filters
@@ -43,7 +43,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/javascript");
 
   // Responsive image shortcodes
-  eleventyConfig.addShortcode('respimg', respimg);
   eleventyConfig.addShortcode('src', src);
   eleventyConfig.addShortcode('srcset', srcset);
 

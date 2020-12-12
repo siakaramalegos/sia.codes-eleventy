@@ -2,6 +2,7 @@
 title: Eleventy and Cloudinary images
 description: Setting up responsive images in Eleventy using Cloudinary
 date: 2020-12-11
+updated: 2020-12-12
 tags: ['Eleventy', 'Images', 'WebPerf']
 layout: layouts/post.njk
 tweetId: '1337612682275459073'
@@ -142,6 +143,8 @@ The last step is to add the shortcodes to our Eleventy config:
 
 ```javascript
 // .eleventy.js
+const { srcset, src } = require("./_11ty/shortcodes");
+
 eleventyConfig.addShortcode('src', src);
 eleventyConfig.addShortcode('srcset', srcset);
 ```
