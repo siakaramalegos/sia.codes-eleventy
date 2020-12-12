@@ -5,7 +5,7 @@ date: 2020-04-21
 tags: ['JavaScript', 'WebPerf']
 layout: layouts/post.njk
 tweetId: '1252703197904408577'
-isSelect: true
+isSelect: false
 featuredImage: vintage-bundles_anqbiu.jpg
 ---
 
