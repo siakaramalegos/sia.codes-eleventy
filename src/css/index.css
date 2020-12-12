@@ -541,7 +541,12 @@ footer p { font-size: 1em;}
 footer a svg {width: 24px;}
 
 /* Webmentions */
-.webmentions img {border-radius: 50%;}
+.webmentions img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+}
 .webmentions h3 {margin-top: 40px;}
 .webmentions__facepile a {
   border: none;
