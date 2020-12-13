@@ -298,6 +298,10 @@ main {
 table { margin: 1em 0; }
 table td,
 table th { padding-right: 1em; }
+.tmpl-post table td {
+  padding: 1em 0.5em;
+  vertical-align: top;
+}
 
 .content {
   max-width: 960px;
