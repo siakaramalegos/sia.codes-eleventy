@@ -1,5 +1,7 @@
 module.exports = {
   upcomingEvents: [
+  ],
+  pastEvents: [
     {
       conference: 'The Progressive Web Experience',
       conferenceUrl: 'https://progressivewebexperience.io/',
@@ -11,8 +13,6 @@ module.exports = {
         { key: 'serverlessNetlify', date: '02 Dec 2020' },
       ]
     },
-  ],
-  pastEvents: [
     {
       conference: 'JAMstack Toronto',
       conferenceUrl: 'https://www.meetup.com/JAMstack-Toronto/events/274128808/',
