@@ -37,6 +37,7 @@
   --pink-70: rgb(113,0,71);
   --pink-80: rgb(71,0,43);
   --purple-0: rgb(253,251,255);
+  --purple-05: hsl(270, 100%, 97%, 1);
   --purple-10: rgb(234,213,255);
   --purple-20: rgb(217,174,255);
   --purple-30: rgb(203,131,255);
@@ -134,6 +135,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--purple-70);
   font-variation-settings: "CASL" 1;
   margin: 1.5rem 0;}
+aside {
+  background-color: var(--purple-05);
+  border-left: 4px solid var(--purple-50);
+  padding: 16px 24px;
+}
 .gradient-text {
   background-color: var(--blue-40);
   /* gradient based off of var(--blue-40) , var(--purple-40)); */

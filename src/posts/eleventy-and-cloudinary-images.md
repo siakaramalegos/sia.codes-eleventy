@@ -110,6 +110,8 @@ Hence, I created shortcodes that do only that - generate the `src` and `srcset`,
 
 I don't need a `<picture>` tag because Cloudinary can automatically serve the best image format based on the user's browser through the [f_auto transformation](https://cloudinary.com/documentation/image_transformations#automatic_format_selection_f_auto).
 
+<aside>If you found this article helpful, you can <a href="https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0">sign up for a free Cloudinary account</a> with this link, and I'll get a few extra Cloudinary credits per month.</aside>
+
 ### Shortcodes
 
 For the shortcodes, I gave them smart default widths based on the styles for my site, but I allow an optional parameter to set them when I invoke the shortcode.
