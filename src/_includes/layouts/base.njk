@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
-    <meta property="og:description" content="{{ renderData.description or description or metadata.description }}" />
+    {% set renderTitle = renderData.title or title or metadata.title %}
+    {% set renderDescription = renderData.description or description or metadata.description %}
+    <title>{{ renderTitle }}</title>
+    <meta name="description" content="{{ renderDescription }}">
+    <meta property="og:description" content="{{ renderDescription }}" />
+
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
@@ -14,16 +17,17 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@thegreengreek" />
     <meta name="twitter:creator" content="@thegreengreek" />
-    <meta name="twitter:title" content="sia.codes" />
-    <meta name="twitter:image" content="https://sia.codes/img/sia-codes.png" />
-    <meta name="twitter:image:alt" content="sia.codes" />
+    <meta name="twitter:title" content="{{ renderTitle }}" />
+    <meta name="twitter:image" content="{% socialImage renderTitle, renderDescription %}" />
+    <meta name="twitter:image:alt" content="{{ renderTitle }}" />
     <meta name="twitter:domain" content="sia.codes" />
     <meta property="og:url" content="https://sia.codes/" />
-    <meta property="og:title" content="sia.codes" />
-    <meta property="og:image" content="https://sia.codes/img/sia-codes.png">
+    <meta property="og:title" content="{{ renderTitle }}" />
+    <meta property="og:image" content="{% socialImage renderTitle, renderDescription %}">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
