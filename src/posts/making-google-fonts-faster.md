@@ -1,5 +1,5 @@
 ---
-title: Making Google Fonts Faster⚡
+title: Making Google Fonts Faster
 description: If you use Google Fonts, a few additional steps can lead to much faster load times.
 date: 2019-02-06
 tags: ['WebPerf', 'Fonts']
