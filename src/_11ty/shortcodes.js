@@ -40,7 +40,8 @@ function cloudinarySafeText(text) {
   return encodeURIComponent(text).replace(/(%2C)/g, '%252C').replace(/(%2F)/g, '%252F')
 }
 
-function socialImageUrl(title, description, isTwitter = false) {
+function socialImageUrl(title, description) {
+  const isTwitter = true
   const file = isTwitter ? TWITTER_IMAGE_FILE : SHARE_IMAGE_FILE
   const width = isTwitter ? "1280" : "1200"
   const height = isTwitter ? "640" : "630"
