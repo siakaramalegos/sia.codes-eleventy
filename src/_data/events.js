@@ -1,5 +1,13 @@
 module.exports = {
   upcomingEvents: [
+    {
+      conference: "c't <web dev>",
+      conferenceUrl: 'https://ctwebdev.de/',
+      location: 'Online',
+      talks: [
+        { key: 'imagesNew', date: '31 Mar 2020' },
+      ]
+    },
   ],
   pastEvents: [
     {
