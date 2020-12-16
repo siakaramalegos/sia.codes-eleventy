@@ -18,6 +18,19 @@ permalink: /posts/
   </section>
 
   <section>
+    <h2>Filter by topic</h2>
+    <p style="max-width: 600px;">
+      {% set tags = collections.tagList | sort %}
+      {% for tag in tags %}
+        {%- if tag != "posts" -%}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {%- endif -%}
+      {% endfor %}
+    </p>
+  </section>
+
+  <section>
     <h2>All posts</h2>
     {% set archivelist = collections.posts %}
     {% include "archivelist.njk" %}
