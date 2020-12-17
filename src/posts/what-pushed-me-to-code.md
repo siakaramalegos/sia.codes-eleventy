@@ -4,14 +4,14 @@ description: Finding inspiration through personal grief
 date: 2017-05-17
 tags: ['Personal']
 layout: layouts/post.njk
-# tweetId: '1251260214051045376'
+tweetId: '1339307226243231749'
 isSelect: true
 featuredImage: passports_zwgffj.jpg
 ---
 
-<img src="{% src "passports_zwgffj.jpg" %}"
-  srcset="{% srcset "passports_zwgffj.jpg" %}"
-  sizes="(min-width: 760px) 680px, 93.64vw"
+<img src="{% src 'passports_zwgffj.jpg' %}"
+  srcset="{% srcset 'passports_zwgffj.jpg' %}"
+  sizes="{% defaultSizes %}"
   alt="My dad's passport photo from the 1970's"
   width="2400" height="1800">
 
@@ -27,10 +27,11 @@ I close my eyes and it feels like he’s right here. The tears rolling down my f
 
 In February of 2014, my dad called me to tell me he had lung cancer. It was a short call. He was driving with my stepmom. It was so short I couldn’t process it other than feeling this immediate sense of dread like a weight pressing down on my chest. I don’t know what I said. I spent the next four months splitting my time between Houston and New Orleans as my father went in and out of hospitals. Once he splurged and got what I can only call a hospital penthouse suite. That’s my dad.
 
-<figure>
-  <img src="{% src "soccer_wgxqft.jpg" %}"
-    srcset="{% srcset "soccer_wgxqft.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+<figure class="portrait-image">
+  <img src="{% src 'soccer_wgxqft.jpg' %}"
+    srcset="{% srcset 'soccer_wgxqft.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
     alt=""
     width="692" height="1004">
   <figcaption>In his soccer uniform in his earlier years</a></figcaption>
@@ -46,9 +47,10 @@ The disease progressed despite treatment. Relationships are tough, especially co
 In the fourth month of his disease, my father went into [palliative care](https://en.wikipedia.org/wiki/Palliative_care) where he soon was on increasing doses of opioids to manage not just the pain but the sense of drowning that lung cancer patients feel as the disease slowly robs them of breath. Everything was not going to be okay. But no matter what happened I was going to support him through it. We watched the World Cup matches together, and eventually, he could no longer communicate. One morning my siblings and I were still at the apartment and we got the call from my stepmom. He was gone.
 
 <figure>
-  <img src="{% src "grave_fvhtns.jpg" %}"
-    srcset="{% srcset "grave_fvhtns.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'grave_fvhtns.jpg' %}"
+    srcset="{% srcset 'grave_fvhtns.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Two graves on a mountain overlooking the Aegean Sea, one fresh"
     width="3360" height="1972">
   <figcaption>My father Spiros is on the left, and my great uncle Ioannis is on the right</figcaption>
@@ -73,9 +75,10 @@ This is not a sad story. Though I write in both grief and joy, more importantly,
 > Thanks, Dad. I love you.
 
 <figure>
-  <img src="{% src "toast_igmcal.jpg" %}"
-    srcset="{% srcset "toast_igmcal.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'toast_igmcal.jpg' %}"
+    srcset="{% srcset 'toast_igmcal.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Older man and daughter hugging and holding up a wine glass to the camera"
     width="3360" height="1972">
   <figcaption>My dad and I celebrating life with an amazing dinner and wine in New Orleans</figcaption>

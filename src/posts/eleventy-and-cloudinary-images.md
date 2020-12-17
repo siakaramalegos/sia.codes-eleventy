@@ -11,9 +11,9 @@ featuredImage: "A_possum_and_a_movie_camera_1943_f4yflt.jpg"
 ---
 
 <figure>
-  <img src="{% src "A_possum_and_a_movie_camera_1943_f4yflt.jpg" %}"
-    srcset="{% srcset "A_possum_and_a_movie_camera_1943_f4yflt.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'A_possum_and_a_movie_camera_1943_f4yflt.jpg' %}"
+    srcset="{% srcset 'A_possum_and_a_movie_camera_1943_f4yflt.jpg' %}"
+    sizes="{% defaultSizes %}"
     alt="An Australian possum climbing a movie camera"
     width="2953" height="2178">
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:A_possum_and_a_movie_camera_1943.jpg">Wikimedia Commons</a> </figcaption>
@@ -56,10 +56,11 @@ For modern browsers, we can give a set of images and instructions for how wide t
 The `sizes` attribute can be tricky to write correctly by hand. My favorite way of getting it (a.k.a, the lazy way), is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that will let you know how far off your images are in their size, and will also give us suggestions for the `sizes` attribute.
 
 <figure>
-  <img src="{% src "respimagelint_bnumrs.jpg" %}"
-    srcset="{% srcset "respimagelint_bnumrs.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'respimagelint_bnumrs.jpg' %}"
+    srcset="{% srcset 'respimagelint_bnumrs.jpg' %}"
+    sizes="{% defaultSizes %}"
     alt="Feedback, code, and image preview in a RespImageLint result"
+    loading="lazy"
     width="2408" height="1360" loading="lazy">
   <figcaption>RespImageLint will suggest a sizes attribute if you provide a srcset</figcaption>
 </figure>
@@ -96,9 +97,9 @@ Hence, I created shortcodes that do only that - generate the `src` and `srcset`,
 
 {% raw %}
 ```html
-  <img src="{% src "possum_film_director.jpg" %}"
-    srcset="{% srcset "possum_film_director.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'possum_film_director.jpg' %}"
+    srcset="{% srcset 'possum_film_director.jpg' %}"
+    sizes="{% defaultSizes %}"
     alt="Possum directing a movie"
     width="2953"
     height="2178"

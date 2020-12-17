@@ -12,7 +12,7 @@ featuredImage: possum_efpwzp.jpg
 <figure>
   <img src="{% src "possum_efpwzp.jpg" %}"
     srcset="{% srcset "possum_efpwzp.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+    sizes="{% defaultSizes %}"
     alt="Possum overlayed on a keyboard"
     width="612" height="408">
   <figcaption>This is what happens when a fan of Eleventy is not a graphic designer.</figcaption>

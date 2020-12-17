@@ -11,7 +11,7 @@ featuredImage: twitter-phone_b3q80y.jpg
 
 <img src="{% src "twitter-phone_b3q80y.jpg" %}"
   srcset="{% srcset "twitter-phone_b3q80y.jpg" %}"
-  sizes="(min-width: 760px) 680px, 93.64vw"
+  sizes="{% defaultSizes %}"
   alt="Mobile phone laying on table with blue screen and Twitter logo showing"
   width="1360" height="907">
 

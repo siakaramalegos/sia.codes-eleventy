@@ -6,6 +6,15 @@ tags: ['Rails']
 layout: layouts/post.njk
 ---
 
+<figure>
+  <img src="{% src 'folders_b2nyci.jpg' %}"
+    srcset="{% srcset 'folders_b2nyci.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="Shelves of multi-colored folders"
+    width="4898" height="3265">
+  <figcaption>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Maarten van den Heuvel</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
+
 Sometimes you just don’t like any one particular reference out there.  This happened to me when I was trying to build lesson content for our first lesson on Rails.  Oh, by the way, I’m teaching a coding bootcamp here in New Orleans right now (fun stuff!).
 
 To summarize, I found a lot of different content explaining the folder tree and files for Rails, but no one particular source spoke to me above all others.  So, I decided to mash them all together and only leave the bits I liked, modifying other bits, and adding some new bits.

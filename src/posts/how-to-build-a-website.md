@@ -11,7 +11,7 @@ featuredImage: disappointed-child_ooyndg.jpg
 
 <img src="{% src "disappointed-child_ooyndg.jpg" %}"
   srcset="{% srcset "disappointed-child_ooyndg.jpg" %}"
-  sizes="(min-width: 760px) 680px, 93.64vw"
+  sizes="{% defaultSizes %}"
   alt="Child grabbing their cheeks with a look of disappointment"
   width="2400" height="1600">
 

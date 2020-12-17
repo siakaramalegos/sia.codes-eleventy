@@ -15,7 +15,7 @@ featuredImage: hands-laptop_rdfolj.jpg
 <figure>
   <img src="{% src "hands-laptop_rdfolj.jpg" %}"
     srcset="{% srcset "hands-laptop_rdfolj.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+    sizes="{% defaultSizes %}"
     alt="hands on a laptop keyboard"
     width="1360" height="808">
   <figcaption>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
@@ -23,8 +23,10 @@ featuredImage: hands-laptop_rdfolj.jpg
 
 I am a huge fan of the static site generator [Eleventy](https://www.11ty.io/) so far, and I was super excited to try out [Webmentions](https://indieweb.org/Webmention) with them.
 
-> Webmention is a web standard for mentions and conversations across the web, a powerful building block that is used for a growing federated network of comments, likes, reposts, and other rich interactions across the decentralized social web.
-> —from [IndieWeb.org](https://indieweb.org/Webmention)
+<blockquote>
+  <p>Webmention is a web standard for mentions and conversations across the web, a powerful building block that is used for a growing federated network of comments, likes, reposts, and other rich interactions across the decentralized social web.</p>
+  <p class="blockquote-source">—from <a href="https://indieweb.org/Webmention">IndieWeb.org</a></p>
+</blockquote>
 
 They are a cool tool for enabling social interactions when you host your own content. Max Böck wrote an excellent post, [Static Indieweb pt2: Using Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/), which walks through his implementation. He also created an Eleventy starter, [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions), which is a basic starter template with webmentions support.
 

@@ -10,9 +10,9 @@ featuredImage: pixelbook_vkhrbc.jpg
 ---
 
 <figure>
-  <img src="{% src "pixelbook_vkhrbc.jpg" %}"
-    srcset="{% srcset "pixelbook_vkhrbc.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'pixelbook_vkhrbc.jpg' %}"
+    srcset="{% srcset 'pixelbook_vkhrbc.jpg' %}"
+    sizes="{% defaultSizes %}"
     alt="Side-view of Pixelbook showing how thin it is"
     width="1360" height="776">
   <figcaption>My favorite view of the ultra-thin Pixelbook by Google</figcaption>
@@ -34,20 +34,28 @@ You should then see your current version and whether it is checking for updates.
 Open your Settings again. Scroll down, and you will find a setting for the Linux beta:
 
 <figure>
-    <img src="/img/pixelbook/linux-flag.jpg"
-         alt="Linux (Beta) setting in Chrome OS. Oh hai, Momentum!">
-    <figcaption>Linux (Beta) setting in Chrome OS. Oh hai, Momentum!</figcaption>
+  <img src="{% src 'linux-flag_p9lyoy.jpg' %}"
+    srcset="{% srcset 'linux-flag_p9lyoy.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt=""
+    loading="lazy"
+    width="1360" height="907">
+  <figcaption>Linux (Beta) setting in Chrome OS. Oh hai, Momentum!</figcaption>
 </figure>
 
 After you turn on the flag, it will download and open a terminal!! 🤯🤯🤯
 
 <figure>
-    <img src="/img/pixelbook/linux-flag.jpg"
-         alt="Terminal systems are go!">
-    <figcaption>Terminal systems are go!</figcaption>
+  <img src="{% src 'terminal_t0fcej.jpg' %}"
+    srcset="{% srcset 'terminal_t0fcej.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="Terminal window view"
+    loading="lazy"
+    width="1360" height="907">
+  <figcaption>Terminal systems are go!</figcaption>
 </figure>
 
-*Note: You may have struggled like me to copy-paste things into this new terminal. Try ctrl-shift-V instead of just ctrl-V.*
+<aside><strong>Note</strong>: You may have struggled like me to copy-paste things into this new terminal. Try ctrl-shift-V instead of just ctrl-V.</aside>
 
 I like tools that make me faster, so I immediately attempted to install `zsh` and `oh-my-zsh`, and that’s when I came across my next problem…
 

@@ -1,7 +1,7 @@
 const CLOUDNAME = "siacodes"
 const FOLDER = "v1607719366/sia.codes/"
 const BASE_URL = `https://res.cloudinary.com/${CLOUDNAME}/image/upload/`;
-const FALLBACK_WIDTHS = [ 300, 600, 680, 1360 ];
+const FALLBACK_WIDTHS = [ 300, 600, 928, 1856 ];
 const FALLBACK_WIDTH = 680;
 const SEO_ASPECT_RATIOS = ["1:1", "4:3", "16:9"]
 
@@ -81,4 +81,5 @@ module.exports = {
     return JSON.stringify(imageSet)
   },
   socialImage: (title, description) => socialImageUrl(title, description),
+  defaultSizes: () => "(min-width: 980px) 928px, calc(95.15vw + 15px)",
 }

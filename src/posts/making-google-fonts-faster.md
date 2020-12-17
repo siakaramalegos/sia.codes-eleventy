@@ -9,9 +9,9 @@ featuredImage: typewriter_keys_qgtruq.jpg
 ---
 
 <figure>
-  <img src="{% src "typewriter_keys_qgtruq.jpg" %}"
-    srcset="{% srcset "typewriter_keys_qgtruq.jpg" %}"
-    sizes="(min-width: 760px) 680px, 93.64vw"
+  <img src="{% src 'typewriter_keys_qgtruq.jpg' %}"
+    srcset="{% srcset 'typewriter_keys_qgtruq.jpg' %}"
+    sizes="{% defaultSizes %}"
     alt="Close-up of typewriter keys"
     width="4000" height="1835">
   <figcaption>Photo by <a href="https://unsplash.com/photos/tFdt_ztePy4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bob Newman</a> on <a href="https://unsplash.com/collections/3603769/font?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
@@ -56,11 +56,14 @@ You may be asking yourself, “Why can’t I just use the direct link to the fon
 The second problem we encounter with Google Fonts is that we have no control over flash-of-invisible-text (FOIT) and flash-of-unstyled-text (FOUT) while fonts are loading. Setting the [`font-display`](https://font-display.glitch.me/) property in the @font-face would give us that control, but it’s defined in the Google Fonts stylesheet.
 
 <figure>
-    <img src="/img/fonts/foit-emr.jpg"
-         alt="FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)">
-    <figcaption>FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)</figcaption>
+  <img src="{% src 'foit-emr_t0jvkk.jpg' %}"
+    srcset="{% srcset 'foit-emr_t0jvkk.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="Dev Tools network tab, screenshot partially through load"
+    loading="lazy"
+    width="1360" height="748">
+  <figcaption>FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)</figcaption>
 </figure>
-
 
 Finally, while rare, if Google Fonts is down, we won’t get our fonts. If our own CDN is down, then at least we are consistently delivering nothing to our users, right? 🤷🏻️
 
@@ -75,17 +78,25 @@ The only basic performance improvement we can do with Google Fonts hosting is wa
 Why? If you don’t warm up the connection, the browser will wait until it sees the CSS call font files before it begins DNS/TCP/TLS:
 
 <figure>
-    <img src="/img/fonts/fonts-no-preconnect.jpg"
-         alt="Loading Google Fonts without preconnect">
-    <figcaption>Loading Google Fonts without preconnect</figcaption>
+  <img src="{% src 'fonts-no-preconnect_fseenl.jpg' %}"
+    srcset="{% srcset 'fonts-no-preconnect_fseenl.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="WebPageTest waterfall showing wasted time connecting to fonts.gstatic.com"
+    loading="lazy"
+    width="1360" height="242">
+  <figcaption>Loading Google Fonts without preconnect</figcaption>
 </figure>
 
 This is wasted time because we KNOW that we will definitely need to request resources from `fonts.gstatic.com`. By adding the preconnect, we can perform DNS/TCP/TLS before the socket is needed, thereby moving forward that branch of the waterfall:
 
 <figure>
-    <img src="/img/fonts/fonts-preconnect.jpg"
-         alt="Loading Google Fonts with preconnect to fonts.gstatic.com">
-    <figcaption>Loading Google Fonts with preconnect to fonts.gstatic.com</figcaption>
+  <img src="{% src 'fonts-preconnect_qleijg.jpg' %}"
+    srcset="{% srcset 'fonts-preconnect_qleijg.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
+    alt="WebPageTest waterfall showing connection happening earlier and not blocking font download"
+    width="1360" height="241">
+  <figcaption>Loading Google Fonts with preconnect to fonts.gstatic.com</figcaption>
 </figure>
 
 ## Even better: self-host for full control
@@ -95,33 +106,49 @@ It would be even better if we had full control over our font files, loading, and
 First, select the Google font you need from the left sidebar. Type in the search box for a filtered list (red arrow), then click on your font (blue arrow):
 
 <figure>
-    <img src="/img/fonts/fonts-step-1.jpg"
-         alt="Step 1: Select a font.">
-    <figcaption>Step 1: Select a font.</figcaption>
+  <img src="{% src 'fonts-step-1_qzbp53.jpg' %}"
+    srcset="{% srcset 'fonts-step-1_qzbp53.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="google-webfonts-helper search for font in top left and select"
+    loading="lazy"
+    width="1360" height="666">
+  <figcaption>Step 1: Select a font.</figcaption>
 </figure>
 
 Next, select your character sets and styles. Remember that more styles mean more for the client to download:
 
 <figure>
-    <img src="/img/fonts/fonts-select-sets.jpg"
-         alt="Select your character sets and styles (weight and style).">
-    <figcaption>Select your character sets and styles (weight and style).</figcaption>
+  <img src="{% src 'fonts-select-sets_f4t6aq.jpg' %}"
+    srcset="{% srcset 'fonts-select-sets_f4t6aq.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt=""
+    loading="lazy"
+    width="1360" height="668">
+  <figcaption>Select your character sets and styles (weight and style).</figcaption>
 </figure>
 
 Different fonts have different levels of character support and style options. For example, Open Sans supports many more charsets than Muli:
 
 <figure>
-    <img src="/img/fonts/fonts-open-sans.jpg"
-         alt="Open Sans supports many more character sets including Cyrillic, Greek, Vietnamese, and extended sets.">
-    <figcaption>Open Sans supports many more character sets including Cyrillic, Greek, Vietnamese, and extended sets.</figcaption>
+  <img src="{% src 'fonts-open-sans_il3mdh.jpg' %}"
+    srcset="{% srcset 'fonts-open-sans_il3mdh.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt=""
+    loading="lazy"
+    width="1360" height="474">
+  <figcaption>Open Sans supports many more character sets including Cyrillic, Greek, Vietnamese, and extended sets.</figcaption>
 </figure>
 
 Your final choice is which browsers you want to support. “Modern Browsers” will give you WOFF and WOFF2 formats while “Best Support” will also give you TTF, EOT, and SVG. For our use case, we chose to only host WOFF and WOFF2 while selecting system fonts as fallbacks for older browsers. Work with your design team to decide the best option for you.
 
 <figure>
-    <img src="/img/fonts/fonts-support.jpg"
-         alt="Select “Best Support” for all file formats or “Modern Browsers” for only WOFF and WOFF2.">
-    <figcaption>Select “Best Support” for all file formats or “Modern Browsers” for only WOFF and WOFF2.</figcaption>
+  <img src="{% src 'fonts-support_q32mh2.jpg' %}"
+    srcset="{% srcset 'fonts-support_q32mh2.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt=""
+    loading="lazy"
+    width="1360" height="669">
+  <figcaption>Select “Best Support” for all file formats or “Modern Browsers” for only WOFF and WOFF2.</figcaption>
 </figure>
 
 After selecting a browser support option, copy the provided CSS into your stylesheet near the beginning of your stylesheets before you call any of those font families. We choose to put this at the top of our variables partial when using SCSS. You can customize the font file location — the default assumes `../fonts/`.
@@ -133,10 +160,12 @@ So far, we have only moved where we are hosting files from Google’s servers to
 
 We can do this with the [`preload`](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) resource hint:
 
-> Preload is a declarative fetch, allowing you to force the browser to make a request for a resource without blocking the document’s onload event.
-> —[from “Preload, Prefetch And Priorities in Chrome”](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf) by Addy Osmani
+<blockquote>
+  <p>Preload is a declarative fetch, allowing you to force the browser to make a request for a resource without blocking the document’s onload event.</p>
+  <p class="blockquote-source">—<a href="https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf">from “Preload, Prefetch And Priorities in Chrome”</a> by Addy Osmani</p>
+</blockquote>
 
-**Warning**: Before we go any further, make sure you understand that `preload` will load a resource whether you use it or not. Only preload resources that are needed on a particular page.
+<aside><strong>Warning</strong>: Before we go any further, make sure you understand that `preload` will load a resource whether you use it or not. Only preload resources that are needed on a particular page, and limit how many resources you preload.</aside>
 
 How do we choose which file type to preload? Resource hints are not available in every browser, but all the [browsers that support preload](https://caniuse.com/#search=preload) also [support WOFF2](https://caniuse.com/#search=woff2) so we can safely choose only WOFF2.
 
@@ -162,14 +191,22 @@ t file type.
 So how did we do? Let’s take a look at the performance before and after. Using webpagetest.org in easy mode (Moto G4, Chrome, slow 3G), our speed index was 4.147s using only preconnect, and 3.388s using self-hosting plus preload. The waterfalls for each show how we are saving time by playing with latency:
 
 <figure>
-  <img src="/img/fonts/fonts-self.jpg"
-        alt="Loading from Google with preconnect to fonts.gstatic.com">
+  <img src="{% src 'fonts-self_aot28d' %}"
+    srcset="{% srcset 'fonts-self_aot28d' %}"
+    sizes="{% defaultSizes %}"
+    alt="WebPageTest waterfall showing blocked font download"
+    loading="lazy"
+    width="1360" height="319">
   <figcaption>Loading from Google with preconnect to fonts.gstatic.com</figcaption>
 </figure>
 
 <figure>
-  <img src="/img/fonts/fonts-preload.jpg"
-        alt="Self-hosting fonts and using preload">
+  <img src="{% src 'fonts-preload_jmjnng' %}"
+    srcset="{% srcset 'fonts-preload_jmjnng' %}"
+    sizes="{% defaultSizes %}"
+    alt="WebPageTest waterfall showing css and fonts being downloaded at the same time"
+    loading="lazy"
+    width="1360" height="288">
   <figcaption>Self-hosting fonts and using preload</figcaption>
 </figure>
 
@@ -195,8 +232,10 @@ One thing Google Fonts does offer is a fast and reliable content delivery networ
 ### Size and Popular Fonts
 In some of my tests for our company website, I noticed smaller font file sizes for some fonts hosted by Google. My theory is this is due to Google’s variants for optimization:
 
-> Google Fonts maintains 30+ optimized variants for each font and automatically detects and delivers the optimal variant for each platform and browser.
-> —from [Web Font Optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#reducing_font_size_with_compression) by Ilya Grigorik
+<blockquote>
+  <p>Google Fonts maintains 30+ optimized variants for each font and automatically detects and delivers the optimal variant for each platform and browser.</p>
+  <p class="blockquote-source">—from <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#reducing_font_size_with_compression">Web Font Optimization</a> by Ilya Grigorik</p>
+</blockquote>
 
 In addition, very popular fonts like Open Sans and Roboto are likely to exist in your users’ cache. Hopefully, in a future post I can explore HTTPArchive data and give you an idea for which fonts are the most popular.
 
