@@ -33,7 +33,7 @@ Here's all the fancy code you need to do this on your own website on-the-line:
 
     const baseUrl = "https://twitter.com/intent/tweet/";
     const shareLink =
-      "https://twitter.com/TheGreenGreek/status/1341717809106173954";
+      "https://sia.codes/posts/wow-look-at-this-number-input/";
     const amount = document.querySelector("input").value;
     const text = `I owe @TheGreenGreek $${amount} for showing me how to HTML`;
     const url = `${baseUrl}?text=${encodeURI(text)}&url=${encodeURI(shareLink)}`;
