@@ -2,6 +2,7 @@
 title: Webmentions + Eleventy Talk
 description: Slides and resources from my talk at JamStack Toronto.
 date: 2020-11-10
+updated: 2020-12-23
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
 tweetId: '1326601057179406338'
