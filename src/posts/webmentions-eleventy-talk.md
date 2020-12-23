@@ -22,9 +22,13 @@ Webmentions are an exciting standard which help enable the IndieWeb. We can own 
 
 In this talk, I discuss what webmentions are and how to implement them. The code is based on an Eleventy site, but the concepts should be applicable to any site.
 
-The latest slides can be accessed at [projects.sia.codes/webmentions-eleventy-talk/](https://projects.sia.codes/webmentions-eleventy-talk/#/). To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down to advance through slides within a section.
+<div class="videoWrapper">
+  <iframe loading="lazy" title="Webmentions + Eleventy by Sia Karamalegos [ Jamstack Toronto ]" width="560" height="315" src="https://www.youtube.com/embed/zjHb4xtnTvU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-Stay tuned here for updates and a possible recording!
+## Slides
+
+The latest slides can be accessed at [projects.sia.codes/webmentions-eleventy-talk/](https://projects.sia.codes/webmentions-eleventy-talk/#/). To advance the slides, use `n` for next and `p` for previous. The right arrow jumps to the next section (and left for previous section). Up and down to advance through slides within a section.
 
 ## Resources
 
