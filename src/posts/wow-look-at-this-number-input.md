@@ -4,7 +4,7 @@ description: Do you know HTML?
 date: 2020-12-23
 tags: ['HTML']
 layout: layouts/post.njk
-# tweetId: '1339307226243231749'
+tweetId: '1341736761496625155'
 isSelect: false
 # featuredImage: passports_zwgffj.jpg
 ---
@@ -33,7 +33,7 @@ Here's all the fancy code you need to do this on your own website on-the-line:
 
     const baseUrl = "https://twitter.com/intent/tweet/";
     const shareLink =
-      "https://sia.codes/posts/wow-look-at-this-number-input/";
+      "https://twitter.com/TheGreenGreek/status/1341736761496625155";
     const amount = document.querySelector("input").value;
     const text = `I owe @TheGreenGreek $${amount} for showing me how to HTML`;
     const url = `${baseUrl}?text=${encodeURI(text)}&url=${encodeURI(shareLink)}`;
