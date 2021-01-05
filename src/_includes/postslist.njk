@@ -7,7 +7,7 @@
           sizes="(min-width: 1020px) 311px, (min-width: 680px) 48.75vw, calc(100vw - 20px)"
           alt="">
       </div>
-      <p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
+      <p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}{% if post.data.updated %}, updated {{ post.data.updated | readableDate }}{% endif %}</time></p>
       <h3 class="postlist-title a-reset">
         <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
       </h3>
