@@ -2,6 +2,7 @@
 title: Making Google Fonts Faster
 description: If you use Google Fonts, a few additional steps can lead to much faster load times.
 date: 2019-02-06
+updated: 2021-01-05
 tags: ['WebPerf', 'Fonts']
 layout: layouts/post.njk
 isSelect: true
@@ -19,12 +20,12 @@ featuredImage: typewriter_keys_qgtruq.jpg
 
 In this article, I will show you how to:
 
-1. Skip over some of the latency time for downloading fonts from Google Fonts
-2. Self-host your fonts for faster speed and greater control over FOIT and FOUT
-3. Do the same as #2 but more quickly with a cool tool
+1. Choose the best way to import your Google Fonts
+2. Skip over some of the latency time for downloading fonts
+3. Fix flash-of-invisible text (FOIT)
+4. Self-host your fonts for faster speed and greater control
 
-## But Why?
-Google Fonts is hosted on a pretty fast and reliable content delivery network (CDN), so why might we consider hosting on our own CDN?
+## Anatomy of a Google Fonts request
 
 Let’s take a step back and look at what is happening when you request from Google Fonts using a standard `<link>` copied from their website:
 
@@ -47,31 +48,56 @@ Then, each `@font-face` declaration tells the browser to use a local version of 
 }
 ```
 
-So what’s the problem?
+Understanding this architecture will help us understand why certain strategies work better for making our site faster.
 
-First, we have a minimum of 2 separate requests to different hosts — first for the stylesheet at `fonts.googleapis.com`, and then to a unique URL for each font hosted at `fonts.gstatic.com`. This makes it impossible to take advantage of [HTTP/2 multiplexing](https://developers.google.com/web/fundamentals/performance/http2/#request_and_response_multiplexing) or [resource hints](https://twitter.com/addyosmani/status/743571393174872064?lang=en).
 
-You may be asking yourself, “Why can’t I just use the direct link to the font?” Google Fonts are updated often so you might find yourself trying to load a font from a link that no longer exists pretty quickly. 🤦🏾
+## `<link>` vs `@import`
 
-The second problem we encounter with Google Fonts is that we have no control over flash-of-invisible-text (FOIT) and flash-of-unstyled-text (FOUT) while fonts are loading. Setting the [`font-display`](https://font-display.glitch.me/) property in the @font-face would give us that control, but it’s defined in the Google Fonts stylesheet.
+Sometimes it's easier for us to get our custom fonts into our projects by importing them in the CSS:
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+```
+
+Unfortunately, this makes our site load slower because we've increased the [critical request depth](https://web.dev/critical-request-chains/) for no benefit. In the network waterfall below, we can see that each request is chained - the HTML is loaded on line 1, which triggers a call to style.css. Only after style.css is loaded and the [CSSOM](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model) is created will the CSS from Google fonts then be triggered for download. And as we learned in the previous section, that file must also be downloaded and read before the fonts themselves will be downloaded (the final 2 rows):
 
 <figure>
-  <img src="{% src 'foit-emr_t0jvkk.jpg' %}"
-    srcset="{% srcset 'foit-emr_t0jvkk.jpg' %}"
+  <img src="{% src 'webfonts_css_iygufk.jpg' %}"
+    srcset="{% srcset 'webfonts_css_iygufk.jpg' %}"
     sizes="{% defaultSizes %}"
-    alt="Dev Tools network tab, screenshot partially through load"
+    alt="Webpagetest network waterfall showing wasted time due to CSS call"
     loading="lazy"
-    width="1360" height="748">
-  <figcaption>FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)</figcaption>
+    width="1876" height="364">
+  <figcaption>Loading Google fonts via @import in CSS increases the critical request depth and slows page load</figcaption>
 </figure>
 
-Finally, while rare, if Google Fonts is down, we won’t get our fonts. If our own CDN is down, then at least we are consistently delivering nothing to our users, right? 🤷🏻️
+By moving our font request to the `<head>` of our HTML instead, we can make our load faster because we've reduced the number of links in the chain for getting our font files:
 
-## If you do nothing else, at least preconnect…
-The only basic performance improvement we can do with Google Fonts hosting is warming up the DNS lookup, TCP handshake, and TLS negotiation to the `fonts.gstatic.com` domain with [preconnect](https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/):
+<figure>
+  <img src="{% src 'fonts-html_trnepj.jpg' %}"
+    srcset="{% srcset 'fonts-html_trnepj.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="Webpagetest network waterfall showing faster load directing in HTML"
+    loading="lazy"
+    width="1876" height="364">
+  <figcaption>Loading Google fonts in the HTML reduces the critical request depth and speeds up page load</figcaption>
+</figure>
+
+<aside>Always import your fonts from HTML, not CSS.</aside>
+
+
+## Warm up that connection faster
+
+Look closely at that last waterfall, and you might spy another inefficiency. Go ahead and try to find it before you keep reading...
+
+We have a minimum of 2 separate requests to 2 different hosts — first for the stylesheet at `fonts.googleapis.com`, and then to a unique URL for each font hosted at `fonts.gstatic.com`.
+
+You may be asking yourself, "Why can’t I just use the direct link to the font?" Google Fonts are updated often so you might find yourself trying to load a font from a link that no longer exists pretty quickly. 🤦🏾
+
+We can make one quick performance improvement by warming up the DNS lookup, TCP handshake, and TLS negotiation to the `fonts.gstatic.com` domain with [preconnect](https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/):
 
 ```html
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com/">
 <link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet">
 ```
 
@@ -99,10 +125,59 @@ This is wasted time because we KNOW that we will definitely need to request reso
   <figcaption>Loading Google Fonts with preconnect to fonts.gstatic.com</figcaption>
 </figure>
 
-## Even better: self-host for full control
-It would be even better if we had full control over our font files, loading, and CSS properties. Luckily, [Mario Ranftl](http://mranftl.com/) created [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) which helps us do exactly that! It is an amazing tool for giving us font files and font-face declarations based on the fonts, charsets, styles, and browser support you select.
+What's really cool is that I noticed that Google Fonts recently added the preconnect line in the HTML snippet they create for you. Now you no longer need to remember to add it when grabbing new fonts. To update legacy projects, just copy and paste this line before the `<link>` calling your font in your HTML:
 
-### Step 1: Use google-webfonts-helper to download our fonts and provide basic CSS font-face declarations
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com">
+```
+
+<figure>
+  <img src="/img/fonts/preconnect-snippet.png" width="620" height="796" class="portrait-image" style="max-width:620px">
+  <figcaption>Google Fonts now supplies the preconnect statement in the HTML snippet automatically</figcaption>
+</figure>
+
+<aside>Preconnect to fonts.gstatic.com when using Google Fonts hosted fonts.</aside>
+
+## Flash of Invisible text
+
+We used to have no control over flash-of-invisible-text (FOIT) and flash-of-unstyled-text (FOUT) while fonts are loading:
+
+<figure>
+  <img src="{% src 'foit-emr_t0jvkk.jpg' %}"
+    srcset="{% srcset 'foit-emr_t0jvkk.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="Dev Tools network tab, screenshot partially through load"
+    loading="lazy"
+    width="1360" height="748">
+  <figcaption>FOIT in action — note the missing navbar text in the filmstrip screenshot (throttled to slow 3G)</figcaption>
+</figure>
+
+Setting the [`font-display`](https://font-display.glitch.me/) property in the `@font-face` declaration in our CSS gives us that control. Different people have different opinions on FOIT (flash of invisible text) and FOUT (flash of unstyled text). For the most part, we prefer to show text as fast as possible even if that means a pesky transition to our preferred font once it loads. For strongly branded content, you may want to keep a FOIT over showing off-brand fonts.
+
+If you’re okay with FOUT, or flash of unstyled text, then we can fix FOIT by adding `font-display: swap;` to your `@font-face` declarations. Check out all your `font-display` options in this [fun Glitch playground](https://font-display.glitch.me/) by Monica Dinculescu.
+
+We don't have control over the `@font-face` declarations in the Google Fonts stylesheet, but luckily they added an [API for modifying `font-display`](https://developers.google.com/fonts/docs/css2#use_font-display). It's now included in the default snippet:
+
+```html/3/2
+<!-- Default HTML embed snippet from Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+```
+
+If you want to change the font display on a legacy project, add `&display=swap` to the tail of your link's href.
+
+## Self-host for full control
+
+Google Fonts is hosted on a pretty fast and reliable content delivery network (CDN), so why might we consider hosting on our own CDN?
+
+Remember how we have a minimum of 2 separate requests to 2 different hosts? This makes it impossible to take advantage of [HTTP/2 multiplexing](https://developers.google.com/web/fundamentals/performance/http2/#request_and_response_multiplexing) or [resource hints](https://twitter.com/addyosmani/status/743571393174872064?lang=en).
+
+Second, while rare, if Google Fonts is down, we won’t get our fonts. If our own CDN is down, then at least we are consistently delivering nothing to our users, right? 🤷🏻️
+
+To have full control over our font files, loading, and CSS properties, we can self-host our Google Fonts. Luckily, [Mario Ranftl](http://mranftl.com/) created [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) which helps us do exactly that! It is an amazing tool for giving us font files and font-face declarations based on the fonts, charsets, styles, and browser support you select.
+
+### Use google-webfonts-helper to download our fonts and provide basic CSS font-face declarations
 First, select the Google font you need from the left sidebar. Type in the search box for a filtered list (red arrow), then click on your font (blue arrow):
 
 <figure>
@@ -139,7 +214,7 @@ Different fonts have different levels of character support and style options. Fo
   <figcaption>Open Sans supports many more character sets including Cyrillic, Greek, Vietnamese, and extended sets.</figcaption>
 </figure>
 
-Your final choice is which browsers you want to support. “Modern Browsers” will give you WOFF and WOFF2 formats while “Best Support” will also give you TTF, EOT, and SVG. For our use case, we chose to only host WOFF and WOFF2 while selecting system fonts as fallbacks for older browsers. Work with your design team to decide the best option for you.
+Your final choice is which browsers you want to support. “Modern Browsers” will give you WOFF and WOFF2 formats while “Best Support” will also give you TTF, EOT, and SVG. For our use case, we chose to only host WOFF([caniuse](https://caniuse.com/woff)) and WOFF2 ([caniuse](https://caniuse.com/woff2)) while selecting system fonts as fallbacks for browsers older than IE9. Work with your design team to decide the best option for you.
 
 <figure>
   <img src="{% src 'fonts-support_q32mh2.jpg' %}"
@@ -151,14 +226,16 @@ Your final choice is which browsers you want to support. “Modern Browsers” w
   <figcaption>Select “Best Support” for all file formats or “Modern Browsers” for only WOFF and WOFF2.</figcaption>
 </figure>
 
-After selecting a browser support option, copy the provided CSS into your stylesheet near the beginning of your stylesheets before you call any of those font families. We choose to put this at the top of our variables partial when using SCSS. You can customize the font file location — the default assumes `../fonts/`.
+After selecting a browser support option, copy the provided CSS into your stylesheet near the beginning of your stylesheets before you call any of those font families. We choose to put this at the top of our variables partial when using SCSS. You can customize the font file location — the default assumes `../fonts/`. Don't forget to set your `font-display` property manually in the CSS to control FOIT.
 
 Finally, download your files. Unzip them, and place them in your project in the appropriate location.
 
-### Step 2: Loading Optimization
-So far, we have only moved where we are hosting files from Google’s servers to ours. This is nice, but not good enough. We want our font files to start downloading right away, not after the CSS is parsed and the CSSOM is created.
+## Loading Optimization
+So far, we have only moved where we are hosting files from Google’s servers to ours. This is nice, but we might be able to do more.
 
-We can do this with the [`preload`](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) resource hint:
+We can have our font files start downloading right away, before the browser knows whether it will need the font or not. By default, the browser only downloads a font after the HTML and CSS are parsed and the CSSOM is created. It won't load font files that aren't needed. If warning bells are going off in your head, then you're right to worry. We only want to hijack this process if we know for sure that a font will be used on that page.
+
+Once we know we definitely need a particular font on a page, we can preload it with the [`preload`](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) resource hint:
 
 <blockquote>
   <p>Preload is a declarative fetch, allowing you to force the browser to make a request for a resource without blocking the document’s onload event.</p>
@@ -169,23 +246,18 @@ We can do this with the [`preload`](https://www.smashingmagazine.com/2016/02/pre
 
 How do we choose which file type to preload? Resource hints are not available in every browser, but all the [browsers that support preload](https://caniuse.com/#search=preload) also [support WOFF2](https://caniuse.com/#search=woff2) so we can safely choose only WOFF2.
 
-In your HTML file, add resource hints for all WOFF2 font files you need for the current page:
+In your HTML file, add resource hints for the WOFF2 font files you need for the current page:
 
 ```html
   <link rel="preload" as="font" type="font/woff2"
     href="./fonts/muli-v12-latin-regular.woff2" crossorigin>
-
-  <link rel="preload" as="font" type="font/woff2"
-    href="./fonts/muli-v12-latin-700.woff2" crossorigin>
 ```
 
 Let’s break down our preload `<link>` element:
 
 - `rel="preload"` tells the browser to declaratively fetch the resource but not “execute” it (our CSS will queue usage).
-- `as="font"` tells the browser what it will be downloading so that it can set an appropriate priority. Withou
-t it, the browser would set a default low priority.
-- `type="font/woff2` tells the browser the file type so that it only downloads the resource if it supports tha
-t file type.
+- `as="font"` tells the browser what it will be downloading so that it can set an appropriate priority. Without it, the browser would set a default low priority.
+- `type="font/woff2` tells the browser the file type so that it only downloads the resource if it supports that file type.
 - `crossorigin` is required because fonts are fetched using anonymous mode CORS.
 
 So how did we do? Let’s take a look at the performance before and after. Using webpagetest.org in easy mode (Moto G4, Chrome, slow 3G), our speed index was 4.147s using only preconnect, and 3.388s using self-hosting plus preload. The waterfalls for each show how we are saving time by playing with latency:
@@ -210,12 +282,11 @@ So how did we do? Let’s take a look at the performance before and after. Using
   <figcaption>Self-hosting fonts and using preload</figcaption>
 </figure>
 
-### Step 3: Fix FOIT and FOUT (optional)
-Different people have different opinions on FOIT (flash of invisible text) and FOUT (flash of unstyled text). For the most part, we prefer to show text as fast as possible even if that means a pesky transition to our preferred font once it loads. For strongly branded content, you may want to keep a FOIT over showing off-brand fonts.
+### Oh no, preload made my page's initial render slower!
 
-If you’re okay with FOUT, or flash of unstyled text, then we can fix FOIT by adding `font-display: swap;` to our `@font-face` declarations.
+Yes, this can happen. Unfortunately, the `preload` hint can throw a wrench into prioritization schemes for loading files to the browser at the moment. Preloaded files can get loaded before other, more important files needed for initial render. On the plus side, sometimes it can actually load the font fast enough that the page doesn't need to render the fallback font first and then re-render and shift when the desired font comes in.
 
-Check out all your `font-display` options in this [fun Glitch playground](https://font-display.glitch.me/) by Monica Dinculescu.
+Your best strategy is to minimize how many resources you preload and TEST, TEST, TEST with [webpagetest.org](https://webpagetest.org/), which is similar to the browser's dev tools network tab.
 
 ## subfont
 So what if you don’t want to go through all of these steps? The [subfont](https://github.com/Munter/subfont) npm package will do this in addition to dynamically subsetting your fonts at build. It takes some more set-up time, but it’s definitely worth a try.
@@ -227,7 +298,7 @@ Are you a fan of [Gatsby](https://www.gatsbyjs.org/)? There’s even a [subfont 
 ## Additional Considerations
 
 ### Host static assets on a CDN
-One thing Google Fonts does offer is a fast and reliable content delivery network (CDN). You should also host your static assets on a CDN for faster delivery to users in different regions. We use AWS S3 plus Cloudfront, the CDN service offered by Amazon, but many options exist.
+One thing Google Fonts does offer is a fast and reliable content delivery network (CDN). You should also host your static assets on a CDN for faster delivery to users in different regions. We use AWS S3 plus Cloudfront, the CDN service offered by Amazon, and Netlify which uses AWS behind the scenes in the same way, but many options exist.
 
 ### Size and Popular Fonts
 In some of my tests for our company website, I noticed smaller font file sizes for some fonts hosted by Google. My theory is this is due to Google’s variants for optimization:
@@ -237,7 +308,7 @@ In some of my tests for our company website, I noticed smaller font file sizes f
   <p class="blockquote-source">—from <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#reducing_font_size_with_compression">Web Font Optimization</a> by Ilya Grigorik</p>
 </blockquote>
 
-In addition, very popular fonts like Open Sans and Roboto are likely to exist in your users’ cache. Hopefully, in a future post I can explore HTTPArchive data and give you an idea for which fonts are the most popular.
+We used to say that very popular fonts like Open Sans and Roboto are likely to exist in your users’ cache. Sadly, shared cache is gone on all major browsers (and had been gone for a while in Safari) due to security. It was debatable how much benefit we actually got from it in the first place.
 
 So, before you commit to a path of self-hosting, compare the tradeoffs of byte sizes and speed/control.
 
