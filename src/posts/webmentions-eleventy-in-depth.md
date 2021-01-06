@@ -2,6 +2,7 @@
 title: An In-Depth Tutorial of Webmentions + Eleventy
 description: Add Webmentions to your Eleventy static site with this step-by-step tutorial.
 date: 2019-11-22
+updated: 2021-01-06
 tags: ['IndieWeb', 'Eleventy']
 layout: layouts/post.njk
 tweetId: '1198282993678376961'
@@ -31,6 +32,8 @@ I am a huge fan of the static site generator [Eleventy](https://www.11ty.io/) so
 They are a cool tool for enabling social interactions when you host your own content. Max Böck wrote an excellent post, [Static Indieweb pt2: Using Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/), which walks through his implementation. He also created an Eleventy starter, [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions), which is a basic starter template with webmentions support.
 
 So why am I writing this post? Sadly, I started with the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), and didn't notice the [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions) starter until after I had already built my site. I also struggled to fully build out the functionality, partly because I'm still an Eleventy n00b. So I wanted to share the detailed steps I used in the hopes that it will help more of you join the Indie Web.
+
+<aside><strong>Prefer to learn by video?</strong> I recently gave a <a href="/posts/webmentions-eleventy-talk/">lightning talk</a> at Jamstack Toronto about the concepts behind Webmentions and adding them to an Eleveny project. Check out <a href="/posts/webmentions-eleventy-talk/">the recording</a>.</aside>
 
 The perspective of this post is adding webmentions to an Eleventy site after the fact. The files, folders, and config architecture match the `eleventy-base-blog`, but you can likely use this as a starting point for any Eleventy site. Make sure you watch out for spots where your analogous architecture may be different.
 
@@ -219,6 +222,8 @@ module.exports = async function () {
   return cache
 }
 ```
+
+<aside><strong>Note:</strong> If you use Netlify, I created a Netlify build plugin to cache the /_cache/ folder between builds. Check it out at <a href="https://www.npmjs.com/package/netlify-plugin-cache-folder">netlify-plugin-cache-folder</a>.</aside>
 
 ## Filters for build
 
