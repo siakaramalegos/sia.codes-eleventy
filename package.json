@@ -29,7 +29,7 @@
     "luxon": "^1.25.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.3.0",
-    "netlify-plugin-cache-folder": "0.0.3",
+    "netlify-plugin-cache-folder": "0.0.6",
     "node-fetch": "^2.6.1"
   },
   "dependencies": {
