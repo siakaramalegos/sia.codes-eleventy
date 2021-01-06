@@ -1,3 +1,5 @@
 [[redirects]]
   from = "/mars-randomizer/"
   to = "https://projects.sia.codes/mars-randomizer/"
+[[plugins]]
+  package = "netlify-plugin-cache-folder"
