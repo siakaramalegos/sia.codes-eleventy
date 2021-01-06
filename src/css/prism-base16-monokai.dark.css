@@ -25,6 +25,7 @@ pre[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 }
+code[class*="language-"] { white-space: pre-wrap !important; }
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
 	color: #97927d;
 }
