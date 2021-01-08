@@ -1,5 +1,5 @@
 ---
-title: "Day 6 of⚡️ #30DaysOfWebPerf ⚡️: Self-hosted fonts"
+title: "Day 6 of #30DaysOfWebPerf: Self-hosted fonts"
 description: Google Fonts is great, but how do we avoid the performance pitfalls?
 date: 2019-11-08
 tags: ['WebPerf', 'Fonts', 'Latency']

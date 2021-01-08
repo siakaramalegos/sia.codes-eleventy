@@ -1,5 +1,5 @@
 ---
-title: "Day 10 of⚡️ #30DaysOfWebPerf ⚡️: <picture>"
+title: "Day 10 of #30DaysOfWebPerf: <picture>"
 description: The HTML <picture> tag can help us do both better art direction and deliver new formats with legacy fallbacks.
 date: 2019-11-21
 tags: ['WebPerf', 'Images']

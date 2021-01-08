@@ -1,5 +1,5 @@
 ---
-title: "Day 4 of⚡️ #30DaysOfWebPerf ⚡️: Web fonts"
+title: "Day 4 of #30DaysOfWebPerf: Web fonts"
 description: Google Fonts is great, but how do we avoid the performance pitfalls?
 date: 2019-11-06
 tags: ['WebPerf', 'Fonts', 'Latency']

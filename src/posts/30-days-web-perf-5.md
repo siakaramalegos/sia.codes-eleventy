@@ -1,5 +1,5 @@
 ---
-title: "Day 5 of⚡️ #30DaysOfWebPerf ⚡️: Your laptop is a filthy liar"
+title: "Day 5 of #30DaysOfWebPerf: Your laptop is a filthy liar"
 description: Dev Tools throttling emulators are great, but they don't mimic real devices.
 date: 2019-11-07
 tags: ['WebPerf', 'Dev Tools']

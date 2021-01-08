@@ -1,5 +1,5 @@
 ---
-title: "Day 3 of⚡️ #30DaysOfWebPerf ⚡️: Network profile"
+title: "Day 3 of #30DaysOfWebPerf: Network profile"
 description: Learn tips and the basics of the Chrome Dev Tools network tab.
 date: 2019-11-05
 tags: ['WebPerf', 'Dev Tools']

@@ -1,5 +1,5 @@
 ---
-title: "Day 8 of⚡️ #30DaysOfWebPerf ⚡️: srcset and sizes"
+title: "Day 8 of #30DaysOfWebPerf: srcset and sizes"
 description: HTML (and CSS) can already handle serving responsive images without the need for other tools.
 date: 2019-11-12
 tags: ['WebPerf', 'Images']

@@ -1,5 +1,5 @@
 ---
-title: "Day 11 of⚡️ #30DaysOfWebPerf ⚡️: Lazy-load images"
+title: "Day 11 of #30DaysOfWebPerf: Lazy-load images"
 description: One major way we can get image savings is through lazy loading images not in the viewport.
 date: 2019-11-22
 tags: ['WebPerf', 'Images', 'Analytics']

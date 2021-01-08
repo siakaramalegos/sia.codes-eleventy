@@ -1,5 +1,5 @@
 ---
-title: "Day 2 of⚡️ #30DaysOfWebPerf ⚡️: Why performance matters"
+title: "Day 2 of #30DaysOfWebPerf: Why performance matters"
 description: Learn the reasons why web performance should be your priority.
 date: 2019-11-04
 tags: ['WebPerf']

@@ -1,5 +1,5 @@
 ---
-title: "Day 9 of⚡️ #30DaysOfWebPerf ⚡️: Image Resolution"
+title: "Day 9 of #30DaysOfWebPerf: Image Resolution"
 description: What is device pixel ratio? What size images should we provide? Balancing speed and image quality.
 date: 2019-11-13
 tags: ['WebPerf', 'Images']

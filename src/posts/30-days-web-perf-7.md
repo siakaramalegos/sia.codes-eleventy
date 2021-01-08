@@ -1,5 +1,5 @@
 ---
-title: "Day 7 of⚡️ #30DaysOfWebPerf ⚡️: Image Formats"
+title: "Day 7 of #30DaysOfWebPerf: Image Formats"
 description: Image format can affect performance more than size. Learn about your best options.
 date: 2019-11-11
 tags: ['WebPerf', 'Images']
