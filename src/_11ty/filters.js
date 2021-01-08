@@ -22,6 +22,18 @@ module.exports = {
   webmentionsByType: (mentions, mentionType) => {
     return mentions.filter(entry => !!entry[mentionType])
   },
+  sortWebmentions: (mentions) => {
+    return mentions.sort((a, b) => {
+      if (a["published"] < b["published"]) {
+        return -1;
+      }
+      if (a["published"] < b["published"]) {
+        return 1;
+      }
+      // a must be equal to b
+      return 0;
+    })
+  },
   readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
     return DateTime.fromISO(dateStr).toFormat(formatStr);
   },

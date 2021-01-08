@@ -5,7 +5,7 @@
   {% set repostsSize = reposts | size %}
   {% set likes = mentions | webmentionsByType('like-of') %}
   {% set likesSize = likes | size %}
-  {% set replies = mentions | webmentionsByType('in-reply-to')  %}
+  {% set replies = mentions | webmentionsByType('in-reply-to') | sortWebmentions  %}
   {% set repliesSize = replies | size  %}
 
 {% if likesSize > 0 %}
