@@ -3,6 +3,16 @@ const rootUrl = require('../_data/metadata.json').url
 const events = require('../_data/events.js')
 const talks = require('../_data/talks.js')
 
+function getRelevance(postTags, matchingPost) {
+  const commonTopics = matchingPost.data.tags.filter(element => postTags.includes(element))
+  const discount = matchingPost.url.includes('30-days') ? 0.5 : 0
+  return commonTopics.length - discount
+}
+
+function unique(array) {
+  return [...new Set(array)]
+}
+
 module.exports = {
   getWebmentionsForUrl: (webmentions, url) => {
     return webmentions.children.filter(entry => entry['wm-target'] === url)
@@ -27,7 +37,7 @@ module.exports = {
       if (a["published"] < b["published"]) {
         return -1;
       }
-      if (a["published"] < b["published"]) {
+      if (a["published"] > b["published"]) {
         return 1;
       }
       // a must be equal to b
@@ -64,5 +74,34 @@ module.exports = {
     }
 
     return array.slice(0, n);
+  },
+  similarItems: (itemPath, tags, collections) => {
+    const topicTags = tags.filter(tag => !["posts", "Popular"].includes(tag))
+
+    let matches = []
+    topicTags.forEach(tag => {
+      matches = [...matches, ...collections[tag]]
+    })
+
+    let uniqueMatches = unique(matches).filter(match => match.url !== itemPath) // remove self
+    if (uniqueMatches.length < 3) {
+      uniqueMatches = unique([...uniqueMatches, ...collections["Popular"]])
+    }
+    const matchesByRelevance = uniqueMatches
+      .filter(match => match.url !== itemPath) // remove self
+      .map(match => {
+        return {...match, relevance: getRelevance(topicTags, match)}
+      })
+      .sort((a, b) => {
+        if (a.relevance > b.relevance) {
+          return -1;
+        }
+        if (a.relevance < b.relevance) {
+          return 1;
+        }
+        return 0;
+      })
+    const size = 3
+    return matchesByRelevance.slice(0, size);
   }
 }

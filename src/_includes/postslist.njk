@@ -2,10 +2,15 @@
   {% for post in postslist | reverse %}
     <article class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <div class="postlist-image">
-        <img src="{% src post.data.featuredImage, 300 %}"
-          srcset="{% srcset post.data.featuredImage, [300, 600] %}"
-          sizes="(min-width: 1020px) 311px, (min-width: 680px) 48.75vw, calc(100vw - 20px)"
-          alt="">
+        {% if post.data.featuredImage %}
+          <img src="{% src post.data.featuredImage, 300 %}"
+            srcset="{% srcset post.data.featuredImage, [300, 600] %}"
+            sizes="(min-width: 1020px) 311px, (min-width: 680px) 48.75vw, calc(100vw - 20px)"
+            alt="">
+        {% else %}
+          <img src="{% socialImage post.data.title, post.data.description %}" alt="">
+        {% endif %}
+
       </div>
       <p><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}{% if post.data.updated %}, updated {{ post.data.updated | readableDate }}{% endif %}</time></p>
       <h3 class="postlist-title a-reset">

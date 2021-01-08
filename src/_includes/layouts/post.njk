@@ -11,6 +11,15 @@ templateClass: tmpl-post
   <section class="e-content">
   {{ content | safe }}
 
+  <p>
+    {% for tag in tags %}
+      {%- if tag != "posts" -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+      {%- endif -%}
+    {% endfor %}
+  </p>
+
   <div class="well">
     <svg aria-hidden="true" focusable="false" role="img" width="200px" xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512">
@@ -22,6 +31,12 @@ templateClass: tmpl-post
     <a class="button button-default" href="/contact/?subject=Contract inquiry from sia.codes">Hire me</a>
 
   </div>
+  </section>
+
+  <section class="wider">
+    <h2>You might also like</h2>
+    {% set postslist = page.url | similarItems(tags, collections) %}
+    {% include 'postslist.njk' %}
   </section>
 
   <section>

@@ -158,6 +158,14 @@ aside {
   -webkit-text-fill-color: transparent;
   padding: 24px 3px 0 0;}
 section {padding: 8px 0;}
+@media (min-width: 58rem) {
+  .wider {
+    width: 100vw;
+    max-width: 58rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .title {
   font-size: 18vw;
   font-weight: 300;
