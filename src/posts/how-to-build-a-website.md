@@ -2,7 +2,7 @@
 title: How to build a website in 2020
 description: It's really easy.
 date: 2020-02-11
-tags: ['Web', 'Tools']
+tags: ['Web', 'Tools', "Popular"]
 layout: layouts/post.njk
 tweetId: '1227248318159491077'
 isSelect: true

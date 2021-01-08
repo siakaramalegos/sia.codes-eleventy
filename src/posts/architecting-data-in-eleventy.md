@@ -2,7 +2,7 @@
 title: Architecting data in Eleventy
 description: Setting and using data in the static site generator Eleventy
 date: 2020-05-15
-tags: ['IndieWeb', 'Eleventy', 'JavaScript']
+tags: ['IndieWeb', 'Eleventy', 'JavaScript', "Popular"]
 layout: layouts/post.njk
 tweetId: '1261340524201390081'
 isSelect: true

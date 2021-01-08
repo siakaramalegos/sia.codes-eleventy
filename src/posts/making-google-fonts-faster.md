@@ -3,7 +3,7 @@ title: Making Google Fonts Faster
 description: If you use Google Fonts, a few additional steps can lead to much faster load times.
 date: 2019-02-06
 updated: 2021-01-05
-tags: ['WebPerf', 'Fonts']
+tags: ['WebPerf', 'Fonts', "Popular"]
 layout: layouts/post.njk
 isSelect: true
 featuredImage: typewriter_keys_qgtruq.jpg
