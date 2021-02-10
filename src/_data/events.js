@@ -1,15 +1,16 @@
 module.exports = {
   upcomingEvents: [
+
+  ],
+  pastEvents: [
     {
       conference: "c't <web dev>",
       conferenceUrl: 'https://ctwebdev.de/',
       location: 'Online',
       talks: [
-        { key: 'imagesNew', date: '31 Mar 2020' },
+        { key: 'imagesNew', date: '9 Feb 2021' },
       ]
     },
-  ],
-  pastEvents: [
     {
       conference: 'The Progressive Web Experience',
       conferenceUrl: 'https://progressivewebexperience.io/',
