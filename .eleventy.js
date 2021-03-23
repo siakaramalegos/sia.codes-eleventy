@@ -25,8 +25,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/css/fonts");
-  eleventyConfig.addPassthroughCopy("src/javascript");
-  eleventyConfig.addPassthroughCopy("node_modules/web-vitals");
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");

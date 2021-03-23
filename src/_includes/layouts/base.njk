@@ -43,8 +43,6 @@
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/Recursive_VF_1.034--subset_sia_logo.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/Recursive_VF_1.034--wght300_800--subset_range_english_basic.woff2" crossorigin>
 
-    <script src="/javascript/index.js" type="module"></script>
-
     <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
     <!-- Global site tag (gtag.js) - Google Analytics - new GA4 tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMTGZPWPWD"></script>
@@ -63,6 +61,32 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-59135521-1');
+    </script>
+    <script type="module">
+      import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
+
+      function sendToGoogleAnalytics({name, delta, id}) {
+        // Assumes the global `gtag()` function exists, see:
+        // https://developers.google.com/analytics/devguides/collection/gtagjs
+        gtag('event', name, {
+          event_category: 'Web Vitals',
+          // The `id` value will be unique to the current page load. When sending
+          // multiple values from the same page (e.g. for CLS), Google Analytics can
+          // compute a total by grouping on this ID (note: requires `eventLabel` to
+          // be a dimension in your report).
+          event_label: id,
+          // Google Analytics metrics must be integers, so the value is rounded.
+          // For CLS the value is first multiplied by 1000 for greater precision
+          // (note: increase the multiplier for greater precision if needed).
+          value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+          // Use a non-interaction event to avoid affecting bounce rate.
+          non_interaction: true,
+        });
+      }
+
+      getCLS(sendToGoogleAnalytics);
+      getFID(sendToGoogleAnalytics);
+      getLCP(sendToGoogleAnalytics);
     </script>
     <link rel="webmention" href="https://webmention.io/sia.codes/webmention" />
     <link rel="pingback" href="https://webmention.io/sia.codes/xmlrpc" />
