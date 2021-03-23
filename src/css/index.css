@@ -512,7 +512,6 @@ nav img {display: block;}
   margin:0 8px 0 0;
   width: 12px;}
 summary::marker {color: var(--pink-20);}
-summary::-webkit-details-marker {color: var(--pink-20);}
 details p {
   background-color: var(--grey-05);
   padding: 16px 24px;
