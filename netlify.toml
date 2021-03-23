@@ -5,7 +5,7 @@
   package = "netlify-plugin-cache-folder"
 [build.processing.css]
   bundle = true
-  minify = false
+  minify = true
 [build.processing.js]
   bundle = true
-  minify = false
+  minify = true
