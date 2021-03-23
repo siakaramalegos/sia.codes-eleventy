@@ -3,3 +3,9 @@
   to = "https://projects.sia.codes/mars-randomizer/"
 [[plugins]]
   package = "netlify-plugin-cache-folder"
+[build.processing.css]
+  bundle = true
+  minify = false
+[build.processing.js]
+  bundle = true
+  minify = false

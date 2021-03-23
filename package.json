@@ -33,6 +33,7 @@
     "node-fetch": "^2.6.1"
   },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "web-vitals": "^1.1.1"
   }
 }
