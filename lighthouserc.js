@@ -14,10 +14,10 @@ module.exports = {
       target: 'temporary-public-storage',
     },
     assert: {
-      budgetsFile: "./budget.json",
+      // budgetsFile: "./budget.json",
       assertions: {
-        'categories:performance': ['error', {minScore: 95}],
-        'categories:accessibility': ['error', {minScore: 95}]
+        'categories:performance': ['error', {minScore: 0.95}],
+        'categories:accessibility': ['error', {minScore: 0.95}]
       }
 
     }
