@@ -16,7 +16,7 @@ module.exports = {
     assert: {
       // budgetsFile: "./budget.json",
       assertions: {
-        'categories:performance': ['error', {minScore: 0.96}],
+        'categories:performance': ['error', {minScore: 0.85}],
         'categories:accessibility': ['error', {minScore: 0.95}]
       }
 
