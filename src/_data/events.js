@@ -1,6 +1,13 @@
 module.exports = {
   upcomingEvents: [
-
+    {
+      conference: 'UberConf',
+      conferenceUrl: 'https://uberconf.com/',
+      location: 'Denver, CO, USA',
+      talks: [
+        { key: 'performanceWorkshop', date: '5 Oct 2021' },
+      ]
+    },
   ],
   pastEvents: [
     {

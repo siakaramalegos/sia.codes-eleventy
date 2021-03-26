@@ -11,6 +11,10 @@ module.exports = {
     title: "Serverless GraphQL Using Hasura Cloud",
     description: "Hasura Cloud makes setting up GraphQL APIs over PostgreSQL databases a breeze. In this talk, we'll build a new database and GraphQL API from scratch using Hasura Cloud and Heroku, then use that API to query and mutate our data using a serverless frontend. You must understand vanilla JavaScript and HTML and be familiar with the basics of GraphQL queries and running npm scripts to attend this workshop."
   },
+  indieWebEleventy: {
+    title: "Join the Indie Web with Eleventy and Webmentions",
+    description: "Webmentions are an exciting standard which help enable the IndieWeb. We can own our own content, hosted on our own domains, without sacrificing social connection and replies with other people! Eleventy is JavaScript-based static site generator that requires no client-side JavaScript, making it performant by default."
+  },
   eleventyWebmentions: {
     title: "Webmentions + Eleventy",
     description: "Webmentions are an exciting standard which help enable the IndieWeb. We can own our own content, hosted on our own domains, without sacrificing social connection and replies with other people! In this talk, I discuss what webmentions are and how to implement them. The code is based on an Eleventy site, but the concepts should be applicable to any site."
