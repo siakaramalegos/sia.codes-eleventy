@@ -398,8 +398,11 @@ pre {
 .highlight-line-active {
   background-color: var(--grey-60);
   background-color: var(--grey-70);}
-.highlight-line-add {background-color: #45844b;}
+.highlight-line-add {background-color: #35643a;}
 .highlight-line-remove {background-color: #902f2f;}
+.highlight-line-remove .token.attr-name, .highlight-line-add .token.attr-name {color: #fecb90;}
+.highlight-line-add .token.attr-value {color: #abe43a;}
+.highlight-line-add .token.tag {color: #8ce2f3;}
 
 /* Nav */
 nav {

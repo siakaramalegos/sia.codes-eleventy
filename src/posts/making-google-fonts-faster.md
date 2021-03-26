@@ -133,7 +133,7 @@ What's really cool is that I noticed that Google Fonts recently added the precon
 ```
 
 <figure>
-  <img src="/img/fonts/preconnect-snippet.png" width="620" height="796" class="portrait-image" style="max-width:620px">
+  <img src="/img/fonts/preconnect-snippet.png" width="620" height="796" class="portrait-image" style="max-width:620px" alt="Screenshot of Google Font's embed link generator">
   <figcaption>Google Fonts now supplies the preconnect statement in the HTML snippet automatically</figcaption>
 </figure>
 
