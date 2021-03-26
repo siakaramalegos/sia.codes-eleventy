@@ -71,7 +71,7 @@ Boom! Now you can install and update things in your terminal.
 ## Step 4. Oh My Zsh!
 I debated on adding this section, but this article really is about my adventures in setting up my machine, so here goes. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) is totally an easy cop-out I’ve used for setting up my terminal on every machine:
 
-> Oh My Zsh is an open source, community-driven framework for managing your [zsh](https://www.zsh.org/) configuration.
+<aside><strong>Oh My Zsh</strong> is an open source, community-driven framework for managing your <a href="https://www.zsh.org/">zsh</a> configuration.</aside>
 
 It gives me a custom terminal prompt that I like and Git aliases. You just need to install Zsh and then Oh My Zsh:
 

@@ -51,7 +51,7 @@ date: 2019-01-01
         d="M186.67 128H272V96h-85.33c-5.89 0-10.67 3.58-10.67 8v16c0 4.42 4.78 8 10.67 8zm0 64H272v-32h-85.33c-5.89 0-10.67 3.58-10.67 8v16c0 4.42 4.78 8 10.67 8zM336 192h-16a16 16 0 0 0-16 16v48a128.15 128.15 0 0 1-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v40.16c0 89.64 64 169.55 152 181.69V464H96a16 16 0 0 0-16 16v16a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16v-16a16 16 0 0 0-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48a16 16 0 0 0-16-16zm-149.33 64H272v-32h-85.33c-5.89 0-10.67 3.58-10.67 8v16c0 4.42 4.78 8 10.67 8z"></path>
     </g>
   </svg>
-  <div class="talks">
+  <div class="talks flow">
     <h2>Upcoming Talks and Workshops</h2>
     <div id="upcomingEvents" class="card-list">
       {% set upcomingEvents = 'upcomingEvents' | getEvents %}
@@ -66,14 +66,13 @@ date: 2019-01-01
       {% endif %}
     </div>
     <p>Learn more <a href="{{ '/speaking/' | url }}">about my speaking</a>.</p>
-    <br>
     <p class="text-center">
       <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me to speak at your event</a>
     </p>
   </div>
 </section>
 
-<section>
+<section class="flow">
   <h2>Select Writing</h2>
 
   {% set postslist = collections.posts | getSelect %}

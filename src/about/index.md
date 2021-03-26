@@ -8,7 +8,7 @@ templateClass: tmpl-post
 date: 2019-01-02
 ---
 
-<section>
+<section class="flow">
 <img src="/img/sia_karamalegos_small.jpg" alt="Sia Karamalegos" class="headshot">
 
 I'm a freelance web developer, a [Women Techmakers](https://www.womentechmakers.com/) ambassador, and a co-organizer for [GDG New Orleans](https://www.gdgneworleans.com/). I'm also a Google Developer Expert in Web Technologies and a Cloudinary Media Developer Expert. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
@@ -17,7 +17,7 @@ As a person, I also love making developer's lives easier through teaching, speak
 
 </section>
 
-<section>
+<section class="flow">
 
 ## ⚡️ Need help making your website fast?
 I implement end-to-end performance managment, from audits and improvements to long-term management with CI. Whether onsite or remote, I can provide training tailored for your team and project technology.

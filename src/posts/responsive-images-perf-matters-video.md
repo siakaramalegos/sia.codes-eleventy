@@ -22,7 +22,7 @@ Want to learn how to make your images more responsive and more performant? Haven
 
 I spoke at my first virtual conference, PerfMatters Conf, and luckily they recorded it. This talk is a great intro into all things images for the web. Enjoy!
 
-> Images account for 50% of the bytes downloaded to load a website. How can you make sure that your users only download the smallest image necessary while preserving image quality?
+<aside>Images account for 50% of the bytes downloaded to load a website. How can you make sure that your users only download the smallest image necessary while preserving image quality?</aside>
 
 In this talk, I focus on the underlying concepts in HTML and CSS for serving responsive images, which you can take with you no matter which tool you use. Which file formats suit which image types best? How can you use art direction in images to show the best image for a viewport layout?
 

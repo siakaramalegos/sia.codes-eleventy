@@ -11,7 +11,7 @@ permalink: /posts/
     <h1>Blog</h1>
   </section>
 
-  <section>
+  <section class="flow">
     <h2>Select posts</h2>
     {% set postslist = collections.posts | getSelect %}
     {% include "postslist.njk" %}
@@ -30,7 +30,7 @@ permalink: /posts/
     </p>
   </section>
 
-  <section>
+  <section class="flow">
     <h2>All posts</h2>
     {% set archivelist = collections.posts %}
     {% include "archivelist.njk" %}

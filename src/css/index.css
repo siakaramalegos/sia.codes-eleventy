@@ -13,8 +13,10 @@
 */
 
 :root{
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, Arial, sans-serif;
-  --font-display: 'Recursive', Arial, Helvetica, sans-serif;
+  --font-body: 'Lexend', sans-serif;
+  --font-display: 'Lexend', sans-serif  ;
+  /* --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, Arial, sans-serif; */
+  /* --font-display: 'Recursive', Arial, Helvetica, sans-serif; */
   --font-serif: Georgia, 'Times New Roman', Times, serif;;
   --grey-0: rgb(252,252,253);
   --grey-05: #edecf0;
@@ -60,10 +62,17 @@
   --blue-default: rgb(24,0,245);
   --blue-70: rgb(16,0,193);
   --blue-80: rgb(7,0,125);
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.33rem;
+  --size-600: 1.77rem;
+  --size-700: 2.36rem;
+  --size-800: 3.15rem;
+  --size-900: 4.2rem;
 }
 
-* { box-sizing: border-box; }
-
+/* Reset */
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
 
  /* The bare minimum for the English Language */
 @font-face {
@@ -75,35 +84,6 @@
   unicode-range: U+0020-007F,U+00A9,U+2190-2193;
 }
 
-/* unicode latin-1 letters, basic european diacritics */
-@font-face {
-  font-family: 'Recursive';
-  font-style: oblique -15deg 0deg;
-  font-weight: 300 800;
-  font-display: swap;
-  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_latin_1.woff2') format('woff2');
-  unicode-range: U+00C0-00FF;
-}
-
-/* unicode latin-1, punc/symbols & arrows (↔ ↕ ↖ ↗ ↘ ↙) */
-@font-face {
-  font-family: 'Recursive';
-  font-style: oblique -15deg 0deg;
-  font-weight: 300 800;
-  font-display: swap;
-  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_latin_1_punc.woff2') format('woff2');
-  unicode-range: U+00A0-00BF,U+2194-2199;
-}
-
-/* unicode latin A extended */
-@font-face {
-  font-family: 'Recursive';
-  font-style: oblique -15deg 0deg;
-  font-weight: 300 800;
-  font-display: swap;
-  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_latin_ext.woff2') format('woff2');
-  unicode-range: U+0100-017F;
-}
 /* SPECIFICALLY for the 'sia' karamalegos logo @ sia.code – remove if you don't need :) */
 @font-face {
   font-family: 'Recursive Sia';
@@ -113,15 +93,41 @@
   unicode-range: U+0073,U+0069,U+0061;
 }
 
+/* lexend-regular - latin */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('fonts/lexend-v2-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/lexend-v2-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* lexend-600 - latin */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(''),
+       url('fonts/lexend-v2-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/lexend-v2-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html, body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-body);
-  color: var(--grey-80);
   background-color: var(--white);
-  min-height: 100%;
+  color: var(--grey-80);
   display: grid;
-  grid-template-rows: 1fr auto; }
+  font-family: var(--font-body);
+  grid-template-rows: 1fr auto;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100%;
+  padding: 0; }
+:focus {
+  outline: 2px dashed var(--pink-50);
+  outline-offset: .25rem;
+}
 header {
   display: grid;
   grid-gap: 24px;
@@ -137,11 +143,23 @@ header {
 h1, h2, h3, h4, h5, h6 {
   color: var(--purple-70);
   font-family: var(--font-display);
-  font-variation-settings: "CASL" 1;
-  margin: 2.5rem 0 1.5rem;}
+  font-weight: 600;
+  line-height: 1.3;
+}
+h1 {font-size: var(--size-700);}
+h2, h2 code {font-size: var(--size-600);}
+h3, h3 code {font-size: var(--size-500);}
+h4 {font-size: var(--size-400);}
+.flow > * + * { margin-top: var(--flow-space, 1em);}
+blockquote, aside {--flow-space: var(--size-700)}
+.card-list {--flow-space: var(--size-700)}
+.tmpl-post :is(h2, h3) {--flow-space: var(--size-900);}
+.tmpl-post :is(h2, h3) + * {--flow-space: var(--size-400);}
+.tmpl-post figure, .tmpl-post figure + * {--flow-space: var(--size-900);}
 aside {
   background-color: var(--purple-05);
   border-left: 4px solid var(--purple-50);
+  margin-bottom: var(--size-700);
   padding: 24px 30px;
 }
 .gradient-text {
@@ -157,7 +175,7 @@ aside {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 24px 3px 0 0;}
-section {padding: 8px 0;}
+section {padding: 16px 0;}
 @media (min-width: 58rem) {
   .wider {
     width: 100vw;
@@ -191,35 +209,38 @@ header p { margin-top: 0; }
 }
 p,
 .tmpl-post li, aside {
-  font-size: 16px;
+  font-size: var(--size-400);
   line-height: 1.7;}
 li { margin-top: 0.5em; margin-bottom: 0.5em;}
-p.lead, blockquote p {
+p.lead {
   color: var(--grey-50);
-  font-size: 18px;
-  font-variation-settings: 'ital' 0, 'slnt' -8}
+  font-size: var(--size-400);}
 .text-right { text-align: right;}
-em { font-variation-settings: 'ital' 1, 'slnt' -8; }
 .text-center {text-align: center;}
 blockquote {
-  font-family: var(--font-serif);
+  background-color: var(--purple-05);
+  color: var(--grey-50);
+  padding: 24px 30px;
+  margin: var(--size-700) 0;
   font-style: italic;
-  margin: 42px 32px;
   position: relative;
   z-index: 1;}
 blockquote::before {
   content: "\201C";
-  color: var(--grey-05);
+  color: var(--purple-50);
   font-size: 150px;
   position: absolute;
-  left: -46px;
+  left: -18px;
   top: -38px;
   z-index: -1;}
 blockquote p {
   margin-bottom: 0.5em;
+  margin-left: 32px;
   z-index: 1;}
 blockquote p.blockquote-source {
-  font-size: 16px;
+  font-family: var(--font-body);
+  font-size: var(--size-300);
+  font-style: normal;
   text-align: right;
 }
 a {
@@ -243,8 +264,8 @@ a.button, input.button, button.button {
   border: none;
   color: var(--white);
   cursor: pointer;
-  font-family: 'Recursive', Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+  letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;}
 a.button-default, button.button-default {
@@ -300,9 +321,11 @@ iframe {
   border-radius: 15px;
 }
 .tmpl-post figure { margin: 2.5em 0; text-align: center; }
+.tmpl-post img { margin: auto; }
 .tmpl-post figcaption {
   color: var(--grey-60);
-  font-size: 0.8em;
+  font-size: var(--size-300);
+  margin-top: 1em;
   text-align: center;}
 .tmpl-post .e-content>img:not(.u-photo), .tmpl-post .e-content>p img:not(.u-photo), .tmpl-post figure {
   width:100vw;
@@ -318,16 +341,16 @@ iframe {
 
 .tmpl-post .byline {
   color: var(--grey-60);
-  font-size: 0.8rem;
+  font-size: var(--size-300);
   font-variation-settings: 'ital' 1, 'slnt' -8;
   margin: 8px 0;}
 .tmpl-post .p-name {margin-bottom: 8px;}
 .tmpl-post .p-summary.lead {
-  font-size: 1.2rem;
-  font-style: italic;
+  font-size: var(--size-400);
   margin: 12px 0;}
 .tmpl-post .u-photo {
   border-radius: 50%;
+  display: inline;
   margin-left: 4px;
   position: relative;
   top: 6px;}
@@ -335,7 +358,7 @@ main {
   margin-top:67px;
   max-width: 100vw;
   overflow: hidden;
-  padding: 1rem;}
+  padding: 2em 1em;}
 table { margin: 2em 0; }
 table td,
 table th { padding-right: 1em; }
@@ -347,8 +370,8 @@ table th { padding-right: 1em; }
 .content {
   max-width: 960px;
   margin: 0 auto;}
-.content-680 {
-  max-width: 680px;
+.content-780 {
+  max-width: 780px;
   margin: 0 auto;}
 .bg-dark {
   background-color: var(--grey-70);
@@ -358,9 +381,8 @@ table th { padding-right: 1em; }
 
 pre,
 code {
-  font-family: 'Recursive', Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  line-height: 1.5;
-  font-variation-settings: "MONO" 1;}
+  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  line-height: 1.5;}
 code {
   background-color: rgba(222,221,227,0.7);
   font-size: 14px;  }
@@ -424,8 +446,9 @@ nav img {display: block;}
   padding: 0;}
 .nav-item {
   display: inline-block;
-  margin-right: 1em;}
-.nav-item-active {font-weight: 700;}
+  margin: 8px 0.5em;
+  text-align: center;}
+.nav-item-active {font-weight: 600;}
 .home {
   display: none;
   margin: auto 1rem;}
@@ -459,7 +482,6 @@ nav img {display: block;}
 .postlist-item h3 {margin: 10px 8px;}
 .postlist-date, .archivelist-date{
   font-size: 14px;
-  font-weight: 200;
   color: var(--grey-60);}
 .postlist-image {
   background-color: var(--purple-10);
@@ -483,7 +505,7 @@ nav img {display: block;}
   position: relative;}
 #upcoming-talks .talks {
   margin: 0 auto;
-  max-width: 680px;}
+  max-width: 780px;}
 #upcoming-talks svg {
   display: none;
   bottom: 20px;
@@ -498,7 +520,6 @@ nav img {display: block;}
 .event-item .event-date {
   color: var(--grey-60);
   font-size: 12px;
-  font-weight: 200;
   margin-right: 4px;}
 .event-item h3 { margin: 0;}
 .event-item details {
@@ -508,10 +529,10 @@ nav img {display: block;}
 .event-location {
   color: var(--grey-60);
   font-size: 12px;
-  font-weight: 200;
   margin: 8px 0 12px 0;}
 .event-location img {
   box-shadow: none;
+  display: inline;
   margin:0 8px 0 0;
   width: 12px;}
 summary::marker {color: var(--pink-20);}
@@ -591,6 +612,7 @@ footer a svg {width: 24px;}
 /* Webmentions */
 .webmentions img {
   border-radius: 50%;
+  display: inline;
   height: 48px;
   width: 48px;
   object-fit: cover;
@@ -619,9 +641,9 @@ form input[type="url"] {
   height: 2rem;
   margin: 4px 0;
   width: 100%;}
-.form-webmention .button {height: 2rem; width: 150px;}
+.form-webmention .button {height: 2rem; width: 200px;}
 form label {
-  font-weight: 700;
+  font-weight: 600;
   margin: 4px 0 0 0;}
 .form {
   background-color: var(--grey-05);
@@ -643,7 +665,7 @@ form label {
   border: 1px solid var(--grey-20);
   color: var(--grey-80);
   display: block;
-  font-family: 'Recursive', Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   margin: 4px 0;
   padding: 4px;
@@ -674,7 +696,7 @@ form label {
   footer a svg {width: 32px;}
   form input[type="url"] {
     display: inline-block;
-    width: calc(100% - 160px);}
+    width: calc(100% - 210px);}
 }
 @media screen and (min-width: 500px) {
   .event-item {
@@ -705,6 +727,15 @@ form label {
   .form button, .form label {width: 80%;}
   .postlist {grid-template-columns: repeat(2, 1fr);}
 }
+@media screen and (min-width: 780px) {
+  h1 {font-size: var(--size-900);}
+  h2, h2 code {font-size: var(--size-700);}
+  p, .tmpl-post li {font-size: var(--size-500);}
+  .tmpl-post .p-summary.lead {font-size: var(--size-500);}
+  code[class*="language-"], pre[class*="language-"] {font-size: var(--size-400);}
+  p.lead, blockquote p, aside {font-size: var(--size-500);}
+  blockquote p.blockquote-source {font-size: var(--size-400);}
+}
 @media screen and (min-width: 850px) {
   #upcoming-talks svg {display: block;}
 }
@@ -725,13 +756,8 @@ form label {
     height: 150px;
     left: -20px;
     width: 150px;}
-  p.lead, blockquote p {font-size: 24px;}
-  p.blockquote-source {font-size: 16px;}
-  h1 {font-size: 40px;}
   section {padding: 32px 0;}
   .postlist {grid-template-columns: repeat(3, 1fr);}
-  p, .tmpl-post li {font-size: 18px;}
-  code {font-size: 16px;}
   footer {padding: 32px 32px 0; }
   footer a { margin: 16px; }
 }
