@@ -2,7 +2,7 @@
 title: Eleventy and Cloudinary images
 description: Setting up responsive images in Eleventy using Cloudinary
 date: 2020-12-11
-updated: 2021-03-22
+updated: 2021-03-30
 tags: ['Eleventy', 'Images', 'WebPerf']
 layout: layouts/post.njk
 tweetId: '1337612682275459073'
@@ -19,9 +19,9 @@ featuredImage: "A_possum_and_a_movie_camera_1943_f4yflt.jpg"
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:A_possum_and_a_movie_camera_1943.jpg">Wikimedia Commons</a> </figcaption>
 </figure>
 
-Responsive images can be a pain to set up, from manually writing markup to generating the images. We can make this job much easier by using Cloudinary and Eleventy. [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) can host and transform our images, making generation of multiple file formats and sizes a matter of adding a param to a URL. [Eleventy](https://www.11ty.dev/) is a hot JavaScript-based static site generator that requires no client-side JavaScript, making it performant by default.
+Responsive images can be challenging to set up, from manually writing markup to generating the images. We can make this job much easier by using Cloudinary and Eleventy. [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) can host and transform our images, making the generation of multiple file formats and sizes a matter of adding a param to a URL. [Eleventy](https://www.11ty.dev/) is a hot JavaScript-based static site generator that requires no client-side JavaScript, making it performant by default.
 
-Originally, I did not set up Cloudinary on my Eleventy blog because I used to have just a handful of images, and I would create srcsets and formats manually [using ImageMagick and cwebp](https://github.com/siakaramalegos/images-on-the-command-line). But then I got excited about using [structured data](https://developers.google.com/search/docs/guides/search-gallery) for SEO, and the image generation job got a LOT more complicated with more sizes and cropping.
+Originally, I did not set up Cloudinary on my Eleventy blog because I used to have just a handful of images. I would create srcsets and formats manually [using ImageMagick and cwebp](https://github.com/siakaramalegos/images-on-the-command-line). But then, I got excited about using [structured data](https://developers.google.com/search/docs/guides/search-gallery) for SEO, and the image generation job got a LOT more complicated with more sizes and cropping.
 
 In this post, first I'll go over how I think about serving responsive, performant images. Then, I'll show you how I implemented Cloudinary image hosting in Eleventy using [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/).
 
@@ -53,7 +53,7 @@ Why did I include all those attributes? Let's take a look at each...
 
 For modern browsers, we can give a set of images and instructions for how wide they will be displayed using `srcset` and `sizes`. This allows the browser to make the best decision on which image to load based on the user's screen width and [device pixel ratio (DPR)](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio). For example, those nice Retina screens (DPR of 2) need images twice as wide as the slot we're putting them in if we still want them to look good. Stated another way, if your CSS says to display an image at 100px wide, we need to supply an image that is 200px wide.
 
-The `sizes` attribute can be tricky to write correctly by hand. My favorite way of getting it (a.k.a, the lazy way), is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that will let you know how far off your images are in their size, and will also give us suggestions for the `sizes` attribute:
+The `sizes` attribute can be tricky to write correctly by hand. My favorite way of getting it (a.k.a, the lazy way) is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that will let you know how far off your images are in their size and will also give us suggestions for the `sizes` attribute:
 
 <figure>
   <img src="{% src 'respimagelint_bnumrs.jpg' %}"
@@ -85,7 +85,7 @@ We now have [partial support](https://caniuse.com/loading-lazy-attr) for lazy lo
 
 At the time of writing, 78% of my blog's visitors are supported for images, so I'm implementing it now. You can [import your Google Analytics data into caniuse](https://sia.codes/posts/google-analytics-caniuse-magic/) to see how many of your visitors have support for any given web feature.
 
-Note that you should not lazy-load images that are in the viewport on initial load ("above the fold"), as this can negatively impact your [performance scores](https://web.dev/vitals/).
+Note that you should not lazy-load images that are in the viewport on initial load ("above the fold") as this can negatively impact your [performance scores](https://web.dev/vitals/).
 
 ## Eleventy Shortcodes and Filters
 
@@ -107,7 +107,7 @@ What are [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/)? Shortcode
 For this use case, we could use either. I chose shortcodes since most of the other solutions use them, and I wanted to try them out for the first time.
 
 ## The code
-Now that you know how I think about images, I can explain my rational behind my solution.
+Now that you know how I think about images, I can explain my rationale behind my solution.
 
 Some of the existing alternatives were shortcodes that provided the full image tag based on the filename, alt, and a few other attributes. I wanted the ability to also provide all the attributes previously mentioned (loading, sizes, etc.) plus others like `class`.
 
@@ -213,7 +213,7 @@ Check out the full demo on [CodeSandbox](https://codesandbox.io/s/eleventy-image
 
 How do you use Eleventy with Cloudinary? I haven't turned this into a plugin yet. Should I? [Ping me on Twitter](https://twitter.com/TheGreenGreek) with your thoughts!
 
-More resouces:
+More resources:
 - [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/)
 - [Responsive, Performant Images for the Web](https://sia.codes/posts/responsive-images-perf-matters-video/)
 - [Eleventy](https://www.11ty.dev/)
