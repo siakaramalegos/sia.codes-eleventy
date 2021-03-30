@@ -23,9 +23,9 @@ Webmentions are an exciting standard which help enable the IndieWeb. We can own 
 
 In this talk, I discuss what webmentions are and how to implement them. The code is based on an Eleventy site, but the concepts should be applicable to any site.
 
-<div class="videoWrapper">
-  <iframe loading="lazy" title="Webmentions + Eleventy by Sia Karamalegos [ Jamstack Toronto ]" width="560" height="315" src="https://www.youtube.com/embed/zjHb4xtnTvU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% set videoTitle = "Webmentions + Eleventy by Sia Karamalegos [ Jamstack Toronto ]" %}
+{% set videoId = "zjHb4xtnTvU" %}
+{% include 'youtube.njk' %}
 
 ## Slides
 

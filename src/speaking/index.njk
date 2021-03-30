@@ -18,9 +18,10 @@ date: 2019-01-04
   <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me to speak at your event</a>
 </p>
 
-<div class="videoWrapper">
-  <iframe title="The Future of Front-End Performance - Sia Karamalegos" width="560" height="315" src="https://www.youtube.com/embed/SA_Hp8l7lr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% set videoTitle = "The Future of Front-End Performance - Sia Karamalegos" %}
+{% set videoId = "SA_Hp8l7lr4" %}
+{% include 'youtube.njk' %}
+
 </section>
 
 <section class="flow">

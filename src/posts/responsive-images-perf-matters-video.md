@@ -26,6 +26,6 @@ I spoke at my first virtual conference, PerfMatters Conf, and luckily they recor
 
 In this talk, I focus on the underlying concepts in HTML and CSS for serving responsive images, which you can take with you no matter which tool you use. Which file formats suit which image types best? How can you use art direction in images to show the best image for a viewport layout?
 
-<div class="videoWrapper">
-  <iframe loading="lazy" title="Responsive Images for the Web" width="560" height="315" src="https://www.youtube.com/embed/XecoxR1ckbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% set videoTitle = "Responsive Images for the Web" %}
+{% set videoId = "XecoxR1ckbc" %}
+{% include 'youtube.njk' %}

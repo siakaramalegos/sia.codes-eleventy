@@ -6,7 +6,8 @@
     "build": "NODE_ENV=production npx eleventy",
     "start": "netlify dev --port=8081",
     "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "lighthouse": "lhci autorun"
   },
   "repository": {
     "type": "git",
