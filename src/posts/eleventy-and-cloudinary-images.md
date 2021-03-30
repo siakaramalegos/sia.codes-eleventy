@@ -19,7 +19,7 @@ featuredImage: "A_possum_and_a_movie_camera_1943_f4yflt.jpg"
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:A_possum_and_a_movie_camera_1943.jpg">Wikimedia Commons</a> </figcaption>
 </figure>
 
-Responsive images can be a pain to set up, from manually writing markup to generating the images. We can make this job much easier by using Cloudinary and Eleventy. [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) can host and transform our images, making generation of multiple file formats and sizes a matter of adding a param to a URL. [Eleventy](https://www.11ty.dev/) is a hot JavaScript-based static site generator that requires no client-side JavaScript, making it performant by default.
+Responsive images can be challenging to set up, from manually writing markup to generating the images. We can make this job much easier by using Cloudinary and Eleventy. [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) can host and transform our images, making generation of multiple file formats and sizes a matter of adding a param to a URL. [Eleventy](https://www.11ty.dev/) is a hot JavaScript-based static site generator that requires no client-side JavaScript, making it performant by default.
 
 Originally, I did not set up Cloudinary on my Eleventy blog because I used to have just a handful of images, and I would create srcsets and formats manually [using ImageMagick and cwebp](https://github.com/siakaramalegos/images-on-the-command-line). But then I got excited about using [structured data](https://developers.google.com/search/docs/guides/search-gallery) for SEO, and the image generation job got a LOT more complicated with more sizes and cropping.
 
