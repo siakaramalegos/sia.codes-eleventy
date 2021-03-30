@@ -19,11 +19,11 @@ featuredImage: "A_possum_and_a_movie_camera_1943_f4yflt.jpg"
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:A_possum_and_a_movie_camera_1943.jpg">Wikimedia Commons</a> </figcaption>
 </figure>
 
-Responsive images can be challenging to set up, from manually writing markup to generating the images. We can make this job much easier by using Cloudinary and Eleventy. [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) can host and transform our images, making the generation of multiple file formats and sizes a matter of adding a param to a URL. [Eleventy](https://www.11ty.dev/) is a hot JavaScript-based static site generator that requires no client-side JavaScript, making it performant by default.
+Responsive images can be challenging to set up, from writing markup to generating the images. We can make this job much easier by using Cloudinary and Eleventy. [Cloudinary](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0) can host and transform our images, making generation of many file formats and sizes a matter of adding a param to a URL. [Eleventy](https://www.11ty.dev/) is a hot JavaScript-based static site generator. It requires no client-side JavaScript, making it performant by default.
 
-Originally, I did not set up Cloudinary on my Eleventy blog because I used to have just a handful of images. I would create srcsets and formats manually [using ImageMagick and cwebp](https://github.com/siakaramalegos/images-on-the-command-line). But then, I got excited about using [structured data](https://developers.google.com/search/docs/guides/search-gallery) for SEO, and the image generation job got a LOT more complicated with more sizes and cropping.
+Originally, I did not set up Cloudinary on my Eleventy blog because I had a handful of images. I would create srcsets and formats [using ImageMagick and cwebp](https://github.com/siakaramalegos/images-on-the-command-line). But then, I got excited about using [structured data](https://developers.google.com/search/docs/guides/search-gallery) for SEO. The image generation job got a LOT more complicated with more sizes and cropping.
 
-In this post, first I'll go over how I think about serving responsive, performant images. Then, I'll show you how I implemented Cloudinary image hosting in Eleventy using [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/).
+In this post, first I'll go over how to serve responsive, performant images. Then, I'll show you how I implemented Cloudinary image hosting in Eleventy using [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/).
 
 ## What's in an `<img>`?
 Let's take a look at a "fully-loaded" image tag in HTML:
@@ -47,13 +47,13 @@ Why did I include all those attributes? Let's take a look at each...
 - **`alt`** - description of the image
 - **`width`** - the image width
 - **`height`** - the image height
-- **`loading`** - optionally lazy-load images and iframes (check for support with [caniuse](https://caniuse.com/loading-lazy-attr))
+- **`loading`** - whether to lazy-load images and iframes (check for support with [caniuse](https://caniuse.com/loading-lazy-attr))
 
 ## `srcset` and `sizes`
 
-For modern browsers, we can give a set of images and instructions for how wide they will be displayed using `srcset` and `sizes`. This allows the browser to make the best decision on which image to load based on the user's screen width and [device pixel ratio (DPR)](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio). For example, those nice Retina screens (DPR of 2) need images twice as wide as the slot we're putting them in if we still want them to look good. Stated another way, if your CSS says to display an image at 100px wide, we need to supply an image that is 200px wide.
+`srcset` and `sizes` give modern browsers a set of images and instructions for how wide they will be displayed. The browser will make the best decision on which image to load based on the user's screen width and [device pixel ratio (DPR)](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio). For example, those nice Retina screens (DPR of 2) need images twice as wide as the slot we're putting them in if we want them to look good. Stated another way, if your CSS says to display an image at 100px wide, we need to supply an image that is 200px wide.
 
-The `sizes` attribute can be tricky to write correctly by hand. My favorite way of getting it (a.k.a, the lazy way) is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that will let you know how far off your images are in their size and will also give us suggestions for the `sizes` attribute:
+The `sizes` attribute can be tricky to write by hand. My favorite way (a.k.a, the lazy way) is to first give the image a `srcset`, then run the page through [RespImageLint](https://ausi.github.io/respimagelint/). RespImageLint is a nifty bookmarklet that analyzes the images on a webpage. It will tell you  how far off your images are in their size, and will also give suggestions for the `sizes` attribute:
 
 <figure>
   <img src="{% src 'respimagelint_bnumrs.jpg' %}"
@@ -67,12 +67,13 @@ The `sizes` attribute can be tricky to write correctly by hand. My favorite way 
 
 ## Layout Shift
 
-To prevent layout shift once the image loads, we need to provide the browser with an aspect ratio. Currently, the way to do that is to set a height and width on the image in HTML. Use the original image's dimensions since the actual size doesn't matter, just the aspect ratio. Your CSS will control the actual height and width.
+To prevent layout shift once the image loads, we need to provide the browser with an aspect ratio. Currently, the way to do that is to set a height and width on the image in HTML. Use the original image's dimensions since the actual size doesn't matter. The aspect ratio is what is important. Your CSS will control the actual height and width.
 
 To prevent weird stretching, set an auto height in your CSS:
 
 ```css
 img {
+  max-width: 100%;
   height: auto;
 }
 ```
@@ -83,13 +84,13 @@ Jen Simmons recorded a great [short video](https://www.youtube.com/watch?v=4-d_S
 
 We now have [partial support](https://caniuse.com/loading-lazy-attr) for lazy loading images and iframes! If you set the `loading` attribute to `lazy`, the browser will use the [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to detect if a user scrolls near the image or iframe and only load it at that time.
 
-At the time of writing, 78% of my blog's visitors are supported for images, so I'm implementing it now. You can [import your Google Analytics data into caniuse](https://sia.codes/posts/google-analytics-caniuse-magic/) to see how many of your visitors have support for any given web feature.
+At the time of writing, 78% of my blog's visitors use browsers that support native lazy loading. Thus, I'm implementing it now. [Import your Google Analytics data into caniuse](https://sia.codes/posts/google-analytics-caniuse-magic/) to see how many of your visitors have support for any given web feature.
 
-Note that you should not lazy-load images that are in the viewport on initial load ("above the fold") as this can negatively impact your [performance scores](https://web.dev/vitals/).
+Note that you should not lazy-load images that are in the viewport on initial load ("above the fold"). This can lower your [performance scores](https://web.dev/vitals/).
 
 ## Eleventy Shortcodes and Filters
 
-What are [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/)? Shortcodes are similar to [filters](https://www.11ty.dev/docs/filters/) in that they allow us to reuse code. Both can be used in Nunjucks, Liquid, and Handlebars templates. For simplicity, the rest of this post will use Nunjucks.
+What are [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/)? Shortcodes are like to [filters](https://www.11ty.dev/docs/filters/) in that they allow us to reuse code. Nunjucks, Liquid, and Handlebars templates all support both shortcodes and filters. For simplicity, the rest of this post will use Nunjucks.
 
 {% raw %}
 
@@ -107,15 +108,16 @@ What are [Eleventy shortcodes](https://www.11ty.dev/docs/shortcodes/)? Shortcode
 For this use case, we could use either. I chose shortcodes since most of the other solutions use them, and I wanted to try them out for the first time.
 
 ## The code
-Now that you know how I think about images, I can explain my rationale behind my solution.
 
-Some of the existing alternatives were shortcodes that provided the full image tag based on the filename, alt, and a few other attributes. I wanted the ability to also provide all the attributes previously mentioned (loading, sizes, etc.) plus others like `class`.
+Now that you know how I make images responsive, I can explain the rationale behind my solution.
 
-The shortcode quickly became unwieldy with this many parameters, and I realized that the HTML itself was only marginally longer. Why not just use HTML? The onerous part of building responsive images, especially when hosting through Cloudinary, is setting the image urls and generating the srcsets.
+The existing solutions used shortcodes that provided the full image tag based on the filename, alt, and a few other attributes. I wanted the ability to also provide all the attributes previously mentioned (loading, sizes, etc.) plus others like `class`.
 
-> Why not just use HTML?
+The shortcode became unwieldy with this many parameters. Then I realized that the HTML itself was only marginally longer. Why not  use HTML? The onerous part of writing the markup is setting the image urls and generating the srcsets.
 
-Hence, I created shortcodes that do only that - generate the `src` and `srcset`, and everything else can be set as needed in the HTML:
+> Why not use HTML?
+
+Hence, I created shortcodes that do only that - generate the `src` and `srcset`. Everything else can be set as needed in the HTML:
 
 {% raw %}
 ```html
@@ -131,13 +133,13 @@ Hence, I created shortcodes that do only that - generate the `src` and `srcset`,
 ```
 {% endraw %}
 
-I don't need a `<picture>` tag because Cloudinary can automatically serve the best image format based on the user's browser through the [f_auto transformation](https://cloudinary.com/documentation/image_transformations#automatic_format_selection_f_auto).
+I don't need a `<picture>` tag. Cloudinary can serve the best image format based on the user's browser through the [f_auto transformation](https://cloudinary.com/documentation/image_transformations#automatic_format_selection_f_auto).
 
 <aside>If you found this article helpful, you can <a href="https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/oq6yrskcixnvxvj1ofc0">sign up for a free Cloudinary account</a> with this link, and I'll get a few extra Cloudinary credits per month.</aside>
 
 ### Shortcodes
 
-For the shortcodes, I gave them smart default widths based on the styles for my site, but I allow an optional parameter to set them when I invoke the shortcode. The first step is to set all of our constants:
+I gave the shortcodes smart default widths based on the styles for my site, but I allow an optional parameter to set them when I invoke the shortcode. The first step is to set our constants:
 
 ```javascript
 // _11ty/shortcodes.js
@@ -152,7 +154,7 @@ const FALLBACK_WIDTH = 680;
 // ...
 ```
 
-Then, we can define the shortcodes to create a `src` and reuse that function to create a `srcset` based on given widths or our fallback widths from the constants previously set:
+Then, we can define the shortcodes to create a `src` and reuse that function to create a `srcset`. These use the given widths or our fallback widths from the constants previously set:
 
 ```javascript
 // _11ty/shortcodes.js
@@ -174,7 +176,7 @@ function getSrc(file, width) {
 // ...
 ```
 
-The final step in our shortcodes file is to export the two shortcodes in order to access them in our Eleventy config:
+The final step in our shortcodes file is to export the two shortcodes to access them in our Eleventy config:
 
 ```javascript
 // _11ty/shortcodes.js
@@ -200,7 +202,7 @@ eleventyConfig.addShortcode('srcset', srcset);
 Voilà!
 
 ## Conclusion
-Eleventy shortcodes help us make the sometimes onerous process of generating source sets for our images easier. By using the shortcodes for the `src` and `srcset` attributes rather than the entire `<img>` element lets us use the flexibility of HTML to customize the rest of the behavior we want (e.g., lazy loading, classes, etc.)
+Eleventy shortcodes help us make the onerous process of generating source sets for our images easier.  We can use the flexibility of HTML to customize all the other behavior we want (e.g., lazy loading, classes, etc.).
 
 Check out the full demo on [CodeSandbox](https://codesandbox.io/s/eleventy-image-shortcodes-with-cloudinary-ycq4r?from-embed=&file=/src/_11ty/shortcodes.js):
 
