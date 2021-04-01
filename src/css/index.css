@@ -16,7 +16,6 @@
   --font-body: 'Lexend', sans-serif;
   --font-display: 'Lexend', sans-serif  ;
   /* --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, Arial, sans-serif; */
-  /* --font-display: 'Recursive', Arial, Helvetica, sans-serif; */
   --font-serif: Georgia, 'Times New Roman', Times, serif;;
   --grey-0: rgb(252,252,253);
   --grey-05: #edecf0;
@@ -74,25 +73,6 @@
 /* Reset */
 *,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
 
- /* The bare minimum for the English Language */
-@font-face {
-  font-family: 'Recursive';
-  font-style: oblique -15deg 0deg;
-  font-weight: 300 800;
-  font-display: swap;
-  src: url('fonts/Recursive_VF_1.034--wght300_800--subset_range_english_basic.woff2') format('woff2');
-  unicode-range: U+0020-007F,U+00A9,U+2190-2193;
-}
-
-/* SPECIFICALLY for the 'sia' karamalegos logo @ sia.code – remove if you don't need :) */
-@font-face {
-  font-family: 'Recursive Sia';
-  font-weight: 1000;
-  font-display: block;
-  src: url('fonts/Recursive_VF_1.034--subset_sia_logo.woff2') format('woff2');
-  unicode-range: U+0073,U+0069,U+0061;
-}
-
 /* lexend-regular - latin */
 @font-face {
   font-family: 'Lexend';
@@ -128,12 +108,6 @@ html, body {
   outline: 2px dashed var(--pink-50);
   outline-offset: .25rem;
 }
-header {
-  display: grid;
-  grid-gap: 24px;
-  margin: 0 auto;
-  padding-bottom: 32px;
-  position: relative;}
 .social { text-align: right;}
 .social a {
   color: var(--pink-50);
@@ -172,9 +146,11 @@ aside {
   background: -webkit-linear-gradient(-45deg,  rgba(119,117,255,1) 1%,rgba(190,79,255,1) 78%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg,  rgba(119,117,255,1) 1%,rgba(190,79,255,1) 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7775ff', endColorstr='#be4fff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  background-clip: text;
+  /* background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  -webkit-clip-path: url(#svgPath);
+  clip-path: url(#svgPath);
   padding: 24px 3px 0 0;}
 section {padding: 16px 0;}
 @media (min-width: 58rem) {
@@ -186,24 +162,8 @@ section {padding: 16px 0;}
   }
 }
 .title {
-  font-size: 18vw;
-  font-weight: 300;
-  line-height: 12vw;
-  margin-bottom: 0;
-  padding: 40px 4px 40px 0;
-  text-align: right;
-  width: 100%;}
-.sia {
-  font-family: 'Recursive Sia', Arial, Helvetica, sans-serif;
-  color: var(--blue-40);
-  display: block;}
-.codes {
-  color: var(--blue-50);
-  font-size: 15vw;
-  font-weight: 300;
-  letter-spacing: -0.088em;
-  font-feature-settings: 'ss20';}
-header p { margin-top: 0; }
+  color: var(--purple-50);
+}
 .subtitle p {
   font-style: italic;
   max-width: 37.5em;
@@ -274,7 +234,7 @@ a.button-default, button.button-default {
   font-size: 20px;
   padding: 16px 32px;}
 input.button-small {padding: 4px 8px;}
-a.button:hover, input.button:hover, button.button:hover { background: var(--pink-40);}
+a.button:hover, input.button:hover, button.button:hover { opacity: 0.8;}
 a.button-circle {
   align-items: center;
   border-radius: 50%;
@@ -289,23 +249,13 @@ a.button-circle {
   width: 15vw;
   min-width: 100px;}
 a.logo-link {
-  align-items: center;
-  background: rgb(205,0,132); /* Old browsers  var(--pink-50); and purple-50*/
-  background: -moz-linear-gradient(-45deg,  rgba(205,0,132,1) 30%, rgba(176,0,245,1) 100%);
-  background: -webkit-linear-gradient(-45deg,  rgba(205,0,132,1) 30%,rgba(176,0,245,1) 100%);
-  background: linear-gradient(135deg,  rgba(205,0,132,1) 30%,rgba(176,0,245,1) 100%);
   border: none;
-  border-radius: 50%;
   box-shadow: none;
-  color: var(--white);
   cursor: pointer;
-  display: flex;
-  font-family: 'Recursive', Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 1000;
-  justify-content: center;
-  height: 50px;
-  width: 50px;
+  margin: 8px;
+}
+a.logo-link:hover {
+  background-color: inherit;
 }
 img {
   height: auto;
@@ -791,12 +741,6 @@ form label {
 }
 @media screen and (min-width: 520px) {.home {display: inline-block;}}
 @media screen and (min-width: 665px) {
-  header {
-    grid-template-columns: minmax(100px, 15vw) 1fr;
-    max-width: 100%;}
-  .title {
-    grid-column: span 2;}
-  .social { grid-column: 2;}
   .form {padding: 72px;}
   .form button, .form label {width: 80%;}
   .postlist {grid-template-columns: repeat(2, 1fr);}
@@ -815,15 +759,7 @@ form label {
 }
 @media screen and (min-width: 1020px) {
   .home {margin-left: -10px;}
-  header {
-    grid-template-columns: 150px 1fr;}
   .gradient-text {padding: 24px 3px 24px 0;}
-  .title {
-    font-size: 200px;
-    line-height: 110px;
-    margin: 40px 0 0 0;}
-  .codes {
-    font-size: 160px;}
   .social a {margin: 8px; }
   a.button-circle {
     font-size: 20px;
