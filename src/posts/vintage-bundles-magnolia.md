@@ -23,6 +23,7 @@ In this talk, we'll learn about differential serving, or serving modern bundles 
 
 [Magnolia JS](https://magnoliajs.com/) was my second virtual conference, and I had a blast participating. This video is the full day 1 video, but the embed should play only my talk by default. Check out the other talks that day too! Enjoy!
 
-<div class="videoWrapper">
-  <iframe title="Responsive Images for the Web" width="560" height="315" src="https://www.youtube.com/embed/Qkc8p4D6JM0?start=10260&end=11280" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% set videoTitle = "Vintage Bundles by Sia Karamalegos [ Magnolia JS ]" %}
+{% set videoId = "Qkc8p4D6JM0" %}
+{% set params = "start=10260&end=11280" %}
+{% include 'youtube.njk' %}

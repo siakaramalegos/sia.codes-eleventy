@@ -8,7 +8,7 @@ templateClass: tmpl-post
 date: 2019-01-04
 ---
 
-<section>
+<section class="flow">
 
 <p>Hello, I love making developer's lives easier through teaching, speaking, and mentoring. I talk about front-end topics such as web performance, JavaScript, and React.</p>
 
@@ -18,12 +18,13 @@ date: 2019-01-04
   <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me to speak at your event</a>
 </p>
 
-<div class="videoWrapper">
-  <iframe title="The Future of Front-End Performance - Sia Karamalegos" width="560" height="315" src="https://www.youtube.com/embed/SA_Hp8l7lr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% set videoTitle = "The Future of Front-End Performance - Sia Karamalegos" %}
+{% set videoId = "SA_Hp8l7lr4" %}
+{% include 'youtube.njk' %}
+
 </section>
 
-<section>
+<section class="flow">
 
 <h2>Testimonials</h2>
 
@@ -31,22 +32,22 @@ date: 2019-01-04
   <p>Sia has definitely mastered the art of keeping a listener engaged. Her humor and ability to communicate technical
   concepts at the same time is an amazing talent. All information was presented well and provided a long list of notes to
   take back to my company and coworkers.</p>
-  <p>--Anonymous attendee feedback from The Progressive Web Experience</p>
+  <p class="blockquote-source">-Anonymous attendee feedback from The Progressive Web Experience</p>
 </blockquote>
 
 <blockquote>
   <p>Sia’s workshop gave me the guidance and tools I needed to finally begin diagnosing real performance problems in my web applications. Not only did her course shed light on how to solve the issues I knew I had, but it also exposed problems I hadn't discovered yet. Whether you’ve got an application that’s not performing well or if you just want to have a better grasp of the performance tools available, Sia’s Measuring Web Performance workshop is well worth your time.</p>
-  <p>--Aundra Miller, Software Engineer at <a href="https://www.learning.com/">Learning.com</a></p>
+  <p class="blockquote-source">-Aundra Miller, Software Engineer at <a href="https://www.learning.com/">Learning.com</a></p>
 </blockquote>
 
 <blockquote>
   <p>Sia was my instructor at Tech Talent South. Thanks to her I've been able to move forward in my career as a Software Developer. Her knowledge and endless patience for our questions created a foundation that I've been building on ever since. She is a fantastic teacher."</p>
-  <p>--Ryan Hageman, Independent Software Developer</p>
+  <p class="blockquote-source">-Ryan Hageman, Independent Software Developer</p>
 </blockquote>
 
 </section>
 
-<section>
+<section class="flow">
 
 <h2>Bio</h2>
 
@@ -56,7 +57,7 @@ date: 2019-01-04
 
 </section>
 
-<section>
+<section class="flow">
 
 <h2>Upcoming Events</h2>
 
