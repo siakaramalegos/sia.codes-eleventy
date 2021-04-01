@@ -7,7 +7,8 @@
     "start": "netlify dev --port=8081",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "build:lighthouse": "npm run build && npm run lighthouse"
   },
   "repository": {
     "type": "git",

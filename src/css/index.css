@@ -68,6 +68,7 @@
   --size-700: 2.36rem;
   --size-800: 3.15rem;
   --size-900: 4.2rem;
+  --size-1000: 5.6rem;
 }
 
 /* Reset */
@@ -288,6 +289,28 @@ img {
   max-width:29rem;
 }
 
+section.bg-secondary {
+  background-color: var(--grey-05);
+  margin: var(--size-1000) 0 var(--size-1000) 50%;
+  padding: var(--size-1000) 0;
+  position:relative;
+  transform:translateX(-50%);
+  width: 100vw;
+}
+.bg-secondary details p {
+  background-color: var(--grey-10);
+}
+.circles {
+  /* -30 colors - worklet only accepts hex */
+	--colors: #ff6fb8, #cb83ff, #9997ff;
+	--min-radius: 8;
+	--max-radius: 16;
+	--num-circles: 30;
+	--min-opacity: 10;
+	--max-opacity: 30;
+
+	background-image: paint(circles);
+}
 
 .tmpl-post .byline {
   color: var(--grey-60);
@@ -319,7 +342,8 @@ table th { padding-right: 1em; }
 
 .content {
   max-width: 960px;
-  margin: 0 auto;}
+  margin: 0 auto;
+  position: relative;}
 .content-780 {
   max-width: 780px;
   margin: 0 auto;}
@@ -450,9 +474,6 @@ nav img {display: block;}
 .archivelist-tags a {position: relative; bottom: 4px;}
 .archivelist-description {font-size: 16px; margin: 0;}
 
-#upcoming-talks {
-  margin: 40px 0;
-  position: relative;}
 #upcoming-talks .talks {
   margin: 0 auto;
   max-width: 780px;}
