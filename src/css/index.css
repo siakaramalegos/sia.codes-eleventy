@@ -170,7 +170,7 @@ section {padding: 16px 0;}
   max-width: 37.5em;
 }
 p,
-.tmpl-post li, aside, .tmpl-post li code {
+.tmpl-post li, aside, .tmpl-post li code, p code {
   font-size: var(--size-400);
   line-height: 1.7;}
 li { margin-top: 0.5em; margin-bottom: 0.5em;}
