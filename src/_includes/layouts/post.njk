@@ -11,6 +11,8 @@ templateClass: tmpl-post
   <section class="e-content flow">
   {{ content | safe }}
 
+  <aside>Was this post helpful for you? 💕 Want to show your appreciation? Buy me a coffee on <a href="https://github.com/sponsors/siakaramalegos">Github Sponsors</a> or <a href="https://ko-fi.com/siacodes">Ko-fi</a>.</aside>
+
   <p>
     {% for tag in tags %}
       {%- if tag != "posts" -%}
