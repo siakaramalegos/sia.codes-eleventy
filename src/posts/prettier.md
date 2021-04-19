@@ -3,6 +3,7 @@ title: Adding Prettier to a Project
 description: Add Prettier with a pre-commit hook and dedicate one commit to a full reformat
 date: 2021-04-19
 tags: ['Tools', 'Dev Tools', 'JavaScript']
+tweetId: '1384219354397507595'
 layout: layouts/post.njk
 ---
 
