@@ -67,10 +67,11 @@ date: 2019-01-01
 
 <section class="flow">
   <h2>Select Writing</h2>
+  <p>All posts can be found on <a href="{{ '/posts/' | url }}">the blog page</a>.</p>
 
   {% set postslist = collections.posts | getSelect %}
   {% include "postslist.njk" %}
 
-  <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <p><a href="{{ '/posts/' | url }}">All posts</a></p>
 </section>
 </div>
