@@ -1,11 +1,21 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: 'Magnolia JS',
+      conferenceUrl: 'https://magnoliajs.com/',
+      location: 'Online',
+      talks: [
+        { key: 'indieWebEleventy', date: '25 May 2021' },
+      ]
+    },
+    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
       talks: [
-        { key: 'performanceWorkshop', date: '5 Oct 2021' },
+        { key: 'performanceWorkshop', date: '05 Oct 2021' },
+        { key: 'devtools', date: '06 Oct 2021' },
+        { key: 'performance', date: '06 Oct 2021' },
       ]
     },
   ],
