@@ -9,6 +9,14 @@ module.exports = {
       ]
     },
     {
+      conference: 'Social Hackers Academy',
+      conferenceUrl: 'https://socialhackersacademy.org/',
+      location: 'Online',
+      talks: [
+        { key: 'serverlessNetlify', date: '30 June 2021' },
+      ]
+    },
+    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
