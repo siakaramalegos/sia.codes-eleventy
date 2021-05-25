@@ -20,7 +20,7 @@ featuredImage: mic-possum_owln9h.jpg
 
 I like to talk and write about Eleventy a LOT. I always run into this problem of having to introduce Eleventy to people not familiar with it in a short way. So, I wrote up this miniature demo to give people a flavor of Eleventy without overwhelming them with all the details. If you like it as much as I do, maybe it will inspire you to learn more!
 
-The code for this repo can be found on [Github](https://github.com/siakaramalegos/eleventy-demo). This article will show you how to:
+The code for this repo can be found on [Github](https://github.com/siakaramalegos/eleventy-demo). This article is meant for people new to Eleventy and will show you how to:
 
 1. Start up the most minimal Eleventy project with one page (the `main` branch)
 2. Add a layout and styles (the `2-layout-styles` branch)
@@ -142,7 +142,7 @@ These are profound thoughts.
 
 We can now access it at http://localhost:8080/blog/welcome-to-my-blog/, but it would be nice to get some links on our home page for all our posts. For that, we should make a [collection](https://www.11ty.dev/docs/collections/) for our blog posts. We will do this using tags.
 
-**Tip**: You can log data to your terminal using the `log` filter which is included in Eleventy for free! For example, `{{ collections | log }}` to see all your collections. Right now, we only have the `all` collection which contains all our pages (home and first blog post).
+<aside><strong>Tip</strong>: You can log data to your terminal using the <code>log</code> filter which is included in Eleventy for free! For example, <code>{% raw %}{{ collections | log }}{% endraw %}</code> to see all your collections. Right now, we only have the <code>all</code> collection which contains all our pages (home and first blog post).</aside>
 
 1. Add a `blog` tag to our blog post's frontmatter:
   ```text
@@ -182,7 +182,14 @@ We can now access it at http://localhost:8080/blog/welcome-to-my-blog/, but it w
 
 This is when I'd probably make another layout for a blog post so that the title is automatically rendered in its `<h1>`, but then this baby demo would be longer. :)
 
+## Moving Forward
+
 Once you've had a chance to play with collections and other forms of data in Eleventy, I recommend you check out my article [Architecting data in Eleventy](https://sia.codes/posts/architecting-data-in-eleventy/) to learn more. It might be a bit much if this is your first time.
+
+What else can Eleventy do? So much! Here's a list of some of my favorite features:
+- Generating [pages based on a data](https://www.11ty.dev/docs/pages-from-data/) set (JavaScript, JSON), like my individual [game pages](https://games.sia.codes/terraforming-mars/) in my [boardgame shelf site](https://games.sia.codes/). [Code](https://github.com/siakaramalegos/games)
+- Creating [layouts](https://www.11ty.dev/docs/layout-chaining/) within layouts and template [partials](https://mozilla.github.io/nunjucks/templating.html#include) (like creating components)
+- Using [filters](https://www.11ty.dev/docs/filters/) and [shortcodes](https://www.11ty.dev/docs/shortcodes/) to make reusable functions and code
+
 <!-- hi https://twitter.com/PossumEveryHour/status/1396722646054838278 -->
-<!-- mic  -->
 <!-- twiddle https://twitter.com/PossumEveryHour/status/1391030131821629443 -->

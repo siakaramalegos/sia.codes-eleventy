@@ -62,7 +62,9 @@
   --blue-70: rgb(16,0,193);
   --blue-80: rgb(7,0,125);
   --size-300: 0.75rem;
+  --size-350: 0.8rem;
   --size-400: 1rem;
+  --size-450: 1.1rem;
   --size-500: 1.33rem;
   --size-600: 1.77rem;
   --size-700: 2.36rem;
@@ -173,6 +175,7 @@ p,
 .tmpl-post li, aside, .tmpl-post li code, p code {
   font-size: var(--size-400);
   line-height: 1.7;}
+.tmpl-post li code, p code { font-size: var(--size-350);}
 li { margin-top: 0.5em; margin-bottom: 0.5em;}
 p.lead {
   color: var(--grey-50);
@@ -359,9 +362,9 @@ code {
   line-height: 1.5;}
 code {
   background-color: rgba(222,221,227,0.7);
-  font-size: 14px;  }
+  font-size: var(--size-400);  }
 pre {
-  font-size: 14px;
+  font-size: var(--size-400);
   line-height: 1.375;
   direction: ltr;
   text-align: left;
@@ -769,7 +772,8 @@ form label {
 @media screen and (min-width: 780px) {
   h1 {font-size: var(--size-900);}
   h2, h2 code {font-size: var(--size-700);}
-  p, .tmpl-post li, .tmpl-post li code {font-size: var(--size-500);}
+  p, .tmpl-post li {font-size: var(--size-500);}
+  .tmpl-post li code, p code { font-size: var(--size-450);}
   .tmpl-post .p-summary.lead {font-size: var(--size-500);}
   code[class*="language-"], pre[class*="language-"] {font-size: var(--size-400);}
   p.lead, blockquote p, aside {font-size: var(--size-500);}

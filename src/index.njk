@@ -69,6 +69,7 @@ date: 2019-01-01
   <h2>Select Writing</h2>
   <p>All posts can be found on <a href="{{ '/posts/' | url }}">the blog page</a>.</p>
 
+  {% set lazyload = true %}
   {% set postslist = collections.posts | getSelect %}
   {% include "postslist.njk" %}
 
