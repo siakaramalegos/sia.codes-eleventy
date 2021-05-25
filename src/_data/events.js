@@ -9,6 +9,14 @@ module.exports = {
       ]
     },
     {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-introduction-to-serverless-functions-using-netlify/',
+      location: 'Online',
+      talks: [
+        { key: 'serverlessNetlify', date: '15 June 2021' },
+      ]
+    },
+    {
       conference: 'Social Hackers Academy',
       conferenceUrl: 'https://socialhackersacademy.org/',
       location: 'Online',
