@@ -3,7 +3,8 @@
   "version": "5.0.0",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "NODE_ENV=production npx eleventy",
+    "build": "NODE_ENV=production npx @11ty/eleventy",
+    "build:local": "NODE_ENV=production netlify build",
     "start": "netlify dev --port=8081",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy",
