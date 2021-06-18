@@ -4,7 +4,7 @@ description: Get started going serverless with Netlify functions and Netlify-CLI
 date: 2021-06-14
 tags: ['JavaScript', 'Tools', 'Jamstack']
 layout: layouts/post.njk
-# tweetId: '1252703197904408577'
+tweetId: '1405998820396261377'
 isSelect: true
 featuredImage: mwcenter_spitzer_s002ha.jpg
 ---
