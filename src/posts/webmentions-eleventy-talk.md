@@ -3,10 +3,10 @@ title: Webmentions + Eleventy Talk
 description: Slides and resources from my talks at JamStack Toronto and Magnolia JS.
 date: 2020-11-10
 updated: 2021-05-26
-tags: ['IndieWeb', 'Eleventy']
+tags: ['IndieWeb', 'Eleventy', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1326601057179406338'
-isSelect: true
+isSelect: false
 featuredImage: webmentions-eleventy_kxnyud.jpg
 ---
 

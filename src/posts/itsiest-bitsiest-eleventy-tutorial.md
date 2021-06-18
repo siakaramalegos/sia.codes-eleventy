@@ -2,7 +2,7 @@
 title: Itsiest, Bitsiest Eleventy Tutorial
 description: Want to get started with Eleventy but feel overwhelmed? Try out this pared-down tutorial
 date: 2021-05-24
-tags: ['IndieWeb', 'Eleventy', 'JavaScript']
+tags: ['IndieWeb', 'Eleventy', 'JavaScript', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1396940383590965254'
 isSelect: true

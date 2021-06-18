@@ -3,7 +3,7 @@ title: Eleventy and Cloudinary images
 description: Setting up responsive images in Eleventy using Cloudinary
 date: 2020-12-11
 updated: 2021-03-30
-tags: ['Eleventy', 'Images', 'WebPerf']
+tags: ['Eleventy', 'Images', 'WebPerf', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1337612682275459073'
 isSelect: true

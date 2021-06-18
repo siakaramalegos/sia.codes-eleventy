@@ -3,7 +3,7 @@ title: An In-Depth Tutorial of Webmentions + Eleventy
 description: Add Webmentions to your Eleventy static site with this step-by-step tutorial.
 date: 2019-11-22
 updated: 2021-05-26
-tags: ['IndieWeb', 'Eleventy']
+tags: ['IndieWeb', 'Eleventy', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1198282993678376961'
 isSelect: true
