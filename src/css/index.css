@@ -176,7 +176,14 @@ p,
   font-size: var(--size-400);
   line-height: 1.7;}
 .tmpl-post li code, p code { font-size: var(--size-350);}
-li { margin-top: 0.5em; margin-bottom: 0.5em;}
+ul, ol {padding-left: 2.5em;}
+li { margin-top: 0.5em; margin-bottom: 0.5em; padding-left: 0.6em;}
+li::marker {
+  color: var(--pink-50);
+  font-size: var(--size-400);
+  font-weight: 700;
+}
+ul li::marker {content: '■ ';}
 p.lead {
   color: var(--grey-50);
   font-size: var(--size-400);}
@@ -471,6 +478,10 @@ nav img {display: block;}
   width: 100%;}
 .postlist-item:hover .postlist-image img {filter: none; mix-blend-mode: normal;}
 .post-tag {position: relative;}
+.post-tag span {
+  font-weight: 400;
+  margin-left: 8px;
+}
 .archivelist-item {margin-top: 40px;}
 .archivelist-title {margin: 12px 0 0 0;}
 .archivelist-tags {margin-left: 16px;}
@@ -778,6 +789,9 @@ form label {
   code[class*="language-"], pre[class*="language-"] {font-size: var(--size-400);}
   p.lead, blockquote p, aside {font-size: var(--size-500);}
   blockquote p.blockquote-source {font-size: var(--size-400);}
+  ul, ol {padding-left: 3em;}
+  li {padding-left: 0.8em;}
+  li::marker {font-size: var(--size-450);}
 }
 @media screen and (min-width: 850px) {
   #upcoming-talks svg {display: block;}

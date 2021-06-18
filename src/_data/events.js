@@ -1,22 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'Magnolia JS',
-      conferenceUrl: 'https://magnoliajs.com/',
-      location: 'Online',
-      talks: [
-        { key: 'indieWebEleventy', date: '25 May 2021' },
-      ]
-    },
-    {
-      conference: 'GDG New Orleans',
-      conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-introduction-to-serverless-functions-using-netlify/',
-      location: 'Online',
-      talks: [
-        { key: 'serverlessNetlify', date: '15 June 2021' },
-      ]
-    },
-    {
       conference: 'Social Hackers Academy',
       conferenceUrl: 'https://socialhackersacademy.org/',
       location: 'Online',
@@ -36,6 +20,22 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-introduction-to-serverless-functions-using-netlify/',
+      location: 'Online',
+      talks: [
+        { key: 'serverlessNetlify', date: '15 June 2021' },
+      ]
+    },
+    {
+      conference: 'Magnolia JS',
+      conferenceUrl: 'https://magnoliajs.com/',
+      location: 'Online',
+      talks: [
+        { key: 'indieWebEleventy', date: '25 May 2021' },
+      ]
+    },
     {
       conference: "c't <web dev>",
       conferenceUrl: 'https://ctwebdev.de/',
