@@ -20,6 +20,8 @@ featuredImage: mic-possum_owln9h.jpg
 
 I like to talk and write about Eleventy a LOT. I always run into this problem of having to introduce Eleventy to people not familiar with it in a short way. So, I wrote up this miniature demo to give people a flavor of Eleventy without overwhelming them with all the details. If you like it as much as I do, maybe it will inspire you to learn more!
 
+<aside><strong>Do you prefer learning by video?</strong> I included a walkthrough of this demo in my <a href="http://localhost:8081/posts/webmentions-eleventy-talk/#magnolia-js-(includes-short-eleventy-tutorial)">talk on Webmentions + Eleventy at Magnolia JS</a>.</aside>
+
 The code for this repo can be found on [Github](https://github.com/siakaramalegos/eleventy-demo). This article is meant for people new to Eleventy and will show you how to:
 
 1. Start up the most minimal Eleventy project with one page (the `main` branch)

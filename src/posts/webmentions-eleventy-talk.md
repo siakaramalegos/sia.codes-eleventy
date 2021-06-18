@@ -2,7 +2,7 @@
 title: Webmentions + Eleventy Talk
 description: Slides and resources from my talks at JamStack Toronto and Magnolia JS.
 date: 2020-11-10
-updated: 2021-05-26
+updated: 2021-06-18
 tags: ['IndieWeb', 'Eleventy', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1326601057179406338'
@@ -23,8 +23,15 @@ Webmentions are an exciting standard which help enable the IndieWeb. We can own 
 
 In this talk, I discuss what webmentions are and how to implement them. In the longer version for [Magnolia.js](https://www.magnoliajs.com/), I also give a quick demo of Eleventy. The code is based on an Eleventy site, but the concepts should be applicable to any site.
 
+### Jamstack Toronto (shorter)
 {% set videoTitle = "Webmentions + Eleventy by Sia Karamalegos [ Jamstack Toronto ]" %}
 {% set videoId = "zjHb4xtnTvU" %}
+{% include 'youtube.njk' %}
+
+### Magnolia JS (includes short Eleventy tutorial)
+{% set videoTitle = "Join the Indie Web with Eleventy and Webmentions - Sia Karamalegos (MagnoliaJS 2021)" %}
+{% set videoId = "-R07ATpOh4M" %}
+{% set params = "start=98" %}
 {% include 'youtube.njk' %}
 
 ## Slides
