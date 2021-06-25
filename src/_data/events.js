@@ -18,6 +18,25 @@ module.exports = {
         { key: 'performance', date: '06 Oct 2021' },
       ]
     },
+    {
+      conference: 'Connect.Tech',
+      conferenceUrl: 'https://2021.connect.tech/',
+      location: 'Atlanta, GA, USA',
+      talks: [
+        { key: 'performanceWorkshop', date: '08 Nov 2021' },
+      ]
+    },
+    {
+      conference: 'The Progressive Web Experience',
+      conferenceUrl: 'https://progressivewebexperience.io/',
+      location: 'Online',
+      talks: [
+        { key: 'performanceWorkshop', date: '05 Dec 2021' },
+        { key: 'devtools', date: '06 Dec 2021' },
+        { key: 'performance', date: '06 Dec 2021' },
+        { key: 'indieWebEleventy', date: '06 Dec 2021' },
+      ]
+    },
   ],
   pastEvents: [
     {

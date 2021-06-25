@@ -362,6 +362,7 @@ table th { padding-right: 1em; }
   color: var(--grey-20); }
 .bg-dark a { color: var(--pink-30); }
 .bg-dark a:hover { color: var(--pink-20); }
+.bg-dark p.lead{color: var(--grey-20);}
 
 pre,
 code {
@@ -568,10 +569,10 @@ footer {
   padding: 16px 16px 0;
   text-align: center;
   width: 100%;}
-footer a {
+footer .footer-social-links a {
   display: inline-block;
   margin: 6px;}
-footer p { font-size: 1em;}
+footer .footer-copy { font-size: 1em; margin-bottom: 0.5rem;}
 
 .headshot{
   border-radius: 100%;
@@ -714,7 +715,7 @@ form label {
   position: absolute;
   top: 5px;
   right: 10px;}
-.form button, .form label {
+.form button, .form label, .form p {
   display: block;
   margin: 24px auto;
   width: 90%;}
@@ -729,6 +730,18 @@ form label {
   margin: 4px 0;
   padding: 4px;
   width: 100%;}
+footer .form {
+  background: none;
+  box-shadow: none;
+  text-align: left;
+}
+footer .button {
+  font-size: var(--size-400);
+  padding: 8px 12px;
+}
+footer .form input, footer .form button {
+  height: 2.3rem;
+}
 #honey {display: none;}
 .well {
   background-color: rgba(222,221,227,0.4);
@@ -777,7 +790,7 @@ form label {
 @media screen and (min-width: 520px) {.home {display: inline-block;}}
 @media screen and (min-width: 665px) {
   .form {padding: 72px;}
-  .form button, .form label {width: 80%;}
+  .form button, .form label, .form p {width: 80%;}
   .postlist {grid-template-columns: repeat(2, 1fr);}
 }
 @media screen and (min-width: 780px) {
@@ -808,5 +821,5 @@ form label {
   section {padding: 32px 0;}
   .postlist {grid-template-columns: repeat(3, 1fr);}
   footer {padding: 32px 32px 0; }
-  footer a { margin: 16px; }
+  footer .footer-social-links a { margin: 16px; }
 }
