@@ -11,7 +11,7 @@ date: 2019-01-02
 <section class="flow">
 <img src="/img/sia_karamalegos_small.jpg" alt="Sia Karamalegos" class="headshot">
 
-I'm a freelance web developer, a [Women Techmakers](https://www.womentechmakers.com/) ambassador, and a co-organizer for [GDG New Orleans](https://www.gdgneworleans.com/). I'm also a Google Developer Expert in Web Technologies and a Cloudinary Media Developer Expert. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
+I'm a freelance web developer and a co-organizer for the [Eleventy Meetup](https://eleventymeetup.netlify.app/) and [GDG New Orleans](https://www.gdgneworleans.com/). I'm also a Google Developer Expert in Web Technologies, a Cloudinary Media Developer Expert, and a Stripe Community Expert. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
 
 As a person, I also love making developer's lives easier through teaching, speaking, and mentoring. You can find more information about me and the topics I speak about on my speaking page. I talk about front-end topics such as web performance, JavaScript, and React.
 
