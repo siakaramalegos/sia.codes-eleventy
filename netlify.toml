@@ -1,6 +1,9 @@
 [[redirects]]
   from = "/mars-randomizer/"
   to = "https://projects.sia.codes/mars-randomizer/"
+[[redirects]]
+  from = "/posts/prettier/"
+  to = "/posts/how-to-add-prettier-to-a-project/"
 [[plugins]]
   package = "netlify-plugin-cache-folder"
 [build.processing]

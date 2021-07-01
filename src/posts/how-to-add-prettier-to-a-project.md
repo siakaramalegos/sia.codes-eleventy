@@ -2,10 +2,20 @@
 title: Adding Prettier to a Project
 description: Add Prettier with a pre-commit hook and dedicate one commit to a full reformat
 date: 2021-04-19
-tags: ['Tools', 'Dev Tools', 'JavaScript']
-tweetId: '1384219354397507595'
+tags: ["Tools", "Dev Tools", "JavaScript"]
+tweetId: "1384219354397507595"
 layout: layouts/post.njk
+featuredImage: laura-chouette-yxcCgzSB_iI-unsplash_myrt2f.jpg
 ---
+
+<figure>
+  <img src="{% src 'laura-chouette-yxcCgzSB_iI-unsplash_myrt2f.jpg' %}"
+    srcset="{% srcset 'laura-chouette-yxcCgzSB_iI-unsplash_myrt2f.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="Woman's hand holding a brush up to an eyemakeup palette in the shape of a laptop"
+    width="3439" height="2578">
+  <figcaption>Take time to make your code prettier. Photo by <a href="https://unsplash.com/@laurachouette?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Laura Chouette</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
 
 While working at a smaller dev shop, our team hit the point at which the inconsistent code formats between and within projects was becoming a pain. Our needs included:
 
@@ -24,36 +34,47 @@ Most of these steps can be found in the [docs](https://prettier.io/docs/en/insta
 <aside>A key step here is to run Prettier on all the files in a separate commit. You don't want to pollute all your future pull request diffs with formatting changes.</aside>
 
 1. Install prettier:
-  ```bash
-  $ npm install --save-dev --save-exact prettier
-  ```
+
+```bash
+$ npm install --save-dev --save-exact prettier
+```
+
 2. Create an empty config file to let tools know you're using Prettier:
-  ```bash
-  $ echo {}> .prettierrc.json
-  ```
+
+```bash
+$ echo {}> .prettierrc.json
+```
+
 3. Create a `.prettierignore` file to let tools know which files NOT to format. `node_modules` are ignored by default. Some suggestions:
-  ```bash
-  build
-  coverage
-  .package-lock.json
-  *.min.*
-  ```
+
+```bash
+build
+coverage
+.package-lock.json
+*.min.*
+```
+
 4. Manually run Prettier to re-format all the files in the project:
-  ```bash
-  $ npx prettier --write .
-  ```
+
+```bash
+$ npx prettier --write .
+```
+
 5. Set up your code editor to auto-format on save for ease of use. See [instructions](https://prettier.io/docs/en/editors.html) for various editors.
 6. Set up commit hooks with [pretty-quick](https://github.com/azz/pretty-quick) and [husky](https://github.com/typicode/husky). First, install them as dev dependencies:
-  ```bash
-  $ npm i --save-dev pretty-quick husky
-  ```
+
+```bash
+$ npm i --save-dev pretty-quick husky
+```
+
 7. Finally, add the pre-commit instructions to your `package.json` file:
-  ```json
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  ```
+
+```json
+"husky": {
+  "hooks": {
+    "pre-commit": "pretty-quick --staged"
+  }
+},
+```
 
 Now when you commit your changes, files in the commit will automatically be formatted!
