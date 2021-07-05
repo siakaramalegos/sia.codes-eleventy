@@ -8,32 +8,6 @@
     {% set renderDescription = renderData.description or description or metadata.description %}
     <title>{{ renderTitle }}</title>
     <meta name="description" content="{{ renderDescription }}">
-    <meta property="og:description" content="{{ renderDescription }}" />
-    <meta property="og:url" content="https://sia.codes/" />
-    <meta property="og:title" content="{{ renderTitle }}" />
-    <meta property="og:image" content="{% socialImage renderTitle, renderDescription %}">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="640">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@thegreengreek" />
-    <meta name="twitter:creator" content="@thegreengreek" />
-    <meta name="twitter:title" content="{{ renderTitle }}" />
-    <meta name="twitter:image" content="{% socialImage renderTitle, renderDescription %}" />
-    <meta name="twitter:image:alt" content="{{ renderTitle }}" />
-    <meta name="twitter:domain" content="sia.codes" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#603cba">
-    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="monetization" content="$ilp.uphold.com/KaKQ36fDzzdM">
-    <link rel="canonical" href="https://sia.codes{{ page.url }}">
 
     <style>
       @font-face {
@@ -104,6 +78,33 @@
     </script>
     <link rel="webmention" href="https://webmention.io/sia.codes/webmention" />
     <link rel="pingback" href="https://webmention.io/sia.codes/xmlrpc" />
+
+    <meta property="og:description" content="{{ renderDescription }}" />
+    <meta property="og:url" content="https://sia.codes/" />
+    <meta property="og:title" content="{{ renderTitle }}" />
+    <meta property="og:image" content="{% socialImage renderTitle, renderDescription %}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@thegreengreek" />
+    <meta name="twitter:creator" content="@thegreengreek" />
+    <meta name="twitter:title" content="{{ renderTitle }}" />
+    <meta name="twitter:image" content="{% socialImage renderTitle, renderDescription %}" />
+    <meta name="twitter:image:alt" content="{{ renderTitle }}" />
+    <meta name="twitter:domain" content="sia.codes" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="monetization" content="$ilp.uphold.com/KaKQ36fDzzdM">
+    <link rel="canonical" href="https://sia.codes{{ page.url }}">
   </head>
   <body>
     <nav>
