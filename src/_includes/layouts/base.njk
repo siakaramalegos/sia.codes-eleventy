@@ -40,8 +40,25 @@
     <meta name="monetization" content="$ilp.uphold.com/KaKQ36fDzzdM">
     <link rel="canonical" href="https://sia.codes{{ page.url }}">
 
-    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/lexend-v2-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/lexend-v2-latin-600.woff2" crossorigin>
+    <style>
+      @font-face {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/fonts/lexend-v5-latin-regular.woff2') format('woff2'), url('/fonts/lexend-v5-latin-regular.woff') format('woff');
+      }
+      @font-face {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url('/fonts/lexend-v5-latin-600.woff2') format('woff2'), url('/fonts/lexend-v5-latin-600.woff') format('woff');
+      }
+
+      body {font-family: 'Lexend', sans-serif;}
+      h1, h2, h3, h4, h5, h6 {font-family: 'Lexend', sans-serif;font-weight: 600;}
+    </style>
 
     <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
     <!-- Global site tag (gtag.js) - Google Analytics - new GA4 tag -->
