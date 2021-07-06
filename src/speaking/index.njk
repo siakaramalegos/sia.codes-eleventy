@@ -1,6 +1,8 @@
 ---
 layout: layouts/page.njk
-title: Speaking 🎤
+title: "Sia Karamalegos: Speaking and Workshops 🎤"
+pageTitle: Speaking and Workshops 🎤
+description: Want to level up your web performance skills? Sia is a performance engineer and web developer available for conference and corporate speaking engagements.
 tags:
   - nav
 navtitle: Speaking
@@ -10,13 +12,16 @@ date: 2019-01-04
 
 <section class="flow">
 
-<p>Hello, I love making developer's lives easier through teaching, speaking, and mentoring. I talk about front-end topics such as web performance, JavaScript, and React.</p>
+<p>Hello, I love making developer's lives easier through teaching, speaking, and mentoring. I talk about front-end topics such as web performance, JavaScript, and the Jamstack.</p>
 
-<p>Want me to speak at one of your events? <a href="/contact/?subject=Speaking inquiry from sia.codes">Send me a message</a>, or <a href="https://twitter.com/thegreengreek">DM me on Twitter</a>!</p>
+<p>Below, you can check out my <a href="#testimonials">testimonials</a>, <a href="#my-speaker-info">speaker info</a> (bio, etc.), <a href="#upcoming-events">upcoming events</a>, and <a href="#speaking-history">speaking history</a>.</p>
+
+<p>Want me to speak at one of your events or at your company? <a href="/contact/?subject=Speaking inquiry from sia.codes">Send me a message</a>, or <a href="https://twitter.com/thegreengreek">DM me on Twitter</a>!</p>
 
 <p class="text-center">
-  <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me to speak at your event</a>
+  <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me to speak</a>
 </p>
+
 
 <!--
 {% set videoTitle = "The Future of Front-End Performance - Sia Karamalegos" %}
@@ -25,44 +30,40 @@ date: 2019-01-04
 
 </section>
 
-<section class="flow">
+<section class="flow" id="testimonials">
 
-<h2>Testimonials</h2>
+  <h2>Testimonials</h2>
 
-<blockquote>
-  <p>Sia has definitely mastered the art of keeping a listener engaged. Her humor and ability to communicate technical
-  concepts at the same time is an amazing talent. All information was presented well and provided a long list of notes to
-  take back to my company and coworkers.</p>
-  <p class="blockquote-source">-Anonymous attendee feedback from The Progressive Web Experience</p>
-</blockquote>
-
-<blockquote>
-  <p>Sia’s workshop gave me the guidance and tools I needed to finally begin diagnosing real performance problems in my web applications. Not only did her course shed light on how to solve the issues I knew I had, but it also exposed problems I hadn't discovered yet. Whether you’ve got an application that’s not performing well or if you just want to have a better grasp of the performance tools available, Sia’s Measuring Web Performance workshop is well worth your time.</p>
-  <p class="blockquote-source">-Aundra Miller, Software Engineer at <a href="https://www.learning.com/">Learning.com</a></p>
-</blockquote>
-
-<blockquote>
-  <p>Sia was my instructor at Tech Talent South. Thanks to her I've been able to move forward in my career as a Software Developer. Her knowledge and endless patience for our questions created a foundation that I've been building on ever since. She is a fantastic teacher."</p>
-  <p class="blockquote-source">-Ryan Hageman, Independent Software Developer</p>
-</blockquote>
-
+  {% include 'carousel.njk' %}
 </section>
 
-<section class="flow">
-  <h2>Short Bio</h2>
+<section class="flow" id="my-speaker-info">
+  <h2>My Speaker Info</h2>
+  <p class="lead">Need my bio, headshot, and links for your website or promotional post?</p>
+
+  <h3>Short Bio</h3>
   <p>Sia Karamalegos is a web developer and performance engineer. She's also an international conference speaker, writer, Google Developer Expert in Web Technologies, Cloudinary Media Developer Expert, and Stripe Community Expert. She co-organizes the Eleventy Meetup and GDG New Orleans.</p>
 
-  <h2>Long Bio</h2>
+  <h3>Long Bio</h3>
 
   <p>Sia Karamalegos is a developer, international conference speaker, and writer. She is a Google Developer Expert in Web Technologies, a Cloudinary Media Developer Expert, and a Stripe Community Expert. She co-organizes GDG New Orleans and its marquee event, DevFest New Orleans. She is the founder and lead developer for Clio + Calliope Web Development and was recognized in the Silicon Bayou 100, the 100 most influential and active people in tech and entrepreneurship in Louisiana.</p>
 
   <p>She graduated from Texas A&M University with a BS in chemical engineering and received her MBA from Harvard Business School. When she's not coding, speaking, or consulting, Sia likes to write short stories and dabble in charcoal figure drawing. She's also an avid endurance athlete.</p>
 
-  <h2>Headshot</h2>
+  <h3>Headshot</h3>
   <p><a href="https://drive.google.com/file/d/0BwRL6D34a40YZUxtUjExak9XRXc/view">Download photo</a></p>
+
+  <h3>Links</h3>
+  <p>Full URLs are included below for easier copy-pasting:</p>
+  <ul>
+    <li>Website: <a href="https://sia.codes/">https://sia.codes/</a></li>
+    <li>Twitter: <a href="https://twitter.com/thegreengreek">https://twitter.com/TheGreenGreek</a></li>
+    <li>Github: <a href="https://github.com/siakaramalegos/">https://github.com/siakaramalegos/</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/karamalegos/">https://www.linkedin.com/in/karamalegos/</a></li>
+  </ul>
 </section>
 
-<section class="flow">
+<section class="flow" id="upcoming-events">
 
 <h2>Upcoming Events</h2>
 
@@ -81,9 +82,9 @@ date: 2019-01-04
 
 </section>
 
-<section>
+<section id="speaking-history">
 
-<h2>Past Events</h2>
+<h2>Speaking History</h2>
 
 <div id="pastEvents" class="card-list">
   {% set pastEvents = 'pastEvents' | getEvents %}

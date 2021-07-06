@@ -1,5 +1,7 @@
 ---
 layout: layouts/home.njk
+title: "Sia Karamalegos: Blog Archive"
+description: Learn about web performance, Eleventy, and the Jamstack with writing by Sia Karamalegos, performance engineer and web developer.
 tags:
   - nav
 navtitle: Blog
@@ -7,16 +9,17 @@ permalink: /posts/
 ---
 
 <div class="content">
-  <section>
+  <section class="flow">
     <h1>Blog</h1>
+    <p>Learn about web performance, Eleventy, and the Jamstack.</p>
+    <p>See <a href="#select-posts">select posts</a>, <a href="#all-posts">all posts</a>, or <a href="#filter-by-topic">filter by topic</a></p>
   </section>
 
-  <section class="flow">
+  <section class="flow" id="filter-by-topic">
     <h2>Filter by topic</h2>
     <p>Or <a href="https://www.google.com/search?q=site%3Asia.codes%2Fposts+eleventy">search with Google</a></p>
     <p style="max-width: 600px;">
       {% set tags = collections.tagList | sort %}
-      {{ tags | log }}
       {% for tag in tags %}
         {%- if tag != "posts" -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
@@ -26,9 +29,8 @@ permalink: /posts/
     </p>
   </section>
 
-  <section class="flow">
+  <section class="flow" id="select-posts">
     <h2>Select posts</h2>
-    <p>Jump to <a href="#all-posts">All posts</a></p>
     {% set postslist = collections.posts | getSelect %}
     {% include "postslist.njk" %}
   </section>
