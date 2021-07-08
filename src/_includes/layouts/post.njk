@@ -5,7 +5,7 @@ templateClass: tmpl-post
 
 <div class="content-780 h-entry">
   <h1 class="p-name">{{ title }}</h1>
-  <p class="p-summary lead">{{ shortDescription or description }}</p>
+  <p class="p-summary lead">{{ description }}</p>
   <p class="byline"><time class="dt-published" datetime="{{ date }}">{{ date | readableDate }}</time>{% if updated %}, updated <time class="dt-published" datetime="{{ updated }}">{{ updated | readableDate }}</time>{% endif %} by <span class="h-card p-author"><img class="u-photo" width="24" height="24" src="/img/sia_96.jpg" alt="" width="48" height="48" loading="lazy"> <a class="u-url" href="https://sia.codes/">Sia Karamalegos</a></span> {% if translations %}{% include 'translations.njk' %}{% endif %}</p>
 
   <section class="e-content flow">
