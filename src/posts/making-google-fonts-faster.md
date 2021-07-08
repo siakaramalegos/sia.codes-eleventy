@@ -1,13 +1,14 @@
 ---
 title: Making Google Fonts Faster
-description: If you use Google Fonts, a few additional steps can lead to much faster load times.
+shortDescription: If you use Google Fonts, a few additional steps can lead to much faster load times.
+description: If you use Google Fonts, a few additional steps can lead to much faster load times. Learn about preconnect, optimal placement, font display, preload, and more in this post.
 date: 2019-02-06
 updated: 2021-01-05
-tags: ['WebPerf', 'Fonts', "Popular"]
+tags: ["WebPerf", "Fonts", "Popular"]
 layout: layouts/post.njk
 isSelect: true
 featuredImage: typewriter_keys_qgtruq.jpg
-tweetId: '1346569499332501506'
+tweetId: "1346569499332501506"
 ---
 
 <figure>
@@ -31,7 +32,7 @@ In this article, I will show you how to:
 Let’s take a step back and look at what is happening when you request from Google Fonts using a standard `<link>` copied from their website:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet"/>
 ```
 
 Did you notice that the link is for a stylesheet and not a font file? If we load the link’s [href](https://fonts.googleapis.com/css?family=Muli:300,400,700|Oswald:500) into our browser, we see that Google Fonts loads a stylesheet of `@font-face` declarations for all the font styles that we requested in every character set that is available. Not all of these are used by default, thankfully.
@@ -41,23 +42,22 @@ Then, each `@font-face` declaration tells the browser to use a local version of 
 ```css
 /* latin */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 ```
 
 Understanding this architecture will help us understand why certain strategies work better for making our site faster.
 
-
 ## `<link>` vs `@import`
 
 Sometimes it's easier for us to get our custom fonts into our projects by importing them in the CSS:
 
 ```css
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 ```
 
 Unfortunately, this makes our site load slower because we've increased the [critical request depth](https://web.dev/critical-request-chains/) for no benefit. In the network waterfall below, we can see that each request is chained - the HTML is loaded on line 1, which triggers a call to style.css. Only after style.css is loaded and the [CSSOM](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model) is created will the CSS from Google fonts then be triggered for download. And as we learned in the previous section, that file must also be downloaded and read before the fonts themselves will be downloaded (the final 2 rows):
@@ -86,7 +86,6 @@ By moving our font request to the `<head>` of our HTML instead, we can make our 
 
 <aside>Always import your fonts from HTML, not CSS.</aside>
 
-
 ## Warm up that connection faster
 
 Look closely at that last waterfall, and you might spy another inefficiency. Go ahead and try to find it before you keep reading...
@@ -98,8 +97,8 @@ You may be asking yourself, "Why can’t I just use the direct link to the font?
 We can make one quick performance improvement by warming up the DNS lookup, TCP handshake, and TLS negotiation to the `fonts.gstatic.com` domain with [preconnect](https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/):
 
 ```html
-<link rel="preconnect" href="https://fonts.gstatic.com/">
-<link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com/" />
+<link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet"/>
 ```
 
 Why? If you don’t warm up the connection, the browser will wait until it sees the CSS call font files before it begins DNS/TCP/TLS:
@@ -129,7 +128,7 @@ This is wasted time because we KNOW that we will definitely need to request reso
 What's really cool is that I noticed that Google Fonts recently added the preconnect line in the HTML snippet they create for you. Now you no longer need to remember to add it when grabbing new fonts. To update legacy projects, just copy and paste this line before the `<link>` calling your font in your HTML:
 
 ```html
-<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 ```
 
 <figure>
@@ -179,6 +178,7 @@ Second, while rare, if Google Fonts is down, we won’t get our fonts. If our ow
 To have full control over our font files, loading, and CSS properties, we can self-host our Google Fonts. Luckily, [Mario Ranftl](http://mranftl.com/) created [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) which helps us do exactly that! It is an amazing tool for giving us font files and font-face declarations based on the fonts, charsets, styles, and browser support you select.
 
 ### Use google-webfonts-helper to download our fonts and provide basic CSS font-face declarations
+
 First, select the Google font you need from the left sidebar. Type in the search box for a filtered list (red arrow), then click on your font (blue arrow):
 
 <figure>
@@ -232,6 +232,7 @@ After selecting a browser support option, copy the provided CSS into your styles
 Finally, download your files. Unzip them, and place them in your project in the appropriate location.
 
 ## Loading Optimization
+
 So far, we have only moved where we are hosting files from Google’s servers to ours. This is nice, but we might be able to do more.
 
 We can have our font files start downloading right away, before the browser knows whether it will need the font or not. By default, the browser only downloads a font after the HTML and CSS are parsed and the CSSOM is created. It won't load font files that aren't needed. If warning bells are going off in your head, then you're right to worry. We only want to hijack this process if we know for sure that a font will be used on that page.
@@ -250,8 +251,13 @@ How do we choose which file type to preload? Resource hints are not available in
 In your HTML file, add resource hints for the WOFF2 font files you need for the current page:
 
 ```html
-  <link rel="preload" as="font" type="font/woff2"
-    href="./fonts/muli-v12-latin-regular.woff2" crossorigin>
+  <link
+    rel="preload"
+    as="font"
+    type="font/woff2"
+    href="./fonts/muli-v12-latin-regular.woff2"
+    crossorigin
+  />
 ```
 
 Let’s break down our preload `<link>` element:
@@ -290,6 +296,7 @@ Yes, this can happen. Unfortunately, the `preload` hint can throw a wrench into 
 Your best strategy is to minimize how many resources you preload and TEST, TEST, TEST with [webpagetest.org](https://webpagetest.org/), which is similar to the browser's dev tools network tab.
 
 ## subfont
+
 So what if you don’t want to go through all of these steps? The [subfont](https://github.com/Munter/subfont) npm package will do this in addition to dynamically subsetting your fonts at build. It takes some more set-up time, but it’s definitely worth a try.
 
 Are you a fan of [Gatsby](https://www.gatsbyjs.org/)? There’s even a [subfont plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-subfont/) for it.
@@ -299,9 +306,11 @@ Are you a fan of [Gatsby](https://www.gatsbyjs.org/)? There’s even a [subfont 
 ## Additional Considerations
 
 ### Host static assets on a CDN
+
 One thing Google Fonts does offer is a fast and reliable content delivery network (CDN). You should also host your static assets on a CDN for faster delivery to users in different regions. We use AWS S3 plus Cloudfront, the CDN service offered by Amazon, and Netlify which uses AWS behind the scenes in the same way, but many options exist.
 
 ### Size and Popular Fonts
+
 In some of my tests for our company website, I noticed smaller font file sizes for some fonts hosted by Google. My theory is this is due to Google’s variants for optimization:
 
 <blockquote>

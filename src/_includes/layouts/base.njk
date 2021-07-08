@@ -67,7 +67,7 @@
     <meta property="og:description" content="{{ renderDescription }}" />
     <meta property="og:url" content="https://sia.codes/" />
     <meta property="og:title" content="{{ renderTitle }}" />
-    <meta property="og:image" content="{% socialImage renderTitle, renderDescription %}">
+    <meta property="og:image" content="{% socialImage renderTitle, shortDescription or renderDescription %}">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="640">
@@ -75,7 +75,7 @@
     <meta name="twitter:site" content="@thegreengreek" />
     <meta name="twitter:creator" content="@thegreengreek" />
     <meta name="twitter:title" content="{{ renderTitle }}" />
-    <meta name="twitter:image" content="{% socialImage renderTitle, renderDescription %}" />
+    <meta name="twitter:image" content="{% socialImage renderTitle, shortDescription or renderDescription %}" />
     <meta name="twitter:image:alt" content="{{ renderTitle }}" />
     <meta name="twitter:domain" content="sia.codes" />
 
