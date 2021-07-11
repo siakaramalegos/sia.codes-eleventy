@@ -1,12 +1,18 @@
 <div reversed class="archivelist">
   {% for post in archivelist | reverse %}
   <article class="archivelist-item{% if post.url == url %} archivelist-item-active{% endif %}">
-    <time class="archivelist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    <time class="archivelist-date" datetime="{{ post.date }}">{{ post.readableDate }}</time>
     <h3 class="archivelist-title">
-      <a
-        href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      {% if post.publicationName %}
+        <a href="{{ post.url | url }}" target="_blank" rel="noopener noreferrer">
+          {% if post.title %}{{ post.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+          <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16"><path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z" class=""></path></svg>
+        </a>
+      {% else %}
+        <a href="{{ post.url | url }}">{% if post.title %}{{ post.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      {% endif %}
       <span class="archivelist-tags">
-        {% for tag in post.data.tags %}
+        {% for tag in post.tags %}
         {%- if tag != "posts" -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
         <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
@@ -14,7 +20,10 @@
         {% endfor %}
       </span>
     </h3>
-    <p class="archivelist-description">{{post.data.description}}</p>
+    <p class="archivelist-description">{{post.description}}</p>
+    {% if post.publicationName %}
+      <p class="archivelist-publication">Published on {{ post.publicationName }}</p>
+    {% endif %}
   </article>
   {% endfor %}
 </div>

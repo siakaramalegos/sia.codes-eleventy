@@ -5,7 +5,7 @@ module.exports = {
       conferenceUrl: 'https://socialhackersacademy.org/',
       location: 'Online',
       talks: [
-        { key: 'serverlessNetlify', date: '30 June 2021' },
+        { key: 'serverlessNetlify', date: '30 Jun 2021' },
       ]
     },
     {
@@ -44,7 +44,7 @@ module.exports = {
       conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-introduction-to-serverless-functions-using-netlify/',
       location: 'Online',
       talks: [
-        { key: 'serverlessNetlify', date: '15 June 2021' },
+        { key: 'serverlessNetlify', date: '15 Jun 2021' },
       ]
     },
     {
@@ -95,7 +95,7 @@ module.exports = {
       conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcjbvb/',
       location: 'New Orleans, LA, USA',
       talks: [
-        { key: 'eleventy', date: '16 June 2020' },
+        { key: 'eleventy', date: '16 Jun 2020' },
       ]
     },
     {

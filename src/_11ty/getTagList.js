@@ -1,5 +1,6 @@
 // this list should match the `filter` list in tags.njk
 const excludedTags = ["all", "nav", "post", "posts"]
+const externalWriting = require('../_data/external_writing.js')
 
 module.exports = function(collection) {
   let tagSet = new Set();
@@ -12,6 +13,11 @@ module.exports = function(collection) {
       }
     }
   });
+  externalWriting.forEach(item => {
+    for (const tag of item.tags) {
+      tagSet.add(tag)
+    }
+  })
 
   // returning an array in addCollection works in Eleventy 0.5.3
   return [...tagSet];

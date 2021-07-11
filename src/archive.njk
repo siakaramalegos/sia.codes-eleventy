@@ -23,7 +23,7 @@ permalink: /posts/
       {% for tag in tags %}
         {%- if tag != "posts" -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }} <span>({{ collections[ tag ] | length }})</span></a>
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
         {%- endif -%}
       {% endfor %}
     </p>
@@ -37,7 +37,7 @@ permalink: /posts/
 
   <section class="flow" id="all-posts">
     <h2>All posts</h2>
-    {% set archivelist = collections.posts %}
+    {% set archivelist = collections.posts | mergeExternalPosts(external_writing) %}
     {% include "archivelist.njk" %}
   </section>
 </div>

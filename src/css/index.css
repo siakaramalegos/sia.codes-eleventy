@@ -475,15 +475,14 @@ nav img {display: block;}
   width: 100%;}
 .postlist-item:hover .postlist-image img {filter: none; mix-blend-mode: normal;}
 .post-tag {position: relative;}
-.post-tag span {
-  font-weight: 400;
-  margin-left: 8px;
-}
+
 .archivelist-item {margin-top: 40px;}
 .archivelist-title {margin: 12px 0 0 0;}
+.archivelist-title svg {margin-left: 4px;}
 .archivelist-tags {margin-left: 16px;}
 .archivelist-tags a {position: relative; bottom: 4px;}
 .archivelist-description {font-size: 16px; margin: 0;}
+.archivelist-publication {color:var(--grey-60); font-size: 14px; margin: 0;}
 
 #upcoming-talks .talks {
   margin: 0 auto;

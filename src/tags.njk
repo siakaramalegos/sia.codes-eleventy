@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: collections
+  data: collections.tagList
   size: 1
   alias: tag
   filter:
@@ -22,7 +22,7 @@ permalink: /tags/{{ tag }}/
   <section>
     <h1>Tagged “{{ tag }}”</h1>
 
-    {% set archivelist = collections[ tag ] %}
+    {% set archivelist = collections[ tag ] | mergeExternalTaggedPosts(external_writing, tag) %}
     {% include "archivelist.njk" %}
   </section>
 

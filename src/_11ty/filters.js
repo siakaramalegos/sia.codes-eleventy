@@ -13,9 +13,82 @@ function unique(array) {
   return [...new Set(array)]
 }
 
+function readableDate(dateObj) {
+  return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+}
+
+function mergeExternalTaggedPosts(taggedPosts, externalPosts, tag) {
+  const taggedExternal = externalPosts.filter(post => post.tags.includes(tag))
+
+  return mergeExternalPosts(taggedPosts, taggedExternal)
+}
+
+function mergeExternalPosts(posts = [], externalPosts = []) {
+  const postData = posts.map(post => {
+    const {data, date, url} = post
+    const {title, description, tags} = data
+
+    return {
+      title,
+      date,
+      readableDate: readableDate(date),
+      url,
+      description,
+      tags,
+    }
+  })
+  const externalPostData = externalPosts.map(post => {
+    const {title, date, url, description, tags, publicationName} = post
+
+    return {
+      title,
+      date,
+      readableDate: readableDate(post.date),
+      url,
+      description,
+      tags,
+      publicationName,
+    }
+  })
+
+  return [...postData, ...externalPostData].sort((a, b) => {
+    if (a.date < b.date) {
+      return -1;
+    }
+    if (a.date > b.date) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  })
+}
+
 module.exports = {
+  generateDiscussionLink: (url) => {
+    const postUrl = `${rootUrl}${url}`
+    return `https://twitter.com/search?f=tweets&src=typd&q=${encodeURI(postUrl)}`
+  },
+  generateShareLink: (url, text) => {
+    const shareText = `${text} by @TheGreenGreek`
+    const shareUrl = `${rootUrl}${url}`
+    return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&url=${encodeURI(shareUrl)}`
+  },
+  getEvents: timing =>  events[timing],
+  getSelect: posts => posts.filter(post => post.data.isSelect),
+  getTalkForEvent: id => talks[id],
   getWebmentionsForUrl: (webmentions, url) => {
     return webmentions.children.filter(entry => entry['wm-target'] === url)
+  },
+  // Get the first `n` elements of a collection.
+  head: (array, n) => {
+    if( n < 0 ) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  },
+  htmlDateString: (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   },
   isOwnWebmention: (webmention) => {
     const urls = [
@@ -26,54 +99,11 @@ module.exports = {
     // check if a given URL is part of this site.
     return authorUrl && urls.includes(authorUrl)
   },
-  size: (mentions) => {
-    return !mentions ? 0 : mentions.length
-  },
-  webmentionsByType: (mentions, mentionType) => {
-    return mentions.filter(entry => !!entry[mentionType])
-  },
-  sortWebmentions: (mentions) => {
-    return mentions.sort((a, b) => {
-      if (a["published"] < b["published"]) {
-        return -1;
-      }
-      if (a["published"] > b["published"]) {
-        return 1;
-      }
-      // a must be equal to b
-      return 0;
-    })
-  },
+  mergeExternalPosts,
+  mergeExternalTaggedPosts,
+  readableDate,
   readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
     return DateTime.fromISO(dateStr).toFormat(formatStr);
-  },
-  generateShareLink: (url, text) => {
-    const shareText = `${text} by @TheGreenGreek`
-    const shareUrl = `${rootUrl}${url}`
-    return `https://twitter.com/intent/tweet/?text=${encodeURI(shareText)}&url=${encodeURI(shareUrl)}`
-  },
-  generateDiscussionLink: (url) => {
-    const postUrl = `${rootUrl}${url}`
-    return `https://twitter.com/search?f=tweets&src=typd&q=${encodeURI(postUrl)}`
-  },
-  getEvents: timing =>  events[timing],
-  getTalkForEvent: id => talks[id],
-  getSelect: posts => posts.filter(post => post.data.isSelect),
-  truncate: text => text.length > 300 ? `${text.substring(0, 300)}...` : text,
-  readableDate: dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
-  },
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  htmlDateString: (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-  },
-  // Get the first `n` elements of a collection.
-  head: (array, n) => {
-    if( n < 0 ) {
-      return array.slice(n);
-    }
-
-    return array.slice(0, n);
   },
   similarItems: (itemPath, tags, collections) => {
     const topicTags = tags.filter(tag => !["posts", "Popular"].includes(tag))
@@ -103,5 +133,24 @@ module.exports = {
       })
     const size = 3
     return matchesByRelevance.slice(0, size);
-  }
+  },
+  size: (mentions) => {
+    return !mentions ? 0 : mentions.length
+  },
+  sortWebmentions: (mentions) => {
+    return mentions.sort((a, b) => {
+      if (a["published"] < b["published"]) {
+        return -1;
+      }
+      if (a["published"] > b["published"]) {
+        return 1;
+      }
+      // a must be equal to b
+      return 0;
+    })
+  },
+  truncate: text => text.length > 300 ? `${text.substring(0, 300)}...` : text,
+  webmentionsByType: (mentions, mentionType) => {
+    return mentions.filter(entry => !!entry[mentionType])
+  },
 }

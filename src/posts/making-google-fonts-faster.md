@@ -187,6 +187,8 @@ Second, while rare, if Google Fonts is down, we won’t get our fonts. If our ow
 
 To have full control over our font files, loading, and CSS properties, we can self-host our Google Fonts. Luckily, [Mario Ranftl](http://mranftl.com/) created [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) which helps us do exactly that! It is an amazing tool for giving us font files and font-face declarations based on the fonts, charsets, styles, and browser support you select.
 
+{% include 'newsletter-aside.njk' %}
+
 ### Use google-webfonts-helper to download our fonts and provide basic CSS font-face declarations
 
 First, select the Google font you need from the left sidebar. Type in the search box for a filtered list (red arrow), then click on your font (blue arrow):
