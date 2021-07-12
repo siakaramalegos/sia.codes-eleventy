@@ -92,7 +92,7 @@ CSS blocks script execution, and JavaScript blocks construction of the DOM! Soun
 
 ## Why is it so important to eliminate render-blocking resources?
 
-Render-blocking can resources trigger a cascade of failures for web performance. First paint gets slowed down which causes Largest Contentful Paint (LCP) to be slower. LCP is one of the Core Web Vitals which are now [used to calculate your search engine rankings](https://developers.google.com/search/docs/advanced/experience/page-experience).
+Render-blocking resources can trigger a cascade of failures for web performance. First paint gets slowed down which causes Largest Contentful Paint (LCP) to be slower. LCP is one of the Core Web Vitals which are now [used to calculate your search engine rankings](https://developers.google.com/search/docs/advanced/experience/page-experience).
 
 SEO is important for discovery of your website. Performance is critical for keeping a visitor on your page. Page abandonment increases significantly if the page doesn't load within 3 seconds. Many companies have seen significant increases in conversions after improving performance.
 

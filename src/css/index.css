@@ -60,16 +60,29 @@
   --blue-default: rgb(24,0,245);
   --blue-70: rgb(16,0,193);
   --blue-80: rgb(7,0,125);
-  --size-300: 0.75rem;
-  --size-350: 0.8rem;
+
+  --gradient: linear-gradient(
+    4deg,
+    var(--pink-default) 0%,
+    var(--purple-default) 40%,
+    var(--blue-50) 100%
+  );
+  --gradient-3: linear-gradient(
+    135deg,
+    var(--pink-50) 30%,
+    var(--purple-60) 100%
+  );
+
+  --size-200: 0.64rem;
+  --size-300: 0.8rem;
   --size-400: 1rem;
-  --size-450: 1.1rem;
-  --size-500: 1.33rem;
-  --size-600: 1.77rem;
-  --size-700: 2.36rem;
-  --size-800: 3.15rem;
-  --size-900: 4.2rem;
-  --size-1000: 5.6rem;
+  --size-500: 1.25rem;
+  --size-600: 1.563rem;
+  --size-700: 1.953rem;
+  --size-800: 2.441rem;
+  --size-900: 3.052rem;
+  --size-1000: 3.815rem;
+
 }
 
 @font-face {
@@ -95,6 +108,7 @@ html, body {
   color: var(--grey-80);
   display: grid;
   font-family: var(--font-body);
+  font-size: 100%; /* 16px */
   grid-template-rows: auto 1fr auto;
   line-height: 1.5;
   margin: 0;
@@ -116,10 +130,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.3;
 }
-h1 {font-size: var(--size-700);}
-h2, h2 code {font-size: var(--size-600);}
-h3, h3 code {font-size: var(--size-500);}
-h4 {font-size: var(--size-400);}
+h1 {font-size: clamp(var(--size-900), 5vw, 4rem)}
+h2, h2 code {font-size: var(--size-800);}
+h3, h3 code {font-size: var(--size-700);}
+h4 {font-size: var(--size-600);}
+h5 {font-size: var(--size-500);}
+small {font-size: var(--size-300);}
 .flow > * + * { margin-top: var(--flow-space, 1em);}
 blockquote, aside {--flow-space: var(--size-700)}
 lite-youtube {--flow-space: var(--size-700)}
@@ -133,21 +149,6 @@ aside {
   margin-bottom: var(--size-700);
   padding: 24px 30px;
 }
-.gradient-text {
-  background-color: var(--blue-40);
-  /* gradient based off of var(--blue-40) , var(--purple-40)); */
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7775ff+1,be4fff+78 */
-  background: rgb(119,117,255); /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  rgba(119,117,255,1) 1%, rgba(190,79,255,1) 78%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  rgba(119,117,255,1) 1%,rgba(190,79,255,1) 78%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  rgba(119,117,255,1) 1%,rgba(190,79,255,1) 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7775ff', endColorstr='#be4fff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  /* background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  -webkit-clip-path: url(#svgPath);
-  clip-path: url(#svgPath);
-  padding: 24px 3px 0 0;}
 section {padding: 16px 0;}
 @media (min-width: 58rem) {
   .wider {
@@ -166,9 +167,7 @@ section {padding: 16px 0;}
 }
 p,
 .tmpl-post li, aside, .tmpl-post li code, p code {
-  font-size: var(--size-400);
   line-height: 1.7;}
-.tmpl-post li code, p code { font-size: var(--size-350);}
 ul, ol {padding-left: 2.5em;}
 li { margin-top: 0.5em; margin-bottom: 0.5em; padding-left: 0.6em;}
 li::marker {
@@ -179,12 +178,11 @@ li::marker {
 ul li::marker {content: '■ ';}
 p.lead {
   color: var(--grey-50);
-  font-size: var(--size-400);}
+  font-size: var(--size-500);}
 .text-right { text-align: right;}
 .text-center {text-align: center;}
 blockquote {
   background-color: var(--purple-05);
-  color: var(--grey-50);
   display: flex;
   flex-direction: column;
   padding: 24px 30px;
@@ -224,11 +222,7 @@ a:hover {
   box-shadow: none;}
 .a-reset a:hover { background: none; }
 a.button, input.button, button.button {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cd0084+30,b000f5+100 */
-  background: rgb(205,0,132); /* Old browsers  var(--pink-50); and purple-50*/
-  background: -moz-linear-gradient(-45deg,  rgba(205,0,132,1) 30%, rgba(176,0,245,1) 100%);
-  background: -webkit-linear-gradient(-45deg,  rgba(205,0,132,1) 30%,rgba(176,0,245,1) 100%);
-  background: linear-gradient(135deg,  rgba(205,0,132,1) 30%,rgba(176,0,245,1) 100%);
+  background: var(--gradient-3);
   border: none;
   color: var(--white);
   cursor: pointer;
@@ -238,7 +232,7 @@ a.button, input.button, button.button {
   text-transform: uppercase;}
 a.button-default, button.button-default {
   display: inline-block;
-  font-size: 20px;
+  font-size: var(--size-500);
   padding: 16px 32px;}
 input.button-small {padding: 4px 8px;}
 a.button:hover, input.button:hover, button.button:hover { opacity: 0.8;}
@@ -246,7 +240,7 @@ a.button-circle {
   align-items: center;
   border-radius: 50%;
   display: flex;
-  font-size: 16px;
+  font-size: var(--size-400);
   height: 15vw;
   min-height: 100px;
   justify-content: center;
@@ -268,7 +262,7 @@ img {
   height: auto;
   max-width: 100%;
 }
-.tmpl-post img, iframe, .twitter-tweet iframe, pre, nav, .postlist-item:hover, .postlist-item:focus-within, .form, a.button, input.button, button.button {
+.tmpl-post img, iframe, .twitter-tweet iframe, pre, .postlist-item:hover, .postlist-item:focus-within, .form, a.button, input.button, button.button {
   box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
 }
 .twitter-tweet {
@@ -284,7 +278,7 @@ img {
   font-size: var(--size-300);
   margin-top: 1em;
   text-align: center;}
-.tmpl-post .e-content>img:not(.u-photo), .tmpl-post .e-content>p img:not(.u-photo), .tmpl-post figure {
+.tmpl-post .e-content>img:not(.u-photo), .tmpl-post .e-content>p img:not(.u-photo), .tmpl-post figure, pre {
   width:100vw;
   max-width:58rem;
   margin-left:50%;
@@ -325,7 +319,6 @@ section.bg-secondary {
   margin: 8px 0;}
 .tmpl-post .p-name {margin-bottom: 8px;}
 .tmpl-post .p-summary.lead {
-  font-size: var(--size-400);
   margin: 12px 0;}
 .tmpl-post .u-photo {
   border-radius: 50%;
@@ -353,66 +346,28 @@ table th { padding-right: 1em; }
   max-width: 780px;
   margin: 0 auto;}
 .bg-dark {
-  background-color: var(--grey-70);
+  background-color: var(--grey-80);
   color: var(--grey-20); }
 .bg-dark a { color: var(--pink-30); }
 .bg-dark a:hover { color: var(--pink-20); }
 .bg-dark p.lead{color: var(--grey-20);}
 
-pre,
-code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  line-height: 1.5;}
-code {
-  background-color: rgba(222,221,227,0.7);
-  font-size: var(--size-400);  }
-pre {
-  font-size: var(--size-400);
-  line-height: 1.375;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  padding: 1em;
-  background-color: var(--white);}
-.highlight-line {
-  display: block;
-  padding: 0.125em 1em;
-  text-decoration: none; /* override del, ins, mark defaults */
-  color: inherit; /* override del, ins, mark defaults */}
-
-/* allow highlighting empty lines */
-.highlight-line:empty:before { content: " ";}
-/* avoid double line breaks when using display: block; */
-.highlight-line + br { display: none;}
-
-.highlight-line-isdir {
-  color: var(--grey-30);
-  background-color: var(--grey-80);}
-.highlight-line-active {
-  background-color: var(--grey-60);
-  background-color: var(--grey-70);}
-.highlight-line-add {background-color: #35643a;}
-.highlight-line-remove {background-color: #902f2f;}
-.highlight-line-remove .token.attr-name, .highlight-line-add .token.attr-name {color: #fecb90;}
-.highlight-line-add .token.attr-value {color: #abe43a;}
-.highlight-line-add .token.tag {color: #8ce2f3;}
-
 /* Nav */
 nav {
   background-color: rgba(252,252,253,0.95);
   font-family: var(--font-display);
-  /* position: fixed; */
+  overflow-x: scroll;
+  position: relative;
   width: 100%;
-  /* z-index: 2; */
+}
+nav::before {
+  content: "";
+  background: var(--gradient);
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 nav .content {
   align-items: center;
@@ -427,6 +382,7 @@ nav img {display: block;}
   padding: 0;}
 .nav-item {
   display: inline-block;
+  font-size: var(--size-400);
   margin: 8px 0.5em;
   text-align: center;}
 .nav-item-active {font-weight: 600;}
@@ -452,6 +408,7 @@ nav img {display: block;}
   background-color: var(--white);
   margin: -6px;
   padding: 6px;}
+.postlist-title {font-size: var(--size-500);}
 .postlist-title a:before {
   content: "";
   top: 0;
@@ -459,10 +416,10 @@ nav img {display: block;}
   bottom: 0;
   left: 0;
   position: absolute;}
-.postlist-item p {font-size: 16px;margin: 10px;}
+.postlist-item p {font-size: var(--size-400);margin: 10px;}
 .postlist-item h3 {margin: 10px 8px;}
 .postlist-date, .archivelist-date{
-  font-size: 14px;
+  font-size: var(--size-300);
   color: var(--grey-60);}
 .postlist-image {
   background-color: var(--purple-10);
@@ -477,12 +434,12 @@ nav img {display: block;}
 .post-tag {position: relative;}
 
 .archivelist-item {margin-top: 40px;}
-.archivelist-title {margin: 12px 0 0 0;}
+.archivelist-title {font-size: var(--size-500); margin: 12px 0 0 0;}
 .archivelist-title svg {margin-left: 4px;}
 .archivelist-tags {margin-left: 16px;}
 .archivelist-tags a {position: relative; bottom: 4px;}
-.archivelist-description {font-size: 16px; margin: 0;}
-.archivelist-publication {color:var(--grey-60); font-size: 14px; margin: 0;}
+.archivelist-description {font-size: var(--size-400); margin: 0;}
+.archivelist-publication {color:var(--grey-60); font-size: var(--size-300); margin: 0;}
 
 #upcoming-talks .talks {
   margin: 0 auto;
@@ -496,26 +453,26 @@ nav img {display: block;}
 /* Events list */
 .event-item {
   margin-top: 1.5rem;}
-.card-list .event-item summary, .card-list .event-item details p {font-size: 16px;}
+.card-list .event-item summary, .card-list .event-item details p {font-size: var(--size-400);}
 .card-list .event-item details {margin: 8px;}
 .event-item .event-date {
   color: var(--grey-60);
-  font-size: 12px;
+  font-size: var(--size-300);
   margin-right: 4px;}
-.event-item h3 { margin: 0;}
+.event-item h3 {font-size: var(--size-500); margin: 0;}
 .event-item details {
   grid-column: span 2;
   margin-top: 0;
   padding: 0;}
 .event-location {
   color: var(--grey-60);
-  font-size: 12px;
+  font-size: var(--size-300);
   margin: 8px 0 12px 0;}
 .event-location img {
   box-shadow: none;
   display: inline;
   margin:0 8px 0 0;
-  width: 12px;}
+  width: var(--size-300);}
 summary::marker {color: var(--pink-20);}
 details p {
   background-color: var(--grey-05);
@@ -531,7 +488,7 @@ summary, .event-location, .post-tag {
   border-radius: 8px; /* 3px /12 */
   color: var(--white);
   display: inline-block;
-  font-size: 12px; /* 10px /16 */
+  font-size: var(--size-200); /* 10px /16 */
   font-weight: 600;
   letter-spacing: 0.5px;
   margin: 0.5em 0.8em 0.25em 0;
@@ -561,12 +518,24 @@ a.direct-link:focus,
 /* Footer */
 footer {
   padding: 16px 16px 0;
+  position: relative;
   text-align: center;
   width: 100%;}
+footer::before {
+  content: "";
+  background: var(--gradient);
+  height: 3px;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+}
 footer .footer-social-links a {
   display: inline-block;
   margin: 6px;}
-footer .footer-copy { font-size: 1em; margin-bottom: 0.5rem;}
+footer .footer-copy {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;}
 
 .headshot{
   border-radius: 100%;
@@ -684,8 +653,8 @@ lite-youtube.lyt-activated > .lty-playbtn {
 .webmention-replies article {margin-bottom: 32px;}
 .webmention-replies .webmention__meta {margin-bottom: 8px;}
 .webmention-replies .webmention__meta time {display: block; margin-top: 8px;}
-.webmention-text {font-size: 16px; margin-top: 0;}
-.webmention-text a {font-size: 14px; margin-left: 4px;}
+.webmention-text {font-size: var(--size-400); margin-top: 0;}
+.webmention-text a {font-size: var(--size-300); margin-left: 4px;}
 article.webmention {
   background-color: var(--grey-05);
   padding: 16px 16px 12px;
@@ -720,7 +689,7 @@ form label {
   color: var(--grey-80);
   display: block;
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: var(--size-400);
   margin: 4px 0;
   padding: 4px;
   width: 100%;}
@@ -753,7 +722,7 @@ footer .form input, footer .form button {
   display: grid;
   grid-template-columns: 24px 1fr;
   grid-gap: 16px;}
-.share p {font-size: 14px;margin: 0;}
+.share p {font-size: var(--size-300);margin: 0;}
 .share svg {margin: auto;}
 
 @media screen and (min-width: 380px) {
@@ -764,6 +733,9 @@ footer .form input, footer .form button {
     width: calc(100% - 210px);}
 }
 @media screen and (min-width: 500px) {
+  html, body {
+    font-size: 112.5%;
+  } /*18px*/
   .event-item {
     display: grid;
     grid-template-columns: 2fr 1fr;}
@@ -787,24 +759,14 @@ footer .form input, footer .form button {
   .postlist {grid-template-columns: repeat(2, 1fr);}
 }
 @media screen and (min-width: 780px) {
-  h1 {font-size: var(--size-900);}
-  h2, h2 code {font-size: var(--size-700);}
-  p, .tmpl-post li {font-size: var(--size-500);}
-  .tmpl-post li code, p code { font-size: var(--size-450);}
-  .tmpl-post .p-summary.lead {font-size: var(--size-500);}
-  code[class*="language-"], pre[class*="language-"] {font-size: var(--size-400);}
-  p.lead, blockquote p, aside {font-size: var(--size-500);}
-  blockquote p.blockquote-source {font-size: var(--size-400);}
   ul, ol {padding-left: 3em;}
   li {padding-left: 0.8em;}
-  li::marker {font-size: var(--size-450);}
 }
 @media screen and (min-width: 850px) {
   #upcoming-talks svg {display: block;}
 }
 @media screen and (min-width: 1020px) {
   .home {margin-left: -10px;}
-  .gradient-text {padding: 24px 3px 24px 0;}
   .social a {margin: 8px; }
   a.button-circle {
     font-size: 20px;

@@ -168,7 +168,8 @@ function getSrcset(file, widths) {
   }).join(", ")
 }
 
-// Generate the src attribute using the fallback width or a width supplied by the shortcode params
+// Generate the src attribute using the fallback width or a width supplied
+// by the shortcode params
 function getSrc(file, width) {
   return `${BASE_URL}q_auto,f_auto,w_${width ? width : FALLBACK_WIDTH}/${FOLDER}${file}`
 }
