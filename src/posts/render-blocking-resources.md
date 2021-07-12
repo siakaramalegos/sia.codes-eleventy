@@ -156,7 +156,7 @@ We're digging a deep hole here.
 
 ## How do I remove render-blocking resources?
 
-It's time to fill in that hole and fix our website. Let's dive deep into both CSS and JavaScript.
+It's time to fill in that hole and fix our website. Let's dive deep into both CSS and JavaScript. Our goal is not to eliminate all render-blocking resources but to lower their impact on performance. The Lighthouse metric is good for determining when you reach that point.
 
 ### Deep-dive: optimizing CSS for the critical rendering path
 
