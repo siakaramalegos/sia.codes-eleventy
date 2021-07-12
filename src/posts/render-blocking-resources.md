@@ -23,7 +23,7 @@ You might be here because Lighthouse told you to "eliminate render-blocking reso
 
 I worked with one client to reduce their render-blocking resources and improved their site loading speed. We went from 13% to 80% of page visits experiencing First Contentful Paint (FCP) in less than 1.8 seconds. We're not done yet!
 
-<aside><strong>Why is 1.8 seconds significant for First Contentful Paint?</strong> <a href="https://httparchive.org/reports/loading-speed#fcp">HTTP Archive</a> collects data from the top ~7 million URLs. Google <a href="https://web.dev/performance-scoring/#metric-scores">uses this data</a> to determine the top performing sites. Then the "green" level is set at the point where increased performance improvements have diminishing returns.</aside>
+<aside><strong>Why is 1.8 seconds significant for First Contentful Paint?</strong> <a href="https://httparchive.org/reports/loading-speed#fcp">HTTP Archive</a> collects data from the top ~7 million URLs. Lighthouse <a href="https://web.dev/performance-scoring/#metric-scores">uses this data</a> to determine the top performing sites. Then the "green" level is set at the point where increased performance improvements have diminishing returns.</aside>
 
 Understanding render-blocking resources will enable you to fix this common web performance issue. In this post, you will learn:
 
@@ -88,11 +88,11 @@ Additionally, if CSS has already begun download, the script will stop running to
 
 CSS blocks script execution, and JavaScript blocks construction of the DOM! Sounds like a giant mess, right? Stay tuned to learn how we can clean it up!
 
-<aside><strong>Note:</strong> Images and fonts are not render-blocking. They might be rendering slower due to render-blocking resources or other performance issues.</aside>
+<aside><strong>Note:</strong> Images and fonts are not render-blocking. They might be rendering slower due to render-blocking resources or other performance issues. Read <a href="/posts/making-google-fonts-faster/">Making Google Fonts Faster</a> for tips on fonts. Watch my introductory talk on <a href="/posts/responsive-images-perf-matters-video/">Responsive Images</a> to learn more about optimizing images.</aside>
 
 ## Why is it so important to eliminate render-blocking resources?
 
-Render-blocking resources trigger a cascade of failures for web performance. First paint gets slowed down which causes Largest Contentful Paint (LCP) to be slower. LCP is one of the Core Web Vitals which are now [used to calculate your search engine rankings](https://developers.google.com/search/docs/advanced/experience/page-experience).
+Render-blocking can resources trigger a cascade of failures for web performance. First paint gets slowed down which causes Largest Contentful Paint (LCP) to be slower. LCP is one of the Core Web Vitals which are now [used to calculate your search engine rankings](https://developers.google.com/search/docs/advanced/experience/page-experience).
 
 SEO is important for discovery of your website. Performance is critical for keeping a visitor on your page. Page abandonment increases significantly if the page doesn't load within 3 seconds. Many companies have seen significant increases in conversions after improving performance.
 
@@ -107,7 +107,9 @@ SEO is important for discovery of your website. Performance is critical for keep
 
 If you failed this metric in Lighthouse, then you've already discovered one way to test for this. If you're new to Lighthouse, then check out the official [Lighthouse](https://developers.google.com/web/tools/lighthouse) page to get started.
 
-Candidates for render-blocking resources include both scripts and styles:
+We all have render-blocking resources on our sites (all the CSS!). The problem comes in when it significantly impacts our performance. When this occurs, Lighthouse flags it, and we should do something about it.
+
+Lighthouse candidates for render-blocking resources include both scripts and styles:
 
 - `<script>` tags in the `<head>` which use do not have at least one of the following attributes: `async`, `defer`, `module`
 - Stylesheet `<link>` tags in the `<head>` without a `disabled` attribute or a media query which does not match (e.g., `print`)
