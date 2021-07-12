@@ -21,16 +21,17 @@ featuredImage: buffalo-blocking-road-tim-wilson_mpq4nt.jpg
 
 You might be here because Lighthouse told you to "eliminate render-blocking resources". Render-blocking resources are a common hurdle to rendering your page faster. They impact your Web Vitals which now impact your SEO. Slow render times also frustrate your users and can cause them to abandon your page.
 
-I worked with one client to reduce their render-blocking resources and improved their site loading speed. We went from 13% to 80% of page visits experiencing First Contentful Paint (FCP) in less than 1.8 seconds. We're not done yet!
+I worked with one client to reduce their render-blocking resources and improved their site loading speed. We went from 13% to 80% of page visits experiencing First Contentful Paint (FCP) in less than 1.8 seconds. And we're not done yet!
 
 <aside><strong>Why is 1.8 seconds significant for First Contentful Paint?</strong> <a href="https://httparchive.org/reports/loading-speed#fcp">HTTP Archive</a> collects data from the top ~7 million URLs. Lighthouse <a href="https://web.dev/performance-scoring/#metric-scores">uses this data</a> to determine the top performing sites. Then the "green" level is set at the point where increased performance improvements have diminishing returns.</aside>
 
 Understanding render-blocking resources will enable you to fix this common web performance issue. In this post, you will learn:
 
-- What render-blocking resources are
-- Why they are important to performance
-- How to test and measure your website
-- How to fix this issue
+- [What the critical rendering path is](#what-is-the-critical-rendering-path%3F)
+- [What render-blocking resources are](#what-are-render-blocking-resources%3F)
+- [Why they are important to performance](#why-is-it-so-important-to-eliminate-render-blocking-resources%3F)
+- [How to test and measure your website](#how-do-i-test-my-website-for-render-blocking-resources%3F)
+- [How to fix this issue](#how-do-i-remove-render-blocking-resources%3F)
 
 Before we continue, we need to take a step back and understand what the critical rendering path is.
 
@@ -86,9 +87,9 @@ Additionally, if CSS appears before a script, the script will not be executed un
   <figcaption>JavaScript execution is blocked until the CSS has finishes download the the CSSOM is created (<a href="#critical-render-path-css-js">link</a>)</figcaption>
 </figure>
 
-CSS blocks script execution, and JavaScript blocks construction of the DOM! Sounds like a giant mess, right? Stay tuned to learn how we can clean it up!
+CSS blocks script execution, and JavaScript blocks construction of the DOM! Sounds like a giant mess, right? Stay tuned to [learn how we can clean it up](#how-do-i-remove-render-blocking-resources%3F)!
 
-<aside><strong>Note:</strong> Images and fonts are not render-blocking. They might be rendering slower due to render-blocking resources or other performance issues. Read <a href="/posts/making-google-fonts-faster/">Making Google Fonts Faster</a> for tips on fonts. Watch my introductory talk on <a href="/posts/responsive-images-perf-matters-video/">Responsive Images</a> to learn more about optimizing images.</aside>
+<aside><strong>Note:</strong> Images and fonts are not render-blocking. They might be rendering slowly due to render-blocking resources or other performance issues. Read <a href="/posts/making-google-fonts-faster/">Making Google Fonts Faster</a> for tips on fonts. Watch my introductory talk on <a href="/posts/responsive-images-perf-matters-video/">Responsive Images</a> to learn more about optimizing images.</aside>
 
 ## Why is it so important to eliminate render-blocking resources?
 
@@ -162,8 +163,8 @@ It's time to fill in that hole and fix our website. Let's dive deep into both CS
 
 For our CSS, we want to
 
-1. Minimize the size of our styles
-2. Deliver them to the client quickly
+1. **Minimize** the size of our styles
+2. Deliver them to the client **quickly** and **effectively**
 
 That [sample failure site](https://lh-perf-failures.glitch.me/) is great. I need to buy whoever built it a beer. It's so juicy with performance problems. Let's take a step back and observe all the stylesheet tags. We can see that this website is using Bootstrap and a lot of Bootstrap dependencies as well as 12 Google fonts. It also has screen and print styles combined into single CSS files.
 
@@ -171,7 +172,7 @@ The first question I would ask is:
 
 > Do I need all those dependencies?
 
-Don't skip that first question. The easiest way to minimize total size for any asset is to annihilate it. Raze it to the ground. For example, 12 Google fonts seems excessive. I try to keep my web fonts down to 4-5 style sets max.
+Don't skip that first question. The easiest way to minimize total size for any asset is to annihilate it. Raze it to the ground. For example, 12 Google fonts seems excessive. I try to keep my web fonts down to 3-4 style sets max.
 
 <aside>If you use <strong>Wordpress</strong>, be very careful how many and which plugins you use. Many of them were naively built without performance in mind. Look at alternatives with better performance.</aside>
 
@@ -214,8 +215,8 @@ Finally, do not use `@import` in your stylesheets to load more stylesheets. The 
 
 As I mentioned earlier, JavaScript is parser-blocking. This means that it blocks DOM construction until it is finished executing. Like CSS, we want to:
 
-1. Minimize the size of our scripts
-2. Deliver them to the client **effectively**
+1. **Minimize** the size of our scripts
+2. Deliver them to the client **quickly** and **effectively**
 
 The Coverage drawer also analyzes your scripts. You can filter the results between CSS and JavaScript. Again, the first question to ask yourself is:
 
