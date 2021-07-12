@@ -68,16 +68,16 @@ However, HTML is not usually the cause of our problems...
 
 **CSS is render blocking**. The browser needs it before it can create the CSSOM, which blocks all later steps. As soon as the browser encounters a stylesheet `<link>` or `<style>` tag, it must download and parse the contents. Then it must create the CSSOM before the rest of the render can continue. You can see this represented at the triangle point in the [diagram](#critical-render-path). The render tree cannot continue until both the CSSOM and DOM are created.
 
-**JavaScript CAN be render blocking**. It blocks the critical rendering path when it interacts with either the DOM or CSSOM. When the browser encounters a script meant to run synchronously, it will stop DOM creation until the script is finished running:
+**JavaScript CAN be render blocking**. When the browser encounters a script meant to run synchronously, it will stop DOM creation until the script is finished running:
 
 <figure id="critical-render-path-js">
   <img src="/img/critical_render_path_JS_karamalegos.svg"
     alt="HTML encounters a synchronous script in the head which stops the parser"
-    width="595" height="862">
+    width="794" height="858">
   <figcaption>Synchronous JavaScript (no async or defer) will block the HTML parser both for download and execution (<a href="#critical-render-path-js">link</a>)</figcaption>
 </figure>
 
-Additionally, if CSS has already begun download, the script will stop running to wait until the CSSOM is created before it will continue:
+Additionally, if CSS appears before a script, the script will not be executed until the CSSOM is created. This is because JavaScript can also interact with the CSSOM, and we would not want a race condition between them.
 
 <figure id="critical-render-path-css-js">
   <img src="/img/critical_render_path_CSS_JS_karamalegos_2.svg"
@@ -111,7 +111,7 @@ We all have render-blocking resources on our sites (all the CSS!). The problem c
 
 Lighthouse candidates for render-blocking resources include both scripts and styles:
 
-- `<script>` tags in the `<head>` which use do not have at least one of the following attributes: `async`, `defer`, `module`
+- `<script>` tags in the `<head>` which do not have at least one of the following attributes: `async`, `defer`, `module`
 - Stylesheet `<link>` tags in the `<head>` without a `disabled` attribute or a media query which does not match (e.g., `print`)
 
 If you fail this metric, your Lighthouse results will look something like this:
@@ -207,6 +207,8 @@ If you have a lot of non-screen styles, consider extracting them to their own st
   <!-- Only downloaded for print: -->
   <link href="styles/main_print.css" type="text/css" rel="stylesheet" media="print">
 ```
+
+Finally, do not use `@import` in your stylesheets to load more stylesheets. The browser won't discover it until later. It's best to load them with `<link>` tags in your HTML.
 
 ### Deep-dive: optimizing JavaScript for the critical rendering path
 

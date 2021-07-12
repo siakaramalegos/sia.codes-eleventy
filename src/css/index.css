@@ -182,7 +182,6 @@ p.lead {
 .text-right { text-align: right;}
 .text-center {text-align: center;}
 blockquote {
-  background-color: var(--purple-05);
   display: flex;
   flex-direction: column;
   padding: 24px 30px;
@@ -192,7 +191,7 @@ blockquote {
   z-index: 1;}
 blockquote p:first-child::before {
   content: "\201C";
-  color: var(--purple-50);
+  color: var(--purple-10);
   font-size: 150px;
   position: absolute;
   left: -82px;
