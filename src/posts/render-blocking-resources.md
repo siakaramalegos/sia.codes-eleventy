@@ -84,7 +84,7 @@ Additionally, if CSS appears before a script, the script will not be executed un
   <img src="/img/critical_render_path_CSS_JS_karamalegos_2.svg"
     alt="HTML encounters CSS first, then a synchronous script in the head which stops the parser"
     width="595" height="862">
-  <figcaption>JavaScript execution is blocked until the CSS has finishes download the the CSSOM is created (<a href="#critical-render-path-css-js">link</a>)</figcaption>
+  <figcaption>JavaScript execution is blocked until the CSSOM is created (<a href="#critical-render-path-css-js">link</a>)</figcaption>
 </figure>
 
 CSS blocks script execution, and JavaScript blocks construction of the DOM! Sounds like a giant mess, right? Stay tuned to [learn how we can clean it up](#how-do-i-remove-render-blocking-resources%3F)!
