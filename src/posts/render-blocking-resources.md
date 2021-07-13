@@ -166,6 +166,8 @@ Another way to test for render-blocking resources is to use [WebPageTest](https:
   <figcaption>The WebPageTest request details tab will show render-blocking status for each request</figcaption>
 </figure>
 
+Check out the official [WebPageTest docs](https://docs.webpagetest.org/getting-started/) for more detailed information to get started.
+
 ## How do I remove render-blocking resources?
 
 It's time to fill in that hole and fix our website. Let's dive deep into both CSS and JavaScript. Our goal is not to eliminate all render-blocking resources but to lower their impact on performance. The Lighthouse metric is good for determining when you reach that point.
