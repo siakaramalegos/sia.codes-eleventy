@@ -5,7 +5,7 @@ date: 2021-04-07
 tags: ['Eleventy', 'Video', 'WebPerf', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1379852248126226432'
-isSelect: true
+isSelect: false
 featuredImage: "after-lite-yt_boupli.jpg"
 ---
 

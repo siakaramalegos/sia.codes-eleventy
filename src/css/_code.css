@@ -1,0 +1,106 @@
+:root{
+  --font-code: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  --red: #902f2f;
+  --green: #35643a;
+	--black: rgb(34,31,44);
+  --grey-20: rgb(192,190,202);
+  --grey-30: rgb(163,160,178);
+  --white: rgb(252,252,253);
+	--color-attr: #fdb31f;
+	--color-attr-light: #f4bf75;
+	--color-tag: #8aadff;
+	--color-string: #8aadff;
+	--color-attr-val: #54e88f;
+	--color-important: rgb(245,0,159);
+	--color-selector: rgb(203,131,255);
+	--color-comment: var(--grey-30);
+}
+
+code, pre {
+	direction: ltr;
+	font-family: var(--font-code);
+	font-size: var(--size-300);
+  padding: 0.5rem;
+  line-height: 1.5;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	background: var(--black);
+	color: var(--white);
+}
+pre {
+	margin: 2.5rem 0;
+	overflow: auto;
+}
+:not(pre) > code {
+	font-size: var(--size-400);
+	padding: .1rem;
+  background-color: rgba(222,221,227,0.7);
+	border-radius: .3rem;
+	color: var(--black);
+}
+/* code { white-space: pre-wrap !important; } */
+.token.comment, .token.prolog, .token.doctype, .token.cdata {color: var(--color-comment);}
+.token.punctuation {color: var(--grey-20);}
+.token.namespace {opacity: .7;}
+.token.operator, .token.boolean, .token.number {color: var(--color-attr);}
+.token.property {color: var(--color-attr-light);}
+.token.tag {color: var(--color-tag);}
+.token.string {color: var(--color-string);}
+.token.selector {color: var(--color-selector);}
+.token.attr-name {color: var(--color-attr);}
+.token.entity, .token.url, .language-css .token.string, .style .token.string {color: var(--color-string);}
+.token.attr-value, .token.keyword, .token.control, .token.directive, .token.unit {color: var(--color-attr-val);}
+.token.statement, .token.regex, .token.atrule {color: var(--color-string);}
+.token.placeholder, .token.variable {color: var(--color-tag);}
+.token.deleted {text-decoration: line-through;}
+.token.inserted {
+	border-bottom: 1px dotted var(--white);
+	text-decoration: none;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.important, .token.bold {
+	font-weight: bold;
+}
+.token.important {
+	color: var(--color-important);
+}
+.token.entity {
+	cursor: help;
+}
+pre > code.highlight {
+	outline: 0.4rem solid var(--color-important);
+	outline-offset: .4rem;
+}
+
+/* Highlight line and diffs */
+.highlight-line {
+  display: block;
+  padding: 0.125rem 1rem;
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */}
+/* allow highlighting empty lines */
+.highlight-line:empty:before { content: " ";}
+/* avoid double line breaks when using display: block; */
+.highlight-line + br { display: none;}
+.highlight-line-isdir {
+  color: var(--grey-30);
+  background-color: var(--grey-80);}
+.highlight-line-active {
+  background-color: var(--grey-60);
+  background-color: var(--grey-70);}
+.highlight-line-add {background-color: var(--green);}
+.highlight-line-remove {background-color: var(--red);}
+.highlight-line-remove .token.attr-name, .highlight-line-add .token.attr-name {color: var(--color-attr-light);}
+.highlight-line-add .token.attr-value {color: var(--color-attr-val);}
+.highlight-line-add .token.tag {color: var(--color-tag);}
