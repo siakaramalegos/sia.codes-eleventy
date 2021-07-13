@@ -645,7 +645,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
   box-shadow: none;}
 .webmentions__facepile a:hover {background: none;}
 .webmentions a:hover img { filter: drop-shadow(3px 5px 10px var(--pink-20));}
-.form-webmention {margin: 16px 0; width: 100%;}
 .webmention-replies img {
   height: 24px;
   width: 24px;}
@@ -661,9 +660,17 @@ article.webmention {
 form input[type="url"] {
   display: block;
   height: 2rem;
-  margin: 4px 0;
   width: 100%;}
-.form-webmention .button {height: 2rem; width: 200px;font-size: var(--size-300);}
+.form-webmention {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 8px;
+  margin: 16px 0;
+  width: 100%;}
+.form-webmention input {width: 100%;}
+.form-webmention .button {
+  font-size: var(--size-300);
+  height: 2rem;}
 form label {
   font-weight: 600;
   margin: 4px 0 0 0;}
@@ -727,9 +734,6 @@ footer .form input, footer .form button {
 @media screen and (min-width: 380px) {
   .social a svg {width: 32px;}
   footer a svg {width: 32px;}
-  form input[type="url"] {
-    display: inline-block;
-    width: calc(100% - 210px);}
 }
 @media screen and (min-width: 500px) {
   html, body {
@@ -750,6 +754,8 @@ footer .form input, footer .form button {
     text-align: right;
   }
   .form {padding: 32px;}
+  .form-webmention {grid-template-columns: 1fr auto;}
+  .form-webmention label {grid-column: 1 / 3;}
 }
 @media screen and (min-width: 520px) {.home {display: inline-block;}}
 @media screen and (min-width: 665px) {
