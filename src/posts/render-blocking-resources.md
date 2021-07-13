@@ -248,3 +248,5 @@ Lighthouse and the Coverage tool can help you identify this issue and evaluate w
 I'd love to hear what worked for you! [Tweet at me](https://mobile.twitter.com/TheGreenGreek) with your replies.
 
 Fixing web performance issues can be overwhelming. If you need more help, I'm available for performance consulting projects. [Contact me](/contact) today!
+
+Special thanks to [Barry Pollard](https://twitter.com/tunetheweb) and [Anthony Ricaud](https://ricaud.me/) for their help with proofreading and editing!
