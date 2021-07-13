@@ -155,6 +155,17 @@ Lighthouse could have flagged any one of those 3 initial stylesheets. The root c
 
 We're digging a deep hole here.
 
+Another way to test for render-blocking resources is to use [WebPageTest](https://webpagetest.org/easy). WebPageTest is the next step up in performance profiling. If you enter a URL, it will run a performance test on a real mobile device. Once the test finishes, click on the waterfall for the median run. Then you can check each request row:
+
+<figure>
+  <img src="{% src 'WebPageTest_show_render_blocking_grw3n7.jpg' %}"
+    srcset="{% srcset 'WebPageTest_show_render_blocking_grw3n7.jpg' %}"
+    sizes="{% defaultSizes %}"
+    alt="WebPageTest waterfall pointing to a request row, and then the request details where the render-blocking status shows up"
+    width="2430" height="1368">
+  <figcaption>The WebPageTest request details tab will show render-blocking status for each request</figcaption>
+</figure>
+
 ## How do I remove render-blocking resources?
 
 It's time to fill in that hole and fix our website. Let's dive deep into both CSS and JavaScript. Our goal is not to eliminate all render-blocking resources but to lower their impact on performance. The Lighthouse metric is good for determining when you reach that point.

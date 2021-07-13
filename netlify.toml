@@ -4,6 +4,9 @@
 [[redirects]]
   from = "/posts/prettier/"
   to = "/posts/how-to-add-prettier-to-a-project/"
+[[redirects]]
+  from = "/posts/wow-look-at-this-number-input/"
+  to = "/posts/how-to-build-a-website/"
 [[plugins]]
   package = "netlify-plugin-cache-folder"
 [build.processing]
