@@ -663,7 +663,7 @@ form input[type="url"] {
   height: 2rem;
   margin: 4px 0;
   width: 100%;}
-.form-webmention .button {height: 2rem; width: 200px;}
+.form-webmention .button {height: 2rem; width: 200px;font-size: var(--size-300);}
 form label {
   font-weight: 600;
   margin: 4px 0 0 0;}
