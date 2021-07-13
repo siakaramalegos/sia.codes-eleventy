@@ -75,7 +75,7 @@ However, HTML is not usually the cause of our problems...
   <img src="/img/critical_render_path_JS_karamalegos.svg"
     alt="HTML encounters a synchronous script in the head which stops the parser"
     width="794" height="858">
-  <figcaption>Synchronous JavaScript (no async or defer) will block the HTML parser both for download and execution (<a href="#critical-render-path-js">link</a>)</figcaption>
+  <figcaption>Synchronous JavaScript (no async or defer) will block the HTML parser during both download and execution of the JavaScript (<a href="#critical-render-path-js">link</a>)</figcaption>
 </figure>
 
 Additionally, if CSS appears before a script, the script will not be executed until the CSSOM is created. This is because JavaScript can also interact with the CSSOM, and we would not want a race condition between them.
