@@ -5,7 +5,7 @@ shortDescription: Is Lighthouse telling you to eliminate render-blocking resourc
 date: 2021-07-13
 tags: ['WebPerf', 'JavaScript']
 layout: layouts/post.njk
-# tweetId: '1326601057179406338'
+tweetId: '1414934155750690836'
 isSelect: true
 featuredImage: buffalo-blocking-road-tim-wilson_mpq4nt.jpg
 ---
