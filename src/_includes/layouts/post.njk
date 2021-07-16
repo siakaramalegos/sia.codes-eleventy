@@ -37,6 +37,7 @@ templateClass: tmpl-post
 
   <section class="wider flow">
     <h2>You might also like</h2>
+    {% set lazyload = true %}
     {% set postslist = page.url | similarItems(tags, collections) %}
     {% include 'postslist.njk' %}
   </section>
