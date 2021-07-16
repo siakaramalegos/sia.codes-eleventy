@@ -56,6 +56,7 @@ Before we get started, let's outline the setup. My setup uses Eleventy paired wi
   <img src="{% src 'sia_karamalegos_netlify_devops1_zpdojl.jpg' %}"
     srcset="{% srcset 'sia_karamalegos_netlify_devops1_zpdojl.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Three entities: a laptop, Github, and Netlify"
     width="2048" height="1536">
   <figcaption>The three entities used in my "dev ops"</figcaption>
@@ -67,6 +68,7 @@ If you're familiar with most Netlify setups, when I push my code to Github, that
   <img src="{% src 'sia_karamalegos_netlify_devops2_zp9pji.jpg' %}"
     srcset="{% srcset 'sia_karamalegos_netlify_devops2_zp9pji.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Arrow from laptop to Github for git push, then arrow from Github to Netlify to build and deploy"
     width="2048" height="1536">
   <figcaption>New commits trigger new deploys, and the _cache folder is preserved between Netlify builds</figcaption>
@@ -78,6 +80,7 @@ Another cool tool we will use is [Github actions](https://github.com/features/ac
   <img src="{% src 'sia_karamalegos_netlify_devops3_st2bd2.jpg' %}"
     srcset="{% srcset 'sia_karamalegos_netlify_devops3_st2bd2.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="New arrow from Github to Netlify showing new builds every 4 hours"
     width="2048" height="1536">
   <figcaption>Github actions sends a POST request to Netlify to trigger builds every 4 hours</figcaption>
@@ -89,6 +92,7 @@ Finally, we need to save a secret API token for pulling our webmentions. We want
   <img src="{% src 'sia_karamalegos_netlify_devops4_ljulpj.jpg' %}"
     srcset="{% srcset 'sia_karamalegos_netlify_devops4_ljulpj.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Arrow from laptop to Github for git push, then arrow from Github to Netlify to build and deploy"
     width="2048" height="1536">
   <figcaption>New commits trigger new deploys, and the _cache folder is preserved between builds</figcaption>
@@ -116,6 +120,7 @@ You'll also be given an API key. We want to safely store that `WEBMENTION_IO_TOK
   <img src="{% src "env_netlify_k4m8k8.jpg" %}"
     srcset="{% srcset "env_netlify_k4m8k8.jpg" %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Screenshot of Netlify site settings showing the WEBMENTION_IO_TOKEN variable"
     width="2554" height="794">
   <figcaption>In your Netlify dashboard, go to <strong>Site Settings > Build & Deploy > Environment</strong> to add WEBMENTION_IO_TOKEN and its value</figcaption>

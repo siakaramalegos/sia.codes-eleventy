@@ -49,7 +49,7 @@ We write HTML, CSS, and JavaScript in files and then deliver those files to the 
 6. **Paint**, or render, the pixels on the page
 
 <figure id="critical-render-path">
-  <img src="/img/critical_render_path_sia_karamalegos.svg"
+  <img src="/img/critical_render_path_sia_karamalegos.svg" loading="lazy"
     alt="Steps of the critical render path visualized in a diagram"
     width="595" height="707">
   <figcaption>The critical render path (<a href="#critical-render-path">link</a>)</figcaption>
@@ -72,7 +72,7 @@ However, HTML is not usually the cause of our problems...
 **JavaScript CAN be render blocking**. When the browser encounters a script meant to run synchronously, it will stop DOM creation until the script is finished running:
 
 <figure id="critical-render-path-js">
-  <img src="/img/critical_render_path_JS_karamalegos.svg"
+  <img src="/img/critical_render_path_JS_karamalegos.svg" loading="lazy"
     alt="HTML encounters a synchronous script in the head which stops the parser"
     width="794" height="858">
   <figcaption>Synchronous JavaScript (no async or defer) will block the HTML parser during both download and execution of the JavaScript (<a href="#critical-render-path-js">link</a>)</figcaption>
@@ -81,7 +81,7 @@ However, HTML is not usually the cause of our problems...
 Additionally, if CSS appears before a script, the script will not be executed until the CSSOM is created. This is because JavaScript can also interact with the CSSOM, and we would not want a race condition between them.
 
 <figure id="critical-render-path-css-js">
-  <img src="/img/critical_render_path_CSS_JS_karamalegos_2.svg"
+  <img src="/img/critical_render_path_CSS_JS_karamalegos_2.svg" loading="lazy"
     alt="HTML encounters CSS first, then a synchronous script in the head which stops the parser"
     width="595" height="862">
   <figcaption>JavaScript execution is blocked until the CSSOM is created (<a href="#critical-render-path-css-js">link</a>)</figcaption>
@@ -121,6 +121,7 @@ If you fail this metric, your Lighthouse results will look something like this:
   <img src="{% src 'eliminate_render_blocking_resources_lighthouse_ujbxsj.jpg' %}"
     srcset="{% srcset 'eliminate_render_blocking_resources_lighthouse_ujbxsj.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Eliminate render-blocking resources: Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. The table shows these two resources listed: /css?family=…(fonts.googleapis.com) and /scripts/jquery-3.4.1.js(lh-perf-failures.glitch.me)"
     width="1774" height="626">
   <figcaption>Once you expand the metric name, you will see a list of resources that blocked render</figcaption>
@@ -161,6 +162,7 @@ Another way to test for render-blocking resources is to use [WebPageTest](https:
   <img src="{% src 'WebPageTest_show_render_blocking_grw3n7.jpg' %}"
     srcset="{% srcset 'WebPageTest_show_render_blocking_grw3n7.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="WebPageTest waterfall pointing to a request row, and then the request details where the render-blocking status shows up"
     width="2430" height="1368">
   <figcaption>The WebPageTest request details tab will show render-blocking status for each request</figcaption>
@@ -203,6 +205,7 @@ The drawer will open up for you, and you can click the reload button to start a 
   <img src="{% src 'coverage_analysis_css_njif6w.jpg' %}"
     srcset="{% srcset 'coverage_analysis_css_njif6w.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Chrome Dev Tools Coverage tab showing table of URLs, total bytes, and unused bytes with a bar chart representing used/unused bytes"
     width="2152" height="696">
   <figcaption>The Coverage tool gives us data for used versus unused bytes</figcaption>

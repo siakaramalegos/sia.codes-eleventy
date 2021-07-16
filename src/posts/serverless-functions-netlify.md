@@ -37,6 +37,7 @@ We are going to build the first feature of my [AstroBirthday](https://astrobirth
   <img src="{% src 'PIA19363_1024_bhff9v.jpg' %}"
     srcset="{% srcset 'PIA19363_1024_bhff9v.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="This close-up from the Mars Reconnaissance Orbiter's HiRISE camera shows weathered craters and windblown deposits in southern Acidalia Planitia. A striking shade of blue in standard HiRISE image colors, to the human eye the area would probably look grey or a little reddish."
     width="900" height="600">
   <figcaption><a href="https://apod.nasa.gov/apod/ap190622.html">"Ares 3 Landing Site: The Martian Revisited"</a> APOD from June 22, 2019</figcaption>
@@ -78,6 +79,7 @@ Our frontends can be vanilla HTML, CSS, and JavaScript, but we can also use many
   <img src="{% src 'static-generators_jwwows.jpg' %}"
     srcset="{% srcset 'static-generators_jwwows.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="11ty, Next.js, Jekyll, NuxtJS, Gatsby, Hugo"
     width="1884" height="1031">
   <figcaption>Choose your own flavor of static-site generator</figcaption>
@@ -119,6 +121,7 @@ Now we're going to put it on steroids to make it even more powerful.
   <img src="{% src 'carina2_hst_1080_shnrcd.jpg' %}"
     srcset="{% srcset 'carina2_hst_1080_shnrcd.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="How do violent stars affect their surroundings? To help find out, astronomers created a 48-frame high-resolution, controlled-color panorama of the center of the Carina Nebula, one of the largest star forming regions on the night sky. The featured image, taken in 2007, was the most detailed image of the Carina Nebula yet taken. Cataloged as NGC 3372, the Carina Nebula is home to streams of hot gas, pools of cool gas, knots of dark globules, and pillars of dense dusty interstellar matter. The Keyhole Nebula, visible left of center, houses several of the most massive stars known. These large and violent stars likely formed in dark globules and continually reshape the nebula with their energetic light, outflowing stellar winds, and ultimately by ending their lives in supernova explosions. Visible to the unaided eye, the entire Carina Nebula spans over 450 light years and lies about 8,500 light-years away toward the constellation of Ship's Keel (Carina)."
     width="1080" height="523">
   <figcaption><a href="https://apod.nasa.gov/apod/ap190623.html">"Carina Nebula Panorama from Hubble"</a> APOD from June 23, 2019</figcaption>
@@ -183,6 +186,7 @@ Now we can really get started!
   <img src="{% src 'PIA22486CuriositySelf2018dustStorm1024_dumijh.jpg' %}"
     srcset="{% srcset 'PIA22486CuriositySelf2018dustStorm1024_dumijh.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Winds on Mars can't actually blow spacecraft over. But in the low gravity, martian winds can loft fine dust particles in planet-wide storms, like the dust storm now raging on the Red Planet. From the martian surface on sol 2082 (June 15), this self-portrait from the Curiosity rover shows the effects of the dust storm, reducing sunlight and visibility at the rover's location in Gale crater. "
     width="1024" height="785">
   <figcaption><a href="https://apod.nasa.gov/apod/ap180623.html">"Curiosity's Dusty Self"</a> APOD from June 23, 2018</figcaption>
@@ -203,6 +207,7 @@ It's a good idea to update your `start` script in your **package.json** file to 
   <img src="{% src 'env-netlify-dev_xvgdqo.jpg' %}"
     srcset="{% srcset 'env-netlify-dev_xvgdqo.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="Netlify Dev: Injected build setting env var: NASA_API_KEY"
     width="1576" height="1048">
   <figcaption>Our environment variable is injected when we run Netlify Dev</figcaption>
@@ -320,6 +325,7 @@ What can we return from our serverless functions? We've seen status code and bod
   <img src="{% src 'moonshorty_apollo17_960_fqb6tl.jpg' %}"
     srcset="{% srcset 'moonshorty_apollo17_960_fqb6tl.jpg' %}"
     sizes="{% defaultSizes %}"
+    loading="lazy"
     alt="In December of 1972, Apollo 17 astronauts Eugene Cernan and Harrison Schmitt spent about 75 hours on the Moon in the Taurus-Littrow valley, while colleague Ronald Evans orbited overhead. This sharp image was taken by Cernan as he and Schmitt roamed the valley floor. The image shows Schmitt on the left with the lunar rover at the edge of Shorty Crater, near the spot where geologist Schmitt discovered orange lunar soil. The Apollo 17 crew returned with 110 kilograms of rock and soil samples, more than was returned from any of the other lunar landing sites. Now forty years later, Cernan and Schmitt are still the last to walk on the Moon."
     width="960" height="637">
   <figcaption><a href="https://apod.nasa.gov/apod/ap120624.html">"Apollo 17 at Shorty Crater"</a> APOD from June 24, 2012</figcaption>
