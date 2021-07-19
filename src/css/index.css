@@ -73,16 +73,15 @@
     var(--purple-60) 100%
   );
 
-  --size-200: 0.64rem;
-  --size-300: 0.8rem;
+  --size-200: 0.694rem;
+  --size-300: 0.833rem;
   --size-400: 1rem;
-  --size-500: 1.25rem;
-  --size-600: 1.563rem;
-  --size-700: 1.953rem;
-  --size-800: 2.441rem;
-  --size-900: 3.052rem;
-  --size-1000: 3.815rem;
-
+  --size-500: 1.2rem;
+  --size-600: 1.44rem;
+  --size-700: 1.728rem;
+  --size-800: 2.074rem;
+  --size-900: 2.488rem;
+  --size-1000: 2.986rem;
 }
 
 @font-face {
@@ -329,12 +328,15 @@ main {
   max-width: 100vw;
   overflow: hidden;
   padding: 2em 1em;}
-table { margin: 2em 0; }
+table {margin: 2em 0;}
 table td,
 table th { padding-right: 1em; }
 .tmpl-post table td {
   padding: 1em 0.5em;
   vertical-align: top;
+}
+.scroll-table {
+  overflow-x: scroll;
 }
 
 .content {
@@ -736,6 +738,17 @@ footer .form input, footer .form button {
   footer a svg {width: 32px;}
 }
 @media screen and (min-width: 500px) {
+  :root {
+    --size-200: 0.64rem;
+    --size-300: 0.8rem;
+    --size-400: 1rem;
+    --size-500: 1.25rem;
+    --size-600: 1.563rem;
+    --size-700: 1.953rem;
+    --size-800: 2.441rem;
+    --size-900: 3.052rem;
+    --size-1000: 3.815rem;
+  }
   html, body {
     font-size: 112.5%;
   } /*18px*/

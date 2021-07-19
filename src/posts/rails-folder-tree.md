@@ -29,8 +29,10 @@ First, I want to thank these sources for their initial great explanations - you 
 
 And now for something completely different…
 
-<h2 id="sias-guide-to-rails-folders">Sia’s Guide to Rails’ Folders</h2>
+## Sia’s Guide to Rails’ Folders
 I would love to hear any feedback on this content - I’d love to make it a living document.
+
+<div class="scroll-table">
 
 | Folder or File | Purpose |
 | -------------- | ------- |
@@ -56,3 +58,5 @@ I would love to hear any feedback on this content - I’d love to make it a livi
 | `test/` | Contains the tests for your application. With tests you make sure that your application actually does what you think it does. |
 | `temp/` | Temporary files (like cache, pid, and session files).  Caching involves temporarily storing recently used information, which can improve application performance. |
 | `vendor/` | A place for all third-party code. In a typical Rails application this includes vendored gems (such as security libraries). |
+
+</div>
