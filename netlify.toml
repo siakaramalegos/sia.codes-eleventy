@@ -7,6 +7,39 @@
 [[redirects]]
   from = "/posts/wow-look-at-this-number-input/"
   to = "/posts/how-to-build-a-website/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-1/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-2/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-3/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-4/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-5/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-6/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-7/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-8/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-9/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-10/"
+  to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/posts/30-days-web-perf-11/"
+  to = "/posts/30-days-web-perf/"
 [[plugins]]
   package = "netlify-plugin-cache-folder"
 [build.processing]

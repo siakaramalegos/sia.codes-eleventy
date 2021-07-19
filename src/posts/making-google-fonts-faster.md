@@ -3,7 +3,7 @@ title: Making Google Fonts Faster in 2021
 shortDescription: If you use Google Fonts, a few additional steps can lead to much faster load times.
 description: If you use Google Fonts, a few additional steps can lead to much faster load times. Learn about preconnect, optimal placement, font display, preload, and more in this post.
 date: 2019-02-06
-updated: 2021-07-08
+updated: 2021-07-19
 tags: ["WebPerf", "Fonts", "Popular"]
 layout: layouts/post.njk
 isSelect: true
@@ -184,6 +184,8 @@ Google Fonts is hosted on a pretty fast and reliable content delivery network (C
 Remember how we have a minimum of 2 separate requests to 2 different hosts? This makes it impossible to take advantage of [HTTP/2 multiplexing](https://developers.google.com/web/fundamentals/performance/http2/#request_and_response_multiplexing) or [resource hints](https://twitter.com/addyosmani/status/743571393174872064?lang=en).
 
 Second, while rare, if Google Fonts is down, we won’t get our fonts. If our own CDN is down, then at least we are consistently delivering nothing to our users, right? 🤷🏻️
+
+Note that self-hosting your fonts will not necessarily lead to faster load times unless your assets are hosted on a CDN. Many providers make this easier like Netlify, which is where this site is hosted. Before moving to Netlify, I used AWS S3 and Cloudfront which requires more set up.
 
 To have full control over our font files, loading, and CSS properties, we can self-host our Google Fonts. Luckily, [Mario Ranftl](http://mranftl.com/) created [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) which helps us do exactly that! It is an amazing tool for giving us font files and font-face declarations based on the fonts, charsets, styles, and browser support you select.
 
