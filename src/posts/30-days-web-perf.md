@@ -2,7 +2,7 @@
 title: "#30DaysOfWebPerf: The Pros and Cons of a Twitter series"
 description: My experiment with 30 days of web performance tips. All packaged up for your temporary viewing pleasure. Results from a Twitter series by Sia Karamalegos.
 shortDescription: My experiment with 30 days of web performance tips. All packaged up for your temporary viewing pleasure.
-date: 2021-07-13
+date: 2021-07-19
 tags: ['WebPerf', 'Dev Tools', 'Content']
 layout: layouts/post.njk
 isSelect: false
