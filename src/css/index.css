@@ -285,6 +285,7 @@ img {
 }
 .tmpl-post .portrait-image, .tmpl-post .portrait-image img {
   max-width:29rem;
+  width: 100%;
 }
 
 section.bg-secondary {
