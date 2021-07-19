@@ -1,5 +1,5 @@
 ---
-title: Making Google Fonts Faster
+title: Making Google Fonts Faster in 2021
 shortDescription: If you use Google Fonts, a few additional steps can lead to much faster load times.
 description: If you use Google Fonts, a few additional steps can lead to much faster load times. Learn about preconnect, optimal placement, font display, preload, and more in this post.
 date: 2019-02-06
