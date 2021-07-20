@@ -1,7 +1,6 @@
 module.exports = {
   ci: {
     collect: {
-      // startServerCommand: 'npm run start',
       staticDistDir: "./_site",
       url: [
         "http://localhost:8081/",
@@ -24,8 +23,8 @@ module.exports = {
         "uses-http2": "off",
         "canonical": "off",
         "csp-xss": "off",
-        "uses-optimized-images": "warn",
-        "uses-responsive-images": "warn",
+        "uses-optimized-images": ["warn", {"maxLength": 0}],
+        "uses-responsive-images": ["warn", {"maxLength": 0}],
       },
     },
   },
