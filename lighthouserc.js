@@ -15,10 +15,12 @@ module.exports = {
     },
     assert: {
       // budgetsFile: "./budget.json",
-      preset: "lighthouse:recommended",
+      preset: "lighthouse:no-pwa",
       assertions: {
         "categories:performance": ["error", { minScore: 0.95 }],
         "categories:accessibility": ["error", { minScore: 0.95 }],
+        "uses-http2": "off",
+        canonical: "off",
       },
     },
   },
