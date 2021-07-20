@@ -1,6 +1,6 @@
 ---
 pagination:
-  data: collections
+  data: collections.tagList
   size: 1
   alias: tag
   filter:
@@ -12,7 +12,9 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/home.njk
 renderData:
-  title: Tagged “{{ tag }}”
+  title: Writing by Sia tagged "{{ tag }}"
+  pageTitle: Writing by Sia tagged "{{ tag }}"
+  description: Learn more about {{ tag }} with posts written by Sia Karamalegos, freelance performance engineer and web developer.
 permalink: /tags/{{ tag }}/
 ---
 
@@ -20,7 +22,7 @@ permalink: /tags/{{ tag }}/
   <section>
     <h1>Tagged “{{ tag }}”</h1>
 
-    {% set archivelist = collections[ tag ] %}
+    {% set archivelist = collections[ tag ] | mergeExternalTaggedPosts(external_writing, tag) %}
     {% include "archivelist.njk" %}
   </section>
 

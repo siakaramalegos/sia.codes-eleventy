@@ -13,7 +13,16 @@ Cards
 - https://paulrobertlloyd.com/articles/
 - https://inclusive-components.design/cards/
 
+## Syndication footers
 
+This is a note to self for the markdown to copy-paste when I syndicate a post to another publication (like Dev).
+
+```markdown
+
+---
+
+This article was originally published on [sia.codes](https://sia.codes/posts/how-to-add-prettier-to-a-project/). Head over there if you like this post and want to read others like it, or sign up for my [newsletter](https://buttondown.email/sia.codes) to be notified of new posts!
+```
 
 ## Demos
 

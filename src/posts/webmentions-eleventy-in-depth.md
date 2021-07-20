@@ -1,9 +1,10 @@
 ---
 title: An In-Depth Tutorial of Webmentions + Eleventy
-description: Add Webmentions to your Eleventy static site with this step-by-step tutorial.
+shortDescription: Add Webmentions to your Eleventy static site with this step-by-step tutorial.
+description: Join the Indie Web by adding Webmentions to your serverless Eleventy static site with this step-by-step tutorial. No client-side JavaScript needed!
 date: 2019-11-22
-updated: 2021-01-06
-tags: ['IndieWeb', 'Eleventy']
+updated: 2021-05-26
+tags: ['IndieWeb', 'Eleventy', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1198282993678376961'
 isSelect: true
@@ -33,13 +34,71 @@ They are a cool tool for enabling social interactions when you host your own con
 
 So why am I writing this post? Sadly, I started with the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog), and didn't notice the [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions) starter until after I had already built my site. I also struggled to fully build out the functionality, partly because I'm still an Eleventy n00b. So I wanted to share the detailed steps I used in the hopes that it will help more of you join the Indie Web.
 
-<aside><strong>Prefer to learn by video?</strong> I recently gave a <a href="/posts/webmentions-eleventy-talk/">lightning talk</a> at Jamstack Toronto about the concepts behind Webmentions and adding them to an Eleveny project. Check out <a href="/posts/webmentions-eleventy-talk/">the recording</a>.</aside>
+<aside><strong>Prefer to learn by video?</strong> I gave <a href="/posts/webmentions-eleventy-talk/">talks</a> at Jamstack Toronto and Magnolia JS about the concepts behind Webmentions and adding them to an Eleventy project. Check out <a href="/posts/webmentions-eleventy-talk/">the recording</a>.</aside>
 
 The perspective of this post is adding webmentions to an Eleventy site after the fact. The files, folders, and config architecture match the `eleventy-base-blog`, but you can likely use this as a starting point for any Eleventy site. Make sure you watch out for spots where your analogous architecture may be different.
 
+This post will cover how to:
+
+1. Set up webmentions for your website
+2. Securely store your webmention token in Netlify and inject it during development
+3. Fetch webmentions at build time
+4. Save webmentions in a cached file that persists between Netlify builds
+5. Render webmentions in Eleventy using Nunjucks
+
 The code in this post is a mash up of Max Böck's original post and [personal site](https://github.com/maxboeck/mxb), the [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions) starter, Zach Leatherman's [personal site](https://github.com/zachleat/zachleat.com), and the edits I made during my implementation. I am hugely grateful for their work, as I never would have gotten this far without it.
 
-## Step 1: Sign up for webmentions
+## The serverless deployment architecture
+
+Before we get started, let's outline the setup. My setup uses Eleventy paired with Github and Netlify.
+
+<figure>
+  <img src="{% src 'sia_karamalegos_netlify_devops1_zpdojl.jpg' %}"
+    srcset="{% srcset 'sia_karamalegos_netlify_devops1_zpdojl.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
+    alt="Three entities: a laptop, Github, and Netlify"
+    width="2048" height="1536">
+  <figcaption>The three entities used in my "dev ops"</figcaption>
+</figure>
+
+If you're familiar with most Netlify setups, when I push my code to Github, that triggers a build and deploy on Netlify because the content of the `main` branch has been updated. We're going to add a [cache folder plugin](https://github.com/siakaramalegos/netlify-plugin-cache-folder) that will stay in our build between deploys. This is where we will save our webmentions so that we only need to import new ones on build.
+
+<figure>
+  <img src="{% src 'sia_karamalegos_netlify_devops2_zp9pji.jpg' %}"
+    srcset="{% srcset 'sia_karamalegos_netlify_devops2_zp9pji.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
+    alt="Arrow from laptop to Github for git push, then arrow from Github to Netlify to build and deploy"
+    width="2048" height="1536">
+  <figcaption>New commits trigger new deploys, and the _cache folder is preserved between Netlify builds</figcaption>
+</figure>
+
+Another cool tool we will use is [Github actions](https://github.com/features/actions) to fake a cron job to trigger deploys on a recurring schedule. This is so we can import new webmentions every X hours.
+
+<figure>
+  <img src="{% src 'sia_karamalegos_netlify_devops3_st2bd2.jpg' %}"
+    srcset="{% srcset 'sia_karamalegos_netlify_devops3_st2bd2.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
+    alt="New arrow from Github to Netlify showing new builds every 4 hours"
+    width="2048" height="1536">
+  <figcaption>Github actions sends a POST request to Netlify to trigger builds every 4 hours</figcaption>
+</figure>
+
+Finally, we need to save a secret API token for pulling our webmentions. We want to save that securely in our [Netlify environment variables](https://docs.netlify.com/configure-builds/environment-variables/). Then, we can use [`netlify-cli`](https://docs.netlify.com/cli/get-started/) to use that secret when running in our local environment.
+
+<figure>
+  <img src="{% src 'sia_karamalegos_netlify_devops4_ljulpj.jpg' %}"
+    srcset="{% srcset 'sia_karamalegos_netlify_devops4_ljulpj.jpg' %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
+    alt="Arrow from laptop to Github for git push, then arrow from Github to Netlify to build and deploy"
+    width="2048" height="1536">
+  <figcaption>New commits trigger new deploys, and the _cache folder is preserved between builds</figcaption>
+</figure>
+
+## Step 1: Sign up for webmentions and store the API key
 
 First, we need to sign up with webmention.io, the third-party service that lets us use the power of webmentions on static sites.
 
@@ -55,26 +114,27 @@ If your sign in was successful, you should be directed to the webmentions dashbo
 <link rel="pingback" href="https://webmention.io/sia.codes/xmlrpc" />
 ```
 
-You'll also be given an API key. We want to safely store that in our local environment variables. Add `dotenv` for easily getting and setting env variables:
+You'll also be given an API key. We want to safely store that `WEBMENTION_IO_TOKEN` in our [Netlify environment variables](https://docs.netlify.com/configure-builds/environment-variables/).
 
-```bash
-$ npm install dotenv
+<figure>
+  <img src="{% src "env_netlify_k4m8k8.jpg" %}"
+    srcset="{% srcset "env_netlify_k4m8k8.jpg" %}"
+    sizes="{% defaultSizes %}"
+    loading="lazy"
+    alt="Screenshot of Netlify site settings showing the WEBMENTION_IO_TOKEN variable"
+    width="2554" height="794">
+  <figcaption>In your Netlify dashboard, go to <strong>Site Settings > Build & Deploy > Environment</strong> to add WEBMENTION_IO_TOKEN and its value</figcaption>
+</figure>
+
+To use the environment variable locally while developing on your machine, install the [`netlify-cli`](https://docs.netlify.com/cli/get-started/):
+
+```
+npm install netlify-cli -g
 ```
 
-Create a `.env` file in the root of your project, and add your Webmention.io API key
+And change your development server script to use `netlify dev`. It will use your build script save in Netlify and hydrate all environment variables. If your previous script set input and output directories in the command itself, you will need to [move those settings](https://www.11ty.dev/docs/config/) to your **.eleventy.js** config instead.
 
-```bash
-WEBMENTION_IO_TOKEN=y0urKeyHeRe
-```
-
-Don't forget to add it to your `.gitignore` file. While we are here, let's add the `_cache/` folder which will be created when we first fetch webmentions:
-
-```bash
-_cache/
-_site/
-node_modules/
-.env
-```
+<aside>The original version of this article recommended using <a href="https://www.npmjs.com/package/dotenv">dotenv</a> for managing env variables. I've found that using <a href="https://docs.netlify.com/cli/get-started/">Netlify CLI</a> is easier for me and requires no extra scripts. If you prefer the dotenv method, see this <a href="https://gist.github.com/siakaramalegos/ad2ef00cf9eb53cdeb651cd9f751b89c">gist</a>.</aside>
 
 You probably want some content in your webmentions. If you use Twitter, [Bridgy](https://brid.gy/) is a great way to bring in mentions from Twitter. First make sure your website is listed in your profile, then link it.
 
@@ -90,7 +150,7 @@ When we do any build, for each page:
 - Render the count with mention type as a heading (e.g., "7 Replies")
 - Render a list of the mentions of that type (e.g., linked Twitter profile pictures representing each like)
 
-## Fetching webmentions
+## Step 2: Set up, dependencies, and the Netlify cache
 
 First, we need to set up our domain as another property in our `_data/metadata.json`. Let's also add our root URL for use later:
 
@@ -106,25 +166,42 @@ First, we need to set up our domain as another property in our `_data/metadata.j
 Next, we'll add a few more dependencies:
 
 ```bash
-$ npm install lodash node-fetch
+$ npm install -D lodash node-fetch netlify-plugin-cache-folder
 ```
 
-And update our `build` script to set the `NODE_ENV` in our `package.json`:
+We will only request new webmentions in production builds. Thus, we need to update our `build` script to set the `NODE_ENV` in our `package.json`. This is the script that should be set as your Build Command in Netlify. To build locally, we'll need that environment variable locally. So add another script called `build:local`. For this to work, you main need to push these updates to Github so that Netlify has the new scripts:
+
 ```json
 // package.json
 {
   // ... more config
   "scripts": {
-    "build": "NODE_ENV=production npx eleventy",
+    "build": "NODE_ENV=production npx @11ty/eleventy",
+    "build:local": "NODE_ENV=production netlify build",
+    "start": "netlify dev",
     // more scripts...
 }
 ```
+
+To finish setting up our [cache folder plugin](https://github.com/siakaramalegos/netlify-plugin-cache-folder), we also need to create a **netlify.toml** file in the root of our project with the following contents:
+
+```toml
+[build]
+  command   = "npm run build"
+
+[[plugins]]
+  package = "netlify-plugin-cache-folder"
+```
+
+{% include 'newsletter-aside.njk' %}
+
+## Step 3: Fetch webmentions during the Eleventy build
 
 Now we can focus on the fetch code. Okay, okay, I know this next file is beaucoup long, but I thought it was more difficult to understand out of context. Here are the general steps happening in the code:
 
 1. Read any mentions from the file cache at `_cache/webmentions.json`.
 2. If our environment is "production", fetch new webmentions since the last time we fetched. Merge them with the cached ones and save to the cache file. Return the merged set of mentions.
-3. If our envinroment is not "production", return the cached mentions from the file
+3. If our environment is not "production", return the cached mentions from the file
 
 ```javascript
 // _data/webmentions.js
@@ -223,9 +300,7 @@ module.exports = async function () {
 }
 ```
 
-<aside><strong>Note:</strong> If you use Netlify, I created a Netlify build plugin to cache the /_cache/ folder between builds. Check it out at <a href="https://www.npmjs.com/package/netlify-plugin-cache-folder">netlify-plugin-cache-folder</a>.</aside>
-
-## Filters for build
+## Step 4: Add handy filters (functions) for our templates
 
 Now that we've populated our webmentions cache, we need to use it. First we have to generate the functions, or "filters" that Eleventy will use to build our templates.
 
@@ -269,7 +344,7 @@ module.exports = function(eleventyConfig) {
 
 I do not have a sanitize HTML filter because I noticed the content data has a `text` field that is already sanitized. Maybe this is new or not true for all webmentions. I'll update this post if I add it in.
 
-## Rendering mentions
+## Step 5: Render the webmentions in Eleventy using Nunjucks
 
 Now we're ready to put it all together and render our webmentions. I put them at the bottom of each blog post, so in my `_includes/layouts/post.njk`, I add a new section for the webmentions. Here, we are setting a variable called `webmentionUrl` to the page's full URL, and passing it into the partial for the `webmentions.njk` template:
 
@@ -361,17 +436,22 @@ Finally, we can render our replies using that new partial for a single reply web
 ```
 {% endraw %}
 
-## Bravely jumping into the black hole...
-Does it work?!?! We can finally test it out. First run `npm run build` to generate an initial list of webmentions that is saved to the `_cache/webmentions.json` file. Then run your local development server and see if it worked! Of course, you'll need to have at least one webmention associated with a post to see anything. 😁
+Time to bravely jumping into the black hole...
+
+## Step 6: Run it!
+
+Does it work?!?! We can finally test it out. First run `npm run build:local` to generate an initial list of webmentions that is saved to the `_cache/webmentions.json` file. Then run your local development server and see if the rendering worked! Of course, you'll need to have at least one webmention associated with a page to see anything. 😁
 
 You can see the result of my own implementation below. Good luck! Let me know how it turns out or if you find in bugs or errors in this post!
 
-## Continue your journey by using Microformats
+## Conclusion
 
-Keith Grant has a great write-up in his article [Adding Webmention Support to a Static Site](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/). Check out the "Enhancing with Microformats" section for an explanation and examples.
+Webmentions let us own our content on our own domains while still engaging socially with other people through likes, replies, and other actions. How have you used webmentions on your site? [Tweet](https://twitter.com/TheGreenGreek) at me to let me know!
+
+Continue your journey by using Microformats. Keith Grant has a great write-up in his article [Adding Webmention Support to a Static Site](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/). Check out the "Enhancing with Microformats" section for an explanation and examples.
 
 ## Additional resources
 
+- [Usando Webmentions en Eleventy](https://antonio.laguna.es/posts/usando-webmentions-en-eleventy/) by Antonio Laguna en español
 - You can find the full code for my site on [Github](https://github.com/siakaramalegos/sia.codes-eleventy). It will evolve in the future, I'm sure, so you can focus on [this commit](https://github.com/siakaramalegos/sia.codes-eleventy/commit/d7318565917b1342b38d6b3bff4e3e548276afca) which has the bulk of my changes for adding webmentions.
-- How I added dotenv support to Netlify is covered in this [Stack Overflow answer](https://stackoverflow.com/questions/48453493/set-environment-variable-for-build-in-netlify).
 - How I set up a "cron" job through Github actions to periodically rebuild my site on Netlify (to grab and post new webmentions) is covered in [Scheduling Netlify deploys with GitHub Actions](https://www.voorhoede.nl/en/blog/scheduling-netlify-deploys-with-github-actions/).

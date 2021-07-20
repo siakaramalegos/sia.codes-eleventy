@@ -6,6 +6,9 @@
           <img src="{% src post.data.featuredImage, 300 %}"
             srcset="{% srcset post.data.featuredImage, [300, 600] %}"
             sizes="(min-width: 1020px) 311px, (min-width: 680px) 48.75vw, calc(100vw - 20px)"
+            {% if lazyload %}
+              loading="lazy"
+            {% endif %}
             alt="">
         {% else %}
           <img src="{% socialImage post.data.title, post.data.description %}" alt="">
@@ -16,7 +19,7 @@
       <h3 class="postlist-title a-reset">
         <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
       </h3>
-      <p>{{ post.data.description }}</p>
+      <p>{{ post.data.shortDescription or post.data.description }}</p>
       <p>
         {% for tag in post.data.tags %}
           {%- if tag != "posts" -%}

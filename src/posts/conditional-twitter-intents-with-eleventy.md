@@ -2,7 +2,7 @@
 title: Show conditional Twitter intents with Eleventy
 description: Encourage users to retweet or share a post based on whether a Tweet already exists for your blog post.
 date: 2019-11-26
-tags: ['IndieWeb', 'Eleventy']
+tags: ['IndieWeb', 'Eleventy', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1199441838140272647'
 isSelect: false

@@ -1,4 +1,4 @@
-<div class="webmentions" id="webmentions">
+<div class="webmentions flow" id="webmentions">
 
   {% set mentions = webmentions | getWebmentionsForUrl(metadata.url + webmentionUrl) %}
   {% set reposts = mentions | webmentionsByType('repost-of') %}
@@ -9,8 +9,8 @@
   {% set repliesSize = replies | size  %}
 
 {% if likesSize > 0 %}
-<div class="webmentions__facepile">
-  <h3{% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ likesSize }}
+<div class="webmentions__facepile flow">
+  <h3 style="margin-bottom:1em" {% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ likesSize }}
     Like{% if likesSize != 1 %}s{% endif %}</h3>
 
     {% for webmention in likes %}
@@ -33,8 +33,8 @@
 {% endif %}
 
 {% if repostsSize > 0 %}
-<div class="webmentions__facepile">
-  <h3{% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ repostsSize }} Retweet{% if repostsSize != 1 %}s{% endif %}</h3>
+<div class="webmentions__facepile flow">
+  <h3 style="margin-bottom:1em" {% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ repostsSize }} Retweet{% if repostsSize != 1 %}s{% endif %}</h3>
 
     {% for webmention in reposts %}
       {% if webmention.url != "" %}
@@ -54,7 +54,7 @@
 {% endif %}
 
 {% if repliesSize > 0 %}
-<div class="webmention-replies">
+<div class="webmention-replies flow">
   <h3>{{ repliesSize }} {% if repliesSize == "1" %}Reply{% else %}Replies{% endif %}</h3>
 
   {% for webmention in replies %}
@@ -66,7 +66,7 @@
 <p>These are <a href="https://indieweb.org/Webmention">webmentions</a> via the <a href="https://indieweb.org/">IndieWeb</a> and <a href="https://webmention.io/">webmention.io</a>. Mention this post from your site:</p>
 
 <form action="https://webmention.io/sia.codes/webmention" method="post" class="form-webmention">
-    <label for="form-webmention-source">URL</label><br>
+    <label for="form-webmention-source">URL</label>
     <input id="form-webmention-source" type="url" name="source" placeholder="https://example.com" required>
     <input type="hidden" name="target" value="https://sia.codes/{{ page.url }}">
     <input type="submit" class="button button-small" value="Send Webmention">

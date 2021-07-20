@@ -1,8 +1,60 @@
 module.exports = {
   upcomingEvents: [
-
+    {
+      conference: 'Social Hackers Academy',
+      conferenceUrl: 'https://socialhackersacademy.org/',
+      location: 'Online',
+      talks: [
+        { key: 'serverlessNetlify', date: '30 Jun 2021' },
+      ]
+    },
+    {
+      conference: 'UberConf',
+      conferenceUrl: 'https://uberconf.com/',
+      location: 'Denver, CO, USA',
+      talks: [
+        { key: 'performanceWorkshop', date: '05 Oct 2021' },
+        { key: 'devtools', date: '06 Oct 2021' },
+        { key: 'performance', date: '06 Oct 2021' },
+      ]
+    },
+    {
+      conference: 'Connect.Tech',
+      conferenceUrl: 'https://2021.connect.tech/',
+      location: 'Atlanta, GA, USA',
+      talks: [
+        { key: 'performanceWorkshop', date: '08 Nov 2021' },
+      ]
+    },
+    {
+      conference: 'The Progressive Web Experience',
+      conferenceUrl: 'https://progressivewebexperience.io/',
+      location: 'Online',
+      talks: [
+        { key: 'performanceWorkshop', date: '05 Dec 2021' },
+        { key: 'devtools', date: '06 Dec 2021' },
+        { key: 'performance', date: '06 Dec 2021' },
+        { key: 'indieWebEleventy', date: '06 Dec 2021' },
+      ]
+    },
   ],
   pastEvents: [
+    {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-introduction-to-serverless-functions-using-netlify/',
+      location: 'Online',
+      talks: [
+        { key: 'serverlessNetlify', date: '15 Jun 2021' },
+      ]
+    },
+    {
+      conference: 'Magnolia JS',
+      conferenceUrl: 'https://magnoliajs.com/',
+      location: 'Online',
+      talks: [
+        { key: 'indieWebEleventy', date: '25 May 2021' },
+      ]
+    },
     {
       conference: "c't <web dev>",
       conferenceUrl: 'https://ctwebdev.de/',
@@ -43,7 +95,7 @@ module.exports = {
       conferenceUrl: 'https://www.meetup.com/gdg-new-orleans/events/kqrvjrybcjbvb/',
       location: 'New Orleans, LA, USA',
       talks: [
-        { key: 'eleventy', date: '16 June 2020' },
+        { key: 'eleventy', date: '16 Jun 2020' },
       ]
     },
     {

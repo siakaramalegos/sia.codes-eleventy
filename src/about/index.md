@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
-title: Hi, I'm Sia Karamalegos.
+title: About Sia Karamalegos
+pageTitle: Hi, I'm Sia Karamalegos.
 tags:
   - nav
 navtitle: About
@@ -8,18 +9,18 @@ templateClass: tmpl-post
 date: 2019-01-02
 ---
 
-<section>
+<section class="flow">
 <img src="/img/sia_karamalegos_small.jpg" alt="Sia Karamalegos" class="headshot">
 
-I'm a freelance web developer, a [Women Techmakers](https://www.womentechmakers.com/) ambassador, and a co-organizer for [GDG New Orleans](https://www.gdgneworleans.com/). I'm also a Google Developer Expert in Web Technologies and a Cloudinary Media Developer Expert. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
+I'm a freelance web developer and a co-organizer for the [Eleventy Meetup](https://eleventymeetup.netlify.app/) and [GDG New Orleans](https://www.gdgneworleans.com/). I'm also a Google Developer Expert in Web Technologies, a Cloudinary Media Developer Expert, and a Stripe Community Expert. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
 
-As a person, I also love making developer's lives easier through teaching, speaking, and mentoring. You can find more information about me and the topics I speak about on my speaking page. I talk about front-end topics such as web performance, JavaScript, and React.
+As a person, I also love making developer's lives easier through teaching, speaking, and mentoring. You can find more information about me and the topics I speak about on my speaking page. I talk about front-end topics such as web performance, JavaScript, and the Jamstack.
 
 </section>
 
-<section>
+<section class="flow">
 
-## ⚡️ Need help making your website fast?
+## Need help making your website fast?
 I implement end-to-end performance managment, from audits and improvements to long-term management with CI. Whether onsite or remote, I can provide training tailored for your team and project technology.
 
 <p class="text-center">
@@ -28,17 +29,22 @@ I implement end-to-end performance managment, from audits and improvements to lo
 
 </section>
 
-<section>
+<section class="flow">
 
-## 🎤 Want me to speak at one of your events?
-<a href="/contact/?subject=Speaking inquiry from sia.codes">Send me a message</a>, or [DM me on Twitter](https://twitter.com/thegreengreek)!
+## Want me to speak at your company or event?
+I'm an international conference speaker and organizer and available to speak at your event or at your company. Topics include web performance, JavaScript, the Jamstack, and Eleventy. [Learn more about my speaking](/speaking).
+
+<p class="text-center">
+  <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me</a>
+</p>
 
 </section>
 
-<section>
+<section class="flow">
 
-## 💕 Want to show your appreciation for speakers and organizers?
-Sponsor me on [Github Sponsors](https://github.com/sponsors/siakaramalegos) or buy me a coffee on [Ko-fi](https://ko-fi.com/siacodes).
+## Want to show your appreciation for speakers and organizers?
+
+💕 Sponsor me on [Github Sponsors](https://github.com/sponsors/siakaramalegos) or buy me a coffee on [Ko-fi](https://ko-fi.com/siacodes).
 
 </section>
 

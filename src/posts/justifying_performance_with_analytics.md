@@ -4,7 +4,7 @@ description: Trying to convince your company to make site load speed improvement
 date: 2019-06-13
 tags: ['WebPerf', 'Analytics']
 layout: layouts/post.njk
-isSelect: true
+isSelect: false
 featuredImage: show-money_uolhum.jpg
 ---
 
