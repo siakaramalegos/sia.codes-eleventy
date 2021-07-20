@@ -19,8 +19,10 @@ module.exports = {
       assertions: {
         "categories:performance": ["error", { minScore: 0.95 }],
         "categories:accessibility": ["error", { minScore: 0.95 }],
+        "unused-javascript": ["error", { minScore: 0.95 }],
+        "unused-javascript": "off",
         "uses-http2": "off",
-        canonical: "off",
+        "canonical": "off",
       },
     },
   },
