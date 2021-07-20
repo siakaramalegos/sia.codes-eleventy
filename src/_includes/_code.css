@@ -1,15 +1,15 @@
 :root{
   --font-code: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  --red: #902f2f;
-  --green: #35643a;
+  --red: hsl(0, 55%, 34%);
+	--green: hsl(126, 39%, 24%);
 	--black: rgb(34,31,44);
   --grey-20: rgb(192,190,202);
   --grey-30: rgb(163,160,178);
   --white: rgb(252,252,253);
 	--color-attr: #fdb31f;
 	--color-attr-light: #f4bf75;
-	--color-tag: #8aadff;
-	--color-string: #8aadff;
+	--color-tag: hsl(222, 100%, 85%);
+	--color-string: hsl(222, 100%, 85%);
 	--color-attr-val: #54e88f;
 	--color-important: rgb(245,0,159);
 	--color-selector: rgb(203,131,255);

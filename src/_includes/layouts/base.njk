@@ -9,12 +9,21 @@
     <title>{{ renderTitle }}</title>
     <meta name="description" content="{{ renderDescription }}">
 
-    <link rel="stylesheet" href="{{ '/css/_code.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    {% set code_css %}
+      {% include "_code.css" %}
+    {% endset %}
+    {% set css %}
+      {% include "index.css" %}
+    {% endset %}
+    <style>
+      {{ code_css | cssmin | safe }}
+      {{ css | cssmin | safe }}
+    </style>
+
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 
-    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/lexend-v5-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/lexend-v5-latin-600.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/lexend-v5-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/lexend-v5-latin-600.woff2" crossorigin>
 
     <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
     <!-- Global site tag (gtag.js) - Google Analytics - new GA4 tag -->
