@@ -6,6 +6,7 @@ date: 2021-07-19
 tags: ['WebPerf', 'Dev Tools', 'Content']
 layout: layouts/post.njk
 isSelect: false
+tweetId: '1417479153037709312'
 featuredImage: 30DaysOfWebPerf_Sia_Karamalegos_tr9xh0.jpg
 ---
 
@@ -50,4 +51,4 @@ This was a great way to get temporary buzz on a topic, help a few folks out in p
 
 Lately, I've been signing up for several 1-week email "challenges" or "courses". Maybe it's a new fad in 2021. The content in each email seems to be shorter than a typical blog post but longer than a tweet. And if you manage it as a campaign that someone can sign up for at any time, then you can edit it when it gets out of date.
 
-What do you think? What are some good ways to deliver smaller chunks of serialized content? [Tweet at me](https://twitter.com/TheGreenGreek) with your thoughts.
+What do you think? What are some good ways to deliver smaller chunks of serialized content? [Tweet at me](https://twitter.com/TheGreenGreek/status/1417479153037709312) with your thoughts.
