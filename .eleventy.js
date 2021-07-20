@@ -1,4 +1,3 @@
-const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -23,8 +22,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("src/img");
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/css/fonts");
+  eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/javascript");
 
   /* Markdown Plugins */

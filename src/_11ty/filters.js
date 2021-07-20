@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const CleanCSS = require('clean-css');
 const rootUrl = require('../_data/metadata.json').url
 const events = require('../_data/events.js')
 const talks = require('../_data/talks.js')
@@ -64,6 +65,9 @@ function mergeExternalPosts(posts = [], externalPosts = []) {
 }
 
 module.exports = {
+  cssmin: code => {
+    return new CleanCSS({}).minify(code).styles;
+  },
   generateDiscussionLink: (url) => {
     const postUrl = `${rootUrl}${url}`
     return `https://twitter.com/search?f=tweets&src=typd&q=${encodeURI(postUrl)}`
