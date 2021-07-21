@@ -7,7 +7,7 @@ module.exports = {
         // "http://localhost:8081/posts/making-google-fonts-faster/",
         "http://localhost:8081/posts/responsive-images-perf-matters-video/",
       ],
-      numberOfRuns: 3,
+      numberOfRuns: 1,
     },
     upload: {
       target: "temporary-public-storage",
@@ -18,8 +18,8 @@ module.exports = {
       assertions: {
         "categories:performance": ["error", { minScore: 0.95 }],
         "categories:accessibility": ["error", { minScore: 0.95 }],
-        "unused-javascript": ["error", { minScore: 0.95 }],
-        "unused-javascript": "off",
+        // "unused-javascript": ["warn", { minScore: 0.95 }],
+        // "unused-javascript": "off",
         "uses-http2": "off",
         "canonical": "off",
         "csp-xss": "off",
