@@ -3,7 +3,7 @@ title:  "How to Eliminate Render-Blocking Resources: a Deep Dive"
 description: Is Lighthouse telling you to eliminate render-blocking resources? Learn what this means, why it's important, and how to fix it in your HTML, CSS, and JavaScript.
 shortDescription: Is Lighthouse telling you to eliminate render-blocking resources? Learn what it means and how to fix it.
 date: 2021-07-13
-tags: ['WebPerf', 'JavaScript']
+tags: ['WebPerf', 'JavaScript', 'Popular']
 layout: layouts/post.njk
 tweetId: '1414934155750690836'
 isSelect: true

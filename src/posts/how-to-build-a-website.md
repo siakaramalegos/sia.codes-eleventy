@@ -3,7 +3,7 @@ title: How to build a website in 2021
 description: It's really easy.
 date: 2020-02-11
 updated: 2021-07-19
-tags: ['Web', 'Tools', "Popular"]
+tags: ['Web', 'Tools']
 layout: layouts/post.njk
 tweetId: '1227248318159491077'
 isSelect: true

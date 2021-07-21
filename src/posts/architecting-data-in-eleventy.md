@@ -10,8 +10,8 @@ featuredImage: possum_efpwzp.jpg
 ---
 
 <figure>
-  <img src="{% src "possum_efpwzp.jpg" %}"
-    srcset="{% srcset "possum_efpwzp.jpg" %}"
+  <img src="{% src 'possum_efpwzp.jpg' %}"
+    srcset="{% srcset 'possum_efpwzp.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Possum overlayed on a keyboard"
     width="612" height="408">
