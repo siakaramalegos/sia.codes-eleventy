@@ -163,7 +163,7 @@ Using AVIF increases your transformations usage because AVIF is intensive to enc
 
 For my blog, I overcome this obstacle by viewing new posts at different screens sizes before publishing. Then Cloudinary caches my AVIF images so they are ready for the next request.
 
-This is not reasonable for larger projects. Instead, you can use [eager transformations](https://cloudinary.com/documentation/transformations_on_upload#eager_transformations) to transforms on upload through the API.
+This is not reasonable for larger projects. Instead, you can use [eager transformations](https://cloudinary.com/documentation/transformations_on_upload#eager_transformations) to transform on upload through the API.
 
 ### The credit usage details
 
@@ -172,7 +172,7 @@ At the time of writing (July 2021), Cloudinary counts AVIF transformations as fo
 - Images 2MP and below count as 1 transformation
 - Each 1MP above 2MB will count as another 0.5 transformations
 
-This seems higher cost on the surface but is a good deal. I understood this once I saw how long AVIF transformations take compared to other formats. AVIF transforms are 70x-100x more CPU intensive than that of JPEG!
+This seems high cost on the surface but is a good deal. I understood this once I saw how long AVIF transformations take compared to other formats. AVIF transforms are 70x-100x more CPU intensive than that of JPEG!
 
 If you want to sign up for the `f_auto` beta, you can [contact Cloudinary](https://support.cloudinary.com/hc/en-us/requests/new).
 
