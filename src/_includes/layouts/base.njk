@@ -39,7 +39,7 @@
     <script type="module">
       import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
 
-      function sendToGoogleAnalytics({name, delta, id}) {
+      function sendToGoogleAnalytics({name, delta, value, id}) {
         gtag('event', name, {
           event_category: 'Web Vitals',
           // GA
