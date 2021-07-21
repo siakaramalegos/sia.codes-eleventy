@@ -1,7 +1,7 @@
 ---
 title: What to know about AVIF on Cloudinary
 description: Start using AVIF today with Cloudinary. Learn about your options, the tradeoffs, and how to overcome slow transformations.
-date: 2021-07-23
+date: 2021-07-21
 tags: ['Images', 'WebPerf']
 layout: layouts/post.njk
 # tweetId: '1261340524201390081'
@@ -66,7 +66,7 @@ Instead, let's look at the difference between formats with equal quality (using 
 }
 </script>
 
-Now let's look at equal-ish file sizes with different quality (compression)...
+How low can we go? Now let's look at equal-ish file sizes with different quality (compression)...
 
 <div class="text-center">
   <button class="button" onclick="openImg2('AVIF-2')">AVIF</button>
@@ -75,16 +75,16 @@ Now let's look at equal-ish file sizes with different quality (compression)...
 </div>
 
 <figure id="AVIF-2" class="imgFormat2">
-  <figcaption><strong>AVIF</strong>: 36.6 kB</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>AVIF</strong>: 23.3 kB (quality 50)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_50,f_auto,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 <figure id="WEBP-2" class="imgFormat2" style="display:none">
-  <figcaption><strong>WEBP</strong>: 37.5 kB (quality 51)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_51,f_webp,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>WEBP</strong>: 24.5 kB (quality 35)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_35,f_webp,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 <figure id="JPEG-2" class="imgFormat2" style="display:none">
-  <figcaption><strong>JPEG</strong>: 37 kB (quality 42)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_42,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>JPEG</strong>: 24.7 kB (quality 25)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_25,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 
 <script>
