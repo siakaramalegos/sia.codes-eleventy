@@ -22,44 +22,6 @@
 
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 
-    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
-    <!-- Global site tag (gtag.js) - Google Analytics - new GA4 tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMTGZPWPWD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-VMTGZPWPWD');
-      gtag('config', 'UA-59135521-1');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics - old tag -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59135521-1"></script> -->
-
-    <script type="module">
-      import {getCLS, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
-
-      function sendToGoogleAnalytics({name, delta, value, id}) {
-        gtag('event', name, {
-          event_category: 'Web Vitals',
-          // GA
-          event_label: id,
-          value: Math.round(name === 'CLS' ? delta * 1000 : delta),
-          non_interaction: true,
-
-          // GA 4
-          // value: delta, // Use `delta` so the value can be summed.
-          // Custom params:
-          metric_id: id, // Needed to aggregate events.
-          metric_value: value, // Optional.
-          metric_delta: delta, // Optional.
-        });
-      }
-
-      getCLS(sendToGoogleAnalytics);
-      getFID(sendToGoogleAnalytics);
-      getLCP(sendToGoogleAnalytics);
-    </script>
     <link rel="webmention" href="https://webmention.io/sia.codes/webmention" />
     <link rel="pingback" href="https://webmention.io/sia.codes/xmlrpc" />
 
@@ -89,6 +51,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="monetization" content="$ilp.uphold.com/KaKQ36fDzzdM">
     <link rel="canonical" href="https://sia.codes{{ page.url }}">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
   </head>
   <body>
     <nav>
@@ -116,6 +79,18 @@
 
     {% include 'footer.njk' %}
 
-    <!-- Current page: {{ page.url | url }} -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-VMTGZPWPWD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+
+    {% set analyticsJs %}
+      {% include "analytics.js" %}
+    {% endset %}
+    <script type="module">
+      {{ analyticsJs | jsmin | safe }}
+    </script>
   </body>
 </html>

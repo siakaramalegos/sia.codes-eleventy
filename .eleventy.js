@@ -1,6 +1,7 @@
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { minify } = require('terser')
 const filters = require('./src/_11ty/filters');
 const shortcodes = require("./src/_11ty/shortcodes");
 
@@ -8,6 +9,17 @@ module.exports = function(eleventyConfig) {
   // Filters
   Object.keys(filters).forEach(filterName => {
     eleventyConfig.addFilter(filterName, filters[filterName])
+  })
+
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
+    try {
+      const minified = await minify(code)
+      callback(null, minified.code)
+    } catch (err) {
+      console.error("Terser error: ", err)
+      // Fail gracefully
+      callback(null, code)
+    }
   })
 
   // Shortcodes
