@@ -3,6 +3,7 @@ title:  "How to Eliminate Render-Blocking Resources: a Deep Dive"
 description: Is Lighthouse telling you to eliminate render-blocking resources? Learn what this means, why it's important, and how to fix it in your HTML, CSS, and JavaScript.
 shortDescription: Is Lighthouse telling you to eliminate render-blocking resources? Learn what it means and how to fix it.
 date: 2021-07-13
+updated: 2021-07-23
 tags: ['WebPerf', 'JavaScript', 'Popular']
 layout: layouts/post.njk
 tweetId: '1414934155750690836'
@@ -156,16 +157,16 @@ Lighthouse could have flagged any one of those 3 initial stylesheets. The root c
 
 We're digging a deep hole here.
 
-Another way to test for render-blocking resources is to use [WebPageTest](https://webpagetest.org/easy). WebPageTest is the next step up in performance profiling. If you enter a URL, it will run a performance test on a real mobile device. Once the test finishes, click on the waterfall for the median run. Then you can check each request row:
+Another way to test for render-blocking resources is to use [WebPageTest](https://webpagetest.org/easy). WebPageTest is the next step up in performance profiling. If you enter a URL, it will run a performance test on a real mobile device. Once the test finishes, click on the waterfall for the median run. Every render-blocking resource will have an orange circle with a white X next to its row:
 
 <figure>
-  <img src="{% src 'WebPageTest_show_render_blocking_grw3n7.jpg' %}"
-    srcset="{% srcset 'WebPageTest_show_render_blocking_grw3n7.jpg' %}"
+  <img src="{% src 'render_blocking_indicator_webpagetest_j5thod.jpg' %}"
+    srcset="{% srcset 'render_blocking_indicator_webpagetest_j5thod.jpg' %}"
     sizes="{% defaultSizes %}"
     loading="lazy"
-    alt="WebPageTest waterfall pointing to a request row, and then the request details where the render-blocking status shows up"
-    width="2430" height="1368">
-  <figcaption>The WebPageTest request details tab will show render-blocking status for each request</figcaption>
+    alt="WebPageTest waterfall with every render-blocking request row circled in red"
+    width="1836" height="828">
+  <figcaption>The WebPageTest waterfall will highligh render-blocking requests with an orange icon</figcaption>
 </figure>
 
 Check out the official [WebPageTest docs](https://docs.webpagetest.org/getting-started/) for more detailed information to get started.
