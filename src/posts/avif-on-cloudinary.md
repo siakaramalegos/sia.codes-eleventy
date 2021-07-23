@@ -43,16 +43,16 @@ Instead, let's look at the difference between formats with equal quality (using 
 </div>
 
 <figure id="AVIF" class="imgFormat">
-  <figcaption><strong>AVIF</strong>: 36.6 / 96.9 kB (1x / 2x screen, desktop)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_680/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" srcset="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_300/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 300w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_600/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 600w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 928w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_1856/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 1856w" sizes="(min-width: 980px) 928px, calc(95.15vw + 15px)" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>AVIF</strong>: 31.1 kB (desktop, 2x screen)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_680/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg" srcset="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_300/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 300w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_600/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 600w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_928/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 928w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_1856/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 1856w" sizes="(min-width: 980px) 928px, calc(95.15vw + 15px)" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 <figure id="WEBP" class="imgFormat" style="display:none">
-  <figcaption><strong>WEBP</strong>: 60.1 / 180 kB (1x / 2x screen, desktop)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_680/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" srcset="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_300/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 300w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_600/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 600w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 928w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_1856/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 1856w" sizes="(min-width: 980px) 928px, calc(95.15vw + 15px)" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>WEBP</strong>: 80.2 kB (desktop, 2x screen)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_680/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg" srcset="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_300/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 300w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_600/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 600w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_928/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 928w, https://res.cloudinary.com/siacodes/image/upload/q_auto,f_webp,w_1856/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 1856w" sizes="(min-width: 980px) 928px, calc(95.15vw + 15px)" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 <figure id="JPEG" class="imgFormat" style="display:none">
-  <figcaption><strong>JPEG</strong>: 64.2 / 198 kB (1x / 2x screen, desktop)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,w_680/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" srcset="https://res.cloudinary.com/siacodes/image/upload/q_auto,w_300/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 300w, https://res.cloudinary.com/siacodes/image/upload/q_auto,w_600/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 600w, https://res.cloudinary.com/siacodes/image/upload/q_auto,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 928w, https://res.cloudinary.com/siacodes/image/upload/q_auto,w_1856/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg 1856w" sizes="(min-width: 980px) 928px, calc(95.15vw + 15px)" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>JPEG</strong>: 112 kB (desktop, 2x screen)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,w_680/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg" srcset="https://res.cloudinary.com/siacodes/image/upload/q_auto,w_300/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 300w, https://res.cloudinary.com/siacodes/image/upload/q_auto,w_600/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 600w, https://res.cloudinary.com/siacodes/image/upload/q_auto,w_928/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 928w, https://res.cloudinary.com/siacodes/image/upload/q_auto,w_1856/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg 1856w" sizes="(min-width: 980px) 928px, calc(95.15vw + 15px)" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 
 <script>
@@ -75,16 +75,16 @@ How low can we go? Now let's look at equal-ish file sizes with different quality
 </div>
 
 <figure id="AVIF-2" class="imgFormat2">
-  <figcaption><strong>AVIF</strong>: 23.3 kB (quality 50)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_50,f_auto,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>AVIF</strong>: 12.1 kB (auto quality, 928px wide)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_auto,f_auto,w_928/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 <figure id="WEBP-2" class="imgFormat2" style="display:none">
-  <figcaption><strong>WEBP</strong>: 24.5 kB (quality 35)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_35,f_webp,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>WEBP</strong>: 13.3 kB (quality 55)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_55,f_webp,w_928/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 <figure id="JPEG-2" class="imgFormat2" style="display:none">
-  <figcaption><strong>JPEG</strong>: 24.7 kB (quality 25)</figcaption>
-  <img src="https://res.cloudinary.com/siacodes/image/upload/q_25,w_928/v1607719366/sia.codes/buffalo-blocking-road-tim-wilson_mpq4nt.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
+  <figcaption><strong>JPEG</strong>: 11.9 kB (quality 35)</figcaption>
+  <img src="https://res.cloudinary.com/siacodes/image/upload/q_35,w_928/v1607719366/sia.codes/karsten-winegeart-6Ja5I4hRLyc-unsplash_c287i6.jpg" alt="Large buffalo blocking the roadway" width="4001" height="2671" loading="lazy">
 </figure>
 
 <script>
@@ -194,3 +194,6 @@ Jake Archibald wrote up how to do this in [Half the size of images by optimising
 Have you started using AVIF images on your sites yet? What method are you using?
 
 Don't miss a post. <a href="https://buttondown.email/sia.codes" target="_blank" rel="noopener noreferrer">Sign up for my newsletter</a>!
+
+<small>Pug photo credit: <a href="https://unsplash.com/@karsten116?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karsten Winegeart</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</small>
+
