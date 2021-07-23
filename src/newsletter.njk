@@ -1,0 +1,24 @@
+---
+layout: layouts/newsPost.njk
+title: "sia.codes newsletter"
+tags: ['nav']
+navtitle: Newsletter
+pageTitle: sia.codes newsletter
+description: Sia's thoughts on web performance and development. Don't miss a post or a great tip again.
+renderDescription: Thoughts on web performance and development...
+ctaText: Don't miss a post
+ctaLink: '#newsletter-signup'
+templateClass: tmpl-post
+date: 2021-07-23
+---
+
+<section class="flow">
+
+  {% for post in newsletterPosts %}
+    <p>
+      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time><br>
+      <a href="/newsletter/{{ post.slug }}">{{post.subject}}</a>
+    </p>
+  {% endfor %}
+
+</section>
