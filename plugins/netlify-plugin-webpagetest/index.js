@@ -18,6 +18,7 @@ module.exports = {
       if (result.ok) {
         const json = await result.json()
         console.log('Success! Url is ', json.data.userUrl);
+        console.log({json});
       } else {
         return failPlugin(`WebPageTest request failed with error ${result.status}: ${result.statusText}`)
       }
