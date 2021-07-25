@@ -19,6 +19,14 @@ module.exports = {
         const json = await result.json()
         console.log('Success! Url is ', json.data.userUrl);
         console.log({json});
+
+        const resultJson = await fetch(json.data.jsonUrl)
+        if (resultJson.ok) {
+          const data = resultJson.json()
+          console.log({data});
+        } else {
+          return failPlugin(`WebPageTest test result request failed with error ${resultJson.status}: ${resultJson.statusText}`)
+        }
       } else {
         return failPlugin(`WebPageTest request failed with error ${result.status}: ${result.statusText}`)
       }
