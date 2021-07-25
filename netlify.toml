@@ -42,6 +42,8 @@
   to = "/posts/30-days-web-perf/"
 [[plugins]]
   package = "netlify-plugin-cache-folder"
+[[plugins]]
+  package = "/plugins/netlify-plugin-webpagetest"
 [[headers]]
   for = "/fonts/*"
     [headers.values]
