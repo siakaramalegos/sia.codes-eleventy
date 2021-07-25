@@ -22,7 +22,7 @@ module.exports = {
 
         const resultJson = await fetch(json.data.jsonUrl)
         if (resultJson.ok) {
-          const data = resultJson.json()
+          const data = await resultJson.json()
           console.log({data});
         } else {
           return failPlugin(`WebPageTest test result request failed with error ${resultJson.status}: ${resultJson.statusText}`)
