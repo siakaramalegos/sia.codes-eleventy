@@ -111,7 +111,7 @@ Currently, 61.27% of my blog's traffic supports AVIF (67.24% globally). Did you 
 You can use AVIF on Cloudinary one of two ways:
 
 - Use the [`f_avif`](https://cloudinary.com/documentation/image_transformations#image_format_support) format transformation
-- Use the [`f_auto`](https://cloudinary.com/documentation/image_transformations#automatic_format_selection_f_auto) auto format transformation, but only after sign up for the beta
+- Use the [`f_auto`](https://cloudinary.com/documentation/image_transformations#automatic_format_selection_f_auto) auto format transformation, but only after you [sign up for the beta](https://support.cloudinary.com/hc/en-us/requests/new)
 
 I am lazy. I am not ashamed of this. I love the `f_auto` transformation because it means that instead of markup like this:
 
@@ -157,6 +157,8 @@ Before you sprint to your code editor...
 - AVIF transformations are slow
 - AVIF transformations use up your credits faster
 
+Let's talk about how to overcome those problems.
+
 ### Reduce delays for your users
 
 Using AVIF increases your transformations usage because AVIF is intensive to encode. This also means that it takes longer for the transformation to occur. It's noticeable with delays of a few seconds.
@@ -170,7 +172,7 @@ This is not reasonable for larger projects. Instead, you can use [eager transfor
 At the time of writing (July 2021), Cloudinary counts AVIF transformations as follows:
 
 - Images 2MP and below count as 1 transformation
-- Each 1MP above 2MB will count as another 0.5 transformations
+- Each 1MP above 2MP will count as another 0.5 transformations
 
 This seems high cost on the surface but is a good deal. I understood this once I saw how long AVIF transformations take compared to other formats. AVIF transforms are 70x-100x more CPU intensive than that of JPEG!
 
@@ -181,7 +183,7 @@ If you want to sign up for the `f_auto` beta, you can [contact Cloudinary](https
 
 ## Results and next steps
 
-As you saw above, the buffalo picture (from my recent post on [render-blocking resources](/posts/render-blocking-resources/)) went from 198 kB to 97 kB. The results around my site vary based on the image, and the savings increase on larger (width) images.
+The buffalo picture (from my recent post on [render-blocking resources](/posts/render-blocking-resources/)) went from 198 kB to 97 kB. The results around my site vary based on the image, and the savings increase on larger (width) images.
 
 Nowadays, we have devices with 2x, 3x, and higher [DPR](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio) (device pixel ratio) screens. Humans can't see much better than 2x. Also, we can't detect lower quality as well on higher DPR images.
 
@@ -189,7 +191,7 @@ So my next step is to manually DPR-cap to 2x sizes with higher compression (lowe
 
 Jake Archibald wrote up how to do this in [Half the size of images by optimising for high density displays](https://jakearchibald.com/2021/serving-sharp-images-to-high-density-screens/).
 
-[Yoav Weiss](https://twitter.com/yoavweiss) wants to run an origin trial for [adding a max DPR value to srcsets](https://chromium-review.googlesource.com/c/chromium/src/+/2395619). That will be exciting if it ever happens!
+[Yoav Weiss](https://twitter.com/yoavweiss) wants to run an origin trial for [adding a max DPR value to srcsets](https://chromium-review.googlesource.com/c/chromium/src/+/2395619). That will be exciting if it happens!
 
 Have you started using AVIF images on your sites yet? What method are you using?
 
