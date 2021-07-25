@@ -1,14 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'Social Hackers Academy',
-      conferenceUrl: 'https://socialhackersacademy.org/',
-      location: 'Online',
-      talks: [
-        { key: 'serverlessNetlify', date: '30 Jun 2021' },
-      ]
-    },
-    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
@@ -39,6 +31,14 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'Social Hackers Academy',
+      conferenceUrl: 'https://socialhackersacademy.org/',
+      location: 'Online',
+      talks: [
+        { key: 'serverlessNetlify', date: '30 Jun 2021' },
+      ]
+    },
     {
       conference: 'GDG New Orleans',
       conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-introduction-to-serverless-functions-using-netlify/',
