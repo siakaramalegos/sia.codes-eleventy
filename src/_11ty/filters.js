@@ -106,7 +106,10 @@ module.exports = {
   mergeExternalPosts,
   mergeExternalTaggedPosts,
   readableDate,
-  readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
+  readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy") => {
+    return DateTime.fromISO(dateStr).toFormat(formatStr);
+  },
+  readableDateTimeFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
     return DateTime.fromISO(dateStr).toFormat(formatStr);
   },
   similarItems: (itemPath, tags, collections) => {

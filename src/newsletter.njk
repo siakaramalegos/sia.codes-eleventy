@@ -16,7 +16,7 @@ date: 2021-07-23
 
   {% for post in newsletterPosts %}
     <p>
-      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time><br>
+      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.publish_date | readableDateFromISO }}</time><br>
       <a href="/newsletter/{{ post.slug }}">{{post.subject}}</a>
     </p>
   {% endfor %}
