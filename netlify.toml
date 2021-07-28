@@ -40,6 +40,10 @@
 [[redirects]]
   from = "/posts/30-days-web-perf-11/"
   to = "/posts/30-days-web-perf/"
+[[redirects]]
+  from = "/cloudinary/:image"
+  to = "https://res.cloudinary.com/siacodes/image/upload/:image"
+  status = 200
 [[plugins]]
   package = "netlify-plugin-cache-folder"
 [[headers]]

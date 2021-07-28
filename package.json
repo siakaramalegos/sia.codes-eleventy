@@ -5,7 +5,7 @@
   "scripts": {
     "build": "NODE_ENV=production npx @11ty/eleventy",
     "build:local": "NODE_ENV=production netlify build",
-    "start": "netlify dev --port=8081",
+    "start": "netlify dev",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy",
     "lighthouse": "lhci autorun",
