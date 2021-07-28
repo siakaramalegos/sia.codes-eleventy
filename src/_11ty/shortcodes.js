@@ -28,7 +28,7 @@ function getSrcset(file, widths) {
 }
 
 function getSrc(file, width) {
-  return `${PROXY_URL}q_auto,f_auto,w_${width ? width : FALLBACK_WIDTH}/${FOLDER}${file}`
+  return `${BASE_URL}q_auto,f_auto,w_${width ? width : FALLBACK_WIDTH}/${FOLDER}${file}`
 }
 
 function fullSizeCrop(file, aspectRatio) {
