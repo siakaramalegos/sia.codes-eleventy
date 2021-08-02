@@ -5,7 +5,7 @@ shortDescription: Discover all JavaScript downloaded for a site and used vs unus
 date: 2021-08-02
 tags: ["WebPerf", "Tools", "Dev Tools"]
 layout: layouts/post.njk
-# tweetId: '1396940383590965254'
+tweetId: '1422222213164457990'
 isSelect: true
 featuredImage: raphael-schaller-D6uxeDSylxo-unsplash_hpbbnp.jpg
 ---
