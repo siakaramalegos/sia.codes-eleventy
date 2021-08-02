@@ -3,10 +3,10 @@ title: How to build a website in 2021
 description: It's really easy.
 date: 2020-02-11
 updated: 2021-07-19
-tags: ['Web', 'Tools']
+tags: ["Web", "Tools"]
 layout: layouts/post.njk
-tweetId: '1227248318159491077'
-isSelect: true
+tweetId: "1227248318159491077"
+isSelect: false
 featuredImage: disappointed-child_ooyndg.jpg
 ---
 
@@ -44,6 +44,6 @@ featuredImage: disappointed-child_ooyndg.jpg
 
 **Step 13**: 5 months later, write a blog post.
 
-*Note to self: next time, just hire a designer.*
+_Note to self: next time, just hire a designer._
 
 <small>Blog gallery photo by [Henrikke Due](https://unsplash.com/@henrikkedue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash</small>
