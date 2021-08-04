@@ -2,7 +2,7 @@
 title: An Informal Survey of Web Performance Tooling in 2021
 description: What tools are web performance engineers using to measure site speed in 2021? Learn which are the most used tools as well as some new tools to try out.
 shortDescription: What tools are web performance engineers using to measure site speed in 2021?
-date: 2021-08-05
+date: 2021-08-04
 tags: ["WebPerf", "Tools", "Dev Tools"]
 layout: layouts/post.njk
 # tweetId: '1396940383590965254'
@@ -62,7 +62,7 @@ Now let's jump into the data!
 
 ## Top web performance tools
 
-Combining the data from the first two columns yields a list of the most used tools:
+Combining the data from the first two columns ("I use this tool regularly" and "I use this tool sometimes") yields a list of the most used tools:
 
 1. [WebPageTest](https://webpagetest.org/) and Chrome [Network](https://developer.chrome.com/docs/devtools/network/) &amp; [Performance](https://developer.chrome.com/docs/devtools/speed/get-started/) Tabs (tied for 1st)
 2. [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) and Running on a browser with JavaScript disabled (tied for 2nd)
