@@ -5,7 +5,7 @@ date: 2021-06-14
 tags: ['JavaScript', 'Tools', 'Jamstack']
 layout: layouts/post.njk
 tweetId: '1405998820396261377'
-isSelect: true
+isSelect: false
 featuredImage: mwcenter_spitzer_s002ha.jpg
 ---
 
