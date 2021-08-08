@@ -7,7 +7,7 @@ module.exports = {
         // "http://localhost:8081/posts/making-google-fonts-faster/",
         "http://localhost:8081/posts/responsive-images-perf-matters-video/",
       ],
-      numberOfRuns: 1,
+      numberOfRuns: 3,
     },
     upload: {
       target: "temporary-public-storage",
