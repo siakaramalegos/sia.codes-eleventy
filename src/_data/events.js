@@ -1,14 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'GDG New Orleans',
-      conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-lets-build-and-deploy-your-blog-already/',
-      location: 'Online',
-      talks: [
-        { key: 'blogEleventy', date: '17 Aug 2021' },
-      ]
-    },
-    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',
@@ -39,6 +31,14 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'GDG New Orleans',
+      conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-lets-build-and-deploy-your-blog-already/',
+      location: 'Online',
+      talks: [
+        { key: 'blogEleventy', date: '17 Aug 2021' },
+      ]
+    },
     {
       conference: 'Social Hackers Academy',
       conferenceUrl: 'https://socialhackersacademy.org/',
