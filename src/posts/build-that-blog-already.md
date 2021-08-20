@@ -4,7 +4,7 @@ description: What's holding you back from starting your blog? Sort through the r
 date: 2021-08-20
 tags: ["Web", "Tools"]
 layout: layouts/post.njk
-# tweetId: '1414934155750690836'
+tweetId: '1428799479159967744'
 isSelect: false
 featuredImage: build_a_blog_workshop_bxvuo9.jpg
 ---
