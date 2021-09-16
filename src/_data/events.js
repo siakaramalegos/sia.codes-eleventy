@@ -1,6 +1,14 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: 'THE Eleventy Meetup',
+      conferenceUrl: 'https://11tymeetup.dev/events/ep-3-getting-your-bearings-and-cloudinary-images/',
+      location: 'Online',
+      talks: [
+        { key: 'cloudinaryEleventy', date: '24 Sep 2021' },
+      ]
+    },
+    {
       conference: 'UberConf',
       conferenceUrl: 'https://uberconf.com/',
       location: 'Denver, CO, USA',

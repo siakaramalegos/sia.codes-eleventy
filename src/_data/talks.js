@@ -3,6 +3,11 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!",
   },
+  cloudinaryEleventy: {
+    title: "Optimize Images in Eleventy Using Cloudinary",
+    description:
+      "Let Cloudinary make your image management easier! In this talk, I'll show how to set up responsive images in Eleventy using Cloudinary and Eleventy shortcodes. If time permits, I'll also show how I generate social share images using Cloudinary and Eleventy.",
+  },
   blogEleventy: {
     title: "Let's build and deploy your blog already",
     description:
