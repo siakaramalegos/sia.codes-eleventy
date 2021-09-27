@@ -1,7 +1,6 @@
 const CLOUDNAME = "siacodes"
 const FOLDER = "v1607719366/sia.codes/"
 const BASE_URL = `https://res.cloudinary.com/${CLOUDNAME}/image/upload/`;
-const PROXY_URL = '/cloudinary/'
 const FALLBACK_WIDTHS = [ 300, 600, 928, 1856 ];
 const FALLBACK_WIDTH = 680;
 const SEO_ASPECT_RATIOS = ["1:1", "4:3", "16:9"]

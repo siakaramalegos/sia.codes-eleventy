@@ -1,24 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'THE Eleventy Meetup',
-      conferenceUrl: 'https://11tymeetup.dev/events/ep-3-getting-your-bearings-and-cloudinary-images/',
-      location: 'Online',
-      talks: [
-        { key: 'cloudinaryEleventy', date: '24 Sep 2021' },
-      ]
-    },
-    {
-      conference: 'UberConf',
-      conferenceUrl: 'https://uberconf.com/',
-      location: 'Denver, CO, USA',
-      talks: [
-        { key: 'performanceWorkshop', date: '05 Oct 2021' },
-        { key: 'devtools', date: '06 Oct 2021' },
-        { key: 'performance', date: '06 Oct 2021' },
-      ]
-    },
-    {
       conference: 'Connect.Tech',
       conferenceUrl: 'https://2021.connect.tech/',
       location: 'Atlanta, GA, USA',
@@ -39,6 +21,14 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'THE Eleventy Meetup',
+      conferenceUrl: 'https://11tymeetup.dev/events/ep-3-getting-your-bearings-and-cloudinary-images/',
+      location: 'Online',
+      talks: [
+        { key: 'cloudinaryEleventy', date: '24 Sep 2021' },
+      ]
+    },
     {
       conference: 'GDG New Orleans',
       conferenceUrl: 'https://gdg.community.dev/events/details/google-gdg-new-orleans-presents-lets-build-and-deploy-your-blog-already/',
