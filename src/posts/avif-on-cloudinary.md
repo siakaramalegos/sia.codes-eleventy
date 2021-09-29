@@ -14,6 +14,7 @@ featuredImage: girl_holding_camera_t08zv8.jpg
     srcset="{% srcset 'girl_holding_camera_t08zv8.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Possum overlayed on a keyboard"
+    importance="high"
     width="3000" height="2072">
   <figcaption>Get ready for some A+ photography now that I have AVIF enabled. Photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly Sikkema</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> with added <a href="https://duotone.shapefactory.co/">duotone</a>.
   </figcaption>

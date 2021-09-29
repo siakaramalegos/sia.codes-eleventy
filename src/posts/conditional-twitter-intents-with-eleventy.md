@@ -13,6 +13,7 @@ featuredImage: twitter-phone_b3q80y.jpg
   srcset="{% srcset "twitter-phone_b3q80y.jpg" %}"
   sizes="{% defaultSizes %}"
   alt="Mobile phone laying on table with blue screen and Twitter logo showing"
+  importance="high"
   width="1360" height="907">
 
 In today's episode of Making Sia's Blog Better™️, I wanted to better encourage readers to engage in the conversation about my blog posts. I used [Eleventy](https://www.11ty.io/) to build my blog and recently added [Webmentions](https://indieweb.org/Webmention), which are a really cool way of making self-hosted blogs a bit more engaging without implementing comments. You can check them out at the bottom of this page.

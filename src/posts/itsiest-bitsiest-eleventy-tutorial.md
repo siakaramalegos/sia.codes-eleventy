@@ -14,6 +14,7 @@ featuredImage: mic-possum_owln9h.jpg
     srcset="{% srcset 'mic-possum_owln9h.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="News reporter holding a microphone up to a possum with its mouth open as if speaking"
+    importance="high"
     width="1830" height="986">
   <figcaption>Photo from <a href="https://twitter.com/PossumEveryHour/status/1396677350759227392">@PossumEveryHour</a></figcaption>
 </figure>

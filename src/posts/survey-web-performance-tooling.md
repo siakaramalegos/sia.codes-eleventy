@@ -15,6 +15,7 @@ featuredImage: gustavo-campos-B87zMorEZRo-unsplash_ylwcwa.jpg
     srcset="{% srcset 'gustavo-campos-B87zMorEZRo-unsplash_ylwcwa.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Red Formula 1 race car in the pit with mechanics all around racing to change tires, etc. View from above."
+    importance="high"
     width="1830" height="986">
   <figcaption>Start your testing engines with some new performance tooling. Photo by <a href="https://unsplash.com/@gustavocpo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">gustavo Campos</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash.</a>
   </figcaption>

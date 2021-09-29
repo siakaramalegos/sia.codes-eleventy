@@ -14,6 +14,7 @@ featuredImage: possum_efpwzp.jpg
     srcset="{% srcset 'possum_efpwzp.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Possum overlayed on a keyboard"
+    importance="high"
     width="612" height="408">
   <figcaption>This is what happens when a fan of Eleventy is not a graphic designer.</figcaption>
 </figure>

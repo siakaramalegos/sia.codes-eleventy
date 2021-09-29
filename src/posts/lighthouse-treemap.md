@@ -15,6 +15,7 @@ featuredImage: raphael-schaller-D6uxeDSylxo-unsplash_hpbbnp.jpg
     srcset="{% srcset 'raphael-schaller-D6uxeDSylxo-unsplash_hpbbnp.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="View of a roundabout from above surrounded by trees"
+    importance="high"
     width="2000" height="1123">
   <figcaption>Find your way with Lighthouse Treemap. Photo by <a href="https://unsplash.com/@raphaelphotoch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Raphael Schaller</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   </a>

@@ -19,6 +19,7 @@ featuredImage: hands-laptop_rdfolj.jpg
     srcset="{% srcset "hands-laptop_rdfolj.jpg" %}"
     sizes="{% defaultSizes %}"
     alt="hands on a laptop keyboard"
+    importance="high"
     width="1360" height="808">
   <figcaption>Photo by <a href="https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NeONBRAND</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

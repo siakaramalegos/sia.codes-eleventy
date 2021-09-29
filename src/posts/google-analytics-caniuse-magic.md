@@ -14,6 +14,7 @@ featuredImage: levitation_ec7gyj.jpg
     srcset="{% srcset 'levitation_ec7gyj.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Woman in woods levitating"
+    importance="high"
     width="1360" height="765">
   <figcaption>How I feel right now. Photo by <a href="https://unsplash.com/photos/GR2uZmp7mUo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rob Potter</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

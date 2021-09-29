@@ -13,6 +13,7 @@ featuredImage: passports_zwgffj.jpg
   srcset="{% srcset 'passports_zwgffj.jpg' %}"
   sizes="{% defaultSizes %}"
   alt="My dad's passport photo from the 1970's"
+  importance="high"
   width="2400" height="1800">
 
 The UPS guy just knocked. Pandemonium ensues. After corralling the dogs, I fetch the brown envelope from my mailbox. I had been waiting for this package from my stepmom but had forgotten about it. I bring it inside and open it. My father’s old passports slip out and into my hands. It has been almost three years since we lost him. Enough time has passed that I can look on pictures with fondness and without too much pain. But, I am not prepared for the smell that hits me as I hold his passports, opening them, gently thumbing through the pages. It is like he is right here with me.

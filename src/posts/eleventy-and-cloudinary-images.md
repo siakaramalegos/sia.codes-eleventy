@@ -16,6 +16,7 @@ featuredImage: "A_possum_and_a_movie_camera_1943_f4yflt.jpg"
     srcset="{% srcset 'A_possum_and_a_movie_camera_1943_f4yflt.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="An Australian possum climbing a movie camera"
+    importance="high"
     width="2953" height="2178">
   <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:A_possum_and_a_movie_camera_1943.jpg">Wikimedia Commons</a> </figcaption>
 </figure>

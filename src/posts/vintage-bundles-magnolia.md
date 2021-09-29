@@ -14,6 +14,7 @@ featuredImage: vintage-bundles_anqbiu.jpg
     srcset="{% srcset 'vintage-bundles_anqbiu.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Title slide from talk"
+    importance="high"
     width="2400" height="1600">
 </figure>
 

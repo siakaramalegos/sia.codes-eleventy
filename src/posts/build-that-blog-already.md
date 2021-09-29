@@ -14,6 +14,7 @@ featuredImage: build_a_blog_workshop_bxvuo9.jpg
     srcset="{% srcset 'build_a_blog_workshop_bxvuo9.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Build a bear workshop logo with the bear overlayed with an RSS icon and the word bear overwritten with 'blog' by hand"
+    importance="high"
     width="600" height="400">
   <figcaption>This lovely promo image is courtesy of <a href="https://twitter.com/eleven_ty/status/1427657012184223752">Zach Leatherman</a></figcaption>
 </figure>

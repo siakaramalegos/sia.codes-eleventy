@@ -13,6 +13,7 @@ featuredImage: laura-chouette-yxcCgzSB_iI-unsplash_myrt2f.jpg
     srcset="{% srcset 'laura-chouette-yxcCgzSB_iI-unsplash_myrt2f.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Woman's hand holding a brush up to an eyemakeup palette in the shape of a laptop"
+    importance="high"
     width="3439" height="2578">
   <figcaption>Take time to make your code prettier. Photo by <a href="https://unsplash.com/@laurachouette?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Laura Chouette</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

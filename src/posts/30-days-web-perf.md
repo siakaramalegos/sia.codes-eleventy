@@ -14,6 +14,7 @@ featuredImage: 30DaysOfWebPerf_Sia_Karamalegos_tr9xh0.jpg
   srcset="{% srcset '30DaysOfWebPerf_Sia_Karamalegos_tr9xh0.jpg' %}"
   sizes="{% defaultSizes %}"
   alt="30 Days of Web Perf by Sia Karamalegos"
+  importance="high"
   width="941" height="627">
 
 In November of 2019, I decided to try out a new way to deliver web performance tips to my Twitter followers. Learning web performance can be overwhelming, so I focused on small bits of information. Thus was born my #30DaysOfWebPerf series.

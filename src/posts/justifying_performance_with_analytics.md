@@ -13,6 +13,7 @@ featuredImage: show-money_uolhum.jpg
     srcset="{% srcset 'show-money_uolhum.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Man's hand holding out a fist full of dollars toward the viewer"
+    importance="high"
     width="1360" height="765">
   <figcaption>Photo by <a href="https://unsplash.com/photos/MNXaW_ABlZY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">lucas Favre</a> on <a href="https://unsplash.com/collections/1815009/checkout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

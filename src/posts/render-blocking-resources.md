@@ -16,6 +16,7 @@ featuredImage: buffalo-blocking-road-tim-wilson_mpq4nt.jpg
     srcset="{% srcset 'buffalo-blocking-road-tim-wilson_mpq4nt.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Large buffalo blocking the roadway"
+    importance="high"
     width="4001" height="2671">
   <figcaption>Don't let render-blocking resources block you on the road to good performance. Photo by <a href="https://unsplash.com/@timwilson7?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Wilson</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

@@ -14,6 +14,7 @@ featuredImage: pixelbook_vkhrbc.jpg
     srcset="{% srcset 'pixelbook_vkhrbc.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Side-view of Pixelbook showing how thin it is"
+    importance="high"
     width="1360" height="776">
   <figcaption>My favorite view of the ultra-thin Pixelbook by Google</figcaption>
 </figure>

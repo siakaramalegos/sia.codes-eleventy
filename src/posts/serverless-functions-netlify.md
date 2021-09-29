@@ -14,6 +14,7 @@ featuredImage: mwcenter_spitzer_s002ha.jpg
     srcset="{% srcset 'mwcenter_spitzer_s002ha.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Nebula with red, purple, and navy colors dominant in the nebula clouds with stars clustered in the middle"
+    importance="high"
     width="900" height="600">
   <figcaption><a href="https://apod.nasa.gov/apod/ap090614.html">"Stars at the Galactic Center"</a> APOD from June 14, 2009</figcaption>
 </figure>

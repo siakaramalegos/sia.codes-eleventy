@@ -15,6 +15,7 @@ featuredImage: images-slide_c4ox2n.jpg
     srcset="{% srcset 'images_slide_rmqvoj.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Title slide from talk"
+    importance="high"
     width="2432" height="1211">
 </figure>
 

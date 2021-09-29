@@ -11,6 +11,7 @@ layout: layouts/post.njk
     srcset="{% srcset 'folders_b2nyci.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Shelves of multi-colored folders"
+    importance="high"
     width="4898" height="3265">
   <figcaption>Photo by <a href="https://unsplash.com/@mvdheuvel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Maarten van den Heuvel</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

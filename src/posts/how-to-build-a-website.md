@@ -14,6 +14,7 @@ featuredImage: disappointed-child_ooyndg.jpg
   srcset="{% srcset "disappointed-child_ooyndg.jpg" %}"
   sizes="{% defaultSizes %}"
   alt="Child grabbing their cheeks with a look of disappointment"
+  importance="high"
   width="2400" height="1600">
 
 **Step 1**: Buy a domain. You might have a problem if you already have 20 domains waiting to be used, but that's okay. Feel free to buy more domains. You never know when you might need that perfect domain name. P.S. [Vercel](https://vercel.com) has a great [domain search tool](https://vercel.com/domains?limit=24) with hacks. Now I've just enabled your habit. You're welcome.

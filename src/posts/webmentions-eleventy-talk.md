@@ -15,6 +15,7 @@ featuredImage: webmentions-eleventy_kxnyud.jpg
     srcset="{% srcset "webmentions-eleventy_kxnyud.jpg" %}"
     sizes="{% defaultSizes %}"
     alt="two heart-shaped balloons"
+    importance="high"
     width="3360" height="1972">
   <figcaption>Photo background by <a href="https://unsplash.com/@akshar_dave?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Akshar Dave</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>

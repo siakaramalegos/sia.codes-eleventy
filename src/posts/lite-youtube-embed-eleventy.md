@@ -27,6 +27,7 @@ This post will explain how to set up a reusable lite-youtube-embed "component" u
     srcset="{% srcset 'after-lite-yt_boupli.jpg' %}"
     sizes="{% defaultSizes %}"
     alt="Screenshot of performance scores in Lighthouse (97)"
+    loading="lazy"
     width="1846" height="812">
   <figcaption>Lighthouse scores after implementing lite-youtube-embed</figcaption>
 </figure>
