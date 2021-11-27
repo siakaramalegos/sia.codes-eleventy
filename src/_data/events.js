@@ -1,14 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: 'Connect.Tech',
-      conferenceUrl: 'https://2021.connect.tech/',
-      location: 'Atlanta, GA, USA',
-      talks: [
-        { key: 'performanceWorkshop', date: '08 Nov 2021' },
-      ]
-    },
-    {
       conference: 'The Progressive Web Experience',
       conferenceUrl: 'https://progressivewebexperience.io/',
       location: 'Online',
@@ -21,6 +13,14 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: 'Connect.Tech',
+      conferenceUrl: 'https://2021.connect.tech/',
+      location: 'Atlanta, GA, USA',
+      talks: [
+        { key: 'performanceWorkshop', date: '08 Nov 2021' },
+      ]
+    },
     {
       conference: 'THE Eleventy Meetup',
       conferenceUrl: 'https://11tymeetup.dev/events/ep-3-getting-your-bearings-and-cloudinary-images/',
