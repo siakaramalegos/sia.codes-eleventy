@@ -13,8 +13,8 @@
 */
 
 :root{
-  --font-body: 'Lexend', sans-serif;
-  --font-display: 'Lexend', sans-serif;
+  --font-body: 'Lexend', 'Lexend-fallback', sans-serif;
+  --font-display: 'Lexend', 'Lexend-fallback', sans-serif;
   --font-serif: Georgia, 'Times New Roman', Times, serif;;
   --grey-0: rgb(252,252,253);
   --grey-05: #edecf0;
@@ -97,6 +97,22 @@
   font-weight: 600;
   font-display: swap;
   src: url('/fonts/lexend-v5-latin-600.woff2') format('woff2'), url('/fonts/lexend-v5-latin-600.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lexend-fallback';
+  font-style: normal;
+  font-weight: 400;
+  size-adjust: 105%;
+  ascent-override: 88%;
+  src: local("Arial");;
+}
+@font-face {
+  font-family: 'Lexend-fallback';
+  font-style: normal;
+  font-weight: 600;
+  size-adjust: 110%;
+  ascent-override: 88%;
+  src: local("Arial");;
 }
 
 /* Reset */
