@@ -1,9 +1,9 @@
 ---
-title: Making Google Fonts Faster in 2021
+title: Making Google Fonts Faster in 2022
 shortDescription: If you use Google Fonts, a few additional steps can lead to much faster load times.
 description: If you use Google Fonts, a few additional steps can lead to much faster load times. Learn about preconnect, optimal placement, font display, preload, and more in this post.
 date: 2019-02-06
-updated: 2021-07-19
+updated: 2022-01-18
 tags: ["WebPerf", "Fonts", "Popular"]
 layout: layouts/post.njk
 isSelect: true
@@ -99,8 +99,11 @@ We can make one quick performance improvement by warming up the DNS lookup, TCP 
 
 ```html
 <link rel="preconnect" href="https://fonts.gstatic.com/" />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 <link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet"/>
 ```
+
+<aside>Note that the <code>crossorigin</code> attribute is needed for assets that are loaded in anonymous mode (like fonts). Otherwise, the preconnect will only perform the DNS lookup portion of the connection.</aside>
 
 Why? If you don’t warm up the connection, the browser will wait until it sees the CSS call font files before it begins DNS/TCP/TLS:
 
