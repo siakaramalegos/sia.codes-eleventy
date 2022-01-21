@@ -3,9 +3,10 @@ title: Explore JavaScript Dependencies With Lighthouse Treemap
 description: Discover all JavaScript downloaded and used/unused for a site in a handy data visualization with Lighthouse Treemap.
 shortDescription: Discover all JavaScript downloaded for a site and used vs unused in a handy data visualization.
 date: 2021-08-02
+updated: 2022-01-21
 tags: ["WebPerf", "Tools", "Dev Tools"]
 layout: layouts/post.njk
-tweetId: '1422222213164457990'
+tweetId: "1422222213164457990"
 isSelect: true
 featuredImage: raphael-schaller-D6uxeDSylxo-unsplash_hpbbnp.jpg
 ---
@@ -171,10 +172,10 @@ While sourcemaps are needed to get the most benefit, even without them I can see
 
 ## How do I access Lighthouse Treemap?
 
-Now that you know all about Lighthouse Treemap, how do you access it? Eventually it will be in Lighthouse in Chrome. Until then, you can access it through:
+Now that you know all about Lighthouse Treemap, how do you access it? It's now fully released in Lighthouse in Chrome! You can access it through many routes:
 
-1. [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-2. Lighthouse in [Chrome Canary](https://www.google.com/chrome/canary/)
+1. [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+2. [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 3. Running Lighthouse, downloading the JSON, and uploading it [here](https://googlechrome.github.io/lighthouse/treemap/?gzip=1)
 4. Through the [Lighthouse Node CLI](https://github.com/GoogleChrome/lighthouse#using-the-node-cli)
 
