@@ -1,6 +1,45 @@
 module.exports = {
-  upcomingEvents: [],
+  upcomingEvents: [
+    {
+      conference: "Stripe Developers Livestream",
+      conferenceUrl:
+        "https://www.youtube.com/watch?v=N7qSVXyHlCA",
+      location: "Online",
+      talks: [{ key: "eleventyEcommerce2", date: "24 Feb 2022" }],
+    },
+    {
+      conference: "Stripe Developers Livestream",
+      conferenceUrl:
+        "https://www.youtube.com/watch?v=9g8UTYR5dH0",
+      location: "Online",
+      talks: [{ key: "eleventyEcommerce3", date: "04 Mar 2022" }],
+    },
+    {
+      conference: "UberConf",
+      conferenceUrl: "https://uberconf.com/",
+      location: "Denver, CO, USA",
+      talks: [
+        { key: "performanceWorkshop", date: "12 Jul 2022" },
+        { key: "devtools", date: "13 Jul 2022" },
+        { key: "performance", date: "13 Jul 2022" },
+      ],
+    },
+  ],
   pastEvents: [
+    {
+      conference: "Stripe Developers Livestream",
+      conferenceUrl:
+        "https://www.youtube.com/watch?v=N7qSVXyHlCA",
+      location: "Online",
+      talks: [{ key: "eleventyEcommerce1", date: "18 Feb 2022" }],
+    },
+    {
+      conference: "THE Eleventy Meetup",
+      conferenceUrl:
+        "https://11tymeetup.dev/events/ep-6-async-shortcodes-and-serverless-e-commerce/",
+      location: "Online",
+      talks: [{ key: "eleventyEcommerceArch", date: "10 Feb 2022" }],
+    },
     {
       conference: "The Progressive Web Experience",
       conferenceUrl: "https://progressivewebexperience.io/",

@@ -58,3 +58,5 @@
 [build.processing.js]
   bundle = true
   minify = true
+[dev]
+  command = "npm run dev"
