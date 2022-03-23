@@ -174,7 +174,7 @@ While sourcemaps are needed to get the most benefit, even without them I can see
 
 Now that you know all about Lighthouse Treemap, how do you access it? It's now fully released in Lighthouse in Chrome! You can access it through many routes:
 
-1. [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+1. [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Dev Tools
 2. [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 3. Running Lighthouse, downloading the JSON, and uploading it [here](https://googlechrome.github.io/lighthouse/treemap/?gzip=1)
 4. Through the [Lighthouse Node CLI](https://github.com/GoogleChrome/lighthouse#using-the-node-cli)
