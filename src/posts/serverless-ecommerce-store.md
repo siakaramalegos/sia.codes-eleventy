@@ -5,7 +5,7 @@ shortDescription: Building the lowest-cost e-commerce solution with static site 
 date: 2022-05-16
 tags: ["Jamstack", "Eleventy", "JavaScript", "IndieWeb"]
 layout: layouts/post.njk
-# tweetId: '1414934155750690836'
+tweetId: '1526272498735763457'
 isSelect: true
 featuredImage: ecommerce_v5tosj.jpg
 ---
