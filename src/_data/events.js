@@ -1,20 +1,6 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: "Stripe Developers Livestream",
-      conferenceUrl:
-        "https://www.youtube.com/watch?v=N7qSVXyHlCA",
-      location: "Online",
-      talks: [{ key: "eleventyEcommerce2", date: "24 Feb 2022" }],
-    },
-    {
-      conference: "Stripe Developers Livestream",
-      conferenceUrl:
-        "https://www.youtube.com/watch?v=9g8UTYR5dH0",
-      location: "Online",
-      talks: [{ key: "eleventyEcommerce3", date: "04 Mar 2022" }],
-    },
-    {
       conference: "UberConf",
       conferenceUrl: "https://uberconf.com/",
       location: "Denver, CO, USA",
@@ -28,8 +14,19 @@ module.exports = {
   pastEvents: [
     {
       conference: "Stripe Developers Livestream",
-      conferenceUrl:
-        "https://www.youtube.com/watch?v=N7qSVXyHlCA",
+      conferenceUrl: "https://www.youtube.com/watch?v=9g8UTYR5dH0",
+      location: "Online",
+      talks: [{ key: "eleventyEcommerce3", date: "04 Mar 2022" }],
+    },
+    {
+      conference: "Stripe Developers Livestream",
+      conferenceUrl: "https://www.youtube.com/watch?v=N7qSVXyHlCA",
+      location: "Online",
+      talks: [{ key: "eleventyEcommerce2", date: "24 Feb 2022" }],
+    },
+    {
+      conference: "Stripe Developers Livestream",
+      conferenceUrl: "https://www.youtube.com/watch?v=N7qSVXyHlCA",
       location: "Online",
       talks: [{ key: "eleventyEcommerce1", date: "18 Feb 2022" }],
     },
