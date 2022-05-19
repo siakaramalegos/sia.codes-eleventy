@@ -196,7 +196,7 @@ Jake Archibald wrote up how to do this in [Half the size of images by optimising
 
 Have you started using AVIF images on your sites yet? What method are you using?
 
-Don't miss a post. <a href="#signup">Sign up for my newsletter</a>!
+Don't miss a post. <a href="#inform">Sign up for my newsletter</a>!
 
 <small>Pug photo credit: <a href="https://unsplash.com/@karsten116?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karsten Winegeart</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</small>
 
