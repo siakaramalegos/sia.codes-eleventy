@@ -200,4 +200,4 @@ Finally, Lighthouse Treemap helps me evaluate any website from the outside witho
 
 Have you tried out Lighthouse Treemap yet? Has it made measuring performance for your site easier? Let me know in the webmentions!
 
-Don't miss a post. <a href="#newsletter-signup">Sign up for my newsletter</a>!
+Don't miss a post. <a href="#signup">Sign up for my newsletter</a>!

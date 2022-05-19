@@ -19,6 +19,7 @@ module.exports = {
         "categories:performance": ["error", { minScore: 0.95 }],
         "categories:accessibility": ["error", { minScore: 0.95 }],
         "unused-javascript": ["warn", { maxLength: 0 }],
+        "unsized-images": ["error", { maxLength: 0 }],
         // "unused-javascript": "off",
         "uses-http2": "off",
         "canonical": "off",
