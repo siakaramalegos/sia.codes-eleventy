@@ -1,6 +1,12 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: "This Dot Media State of the Web",
+      conferenceUrl: "https://www.thisdotmedia.com/state-of-the-web/state-of-web-performance-august-2022/",
+      location: "Online",
+      talks: [{ key: "perfPanel", date: "23 Aug 2022" }],
+    },
+    {
       conference: "performance.now()",
       conferenceUrl: "https://perfnow.nl/",
       location: "Amsterdam, NL",
