@@ -3,21 +3,30 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!",
   },
+  earlyHints: {
+    title: "103 Early Hints at Shopify",
+    description:
+      "103 Early Hints allow us to preconnect and even preload resources before the main document arrives. Come learn how the partnership between Shopify, Google, and Cloudflare led to this performance breakthrough, how Shopify is continuing to experiment with it at scale, and thoughts on what the future holds.",
+  },
   eleventyEcommerce3: {
     title: "Ep. 3: Building a Jamstack store with Netlify and Stripe",
-    description: "In episode 3 of this series, , Sia Karamalegos (@TheGreenGreek) is joining Matt Ling (@mattling_dev) from Stripe to build out an end-to-end eCommerce store selling digital goods, using 11ty, Netlify serverless functions, and Stripe. In this third and final episode you’ll learn how to leverage a Netlify serverless function to build a webhook endpoint to listen and react to payment events such as a Checkout Session completing to fulfill your orders.",
+    description:
+      "In episode 3 of this series, , Sia Karamalegos (@TheGreenGreek) is joining Matt Ling (@mattling_dev) from Stripe to build out an end-to-end eCommerce store selling digital goods, using 11ty, Netlify serverless functions, and Stripe. In this third and final episode you’ll learn how to leverage a Netlify serverless function to build a webhook endpoint to listen and react to payment events such as a Checkout Session completing to fulfill your orders.",
   },
   eleventyEcommerce2: {
     title: "Ep. 2: Building a Jamstack store with Netlify and Stripe",
-    description: "In episode 2 of this series, Sia Karamalegos (@TheGreenGreek) is joining Matt Ling (@mattling_dev) from Stripe to build out an end-to-end eCommerce store selling digital goods, using 11ty, Netlify serverless functions, and Stripe. In this second episode you’ll learn how to leverage Netlify serverless functions to create Checkout Sessions using the Stripe API and collect payments from your customers.",
+    description:
+      "In episode 2 of this series, Sia Karamalegos (@TheGreenGreek) is joining Matt Ling (@mattling_dev) from Stripe to build out an end-to-end eCommerce store selling digital goods, using 11ty, Netlify serverless functions, and Stripe. In this second episode you’ll learn how to leverage Netlify serverless functions to create Checkout Sessions using the Stripe API and collect payments from your customers.",
   },
   eleventyEcommerce1: {
     title: "Ep. 1: Building a Jamstack store with Netlify and Stripe",
-    description: "In episode 1 of this series, Sia Karamalegos (@TheGreenGreek) joins Matt Ling (@mattling_dev) from Stripe to build out an end-to-end eCommerce store selling digital goods, using 11ty, Netlify serverless functions, and Stripe. In this first episode you’ll learn how to model a product catalog in Stripe using Products and Prices and how to query and render them using Stripe-node and 11ty.",
+    description:
+      "In episode 1 of this series, Sia Karamalegos (@TheGreenGreek) joins Matt Ling (@mattling_dev) from Stripe to build out an end-to-end eCommerce store selling digital goods, using 11ty, Netlify serverless functions, and Stripe. In this first episode you’ll learn how to model a product catalog in Stripe using Products and Prices and how to query and render them using Stripe-node and 11ty.",
   },
   eleventyEcommerceArch: {
     title: "Architecting an Eleventy serverless e-commerce site",
-    description: "A lot of e-commerce solutions exist, but many of them charge a monthly fee. How could we build a site with the lowest hosting costs possible? Sometimes the biggest challenge is coming up with an architecture that will work. In this talk, I will show you how I'm building an Eleventy shop for digital downloads using Stripe, Netlify, Sendgrid, and AWS. It's a sneak peek for a longer series where we will go step-by-step in the build.",
+    description:
+      "A lot of e-commerce solutions exist, but many of them charge a monthly fee. How could we build a site with the lowest hosting costs possible? Sometimes the biggest challenge is coming up with an architecture that will work. In this talk, I will show you how I'm building an Eleventy shop for digital downloads using Stripe, Netlify, Sendgrid, and AWS. It's a sneak peek for a longer series where we will go step-by-step in the build.",
   },
   cloudinaryEleventy: {
     title: "Optimize Images in Eleventy Using Cloudinary",
