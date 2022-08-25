@@ -3,9 +3,15 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!",
   },
+  wptIntro: {
+    title: "Introducing the Shopify Merchant Performance Team",
+    description:
+      "Excited to have the Shopify Merchant Performance Team join me next week as we explore their raison d'être + what to expect from this team as they help shape the future of e-commerce by keeping things fast! Join us.",
+  },
   perfPanel: {
     title: "Panel: State of Web Performance August 2022",
-    description: "In this month’s “State of” event, we’re bringing you the State of Web Performance. We will be talking with Community members, library authors and maintainers to discuss community initiatives, how to identify Performance challenges, metrics to measure and resources to help you."
+    description:
+      "In this month’s “State of” event, we’re bringing you the State of Web Performance. We will be talking with Community members, library authors and maintainers to discuss community initiatives, how to identify Performance challenges, metrics to measure and resources to help you.",
   },
   earlyHints: {
     title: "103 Early Hints at Shopify",

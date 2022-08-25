@@ -1,10 +1,11 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: "This Dot Media State of the Web",
-      conferenceUrl: "https://www.thisdotmedia.com/state-of-the-web/state-of-web-performance-august-2022/",
+      conference: "WebPageTest Under the Hood",
+      conferenceUrl:
+        "https://twitter.com/HenriHelvetica/status/1562507718728232960",
       location: "Online",
-      talks: [{ key: "perfPanel", date: "23 Aug 2022" }],
+      talks: [{ key: "wptIntro", date: "30 Aug 2022" }],
     },
     {
       conference: "performance.now()",
@@ -14,6 +15,13 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: "This Dot Media State of the Web",
+      conferenceUrl:
+        "https://www.thisdotmedia.com/state-of-the-web/state-of-web-performance-august-2022/",
+      location: "Online",
+      talks: [{ key: "perfPanel", date: "23 Aug 2022" }],
+    },
     {
       conference: "UberConf",
       conferenceUrl: "https://uberconf.com/",
