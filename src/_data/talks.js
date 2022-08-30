@@ -3,6 +3,10 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!",
   },
+  livestream: {
+    title: "Livestream chat",
+    description: "See event link for details!",
+  },
   wptIntro: {
     title: "Introducing the Shopify Merchant Performance Team",
     description:

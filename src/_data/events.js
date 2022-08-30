@@ -8,6 +8,13 @@ module.exports = {
       talks: [{ key: "wptIntro", date: "30 Aug 2022" }],
     },
     {
+      conference: "Developer Downloads (Jamstack Discord)",
+      conferenceUrl:
+        "https://twitter.com/domitriusclark/status/1564319320615931907",
+      location: "Online",
+      talks: [{ key: "livestream", date: "02 Sep 2022" }],
+    },
+    {
       conference: "performance.now()",
       conferenceUrl: "https://perfnow.nl/",
       location: "Amsterdam, NL",
