@@ -750,6 +750,15 @@ footer .form input, footer .form button {
   grid-gap: 16px;}
 .share p {font-size: var(--size-300);margin: 0;}
 .share svg {margin: auto;}
+.tmpl-newspost .circles .content-780 {
+  margin: 0 auto;
+}
+@media screen and (max-width: 820px) {
+  .tmpl-newspost .circles .content-780 {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+}
 
 @media screen and (min-width: 380px) {
   .social a svg {width: 32px;}
