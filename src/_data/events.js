@@ -1,18 +1,11 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: "WebPageTest Under the Hood",
-      conferenceUrl:
-        "https://twitter.com/HenriHelvetica/status/1562507718728232960",
-      location: "Online",
-      talks: [{ key: "wptIntro", date: "30 Aug 2022" }],
-    },
-    {
       conference: "Developer Downloads (Jamstack Discord)",
       conferenceUrl:
         "https://twitter.com/domitriusclark/status/1564319320615931907",
       location: "Online",
-      talks: [{ key: "livestream", date: "02 Sep 2022" }],
+      talks: [{ key: "livestream", date: "27 Sep 2022" }],
     },
     {
       conference: "performance.now()",
@@ -22,6 +15,13 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: "WebPageTest Under the Hood",
+      conferenceUrl:
+        "https://twitter.com/HenriHelvetica/status/1562507718728232960",
+      location: "Online",
+      talks: [{ key: "wptIntro", date: "30 Aug 2022" }],
+    },
     {
       conference: "This Dot Media State of the Web",
       conferenceUrl:
