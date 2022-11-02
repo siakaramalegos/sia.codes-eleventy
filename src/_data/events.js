@@ -1,20 +1,13 @@
 module.exports = {
   upcomingEvents: [
-    {
-      conference: "Developer Downloads (Jamstack Discord)",
-      conferenceUrl:
-        "https://twitter.com/domitriusclark/status/1564319320615931907",
-      location: "Online",
-      talks: [{ key: "livestream", date: "27 Sep 2022" }],
-    },
+  ],
+  pastEvents: [
     {
       conference: "performance.now()",
       conferenceUrl: "https://perfnow.nl/",
       location: "Amsterdam, NL",
       talks: [{ key: "earlyHints", date: "28 Oct 2022" }],
     },
-  ],
-  pastEvents: [
     {
       conference: "WebPageTest Under the Hood",
       conferenceUrl:
