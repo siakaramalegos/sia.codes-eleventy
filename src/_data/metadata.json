@@ -9,6 +9,13 @@
     "url": "https://sia.codes/feed/feed.xml",
     "id": "https://sia.codes/"
   },
+  "newsletterFeed": {
+    "subtitle": "Newsletter for sia.codes: thoughts on web development and web performance",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://sia.codes/feed/newsletter.xml",
+    "id": "https://sia.codes/newsletter"
+  },
   "author": {
     "name": "Sia Karamalegos",
     "email": "siakaramalegos@gmail.com"

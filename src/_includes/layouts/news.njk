@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-newspost
+---
+
+<script>
+  (async function () {
+  // Polyfill for older browsers
+  if (CSS["paintWorklet"] === undefined) {
+    await import("https://unpkg.com/css-paint-polyfill");
+  }
+
+  // Looking for the source of the Paint Worklet?
+  // ~> Go check out https://github.com/bramus/css-houdini-circles
+  CSS.paintWorklet.addModule('https://unpkg.com/css-houdini-circles/dist/circles.js');
+  })();
+</script>
+<section class="bg-secondary circles" style="margin-top: 0; margin-bottom: 0;">
+  <div class="content-780 flow">
+    <h1 class="p-name">{{ pageTitle or title }}</h1>
+    {% if renderDescription %}
+      <p class="lead" style="color:hsl(245, 10%, 36%)">{{ renderDescription }}</p>
+    {% endif %}
+    {% if ctaLink %}
+      <p><a href="{{ ctaLink }}">{{ ctaText }} <svg width="14" height="13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.827.26A1 1 0 018.24.327l5 5.5a1 1 0 010 1.346l-5 5.5a1 1 0 11-1.48-1.346L10.24 7.5H1.5a1 1 0 010-2h8.74L6.76 1.673A1 1 0 016.827.26z" fill="#C10B7E"></path></svg></a></p>
+    {% endif %}
+  </div>
+</section>
+
+<div class="content-780">
+  {{ content | safe }}
+</div>
