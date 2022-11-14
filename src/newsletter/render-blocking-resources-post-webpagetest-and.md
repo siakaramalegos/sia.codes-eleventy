@@ -1,8 +1,6 @@
 ---
 title: Render-blocking resources post, WebPageTest, and getting better at blogging
 date: 2021-07-13
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 ## New post on web performance!
 

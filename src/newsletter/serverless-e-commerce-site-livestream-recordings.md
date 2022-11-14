@@ -1,8 +1,6 @@
 ---
 title: Serverless e-commerce site livestream recordings and Women of Jamstack
 date: 2022-03-14
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 Hey folks, times are a bit rough in the world right now. If you need a bit of a distraction, I've got some new content for you...
 

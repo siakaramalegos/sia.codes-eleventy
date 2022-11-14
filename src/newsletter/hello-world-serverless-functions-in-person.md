@@ -1,8 +1,6 @@
 ---
 title: Hello, world! Serverless functions, in-person workshops, and image resolution
 date: 2021-06-24
-tags: ['newsletter']
-layout: layouts/newsPost.njk
 ---
 In case you didn't have enough newsletters in your inbox, I've decided to add another to the crowd. :) I plan to keep these short and sweet because who has time to really read all that email???
 

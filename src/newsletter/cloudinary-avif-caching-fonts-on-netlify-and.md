@@ -1,7 +1,6 @@
 ---
 title: Cloudinary AVIF, caching fonts on Netlify, and Google Analytics 4
 date: 2021-07-25
-layout: layouts/newsPost.njk
 ---
 ## New post on AVIF in Cloudinary
 

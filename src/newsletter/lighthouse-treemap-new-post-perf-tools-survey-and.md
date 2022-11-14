@@ -1,8 +1,6 @@
 ---
 title: Lighthouse Treemap (new post!), perf tools survey, and free online performance workshop
 date: 2021-08-02
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 Happy Monday folks!
 

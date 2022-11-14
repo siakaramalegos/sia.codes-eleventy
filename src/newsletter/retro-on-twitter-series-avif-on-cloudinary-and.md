@@ -1,8 +1,6 @@
 ---
 title: Retro on Twitter series, AVIF on Cloudinary, and Web Perf Tools
 date: 2021-07-19
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 ## New post: a retro on my old Twitter series
 I published a new post, [#30DaysOfWebPerf: The Pros and Cons of a Twitter series](https://sia.codes/posts/30-days-web-perf/). It's been a long time coming since I did the series at the end of 2019. Recently I've been contemplating other ideas for delivering serial content in smaller chunks.

@@ -1,8 +1,6 @@
 ---
 title: Updated fonts article, syndicate your blog posts, SEO, and Eleventy Meetup
 date: 2021-07-08
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 ## Updated post on Google Fonts
 

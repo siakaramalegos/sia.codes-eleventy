@@ -1,7 +1,6 @@
 ---
 title: Livestreams and key web perf metrics
 date: 2022-08-30
-layout: layouts/newsPost.njk
 ---
 Hey folks, this week I have a few livestreams for you and a new article...
 

@@ -2,5 +2,6 @@
   "tags": [
     "newsletter"
   ],
-  "description": "From the sia.codes newsletter"
+  "description": "From the sia.codes newsletter",
+  "layout": "layouts/newsPost.njk"
 }

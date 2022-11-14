@@ -1,7 +1,6 @@
 ---
 title: New job, stream today, more events!
 date: 2022-08-23
-layout: layouts/newsPost.njk
 ---
 Hey folks, it's been a while! Things have been cooking in my world lately and I'm finally coming up for air. My biggest news is that I started a new job at Shopify helping merchants with their web performance. I'm excited for the opportunity to impact performance on a larger scale. On that note...
 

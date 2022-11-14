@@ -1,8 +1,6 @@
 ---
 title: Building an ecommerce site livestreams, video posted for the architecture
 date: 2022-02-16
-layout: layouts/newsPost.njk
-description: "sia.codes newsletter post for 16 Feb 2022. Don't miss a new post - sign up today!"
 ---
 Hey folks! This week I have a few updates on the big e-commerce site livestream series...
 

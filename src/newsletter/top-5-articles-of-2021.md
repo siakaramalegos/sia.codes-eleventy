@@ -1,8 +1,6 @@
 ---
 title: Top 5 articles of 2021
 date: 2022-01-21
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 
 Hey folks! I'm busy working on a new contract which is exciting, but it's left less time for making new content sadly. In the meantime, here are my top 5 posts of 2021 based on analytics. Enjoy!

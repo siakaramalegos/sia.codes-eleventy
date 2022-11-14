@@ -1,8 +1,6 @@
 ---
 title: Jamstack store post, woes of CSS, and IE trolling
 date: 2022-05-16
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 ## Serverless Ecommerce Store content - now all in one place!
 

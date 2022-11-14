@@ -1,8 +1,6 @@
 ---
 title: Perf tooling survey, mini workshop to build your blog, and color theme builder
 date: 2021-08-08
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 ## New post: Web performance tooling
 I was curious what tools other performance engineers were using to measure site speed, so I ran an informal survey.

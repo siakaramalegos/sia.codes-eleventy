@@ -1,8 +1,6 @@
 ---
 title: Eleventy Meetup, Polywork, and MOAR in-person events
 date: 2021-06-30
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 ## New Eleventy Meetup
 

@@ -1,7 +1,6 @@
 ---
 title: New Eleventy starter, initial thoughts on Astro, website fun, and 11ty meetup
 date: 2021-08-13
-layout: layouts/newsPost.njk
 ---
 ## New Eleventy Blog Starter
 

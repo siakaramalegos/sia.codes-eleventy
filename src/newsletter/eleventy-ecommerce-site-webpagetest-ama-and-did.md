@@ -1,7 +1,6 @@
 ---
 title: Eleventy ecommerce site, WebPageTest AMA, and did anyone say Legos?
 date: 2022-02-02
-layout: layouts/newsPost.njk
 ---
 ## Digital e-commerce talk for the Eleventy Meetup
 

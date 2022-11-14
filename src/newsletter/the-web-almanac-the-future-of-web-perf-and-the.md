@@ -1,8 +1,6 @@
 ---
 title: The Web Almanac, the future of web perf, and the perf calendar
 date: 2021-12-15
-tags: ['Newsletter']
-layout: layouts/newsPost.njk
 ---
 Hi folks,
 
