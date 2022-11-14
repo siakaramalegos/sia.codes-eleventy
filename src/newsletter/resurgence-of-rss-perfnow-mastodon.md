@@ -1,5 +1,5 @@
 ---
-title: Resurgence of CSS, perfnow, Mastodon, and Shopify perf
+title: Resurgence of RSS, perfnow, Mastodon, and Shopify perf
 date: 2022-11-14
 ---
 
