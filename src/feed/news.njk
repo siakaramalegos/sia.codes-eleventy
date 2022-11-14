@@ -10,6 +10,13 @@ eleventyExcludeFromCollections: true
 	<link href="{{ metadata.url }}"/>
 	<updated>{{ collections.newsletters | rssLastUpdatedDate }}</updated>
 	<id>{{ metadata.newsletterFeed.id }}</id>
+  <image>
+		<url>https://sia.codes/img/favicons/rss_144x144.png</url>
+		<title>{{ metadata.feed.title }}</title>
+		<link href="{{ metadata.newsletterFeed.id }}"/>
+		<width>144</width>
+		<height>144</height>
+	</image>
 	<author>
 		<name>{{ metadata.author.name }}</name>
 		<email>{{ metadata.author.email }}</email>

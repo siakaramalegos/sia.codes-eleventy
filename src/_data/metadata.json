@@ -3,7 +3,7 @@
   "url": "https://sia.codes",
   "description": "Performance engineer and web developer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies based in Durham, North Carolina",
   "feed": {
-    "title": "sia.codes blog feed",
+    "title": "Sia Karamalegos | Blog",
     "subtitle": "Performance engineer and web developer, speaker, teacher, community organizer, and Google Developers Expert in Web Technologies based in Durham, North Carolina",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
@@ -11,7 +11,7 @@
     "id": "https://sia.codes/"
   },
   "newsletterFeed": {
-    "title": "sia.codes newsletter feed",
+    "title": "Sia Karamalegos | Newsletter",
     "subtitle": "Newsletter for sia.codes: thoughts on web development and web performance",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
