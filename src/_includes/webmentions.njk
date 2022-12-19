@@ -8,55 +8,15 @@
   {% set replies = mentions | webmentionsByType('in-reply-to') | sortWebmentions  %}
   {% set repliesSize = replies | size  %}
 
-{% if likesSize > 0 %}
+
 <div class="webmentions__facepile flow">
-  <h3 style="margin-bottom:1em" {% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ likesSize }}
-    Like{% if likesSize != 1 %}s{% endif %}</h3>
-
-    {% for webmention in likes %}
-
-      {% if webmention.url != "" %}
-        <a class="h-card u-url link-u-exempt" href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
-      {% endif %}
-
-      {% if webmention.author.photo %}
-      <img src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}" width="48" height="48" loading="lazy">
-      {% else %}
-      <img src="{{ '/img/avatar.svg' | url }}" alt="" width="48" height="48">
-      {% endif %}
-
-      {% if webmention.url != "" %}
-        </a>
-      {% endif %}
-    {% endfor %}
+  {% if likesSize > 0 %}<span>❤️ {{ likesSize }}</span>{% endif %}
+  {% if repostsSize > 0 %}<span>🔁 {{ repostsSize }}</span>{% endif %}
+  {% if repliesSize > 0 %}<span>💬 {{ repliesSize }}</span>{% endif %}
 </div>
-{% endif %}
-
-{% if repostsSize > 0 %}
-<div class="webmentions__facepile flow">
-  <h3 style="margin-bottom:1em" {% if repostsSize > 11 or likesSize > 11 %} class="webmentions__facepile__squish" {% endif %}>{{ repostsSize }} Retweet{% if repostsSize != 1 %}s{% endif %}</h3>
-
-    {% for webmention in reposts %}
-      {% if webmention.url != "" %}
-      <a class="h-card u-url link-u-exempt" href="{{ webmention.url }}" target="_blank" rel="noopener noreferrer">
-      {% endif %}
-
-      {% if webmention.author.photo %}
-      <img src="{{ webmention.author.photo }}" alt="{{ webmention.author.name }}" width="48" height="48" loading="lazy">
-      {% else %}
-      <img src="{{ '/img/avatar.svg' | url }}" alt="" width="48" height="48">
-      {% endif %}
-      {% if webmention.url != "" %}
-      </a>
-      {% endif %}
-    {% endfor %}
-</div>
-{% endif %}
 
 {% if repliesSize > 0 %}
 <div class="webmention-replies flow">
-  <h3>{{ repliesSize }} {% if repliesSize == "1" %}Reply{% else %}Replies{% endif %}</h3>
-
   {% for webmention in replies %}
     {% include 'webmention.njk' %}
   {% endfor %}

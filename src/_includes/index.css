@@ -659,11 +659,10 @@ lite-youtube.lyt-activated > .lty-playbtn {
   object-fit: cover;
 }
 .webmentions h3 {margin-top: 40px;}
-.webmentions__facepile a {
-  border: none;
-  box-shadow: none;}
-.webmentions__facepile a:hover {background: none;}
-.webmentions a:hover img { filter: drop-shadow(3px 5px 10px var(--pink-20));}
+.webmentions__facepile span {
+  font-size: var(--size-600);
+  margin-right: 2rem;
+}
 .webmention-replies img {
   height: 24px;
   width: 24px;}
@@ -744,12 +743,6 @@ footer .form input, footer .form button {
   right: 100px;
   position: absolute;
   transform: rotate(45deg);}
-.share {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  grid-gap: 16px;}
-.share p {font-size: var(--size-300);margin: 0;}
-.share svg {margin: auto;}
 .tmpl-newspost .circles .content-780 {
   margin: 0 auto;
 }
