@@ -7,6 +7,13 @@ module.exports = {
       location: "Online",
       talks: [{ key: "perfPanel2", date: "21 Feb 2023" }],
     },
+    {
+      conference: "This Dot Media State of the Web",
+      conferenceUrl:
+        "https://www.thisdotmedia.com/state-of-the-web/state-of-web-performance-february-2023/",
+      location: "Online",
+      talks: [{ key: "perfPanel2", date: "21 Feb 2023" }],
+    },
   ],
   pastEvents: [
     {
