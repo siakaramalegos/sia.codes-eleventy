@@ -17,6 +17,11 @@ module.exports = {
     description:
       "In this month’s “State of” event, we’re bringing you the State of Web Performance. We will be talking with Community members, library authors and maintainers to discuss community initiatives, how to identify Performance challenges, metrics to measure and resources to help you.",
   },
+  perfPanel2: {
+    title: "Panel: State of Web Performance February 2023",
+    description:
+      "In this month’s “State of” event, we’re bringing you the State of Web Performance. We will be talking with Community members, library authors and maintainers to discuss community initiatives, how to identify Performance challenges, metrics to measure and resources to help you.",
+  },
   earlyHints: {
     title: "103 Early Hints at Shopify",
     description:
