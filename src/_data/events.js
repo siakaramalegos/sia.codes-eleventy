@@ -1,14 +1,28 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: "All Things Open Meetup",
+      conferenceUrl:
+        "https://www.meetup.com/all-things-open-rtp-meetup/events/291374927/",
+      location: "Durham, NC, USA",
+      talks: [{ key: "devtools", date: "05 Apr 2023" }],
+    },
+    {
+      conference: "CityJS Athens",
+      conferenceUrl:
+        "https://greece.cityjsconf.org/",
+      location: "Athens, GR",
+      talks: [{ key: "tbd", date: "29 May 2023" }],
+    },
+  ],
+  pastEvents: [
+    {
       conference: "This Dot Media State of the Web",
       conferenceUrl:
         "https://www.thisdotmedia.com/state-of-the-web/state-of-web-performance-february-2023/",
       location: "Online",
       talks: [{ key: "perfPanel2", date: "21 Feb 2023" }],
     },
-  ],
-  pastEvents: [
     {
       conference: "performance.now()",
       conferenceUrl: "https://perfnow.nl/",
