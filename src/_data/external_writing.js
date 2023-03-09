@@ -16,6 +16,22 @@ module.exports = [
   //   tags: ['WebPerf', 'External']
   // },
   {
+    title: "Why web performance still matters in 2023",
+    description: "The web performance community often says that "performance matters", but why is that? Does it truly matter? What are the reasons? Whether you're new to this topic or want to better understand the arguments, this article is for you.",
+    url: "https://performance.shopify.com/blogs/blog/why-web-performance-still-matters-in-2023",
+    date: new Date('2023-01-06'),
+    publicationName: "Performance at Shopify",
+    tags: ['WebPerf', 'Analytics', 'External']
+  },
+  {
+    title: "A countdown of my top 5 favorite web performance tools",
+    description: "Much like a carpenter or handyperson, every web performance expert has a set of their favorite tools. Whether you’re new to performance or simply wanting to snoop on other people’s processes, here’s my own toolbox favorites and why.",
+    url: "https://calendar.perfplanet.com/2022/countdown-top-5-favorite-web-performance-tools/",
+    date: new Date('2022-12-18'),
+    publicationName: "Planet Performance",
+    tags: ['WebPerf', 'Dev Tools', 'Analytics', 'External']
+  },
+  {
     title: "Optimizing images for performance on Shopify",
     description: "Images are key to user experience, especially in ecommerce. Making images smaller doesn't always result in better performance. In this post, I focus on how images can impact page load speed and layout shift.",
     url: "https://performance.shopify.com/blogs/blog/optimizing-images-for-performance-on-shopify",
