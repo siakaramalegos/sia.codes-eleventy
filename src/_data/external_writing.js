@@ -17,7 +17,7 @@ module.exports = [
   // },
   {
     title: "Why web performance still matters in 2023",
-    description: "The web performance community often says that "performance matters", but why is that? Does it truly matter? What are the reasons? Whether you're new to this topic or want to better understand the arguments, this article is for you.",
+    description: "The web performance community often says that performance matters, but why is that? Does it truly matter? What are the reasons? Whether you're new to this topic or want to better understand the arguments, this article is for you.",
     url: "https://performance.shopify.com/blogs/blog/why-web-performance-still-matters-in-2023",
     date: new Date('2023-01-06'),
     publicationName: "Performance at Shopify",
