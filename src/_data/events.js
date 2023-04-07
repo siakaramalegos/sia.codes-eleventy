@@ -1,11 +1,11 @@
 module.exports = {
   upcomingEvents: [
     {
-      conference: "All Things Open Meetup",
+      conference: "THE Eleventy Meetup",
       conferenceUrl:
-        "https://www.meetup.com/all-things-open-rtp-meetup/events/291374927/",
-      location: "Durham, NC, USA",
-      talks: [{ key: "devtools", date: "05 Apr 2023" }],
+        "https://11tymeetup.dev/events/ep-lucky-13-adding-social-content-and-webmentions/",
+      location: "Online",
+      talks: [{ key: "eleventyWebmentions", date: "14 Apr 2023" }],
     },
     {
       conference: "CityJS Athens",
@@ -16,6 +16,13 @@ module.exports = {
     },
   ],
   pastEvents: [
+    {
+      conference: "All Things Open Meetup",
+      conferenceUrl:
+        "https://www.meetup.com/all-things-open-rtp-meetup/events/291374927/",
+      location: "Durham, NC, USA",
+      talks: [{ key: "devtools", date: "05 Apr 2023" }],
+    },
     {
       conference: "This Dot Media State of the Web",
       conferenceUrl:
