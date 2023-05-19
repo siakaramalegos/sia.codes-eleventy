@@ -315,6 +315,9 @@ section.bg-secondary {
 .bg-secondary details p {
   background-color: var(--grey-10);
 }
+.bg-secondary .content-780 {
+  padding: 0 1rem;
+}
 .circles {
   /* -30 colors - worklet only accepts hex */
 	--colors: #ff6fb8, #cb83ff, #9997ff;
@@ -344,7 +347,7 @@ section.bg-secondary {
 main {
   max-width: 100vw;
   overflow: hidden;
-  padding: 2em 1em;}
+  padding: 2rem 1rem;}
 table {margin: 2em 0;}
 table td,
 table th { padding-right: 1em; }
@@ -800,6 +803,9 @@ footer .form input, footer .form button {
   ul, ol {padding-left: 3em;}
   li {padding-left: 0.8em;}
 }
+@media screen and (min-width: 812px) {
+  .bg-secondary .content-780 {padding: 0;}
+}
 @media screen and (min-width: 850px) {
   #upcoming-talks svg {display: block;}
 }
@@ -816,3 +822,8 @@ footer .form input, footer .form button {
   footer {padding: 32px 32px 0; }
   footer .footer-social-links a { margin: 16px; }
 }
+
+.now_before {
+  display: none;
+}
+.now_after > * + * { margin-top: var(--flow-space, 1em);}
