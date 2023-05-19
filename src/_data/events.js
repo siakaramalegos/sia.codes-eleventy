@@ -1,21 +1,21 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: "CityJS Athens",
+      conferenceUrl:
+        "https://greece.cityjsconf.org/",
+      location: "Athens, GR",
+      talks: [{ key: "jsPerf", date: "30 May 2023" }],
+    },
+  ],
+  pastEvents: [
+    {
       conference: "THE Eleventy Meetup",
       conferenceUrl:
         "https://11tymeetup.dev/events/ep-lucky-13-adding-social-content-and-webmentions/",
       location: "Online",
       talks: [{ key: "eleventyWebmentions", date: "14 Apr 2023" }],
     },
-    {
-      conference: "CityJS Athens",
-      conferenceUrl:
-        "https://greece.cityjsconf.org/",
-      location: "Athens, GR",
-      talks: [{ key: "tbd", date: "29 May 2023" }],
-    },
-  ],
-  pastEvents: [
     {
       conference: "All Things Open Meetup",
       conferenceUrl:

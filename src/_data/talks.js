@@ -7,6 +7,10 @@ module.exports = {
     title: "Livestream chat",
     description: "See event link for details!",
   },
+  jsPerf: {
+    title: "Measuring JavaScript Performance",
+    description: "How does JavaScript impact user experience and what are the implications? What tools can I use to better understand my performance and focus on the most important problems? In this session, Sia will walk through the answers to these questions and more.",
+  },
   wptIntro: {
     title: "Introducing the Shopify Merchant Performance Team",
     description:
