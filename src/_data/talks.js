@@ -3,6 +3,10 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!",
   },
+  mc: {
+    title: "M.C.",
+    description: "Master of Ceremonies",
+  },
   livestream: {
     title: "Livestream chat",
     description: "See event link for details!",

@@ -1,14 +1,20 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: "performance.now()",
+      conferenceUrl: "https://perfnow.nl/",
+      location: "Amsterdam, NL",
+      talks: [{ key: "mc", date: "02 Nov 2023" }],
+    },
+  ],
+  pastEvents: [
+    {
       conference: "CityJS Athens",
       conferenceUrl:
         "https://greece.cityjsconf.org/",
       location: "Athens, GR",
       talks: [{ key: "jsPerf", date: "30 May 2023" }],
     },
-  ],
-  pastEvents: [
     {
       conference: "THE Eleventy Meetup",
       conferenceUrl:
