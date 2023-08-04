@@ -17,51 +17,57 @@ module.exports = [
   // },
   {
     title: "Announcing INP as the next Core Web Vital: What Shopify stores can do now",
-    description: "Google just announced that Interaction to Next Paint, or INP, will replace First Input Delay in the Core Web Vitals. What does this mean for Shopify sites and what can you do now to make sure you’re ready for the switch? This article will give you an overview of everything you need to know.",
+    description: "What does this mean for Shopify sites and what can you do now to make sure you’re ready for the switch?",
     url: "https://performance.shopify.com/blogs/blog/announcing-inp-as-the-next-core-web-vital-what-shopify-stores-can-do-now",
     date: new Date('2023-05-11'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'JavaScript']
+    tags: ['WebPerf', 'External', 'JavaScript'],
+    featuredImage: "INP-simple_yzgj3v"
   },
   {
     title: "3 ways to find your worst JavaScript offenders for page load",
-    description: "As Addy Osmani likes to say, JavaScript is your most expensive asset. Compared to an image or stylesheet, for example, a JavaScript file of the same size will take the same amount of time to download. The problem comes in the amount of processing after download that needs to occur before the JavaScript is fully executed.",
+    description: "Before debugging FID and INP directly, look for low-hanging JavaScript fruit to trim out.",
     url: "https://performance.shopify.com/blogs/blog/3-ways-to-find-your-worst-javascript-offenders-for-page-load",
     date: new Date('2023-05-10'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'JavaScript']
+    tags: ['WebPerf', 'External', 'JavaScript'],
+    featuredImage: "js_books_gpozej"
   },
   {
     title: "Using WebPageTest on Shopify preview sites with passwords",
-    description: "WebPageTest is an amazing tool for testing performance. However, unlike running Chrome Dev Tools locally, it runs on an outside server. If our Shopify preview site requires a password, testing it becomes a challenge. Luckily we can use the scripting feature in WebPageTest to overcome this obstacle.",
+    description: "WebPageTest is an amazing tool for testing performance. Here's how to use the scripting feature to test sites behind passwords.",
     url: "https://performance.shopify.com/blogs/blog/using-webpagetest-on-shopify-preview-sites-with-passwords",
     date: new Date('2023-04-06'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External']
+    tags: ['WebPerf', 'External'],
+    featuredImage: "opening_soon_azi4xl"
   },
   {
     title: "Why web performance still matters in 2023",
-    description: "The web performance community often says that performance matters, but why is that? Does it truly matter? What are the reasons? Whether you're new to this topic or want to better understand the arguments, this article is for you.",
+    description: "Does web performance truly matter? What are the reasons? Whether you're new to this topic or want to better understand the arguments, this article is for you.",
     url: "https://performance.shopify.com/blogs/blog/why-web-performance-still-matters-in-2023",
     date: new Date('2023-01-06'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Analytics', 'External']
+    tags: ['WebPerf', 'Analytics', 'External'],
+    featuredImage: "exhaust_jy7lys"
   },
   {
     title: "A countdown of my top 5 favorite web performance tools",
-    description: "Much like a carpenter or handyperson, every web performance expert has a set of their favorite tools. Whether you’re new to performance or simply wanting to snoop on other people’s processes, here’s my own toolbox favorites and why.",
+    description: "Much like a carpenter or handyperson, every web performance expert has a set of their favorite tools. Here’s my own toolbox favorites and why.",
     url: "https://calendar.perfplanet.com/2022/countdown-top-5-favorite-web-performance-tools/",
     date: new Date('2022-12-18'),
     publicationName: "Planet Performance",
-    tags: ['WebPerf', 'Dev Tools', 'Analytics', 'External']
+    tags: ['WebPerf', 'Dev Tools', 'Analytics', 'External'],
+    featuredImage: "charlie-wollborg-unsplash_bw6cxd"
   },
   {
     title: "Optimizing images for performance on Shopify",
-    description: "Images are key to user experience, especially in ecommerce. Making images smaller doesn't always result in better performance. In this post, I focus on how images can impact page load speed and layout shift.",
+    description: "Images are key to user experience. Making images smaller doesn't always result in better performance. How can images impact page load speed and layout shift?",
     url: "https://performance.shopify.com/blogs/blog/optimizing-images-for-performance-on-shopify",
     date: new Date('2022-11-18'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Images', 'External']
+    tags: ['WebPerf', 'Images', 'External'],
+    featuredImage: "alexander-dummer-unsplash_f1riwp"
   },
   {
     title: "Responsive images on Shopify with Liquid",
@@ -69,7 +75,8 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/responsive-images-on-shopify-with-liquid",
     date: new Date('2022-10-11'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Images', 'External']
+    tags: ['WebPerf', 'Images', 'External'],
+    featuredImage: "soragrit-wongsa-unsplash_wzjohs"
   },
   {
     title: "Lazy load images for performance",
@@ -77,7 +84,8 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/lazy-load-images-for-performance",
     date: new Date('2022-08-08'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Images', 'External']
+    tags: ['WebPerf', 'Images', 'External'],
+    featuredImage: "nordwood-themes-unsplash_gkystu"
   },
   {
     title: "Fix web performance for the long-term",
@@ -85,7 +93,8 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/how-to-achieve-and-maintain-web-performance",
     date: new Date('2022-07-25'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External']
+    tags: ['WebPerf', 'External'],
+    featuredImage: "Group_36_cg8bkg"
   },
   {
     title: "Web Almanac 2021: Performance",
@@ -93,7 +102,8 @@ module.exports = [
     url: "https://almanac.httparchive.org/en/2021/performance",
     date: new Date('2021-12-02'),
     publicationName: "Web Almanac by HTTP Archive",
-    tags: ['WebPerf', 'External']
+    tags: ['WebPerf', 'External'],
+    featuredImage: "hero_lg_ppv4pn"
   },
   {
     title: "8 Things to Know About React for Drupal Devs",
@@ -101,7 +111,8 @@ module.exports = [
     url: "https://reactfordrupal.com/tutorials/react-for-drupal-developers/",
     date: new Date('2018-04-20'),
     publicationName: "React ❤ Drupal (Osio Labs)",
-    tags: ['React', 'External']
+    tags: ['React', 'External'],
+    featuredImage: "One-way_Data_Binding_b3imec"
   },
   {
     title: "An Introduction to Drupal for React Developers",

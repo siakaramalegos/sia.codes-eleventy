@@ -12,9 +12,11 @@ date: 2019-01-02
 <section class="flow">
 <img src="/img/sia_karamalegos_small.jpg" alt="Sia Karamalegos" class="headshot" height="300" width="300">
 
-I'm a web developer, performance engineer, and a co-organizer for the [Eleventy Meetup](https://eleventymeetup.netlify.app/). Currently, I'm working at Shopify, helping merchants make their online stores faster. I'm also a Google Developer Expert in Web Technologies, a Cloudinary Media Developer Expert, and a Stripe Community Expert. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
+I'm a web developer and web performance engineer. Currently, I'm working at Shopify, helping merchants make their online stores faster. I'm also trying to take those learnings back to the platform to make wider changes. I've built out a large part of [performance.shopify.com](https://performance.shopify.com/) and its blog with the help of my team.
 
-As a person, I also love making developer's lives easier through teaching, speaking, and mentoring. You can find more information about me and the topics I speak about on my speaking page. I talk about front-end topics such as web performance, JavaScript, and the Jamstack.
+I'm also a co-organizer for the [Eleventy Meetup](https://eleventymeetup.netlify.app/) and a Google Developer Expert in Web Technologies. I recently joined the [W3C](https://www.w3.org/) web performance working group as well and am enjoying participating more in the platform standards. As a developer, I love building things that help make people's lives easier. Check out [Coder Ipsum](https://coder-ipsum.tech/) for a fun developer-inspired ipsum text generator.
+
+As a person, I also love making developer's lives easier through teaching, speaking, and mentoring. You can find more information about me and the topics I speak about on my [speaking page](). I talk about front-end topics such as web performance, JavaScript, and the Jamstack.
 
 </section>
 
@@ -32,7 +34,7 @@ I implement end-to-end performance management, from audits and improvements to l
 <section class="flow">
 
 ## Want me to speak at your company or event?
-I'm an international conference speaker and organizer and available to speak at your event or at your company. Topics include web performance, JavaScript, the Jamstack, and Eleventy. [Learn more about my speaking](/speaking).
+I'm an international conference speaker and organizer and available to speak at your event or at your company. Topics include web performance, JavaScript, and Eleventy. [Learn more about my speaking](/speaking).
 
 <p class="text-center">
   <a class="button button-default" href="/contact/?subject=Speaking inquiry from sia.codes">Book me</a>
@@ -48,4 +50,3 @@ I'm an international conference speaker and organizer and available to speak at 
 
 </section>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">heylow web dev friends: if you aren&#39;t keeping up with <a href="https://twitter.com/TheGreenGreek?ref_src=twsrc%5Etfw">@TheGreenGreek</a>&#39;s <a href="https://twitter.com/hashtag/30DaysOfWebPerf?src=hash&amp;ref_src=twsrc%5Etfw">#30DaysOfWebPerf</a>, you should be.<br><br>just did Day 4&#39;s tip to our site, and got a 27% bump in page load and a 13% bump in TTFB.<br><br>(note: we were using only `dns-prefetch` before today. `preconnect` is amazing.) <a href="https://t.co/eHHMFWxdBB">https://t.co/eHHMFWxdBB</a></p>&mdash; thanksgiving, but spooky (@vincefalconi) <a href="https://twitter.com/vincefalconi/status/1192133784117948419?ref_src=twsrc%5Etfw">November 6, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

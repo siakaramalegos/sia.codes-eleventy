@@ -133,6 +133,7 @@ html, body {
   outline: 2px dashed var(--pink-50);
   outline-offset: .25rem;
 }
+.hidden { display: none; }
 .social { text-align: right;}
 .social a {
   color: var(--pink-50);
@@ -248,7 +249,7 @@ a.button-default, button.button-default {
   display: inline-block;
   font-size: var(--size-500);
   padding: 16px 32px;}
-input.button-small {padding: 4px 8px;}
+.button-small {padding: 4px 8px; font-size: var(--size-300);}
 a.button:hover, input.button:hover, button.button:hover { opacity: 0.8;}
 a.button-circle {
   align-items: center;

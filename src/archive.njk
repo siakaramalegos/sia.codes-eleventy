@@ -11,13 +11,7 @@ permalink: /posts/
 <div class="content">
   <section class="flow">
     <h1>Blog</h1>
-    <p>Learn about web performance, Eleventy, and the Jamstack.</p>
-    <p>See <a href="#select-posts">select posts</a>, <a href="#all-posts">all posts</a>, or <a href="#filter-by-topic">filter by topic</a></p>
-  </section>
-
-  <section class="flow" id="filter-by-topic">
-    <h2>Filter by topic</h2>
-    <p>Or <a href="https://www.google.com/search?q=site%3Asia.codes%2Fposts+eleventy">search with Google</a></p>
+    <p>Learn about web performance, web development, JavaScript, and Eleventy. <a href="https://www.google.com/search?q=site%3Asia.codes%2Fposts+eleventy">Search with Google</a> or filter by topic:</p>
     <p style="max-width: 600px;">
       {% set tags = collections.tagList | sort %}
       {% for tag in tags %}
@@ -28,15 +22,30 @@ permalink: /posts/
       {% endfor %}
     </p>
   </section>
+  <button class="button button-small" id="toggle-view" data-current="image">Simplified list</button>
+  <script>
+    document.querySelector("#toggle-view").addEventListener("click", e => {
+      const current = e.target.dataset.current
+      if (current === "image") {
+        document.querySelector("#list-posts").classList.remove("hidden")
+        document.querySelector("#image-posts").classList.add("hidden")
+        e.target.innerText = "Detailed list"
+        e.target.dataset.current = "list"
+      } else {
+        document.querySelector("#list-posts").classList.add("hidden")
+        document.querySelector("#image-posts").classList.remove("hidden")
+        e.target.innerText = "Simplified list"
+        e.target.dataset.current = "image"
+      }
+    })
+  </script>
 
-  <section class="flow" id="select-posts">
-    <h2>Select posts</h2>
-    {% set postslist = collections.posts | getSelect %}
+  <section class="flow" id="image-posts">
+    {% set postslist = collections.posts | mergeExternalPosts(external_writing) %}
     {% include "postslist.njk" %}
   </section>
 
-  <section class="flow" id="all-posts">
-    <h2>All posts</h2>
+  <section class="flow hidden" id="list-posts">
     {% set archivelist = collections.posts | mergeExternalPosts(external_writing) %}
     {% include "archivelist.njk" %}
   </section>

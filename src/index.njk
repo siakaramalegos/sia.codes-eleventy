@@ -63,11 +63,11 @@ date: 2019-01-01
 </section>
 
 <section class="flow">
-  <h2>Select Writing</h2>
+  <h2>Latest Writing</h2>
   <p>All posts can be found on <a href="{{ '/posts/' | url }}">the blog page</a>.</p>
 
   {% set lazyload = true %}
-  {% set postslist = collections.posts | getSelect %}
+  {% set postslist = collections.posts | mergeExternalPosts(external_writing) | tail(6) %}
   {% include "postslist.njk" %}
 
   <p><a href="{{ '/posts/' | url }}">All posts</a></p>

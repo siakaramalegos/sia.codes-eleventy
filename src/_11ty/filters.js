@@ -27,28 +27,35 @@ function mergeExternalTaggedPosts(taggedPosts, externalPosts, tag) {
 function mergeExternalPosts(posts = [], externalPosts = []) {
   const postData = posts.map(post => {
     const {data, date, url} = post
-    const {title, description, tags} = data
+    const {title, description, tags, featuredImage} = data
 
     return {
-      title,
       date,
       readableDate: readableDate(date),
       url,
-      description,
-      tags,
+      data: {
+        title,
+        description,
+        tags,
+        featuredImage,
+      }
     }
   })
   const externalPostData = externalPosts.map(post => {
-    const {title, date, url, description, tags, publicationName} = post
+    const {title, date, url, description, tags, publicationName, featuredImage} = post
 
     return {
-      title,
       date,
       readableDate: readableDate(post.date),
       url,
-      description,
-      tags,
-      publicationName,
+      data: {
+        title,
+        description,
+        tags,
+        publicationName,
+        featuredImage,
+        external: true,
+      }
     }
   })
 
@@ -90,6 +97,14 @@ module.exports = {
     }
 
     return array.slice(0, n);
+  },
+  // Get the last `n` elements of a collection.
+  tail: (array, n) => {
+    if( n < 0 ) {
+      return array.slice(n);
+    }
+
+    return array.slice(-n);
   },
   htmlDateString: (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
