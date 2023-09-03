@@ -16,6 +16,15 @@ module.exports = [
   //   tags: ['WebPerf', 'External']
   // },
   {
+    title: "How layout position impacts three big web performance levers",
+    description: "We see three common web performance problems related to layout position with Shopify themes...",
+    url: "https://performance.shopify.com/blogs/blog/how-layout-position-impacts-three-big-web-performance-levers",
+    date: new Date('2023-08-15'),
+    publicationName: "Performance at Shopify",
+    tags: ['WebPerf', 'External', 'Images'],
+    featuredImage: "hal-gatewood_ddondt"
+  },
+  {
     title: "Announcing INP as the next Core Web Vital: What Shopify stores can do now",
     description: "What does this mean for Shopify sites and what can you do now to make sure you’re ready for the switch?",
     url: "https://performance.shopify.com/blogs/blog/announcing-inp-as-the-next-core-web-vital-what-shopify-stores-can-do-now",
