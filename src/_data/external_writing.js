@@ -16,6 +16,24 @@ module.exports = [
   //   tags: ['WebPerf', 'External']
   // },
   {
+    title: "Liquid vs headless: A look at real user web performance",
+    description: "Considering headless? Why web performance should not be your only reason...",
+    url: "https://performance.shopify.com/blogs/blog/liquid-vs-headless-a-look-at-real-user-web-performance",
+    date: new Date('2023-10-27'),
+    publicationName: "Performance at Shopify",
+    tags: ['WebPerf', 'External', 'JavaScript'],
+    featuredImage: "mika-ruusunen-43E513RKDug-unsplash_hnumeq"
+  },
+  {
+    title: "Announcing new Liquid features for better web performance",
+    description: "Default lazy loading for image tags and new section.index properties...",
+    url: "https://performance.shopify.com/blogs/blog/announcing-new-liquid-features-for-better-web-performance",
+    date: new Date('2023-09-18'),
+    publicationName: "Performance at Shopify",
+    tags: ['WebPerf', 'External', 'Images'],
+    featuredImage: "okeykat-JnkAqh47QUs-unsplash_kktdoy"
+  },
+  {
     title: "How layout position impacts three big web performance levers",
     description: "We see three common web performance problems related to layout position with Shopify themes...",
     url: "https://performance.shopify.com/blogs/blog/how-layout-position-impacts-three-big-web-performance-levers",
