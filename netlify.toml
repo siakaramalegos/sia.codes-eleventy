@@ -46,6 +46,8 @@
   status = 200
 [[plugins]]
   package = "netlify-plugin-cache-folder"
+[[plugins]]
+  package = "/plugins/netlify-plugin-webpagetest"
 [[headers]]
   for = "/fonts/*"
     [headers.values]
