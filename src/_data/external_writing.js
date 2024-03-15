@@ -13,8 +13,27 @@ module.exports = [
   //   url: "",
   //   date: new Date('2022-12-2'),
   //   publicationName: "Performance at Shopify",
-  //   tags: ['WebPerf', 'External']
+  //   tags: ['WebPerf', 'External'],
+  // featuredImage: ""
   // },
+  {
+    title: "How to optimize Cumulative Layout Shift (CLS) on Shopify sites",
+    description: "The common causes for CLS on Shopify sites and how to fix them",
+    url: "https://performance.shopify.com/blogs/blog/how-to-optimize-cumulative-layout-shift-cls-on-shopify-sites",
+    date: new Date('2024-3-15'),
+    publicationName: "Performance at Shopify",
+    tags: ['WebPerf', 'External', 'Images'],
+    featuredImage: "matus-kovacovsky-eIvLuyDjCQI-unsplash_gojr5z"
+  },
+  {
+    title: "Debugging common causes for slow loading in Shopify Liquid storefronts",
+    description: "Have you ever been confronted with the daunting task of figuring out what exactly is causing a page to load slowly?",
+    url: "https://performance.shopify.com/blogs/blog/debugging-common-causes-for-slow-loading-in-shopify-liquid-storefronts",
+    date: new Date('2024-1-11'),
+    publicationName: "Performance at Shopify",
+    tags: ['WebPerf', 'External', 'Images', 'JavaScript', 'Analytics'],
+    featuredImage: "marten-newhall-uAFjFsMS3YY-unsplash_llt3vw"
+  },
   {
     title: "Liquid vs headless: A look at real user web performance",
     description: "Considering headless? Why web performance should not be your only reason...",
