@@ -11,6 +11,10 @@ module.exports = {
     title: "Livestream chat",
     description: "See event link for details!",
   },
+  wrongPerf: {
+    title: "You're probably doing web performance wrong",
+    description: "Lighthouse 100 is a common goal for developers seeking to make their sites fast, but does this really center user experience? In this talk, I'll cover how to get a broader perspective on how real users are experiencing your website performance and better strategies for improving it.",
+  },
   jsPerf: {
     title: "Measuring JavaScript Performance",
     description: "How does JavaScript impact user experience and what are the implications? What tools can I use to better understand my performance and focus on the most important problems? In this session, Sia will walk through the answers to these questions and more.",

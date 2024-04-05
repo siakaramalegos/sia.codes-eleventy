@@ -1,6 +1,12 @@
 module.exports = {
   upcomingEvents: [
-    
+    {
+      conference: "The 11ty International Symposium on Making Websites Real Good",
+      conferenceUrl:
+        "https://conf.11ty.dev/",
+      location: "Online",
+      talks: [{ key: "wrongPerf", date: "9 May 2024" }],
+    },
   ],
   pastEvents: [
     {
