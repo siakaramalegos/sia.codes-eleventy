@@ -1,14 +1,23 @@
 module.exports = {
   upcomingEvents: [
     {
+      conference: "Connect.Tech",
+      conferenceUrl: "https://2024.connect.tech/",
+      location: "Atlanta, GA, USA",
+      talks: [
+        { key: "workshop2", date: "18 Nov 2024" },
+        { key: "ditchLighthouse", date: "19 Nov 2024" },
+      ],
+    },
+  ],
+  pastEvents: [
+    {
       conference: "The 11ty International Symposium on Making Websites Real Good",
       conferenceUrl:
         "https://conf.11ty.dev/",
       location: "Online",
       talks: [{ key: "wrongPerf", date: "9 May 2024" }],
     },
-  ],
-  pastEvents: [
     {
       conference: "performance.now()",
       conferenceUrl: "https://perfnow.nl/",

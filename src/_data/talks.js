@@ -3,6 +3,14 @@ module.exports = {
     title: "To be determined...",
     description: "Stay tuned for the details!",
   },
+  workshop2: {
+    title: "Web performance workshop: hands-on tools and practices",
+    description: "Have you tried to make your website fast and only been rewarded with frustration? Do the tools of the trade intimidate you? In this workshop, you'll learn tried and true techniques for optimizing the Core Web Vitals. We'll cover how to interpret and use real user analytics to guide debugging strategies. Then, we'll dive into lab testing tools, giving you hands-on practice and guidance to improve your confidence to approach any web performance improvement project.",
+  },
+  ditchLighthouse: {
+    title: "It's time to ditch Lighthouse 100",
+    description: "Lighthouse 100 is a common goal for developers seeking to make their sites fast, but does this really center user experience? In this talk, I'll cover how to get a broader perspective on how real users are experiencing your website performance and better strategies for improving it.",
+  },
   mc: {
     title: "M.C.",
     description: "Master of Ceremonies",
