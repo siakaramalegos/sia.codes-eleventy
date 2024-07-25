@@ -7,9 +7,7 @@
     "build": "NODE_ENV=production npx @11ty/eleventy",
     "build:local": "NODE_ENV=production netlify build",
     "dev": "npx @11ty/eleventy --serve",
-    "debug": "DEBUG=* npx @11ty/eleventy",
-    "lighthouse": "lhci autorun",
-    "build:lighthouse": "npm run build && npm run lighthouse"
+    "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
