@@ -28,3 +28,5 @@ One of my favorite newsletter-like blogs is written by [Melanie Richards](https:
 - Sign-ups for the winter classes at my local arts council are this Friday. I've been attending the open figure drawing sessions, and I think I'll sign up again. It seems many people prefer static long poses, but my preference is shorter, dynamic, active poses. I have not found a better option yet though.
 
 What are your favorite offline pursuits? How do you maintain those hobbies while they compete with everything that distracts us so easily?
+
+*This newsletter is reader-supported. If you buy a book from one of the links above, I'll earn some coffee money. You don't pay a higher price, and Bookshop.org supports independent booksellers.*
