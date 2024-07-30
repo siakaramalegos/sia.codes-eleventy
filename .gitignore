@@ -6,5 +6,6 @@ package-lock.json
 .DS_Store
 .env
 
-# Local Netlify folder
+# Local Netlify and Cloudflare folders
 .netlify
+.wrangler

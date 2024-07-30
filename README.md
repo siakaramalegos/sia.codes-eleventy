@@ -13,6 +13,10 @@ Cards
 - https://paulrobertlloyd.com/articles/
 - https://inclusive-components.design/cards/
 
+## Local dev with Cloudflare functions
+
+First run `npm run build` before running `npm run wrangler`. 11ty will not run in watch mode though. Alternatively, run `npm run watch` in one terminal window, then in another run `npm run wrangler`.
+
 ## Buttondown newsletter
 
 I use [Buttondown](https://buttondown.email/emails) for my newsletter service. I write my newsletters in Markdown, much like my blog posts. They have an API, but for now, I just copy-paste the newsletter post into my newsletters folder since both use markdown. I also update the canonical URL in Buttondown to point back to my self-hosted version from their archive.
