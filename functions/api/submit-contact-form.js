@@ -41,7 +41,7 @@ export async function onRequestPost(context) {
         msg.asRaw()
       );
       try {
-        await env.SEB.send(message);
+        await env.form_email.send(message);
       } catch (e) {
         return new Response(e.message);
       }
