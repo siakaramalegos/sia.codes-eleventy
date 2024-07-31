@@ -5,6 +5,7 @@ package-lock.json
 */.DS_Store
 .DS_Store
 .env
+.dev.vars
 
 # Local Netlify and Cloudflare folders
 .netlify

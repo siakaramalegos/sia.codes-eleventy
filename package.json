@@ -6,7 +6,7 @@
     "start": "netlify dev",
     "build": "NODE_ENV=production npx @11ty/eleventy",
     "build:local:netlify": "NODE_ENV=production netlify build",
-    "wrangler": "npx wrangler pages dev _site",
+    "wrangler": "npx wrangler pages dev _site --compatibility-flags='nodejs_compat'",
     "dev": "npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch",
     "debug": "DEBUG=* npx @11ty/eleventy"
@@ -33,12 +33,12 @@
     "luxon": "^1.25.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.3.0",
-    "netlify-plugin-cache-folder": "0.0.6",
     "node-fetch": "^2.6.1",
     "terser": "^5.7.1",
     "wrangler": "^3.67.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mimetext": "^3.0.24"
   }
 }
