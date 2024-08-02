@@ -9,7 +9,8 @@
     "wrangler": "npx wrangler pages dev _site",
     "dev": "npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch",
-    "debug": "DEBUG=* npx @11ty/eleventy"
+    "debug": "DEBUG=* npx @11ty/eleventy",
+    "log": "npx wrangler pages deployment tail"
   },
   "repository": {
     "type": "git",

@@ -41,6 +41,7 @@ export async function onRequestPost(context) {
       subject: `[SIA.CODES] Contact form request from ${output.name}: ${output.subject}`,
       html: `<p>${output.message}</p>`,
     });
+    console.log({data, error});
 
     if (error) {
       return Response.redirect("https://sia.codes/404", 303)
