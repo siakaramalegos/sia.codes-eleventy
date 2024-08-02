@@ -33,13 +33,14 @@ export async function onRequestPost(context) {
       return Response.redirect("https://sia.codes/contact-confirmation", 303)
     }
 
+    // Using text instead of email so that I don't need to sanitize it
     const resend = new Resend(context.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: context.env.SENDER_EMAIL,
       reply_to: output.email,
       to: context.env.RECIPIENT_EMAIL,
       subject: `[SIA.CODES] Contact form request from ${output.name}: ${output.subject}`,
-      html: `<p>${output.message}</p>`,
+      text: output.message,
     });
     console.log({data, error});
 
