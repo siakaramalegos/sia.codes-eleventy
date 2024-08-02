@@ -1,8 +1,7 @@
 /**
  * POST /api/submit-contact-form
  */
-// import { EmailMessage } from "cloudflare:email";
-import { createMimeMessage } from "mimetext/browser";
+import { Resend } from 'resend';
 
 export async function onRequestPost(context) {
   try {
@@ -19,44 +18,37 @@ export async function onRequestPost(context) {
         output[key] = [].concat(tmp, value);
       }
     }
+    // output: {
+    //   name: 'Jane Doe',
+    //   'contact-name': '',
+    //   email: 'jane@doe.com',
+    //   subject: 'help me',
+    //   message: 'this is my message'
 
-    let pretty = JSON.stringify(output, null, 2);
+    const honeypot = output["contact-name"]
+    console.log({output});
 
-    if (context.env.ENVIRONMENT === "production") {
-      const { EmailMessage } = await import("cloudflare:email");
-
-      const msg = createMimeMessage();
-      msg.setSender({ name: "[SIA.CODES]", addr: "hi@sia.codes" });
-      msg.setRecipient("hi@sia.codes");
-      msg.setSubject("Contact form request");
-      msg.addMessage({
-          contentType: 'text/plain',
-          data: `Congratulations, you just sent an email from a worker.`
-      });
-
-      // first is sender
-      var message = new EmailMessage(
-        "hi@sia.codes",
-        "hi@sia.codes",
-        msg.asRaw()
-      );
-      try {
-        await env.form_email.send(message);
-      } catch (e) {
-        return new Response(e.message);
-      }
-
-      return new Response("Hello Send Email World!");
-    } else {
-      console.log("DEV");
-
-      return new Response(pretty, {
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8',
-        },
-      });
+    // Return early with pretend confirmation if bot hit honeypot
+    if (honeypot !== "") {
+      return Response.redirect("https://sia.codes/contact-confirmation", 303)
     }
+
+    const resend = new Resend(context.env.RESEND_API_KEY);
+    const { data, error } = await resend.emails.send({
+      from: context.env.SENDER_EMAIL,
+      reply_to: output.email,
+      to: context.env.RECIPIENT_EMAIL,
+      subject: `[SIA.CODES] Contact form request from ${output.name}`,
+      html: `<p>${output.message}</p>`,
+    });
+
+    if (error) {
+      return Response.redirect("https://sia.codes/404", 303)
+    } else {
+      return Response.redirect("https://sia.codes/contact-confirmation", 303)
+    }
+
   } catch (err) {
-    return new Response('Error parsing JSON content', { status: 400 });
+    return Response.redirect("https://sia.codes/404?error=json_parsing", 303)
   }
 }

@@ -3,10 +3,10 @@
   "version": "5.0.0",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "start": "netlify dev",
+    "start": "npx @11ty/eleventy --serve",
     "build": "NODE_ENV=production npx @11ty/eleventy",
     "build:local:netlify": "NODE_ENV=production netlify build",
-    "wrangler": "npx wrangler pages dev _site --compatibility-flags='nodejs_compat'",
+    "wrangler": "npx wrangler pages dev _site",
     "dev": "npx @11ty/eleventy --serve",
     "watch": "npx @11ty/eleventy --watch",
     "debug": "DEBUG=* npx @11ty/eleventy"
@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "mimetext": "^3.0.24"
+    "resend": "^3.5.0"
   }
 }

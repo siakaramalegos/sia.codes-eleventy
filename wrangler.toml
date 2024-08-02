@@ -8,8 +8,3 @@ ENVIRONMENT = "dev"
 
 [env.production.vars]
 ENVIRONMENT = "production"
-
-[env.production]
-send_email = [
-  {name = "form_email", destination_address = "hi@sia.codes"},
-]
