@@ -26,7 +26,6 @@ export async function onRequestPost(context) {
     //   message: 'this is my message'
 
     const honeypot = output["contact-name"]
-    console.log({output});
 
     // Return early with pretend confirmation if bot hit honeypot
     if (honeypot !== "") {

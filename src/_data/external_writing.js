@@ -22,7 +22,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/how-to-optimize-cumulative-layout-shift-cls-on-shopify-sites",
     date: new Date('2024-3-15'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'Images'],
+    tags: ['WebPerf', 'External', 'Images', 'Shopify'],
     featuredImage: "matus-kovacovsky-eIvLuyDjCQI-unsplash_gojr5z"
   },
   {
@@ -31,7 +31,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/debugging-common-causes-for-slow-loading-in-shopify-liquid-storefronts",
     date: new Date('2024-1-11'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'Images', 'JavaScript', 'Analytics'],
+    tags: ['WebPerf', 'External', 'Images', 'JavaScript', 'Analytics', 'Shopify'],
     featuredImage: "marten-newhall-uAFjFsMS3YY-unsplash_llt3vw"
   },
   {
@@ -40,7 +40,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/liquid-vs-headless-a-look-at-real-user-web-performance",
     date: new Date('2023-10-27'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'JavaScript'],
+    tags: ['WebPerf', 'External', 'JavaScript', 'Shopify'],
     featuredImage: "mika-ruusunen-43E513RKDug-unsplash_hnumeq"
   },
   {
@@ -49,7 +49,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/announcing-new-liquid-features-for-better-web-performance",
     date: new Date('2023-09-18'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'Images'],
+    tags: ['WebPerf', 'External', 'Images', 'Shopify'],
     featuredImage: "okeykat-JnkAqh47QUs-unsplash_kktdoy"
   },
   {
@@ -58,7 +58,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/how-layout-position-impacts-three-big-web-performance-levers",
     date: new Date('2023-08-15'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'Images'],
+    tags: ['WebPerf', 'External', 'Images', 'Shopify'],
     featuredImage: "hal-gatewood_ddondt"
   },
   {
@@ -67,7 +67,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/announcing-inp-as-the-next-core-web-vital-what-shopify-stores-can-do-now",
     date: new Date('2023-05-11'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'JavaScript'],
+    tags: ['WebPerf', 'External', 'JavaScript', 'Shopify'],
     featuredImage: "INP-simple_yzgj3v"
   },
   {
@@ -76,7 +76,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/3-ways-to-find-your-worst-javascript-offenders-for-page-load",
     date: new Date('2023-05-10'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External', 'JavaScript'],
+    tags: ['WebPerf', 'External', 'JavaScript', 'Shopify'],
     featuredImage: "js_books_gpozej"
   },
   {
@@ -85,7 +85,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/using-webpagetest-on-shopify-preview-sites-with-passwords",
     date: new Date('2023-04-06'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External'],
+    tags: ['WebPerf', 'External', 'Shopify'],
     featuredImage: "opening_soon_azi4xl"
   },
   {
@@ -94,7 +94,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/why-web-performance-still-matters-in-2023",
     date: new Date('2023-01-06'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Analytics', 'External'],
+    tags: ['WebPerf', 'Analytics', 'External', 'Shopify'],
     featuredImage: "exhaust_jy7lys"
   },
   {
@@ -112,7 +112,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/optimizing-images-for-performance-on-shopify",
     date: new Date('2022-11-18'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Images', 'External'],
+    tags: ['WebPerf', 'Images', 'External', 'Shopify'],
     featuredImage: "alexander-dummer-unsplash_f1riwp"
   },
   {
@@ -121,7 +121,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/responsive-images-on-shopify-with-liquid",
     date: new Date('2022-10-11'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Images', 'External'],
+    tags: ['WebPerf', 'Images', 'External', 'Shopify'],
     featuredImage: "soragrit-wongsa-unsplash_wzjohs"
   },
   {
@@ -130,7 +130,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/lazy-load-images-for-performance",
     date: new Date('2022-08-08'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'Images', 'External'],
+    tags: ['WebPerf', 'Images', 'External', 'Shopify'],
     featuredImage: "nordwood-themes-unsplash_gkystu"
   },
   {
@@ -139,7 +139,7 @@ module.exports = [
     url: "https://performance.shopify.com/blogs/blog/how-to-achieve-and-maintain-web-performance",
     date: new Date('2022-07-25'),
     publicationName: "Performance at Shopify",
-    tags: ['WebPerf', 'External'],
+    tags: ['WebPerf', 'External', 'Shopify'],
     featuredImage: "Group_36_cg8bkg"
   },
   {

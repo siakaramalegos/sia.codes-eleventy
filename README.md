@@ -23,6 +23,14 @@ I use [Buttondown](https://buttondown.email/emails) for my newsletter service. I
 
 ## Copy-pasta
 
+### Sign up for newsletter aside
+
+Paste somewhere in a blog post after somethink useful has been shared.
+
+```njk
+{% include 'newsletter-aside.njk' %}
+```
+
 ### Bookshop.org affiliate links
 
 *This newsletter is reader-supported. If you buy a book from one of the links above, I'll earn some coffee money. You don't pay a higher price, and Bookshop.org supports independent booksellers.*
