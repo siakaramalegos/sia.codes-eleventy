@@ -26,9 +26,9 @@ export async function onRequestPost(context) {
       const { EmailMessage } = await import("cloudflare:email");
 
       const msg = createMimeMessage();
-      msg.setSender({ name: "GPT-4", addr: "hi@sia.codes" });
+      msg.setSender({ name: "[SIA.CODES]", addr: "hi@sia.codes" });
       msg.setRecipient("hi@sia.codes");
-      msg.setSubject("An email generated in a worker");
+      msg.setSubject("Contact form request");
       msg.addMessage({
           contentType: 'text/plain',
           data: `Congratulations, you just sent an email from a worker.`

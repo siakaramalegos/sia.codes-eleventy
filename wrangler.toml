@@ -11,5 +11,5 @@ ENVIRONMENT = "production"
 
 [env.production]
 send_email = [
-  {type = "send_email", name = "form_email", destination_address = "hi@sia.codes"},
+  {name = "form_email", destination_address = "hi@sia.codes"},
 ]
