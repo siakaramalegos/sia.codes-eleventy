@@ -38,7 +38,7 @@ export async function onRequestPost(context) {
       from: context.env.SENDER_EMAIL,
       reply_to: output.email,
       to: context.env.RECIPIENT_EMAIL,
-      subject: `[SIA.CODES] Contact form request from ${output.name}`,
+      subject: `[SIA.CODES] Contact form request from ${output.name}: ${output.subject}`,
       html: `<p>${output.message}</p>`,
     });
 
