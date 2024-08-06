@@ -57,3 +57,13 @@ For all sia.codes enhancements: [Attribution-NonCommercial-ShareAlike 4.0 Intern
 For the eleventy-base-blog: MIT
 
 Content is all &copy; Sia Karamalegos
+
+<!--
+Google calendar
+http://www.google.com/calendar/event?location=Hi-Wire+Brewing+Durham+-+800+Taylor+St+%239-150+-+Durham%2C+NC%2C+us&action=TEMPLATE&sprop=name%3ADurham+Social+Hack+Night&sprop=website%3Ahttps%3A%2F%2Fwww.meetup.com%2Fdurham-social-hack-night%2Fevents%2F300873921&details=For+full+details%2C+including+the+address%2C+and+to+RSVP+see%3A+https%3A%2F%2Fwww.meetup.com%2Fdurham-social-hack-night%2Fevents%2F300873921%0A%0A&text=Durham+Social+Hack+Night&dates=20240812T220000Z%2F20240813T000000Z
+
+iCal, Outlook
+https://www.meetup.com/durham-social-hack-night/events/300873921/ical/Durham+Social+Hack+Night.ics
+
+http://calendar.yahoo.com/?in_loc=Hi-Wire+Brewing+Durham+-+800+Taylor+St+%239-150+-+Durham%2C+NC%2C+us&v=60&VIEW=d&TYPE=20&TITLE=Durham+Social+Hack+Night&ST=20240812T220000Z&DUR=0200&URL=https%3A%2F%2Fwww.meetup.com%2Fdurham-social-hack-night%2Fevents%2F300873921&DESC=For+full+details%2C+including+the+address%2C+and+to+RSVP+see%3A+https%3A%2F%2Fwww.meetup.com%2Fdurham-social-hack-night%2Fevents%2F300873921%0A%0A
+-->
