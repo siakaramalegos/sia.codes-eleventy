@@ -1,7 +1,11 @@
 ---
-layout: layouts/home.njk
+layout: layouts/page-wide.njk
 title: "Sia Karamalegos: Blog Archive"
-description: Learn about web performance, Eleventy, and the Jamstack with writing by Sia Karamalegos, performance engineer and web developer.
+pageTitle: "Blog"
+description: Learn about web performance, web development, and Eleventy, with writing by Sia Karamalegos, performance engineer and web developer.
+renderDescription: "Learn about web performance, web development, and Eleventy."
+ctaText: Blogroll
+ctaLink: '/rolls'
 tags:
   - nav
 navtitle: Blog
@@ -10,9 +14,8 @@ permalink: /posts/
 
 <div class="content">
   <section class="flow">
-    <h1>Blog</h1>
-    <p>Learn about web performance, web development, JavaScript, and Eleventy. <a href="https://www.google.com/search?q=site%3Asia.codes%2Fposts+eleventy">Search with Google</a> or filter by topic:</p>
-    <p style="max-width: 600px;">
+    <p><a href="https://www.google.com/search?q=site%3Asia.codes%2Fposts+eleventy">Search with Google</a> or filter by topic:</p>
+    <p>
       {% set tags = collections.tagList | sort %}
       {% for tag in tags %}
         {%- if tag != "posts" -%}

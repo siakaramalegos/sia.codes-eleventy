@@ -1,0 +1,37 @@
+---
+layout: layouts/page-wide.njk
+title: Sia's Favorite Content
+pageTitle: This is how I roll
+description: Sia's favorite blogs and newsletters
+renderDescription: A blogroll with a twist - not all of these are blogs
+navtitle: Rolls
+templateClass: tmpl-post
+date: 2024-08-09
+---
+
+<section class="flow">
+  <p>I wanted to share a few of my favorite sites or content generators. This collection has a heavy emphasis on web performance and 11ty because of my personal interests.</p>
+  <p>Want to build your own? <a href="https://benmyers.dev/blog/eleventy-blogroll/">Ben Myers wrote an excellent post</a> which I followed for my implementation. Do you have an RSS feed for your blog? If not, please create one! If so, check that your feed is <a href="https://blog.jim-nielsen.com/2021/automatically-discoverable-rss-feeds/">easily discoverable</a> by RSS readers.</p>
+
+  <div class="blog-grid">
+    {% for blog in rolls %}
+      <article>
+        <p class="blog-name">
+          <img alt="" src="{{ blog.favicon }}" width="20px" height="20px" loading="lazy" />
+					<strong>{{ blog.name }}</strong></p>
+        <p class="blog-url"><a href="{{ blog.url | url }}">{{ blog.cleanUrl }}</a> {% if blog.newsletter.url %}(<a href="{{ blog.newsletter.url | url }}">newsletter</a>){% endif %}</p>
+        <p class="blog-topics">
+          {% for tag in blog.topics %}
+            <span class="post-tag">{{ tag }}</span>
+          {% endfor %}
+        </p>
+        {% if blog.latestPost and blog.latestPost.title %}
+          <p><strong>Latest post:</strong></p>
+          <p><a href="{{ blog.latestPost.url | url }}">{{ blog.latestPost.title | truncate(100) }}</a></p>
+        {% endif %}
+
+      </article>
+    {% endfor %}
+  </div>
+
+</section>

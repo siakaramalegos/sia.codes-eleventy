@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-newspost
+templateClass: tmpl-post
 ---
 
 <script>
@@ -16,7 +16,7 @@ templateClass: tmpl-newspost
   })();
 </script>
 <section class="bg-secondary circles" style="margin-top: 0;margin-bottom: 0;">
-  <div class="content-780 flow">
+  <div class="content flow">
     <h1 class="p-name">{{ pageTitle or title }}</h1>
     {% if renderDescription %}
       <p class="lead" style="color:hsl(245, 10%, 36%)">{{ renderDescription }}</p>
@@ -27,6 +27,9 @@ templateClass: tmpl-newspost
   </div>
 </section>
 
-<div class="content-780">
+<div class="content">
   {{ content | safe }}
+
+  <p><a href="{{ '/' | url }}">← Home</a></p>
+
 </div>

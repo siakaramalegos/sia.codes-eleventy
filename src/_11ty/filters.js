@@ -171,7 +171,7 @@ module.exports = {
       return 0;
     })
   },
-  truncate: text => text.length > 300 ? `${text.substring(0, 300)}...` : text,
+  truncate: (text, limit=300) => text.length > limit ? `${text.substring(0, limit)}...` : text,
   webmentionsByType: (mentions, mentionType) => {
     return mentions.filter(entry => !!entry[mentionType])
   },

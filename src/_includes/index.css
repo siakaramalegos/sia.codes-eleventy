@@ -73,6 +73,7 @@
     var(--purple-60) 100%
   );
 
+  --size-100: 0.5rem;
   --size-200: 0.694rem;
   --size-300: 0.833rem;
   --size-400: 1rem;
@@ -316,7 +317,7 @@ section.bg-secondary {
 .bg-secondary details p {
   background-color: var(--grey-10);
 }
-.bg-secondary .content-780 {
+.bg-secondary .content-780, .bg-secondary .content {
   padding: 0 1rem;
 }
 .circles {
@@ -348,7 +349,8 @@ section.bg-secondary {
 main {
   max-width: 100vw;
   overflow: hidden;
-  padding: 2rem 1rem;}
+  padding: 0 1rem 2rem 1rem;
+}
 table {margin: 2em 0;}
 table td,
 table th { padding-right: 1em; }
@@ -805,7 +807,7 @@ footer .form input, footer .form button {
   li {padding-left: 0.8em;}
 }
 @media screen and (min-width: 812px) {
-  .bg-secondary .content-780 {padding: 0;}
+  .bg-secondary .content-780, .bg-secondary .content {padding: 0;}
 }
 @media screen and (min-width: 850px) {
   #upcoming-talks svg {display: block;}
@@ -824,7 +826,27 @@ footer .form input, footer .form button {
   footer .footer-social-links a { margin: 16px; }
 }
 
-.now_before {
-  display: none;
+.blog-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  font-size: var(--size-300);
+  margin-top: var(--size-700);
 }
-.now_after > * + * { margin-top: var(--flow-space, 1em);}
+.blog-grid article {
+  background-color: var(--grey-05);
+  padding: 10px;
+}
+.blog-name {font-size: var(--size-400)}
+.blog-name img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.blog-topics {
+  margin-bottom: var(--size-400);
+}
+.blog-topics .post-tag {
+  font-size: var(--size-100);
+  padding: 2px 6px;
+  margin: .5em .5em 0 0;
+}
