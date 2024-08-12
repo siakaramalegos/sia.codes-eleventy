@@ -156,7 +156,7 @@ const BLOGS = [
   {
     name: "Modern CSS Solutions",
     url: "https://moderncss.dev/",
-    rss: "",
+    rss: "https://moderncss.dev/feed",
     types: ["blog"],
     topics: ["CSS", "web dev"],
   },

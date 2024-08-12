@@ -1,8 +1,8 @@
 ---
 layout: layouts/page-wide.njk
-title: Sia's Favorite Content
+title: Blog roll | sia.codes
 pageTitle: This is how I roll
-description: Sia's favorite blogs and newsletters
+description: A blogroll with a twist - not all of these are blogs
 renderDescription: A blogroll with a twist - not all of these are blogs
 navtitle: Rolls
 templateClass: tmpl-post
@@ -16,22 +16,42 @@ date: 2024-08-09
   <div class="blog-grid">
     {% for blog in rolls %}
       <article>
-        <p class="blog-name">
-          <img alt="" src="{{ blog.favicon }}" width="20px" height="20px" loading="lazy" />
-					<strong>{{ blog.name }}</strong></p>
-        <p class="blog-url"><a href="{{ blog.url | url }}">{{ blog.cleanUrl }}</a> {% if blog.newsletter.url %}(<a href="{{ blog.newsletter.url | url }}">newsletter</a>){% endif %}</p>
-        <p class="blog-topics">
-          {% for tag in blog.topics %}
-            <span class="post-tag">{{ tag }}</span>
-          {% endfor %}
-        </p>
-        {% if blog.latestPost and blog.latestPost.title %}
-          <p><strong>Latest post:</strong></p>
-          <p><a href="{{ blog.latestPost.url | url }}">{{ blog.latestPost.title | truncate(100) }}</a></p>
-        {% endif %}
-
+        <div class="blog-main">
+          <p class="blog-name">
+            <img alt="" src="{{ blog.favicon }}" width="20px" height="20px" loading="lazy" />
+            <strong>{{ blog.name }}</strong></p>
+          <p class="blog-url"><a href="{{ blog.url | url }}">{{ blog.cleanUrl }}</a></p>
+          <p class="blog-topics">
+            {% for tag in blog.topics %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endfor %}
+          </p>
+          {% if blog.latestPost and blog.latestPost.title %}
+              <p><strong>Latest post:</strong></p>
+              <p><a href="{{ blog.latestPost.url | url }}">{{ blog.latestPost.title | truncate(100) }}</a></p>
+          {% endif %}
+        </div>
+        <div class="blog-links">
+          <a href="{{ blog.rss | url }}" aria-label="website link"><svg aria-hidden="true" width="24" height="24"><use xlink:href="#link" /></svg></a>
+          {% if blog.rss %}<a href="{{ blog.rss | url }}" aria-label="RSS"><svg aria-hidden="true" width="24" height="24"><use xlink:href="#rss" /></svg></a>{% endif %}
+          {% if blog.newsletter.url %}<a href="{{ blog.newsletter.url | url }}" aria-label="newsletter"><svg aria-hidden="true" width="24" height="24"><use xlink:href="#news" /></svg></a></a>{% endif %}
+        </div>
       </article>
     {% endfor %}
   </div>
 
 </section>
+
+<svg display="none">
+  <symbol width="24" height="24" viewBox="0 0 448 512" id="rss">
+    <path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/>
+  </symbol>
+
+  <symbol width="24" height="24" viewBox="0 0 512 512" id="news">
+    <path fill="currentColor" d="M96 96c0-35.3 28.7-64 64-64l288 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L80 480c-44.2 0-80-35.8-80-80L0 128c0-17.7 14.3-32 32-32s32 14.3 32 32l0 272c0 8.8 7.2 16 16 16s16-7.2 16-16L96 96zm64 24l0 80c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24l0-80c0-13.3-10.7-24-24-24L184 96c-13.3 0-24 10.7-24 24zm208-8c0 8.8 7.2 16 16 16l48 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-48 0c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16l48 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-48 0c-8.8 0-16 7.2-16 16zM160 304c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-256 0c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-256 0c-8.8 0-16 7.2-16 16z"/>
+  </symbol>
+
+  <symbol width="24" height="24" viewBox="0 0 640 512" id="link">
+    <path fill="currentColor" d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+  </symbol>
+</svg>

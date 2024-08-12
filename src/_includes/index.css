@@ -836,6 +836,10 @@ footer .form input, footer .form button {
 .blog-grid article {
   background-color: var(--grey-05);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-400);
+  justify-content: space-between;
 }
 .blog-name {font-size: var(--size-400)}
 .blog-name img {
@@ -849,4 +853,17 @@ footer .form input, footer .form button {
   font-size: var(--size-100);
   padding: 2px 6px;
   margin: .5em .5em 0 0;
+}
+.blog-links {
+  display: flex;
+  gap: 8px;
+}
+.blog-links a {
+  box-shadow: none;
+  border-bottom: none;
+}
+.blog-links a:hover {
+  background-color: transparent;
+  /* box-shadow: none; */
+  color: var(--pink-40);
 }
