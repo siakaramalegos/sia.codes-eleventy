@@ -161,6 +161,16 @@ const BLOGS = [
     topics: ["CSS", "web dev"],
   },
   {
+    name: "Own Your Web",
+    url: "https://buttondown.com/ownyourweb/archive/",
+    rss: "https://buttondown.com/ownyourweb/rss",
+    newsletter: {
+      url: "https://buttondown.com/ownyourweb"
+    },
+    types: ["newsletter"],
+    topics: ["web dev"],
+  },
+  {
     name: "Ryan Trimble",
     url: "https://ryantrimble.com/",
     rss: "https://ryantrimble.com/rss.xml",
